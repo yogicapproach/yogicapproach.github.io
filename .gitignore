@@ -1,0 +1,3 @@
+# Claude Code agent staging area — never commit tmp output
+.claude/tmp/*
+!.claude/tmp/.gitkeep
