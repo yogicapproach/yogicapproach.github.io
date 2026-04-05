@@ -1,5 +1,9 @@
 # Progress — yogicapproach/yogicapproach.github.io
 
+## 2026-04-05 — PM scaffold committed
+
+- #3 closed: `.claude/pm/` scaffold initialized and pushed (2ce05ea)
+
 Running log of completed work. Newest session at top. Append-only — never rewrite.
 
 ---

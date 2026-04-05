@@ -11,23 +11,9 @@ _No active task._
 
 ---
 
-## Completed This Session
-
-- [#3](https://github.com/yogicapproach/yogicapproach.github.io/issues/3) — PM scaffold setup (commit pending)
-
----
-
-## Next Major Tasks (in rough priority order)
-
-| # | Title | Notes |
-|---|-------|-------|
-
----
-
 ## Open Issues
 
-| # | Title |
-|---|-------|
+_None — this is a publish-only serving repo. Public issues are for content-facing concerns raised by visitors._
 
 ---
 
@@ -36,3 +22,5 @@ _No active task._
 1. Open VS Code at `c:\Users\kaanchan\Projects\Yoga\yogicapproach\yogicapproach.github.io`
 2. PM files are at `.claude/pm/`
 3. PENDING-TASK.md is always on main — never edit on a feature branch
+4. This is a publish-only serving repo — GitHub Pages serves it at yogicapproach.com
+5. Dev repos (`site-root`, `events`) push to this repo additively; no repo wipes it
