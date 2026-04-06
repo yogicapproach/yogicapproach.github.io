@@ -1,0 +1,73 @@
+{
+  "resources": [
+    {
+      "type": "audio",
+      "title": "Tantroktam Devi Suktam",
+      "description": "Ashram recording",
+      "description_es": "Grabación del ashram",
+      "description_ne": "आश्रम रेकर्डिङ",
+      "license": "© Sannyasa Peeth",
+      "license_url": "https://sannyasapeeth.net",
+      "file": "1-03 Tantroktam Devi Suktam-satyamyogaprasad.net.mp3",
+      "cover": "cover-tantroktam-devi-suktam.jpg",
+      "no_download": true,
+      "external_source": "Satyam Yoga Prasad",
+      "external_url": "https://www.satyamyogaprasad.net/search?keyword=tantroktam+devi+suktam&tab=audio"
+    },
+    {
+      "type": "audio",
+      "title": "Jai Durga Lakshmi Saraswati",
+      "description": "Opening kirtan",
+      "description_es": "Kirtan de apertura",
+      "description_ne": "उद्घाटन कीर्तन",
+      "artist": "Ramnavmi",
+      "license": "CC BY-NC-SA 4.0",
+      "file": "La Paloma - Kirtan 1 - Jai-Durga-Lakshmi-Saraswati - Ramnavmi.m4a",
+      "cover": "cover art - durga laxmi saraswati.jpg"
+    },
+    {
+      "type": "audio",
+      "title": "Bajomana Ma",
+      "description": "Intermission kirtan",
+      "description_es": "Kirtan del intermedio",
+      "description_ne": "मध्यान्तर कीर्तन",
+      "artist": "Chittarupa",
+      "license": "CC BY-NC-SA 4.0",
+      "file": "La Paloma - Kirtan 2 - Bajomana-Ma - Chittarupa.m4a",
+      "cover": "cover art - bhajomana ma.jpg"
+    },
+    {
+      "type": "pdf",
+      "title": "Tantroktam Devi Suktam — Devanāgarī, Transliteración y Traducción",
+      "lang": "spa",
+      "file": "Tantroktaṃ Devī Sūktaṃ - Devanāgarī, Transliteración y Traducción (Español).pdf"
+    },
+    {
+      "type": "pdf",
+      "title": "Tantroktam Devi Suktam — Devanagari, Transliterated and Translation",
+      "lang": "eng",
+      "file": "Tantroktaṃ Devī Sūktaṃ - Devangari, Transliterated and Translation (English).pdf"
+    },
+    {
+      "type": "pdf",
+      "title": "Tantroktam Devi Suktam — Compacto",
+      "lang": "spa",
+      "compact": true,
+      "file": "Tantroktaṃ Devī Sūktaṃ - Compacto Español.pdf"
+    },
+    {
+      "type": "pdf",
+      "title": "Tantroktam Devi Suktam — Ultra compacto",
+      "lang": "spa",
+      "compact": true,
+      "file": "Tantroktaṃ Devī Sūktaṃ - Ultra compacto (Español).pdf"
+    },
+    {
+      "type": "pdf",
+      "title": "Tantroktam Devi Suktam — Compact English",
+      "lang": "eng",
+      "compact": true,
+      "file": "Tantroktaṃ Devī Sūktaṃ - Compact English.pdf"
+    }
+  ]
+}

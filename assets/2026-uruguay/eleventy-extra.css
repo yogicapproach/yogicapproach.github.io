@@ -1,0 +1,100 @@
+/*
+ * eleventy-extra.css — supplemental styles for the Eleventy-built site.
+ * Loaded in addition to shared.css (which comes from docs/events/shared.css).
+ *
+ * Purpose: the new lang-toggle uses <a class="lang-btn"> instead of <button>
+ * (so language switching works without JavaScript). These rules mirror the
+ * existing .lang-toggle button rules from shared.css.
+ *
+ * Also provides progressive language toggle compression:
+ *   768px+      : full labels + sublabels
+ *   480–768px   : compact padding
+ *   380–480px   : abbreviated labels (Eng./Esp./नेप. + Orig./IA Trad./AI अनु.)
+ *   <380px      : <select> dropdown (injected by shared.js injectLangSelectMobile)
+ */
+
+/* lang-btn: <a> elements styled as the existing language toggle buttons */
+.lang-toggle .lang-btn {
+  display: inline-block;
+  padding: 8px 24px;
+  font-size: 1em;
+  text-decoration: none;
+  border: 2px solid var(--color-btn-border);
+  border-radius: 4px;
+  background: var(--color-btn-bg);
+  color: var(--color-btn-border);
+  transition: all 0.2s;
+  text-align: center;
+}
+.lang-toggle .lang-btn.active {
+  background: var(--color-btn-active-bg);
+  color: var(--color-bg);
+}
+.lang-toggle .lang-btn:hover {
+  background: var(--color-btn-hover-bg);
+  color: var(--color-bg);
+}
+.lang-toggle .lang-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Abbreviated text — hidden by default, revealed at narrow widths */
+.lang-btn .lang-abbr,
+.lang-btn .lang-sublabel-abbr {
+  display: none;
+}
+
+/* 480–768px: compact padding, full labels still shown */
+@media (max-width: 768px) {
+  .lang-toggle .lang-btn {
+    padding: 6px 16px;
+  }
+}
+
+/* 380–480px: abbreviated labels + tighter padding */
+@media (max-width: 480px) {
+  .lang-toggle .lang-btn {
+    padding: 5px 10px;
+    font-size: 0.875em;
+  }
+  .lang-btn .lang-full,
+  .lang-btn .lang-sublabel-full {
+    display: none;
+  }
+  .lang-btn .lang-abbr {
+    display: inline;
+  }
+  .lang-btn .lang-sublabel-abbr {
+    display: block;
+  }
+}
+
+/* Override shared.css @media (max-width: 600px) which hides .lang-toggle —
+ * on Eleventy pages we keep buttons visible until 380px. */
+@media (max-width: 600px) {
+  .lang-toggle { display: flex; }
+}
+
+/* <380px: hide toggle buttons, show select wrapper */
+@media (max-width: 380px) {
+  .lang-toggle { display: none; }
+}
+
+/* lang-select-wrapper: wraps label + <select>, injected by injectLangSelectMobile() */
+.lang-select-wrapper {
+  display: none;
+  text-align: center;
+  margin: 20px 0;
+}
+@media (max-width: 380px) {
+  .lang-select-wrapper { display: block; }
+}
+
+.lang-select-label {
+  display: block;
+  font-size: 0.875em;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}

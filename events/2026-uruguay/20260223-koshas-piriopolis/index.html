@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
+</head>
+<body>
+<script>
+(function() {
+  var nl = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+  var lang = nl.startsWith('ne') ? 'ne' : nl.startsWith('en') ? 'en' : 'es';
+  var dest = '/' + lang + '/events/2026-uruguay/20260223-koshas-piriopolis/';
+  // honour legacy ?lang= param if present
+  var p = new URLSearchParams(location.search).get('lang');
+  if (p === 'en' || p === 'es' || p === 'ne') { lang = p; dest = '/' + lang + '/events/2026-uruguay/20260223-koshas-piriopolis/'; }
+  location.replace(dest);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=/es/events/2026-uruguay/20260223-koshas-piriopolis/"></noscript>
+</body>
+</html>

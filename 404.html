@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Page not found — Yogaval 2026</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 600px; margin: 60px auto; padding: 20px; color: #333; }
+  h1 { font-size: 1.4em; }
+  a { color: #2a6496; }
+  #countdown-msg { color: #555; font-style: italic; }
+</style>
+</head>
+<body>
+<script>
+(function() {
+  var path = location.pathname;
+  var nl = (navigator.language || 'es').toLowerCase();
+  var lang = nl.startsWith('ne') ? 'ne' : nl.startsWith('en') ? 'en' : 'es';
+  var p = new URLSearchParams(location.search).get('lang');
+  if (p === 'en' || p === 'es' || p === 'ne') lang = p;
+
+  // Recognisable pattern: /events/2026-uruguay/[folder]/ (new) or /{lang}/events/2026-uruguay/[folder]/ (already correct)
+  var VALID_FOLDERS = [
+    '20260209-koshas-escuela-de-yoga-satyam',
+    '20260210-living-fully-in-yourself-yoga-carrasco',
+    '20260211-koshas-and-ai-maca',
+    '20260218-tantroktam-devi-suktam-la-paloma',
+    '20260223-koshas-piriopolis'
+  ];
+  var m = path.match(/\/events\/2026-uruguay\/([\w-]+)\//);
+  if (m && VALID_FOLDERS.indexOf(m[1]) !== -1) {
+    location.replace('/' + lang + '/events/2026-uruguay/' + m[1] + '/'); return;
+  }
+
+  // Recognisable pattern: glossary
+  if (path.includes('glossary')) { location.replace('/' + lang + '/events/2026-uruguay/glossary/'); return; }
+
+  // Recognisable pattern: /events/ listing
+  if (path.match(/\/events\/?$/)) { location.replace('/' + lang + '/events/2026-uruguay/'); return; }
+
+  // No match — countdown to events listing
+  var dest = '/' + lang + '/events/2026-uruguay/';
+  var secs = 5;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var el = document.getElementById('countdown-msg');
+    var link = document.getElementById('redirect-link');
+    if (link) link.href = dest;
+
+    function tick() {
+      if (el) el.textContent = 'Taking you there in ' + secs + '...';
+      if (secs <= 0) { location.replace(dest); return; }
+      secs--;
+      setTimeout(tick, 1000);
+    }
+    tick();
+  });
+})();
+</script>
+
+<h1>Page not found</h1>
+<p>That link doesn't exist — it may be old or broken.</p>
+<p id="countdown-msg"></p>
+<p><a id="redirect-link" href="/es/events/2026-uruguay/">Go to the events page now</a></p>
+</body>
+</html>

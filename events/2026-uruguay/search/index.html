@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Search — Uruguay 2026 — Exploring the Koshas</title></head>
+<body>
+<script>
+(function() {
+  var nl = (navigator.language || 'es').toLowerCase();
+  var lang = nl.startsWith('ne') ? 'ne' : nl.startsWith('en') ? 'en' : 'es';
+  var p = new URLSearchParams(location.search).get('lang');
+  if (p === 'en' || p === 'es' || p === 'ne') lang = p;
+  location.replace('/' + lang + '/events/2026-uruguay/search/');
+})();
+</script>
+<p>Redirecting to search&hellip; <a href="/es/events/2026-uruguay/search/">Go now</a></p>
+</body>
+</html>
