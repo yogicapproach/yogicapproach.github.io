@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Five Koshas · Student Notes · Session 1</title>
+  <meta name="description" content="Interactive bilingual student notes on the five koshas — grounded in the Session-1 TTC-300 talk by Satchidananda." />
+
+  <!-- Set theme before paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("kosha_theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.dataset.theme = t;
+      } catch (e) { document.documentElement.dataset.theme = "dark"; }
+    })();
+  </script>
+
+  <!-- Distinctive type: Fraunces (display) · Spectral (body) · Noto Serif Devanagari (Sanskrit) · IBM Plex Mono (labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../shared/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="mast-inner">
+      <div class="sigil" id="sigil" aria-hidden="true"></div>
+      <div class="mast-text">
+        <a class="home-link" id="homeLink" href="../../index.html">‹ home</a>
+        <p class="eyebrow" id="eyebrow"></p>
+        <h1 class="mast-title" id="mastTitle"></h1>
+        <p class="mast-sub" id="mastSub"></p>
+      </div>
+      <div class="controls" id="controls"></div>
+    </div>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Sections"></nav>
+  </header>
+
+  <main id="view" class="view" role="main"><!-- rendered by app.js --></main>
+
+  <footer class="footer">
+    <p id="footNote"></p>
+    <p class="foot-meta" id="footMeta"></p>
+  </footer>
+
+  <!-- shared UI strings + series catalog, session content bundles, then the engine -->
+  <script src="../../shared/i18n.js"></script>
+  <script src="../../shared/series.js"></script>
+  <script src="data/notes.en.js"></script>
+  <script src="data/notes.es.js"></script>
+  <script src="data/notes.ne.js"></script>
+  <script src="data/notes.pt.js"></script>
+  <script src="../../shared/session.js"></script>
+  <script src="../../shared/footer.js"></script>
+</body>
+</html>

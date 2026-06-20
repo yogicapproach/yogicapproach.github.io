@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>The Five Koshas · redirecting…</title>
+  <link rel="canonical" href="/en/talks/koshas-ttc-300-uruguay/" />
+  <script>
+    // Language-detect redirect stub (contract: /{section}/{slug}/).
+    // This app does client-side i18n inside a single /en/ path — Spanish lives
+    // in the same app via an EN/ES toggle and navigator.language auto-detect.
+    // So we forward everyone to the one hosted app, preserving any hash/query.
+    (function () {
+      var target = "/en/talks/koshas-ttc-300-uruguay/";
+      // Seed the app's language preference so the first paint matches the browser.
+      try {
+        var es = (navigator.language || "").toLowerCase().indexOf("es") === 0;
+        if (!localStorage.getItem("kosha_lang")) {
+          localStorage.setItem("kosha_lang", es ? "es" : "en");
+        }
+      } catch (e) {}
+      location.replace(target + location.search + location.hash);
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0; url=/en/talks/koshas-ttc-300-uruguay/" />
+</head>
+<body>
+  <p>Redirecting to <a href="/en/talks/koshas-ttc-300-uruguay/">the Koshas notes</a>…</p>
+</body>
+</html>
