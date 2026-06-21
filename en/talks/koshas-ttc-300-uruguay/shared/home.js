@@ -12,8 +12,8 @@
   const LANGS = [
     { code: "en", label: "EN" },
     { code: "es", label: "ES" },
-    { code: "ne", label: "ने" },   // Nepali (Devanagari)
-    { code: "pt", label: "PT" }    // Portuguese
+    { code: "ne", label: "ने" }    // Nepali (Devanagari)
+    // pt (Portuguese) held — re-add when pursued
   ];
 
   /* Deep EN fallback so partial (stub) locales render cleanly — missing keys

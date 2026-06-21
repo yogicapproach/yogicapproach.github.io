@@ -1,62 +1,57 @@
 /* ============================================================================
    KOSHAS — Student Notes · Data layer · locale: ne
-   AUTO-SCAFFOLDED from notes.en.js (NON-GPU, no translation model).
-   Every translatable string is a flagged placeholder:  "⚠TODO[ne]: <EN source>"
-   carrying the English source forward for a human / translation pass.
-   Structural fields (id, n, hue, devanagari, source, refs, recording, names,
-   Sanskrit etymology keys) are copied verbatim. NOTHING here is invented.
-   The renderer falls back to EN for any key still missing — so the page stays
-   clean while these placeholders await real translation.
-   Regenerate:  node scripts/gen-stub-locale.js ne
+   Session 1 of 4 · Koshas TTC-300, Uruguay · Satchidananda · 2026-06-10
+   ----------------------------------------------------------------------------
+   This file holds ALL content, separated from presentation. Edit freely.
    ============================================================================ */
 window.KOSHAS_I18N = (window.KOSHAS_I18N || {});
 window.KOSHAS_I18N.ne = {
   "meta": {
-    "title": "⚠TODO[ne]: The Five Koshas",
-    "subtitle": "⚠TODO[ne]: A Framework for Awareness",
-    "session": "⚠TODO[ne]: Session 1 of 4",
-    "course": "⚠TODO[ne]: 300-Hour Teacher Training · Uruguay",
+    "title": "पाँच कोशहरू",
+    "subtitle": "सजगताको लागि एक ढाँचा",
+    "session": "४ मध्ये पहिलो सत्र",
+    "course": "३००-घण्टे शिक्षक प्रशिक्षण · उरुग्वे",
     "teacher": "Satchidananda",
     "host": "Ale",
-    "date": "⚠TODO[ne]: 10 June 2026",
+    "date": "१० जुन २०२६",
     "recording": "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
-    "note": "⚠TODO[ne]: Built from the Session-1 transcript. Quotes are the teacher's words (some reconstructed from the live Spanish translation — verify ⚠ blocks against the recording). Fields marked ‘to develop’ are framework seeds for Sessions 2–4."
+    "note": "पहिलो सत्रको प्रतिलिपि (transcript) बाट तयार गरिएको। उद्धरणहरू शिक्षकका आफ्नै शब्दहरू हुन् (केही प्रत्यक्ष स्पेनिस अनुवादबाट पुन: निर्माण गरिएका हुन् — रेकर्डिङसँग ⚠ ब्लकहरू रुजु गर्नुहोस्)। 'विकसित गर्न बाँकी' भनी चिन्ह लगाइएका क्षेत्रहरू सत्र २–४ का लागि ढाँचाका रूपहरू हुन्।"
   },
   "overview": {
-    "lead": "⚠TODO[ne]: Don’t take the koshas as five boxes to memorise. Take them as a set of lenses — and learn to change the lens on demand.",
+    "lead": "कोशहरूलाई कण्ठ गर्नुपर्ने पाँचवटा बाकसका रूपमा नलिनुहोस्। तिनीहरूलाई लेन्सको सेटको रूपमा लिनुहोस् — र आवश्यक पर्दा लेन्स परिवर्तन गर्न सिक्नुहोस्।",
     "framework": {
-      "quote": "⚠TODO[ne]: I want you to see and experience the koshas as a framework — like a photographer who has a bag full of different lenses and puts on a different lens depending on the situation and the need. We want to be able to direct our awareness fluidly among the various koshas.",
+      "quote": "म तपाईंले कोशहरूलाई एक ढाँचाका रूपमा हेरेको र अनुभव गरेको चाहन्छु — जस्तै एउटा फोटोग्राफर जसको झोलामा विभिन्न लेन्सहरू हुन्छन् र उसले परिस्थिति र आवश्यकता अनुसार फरक-फरक लेन्स प्रयोग गर्दछ। हामी विभिन्न कोशहरूका बीचमा आफ्नो सजगतालाई सहज रूपमा निर्देशित गर्न सक्षम हुन चाहन्छौं।",
       "ref": "transcript-en.md:90"
     },
     "why": {
-      "quote": "⚠TODO[ne]: Otherwise, settling at the beginning of a class becomes a ritual rather than a practice that generates real change.",
+      "quote": "अन्यथा, कक्षाको सुरुमा शान्त भएर बस्नु (settling) वास्तविक परिवर्तन ल्याउने अभ्यासको सट्टा एउटा औपचारिकता मात्र बन्न पुग्छ।",
       "ref": "transcript-en.md:66"
     },
     "tradition": {
-      "quote": "⚠TODO[ne]: There is often a traditional presentation — which has immense value, because they are time-tested. But sometimes they are overly simplistic… it’s always left to the practitioner to take that and align it to themselves.",
+      "quote": "प्रायः एउटा परम्परागत प्रस्तुति हुन्छ — जसको ठूलो महत्त्व छ, किनकि तिनीहरू समयको कसीमा प्रमाणित भएका छन्। तर कहिलेकाहीं तिनीहरू अति नै सरल हुन्छन्... यसलाई आफ्नो जीवनसँग अनुकूलन गर्ने काम सधैं साधककै हातमा रहन्छ।",
       "ref": "transcript-en.md:24"
     },
-    "carAnalogy": "⚠TODO[ne]: A single metaphor runs through the whole talk: you, driving. The physical and energetic bodies are the car itself; the mind is how you handle the road; wisdom is choosing when and where to drive at all; and bliss is the felt sense of every system running in harmony.",
+    "carAnalogy": "सम्पूर्ण प्रवचनमा एउटै रूपक (metaphor) प्रयोग गरिएको छ: तपाईं, गाडी चलाउँदै हुनुहुन्छ। भौतिक शरीर र प्राणमय शरीर गाडी आफैं हुन्; मन भनेको तपाईंले सडकमा कसरी गाडी नियन्त्रण गर्नुहुन्छ भन्ने हो; विवेक भनेको गाडी कहिले र कहाँ चलाउने भनेर छनौट गर्नु हो; र आनन्द भनेको हरेक प्रणाली सामंजस्यमा चलिरहेको महसुस हुनु हो।",
     "courseArc": [
       {
         "n": 1,
-        "label": "⚠TODO[ne]: Today",
-        "body": "⚠TODO[ne]: Theory — the koshas from the traditional presentation toward a more alternative one."
+        "label": "आज",
+        "body": "सिद्धान्त — कोशहरूलाई परम्परागत प्रस्तुतिबाट अझ बढी वैकल्पिक दृष्टिकोणतर्फ।"
       },
       {
         "n": 2,
-        "label": "⚠TODO[ne]: Connection",
-        "body": "⚠TODO[ne]: The koshas from the perspective of how to connect — between students and teachers."
+        "label": "सम्बन्ध",
+        "body": "विद्यार्थी र शिक्षकहरू बीच कसरी सम्बन्ध स्थापित गर्ने भन्ने दृष्टिकोणबाट कोशहरू।"
       },
       {
         "n": 3,
-        "label": "⚠TODO[ne]: Society",
-        "body": "⚠TODO[ne]: The koshas in relation to society, and how that affects us within these layers."
+        "label": "समाज",
+        "body": "समाजको सन्दर्भमा कोशहरू, र यसले यी तहहरू भित्र हामीलाई कसरी प्रभाव पार्छ।"
       },
       {
         "n": 4,
-        "label": "⚠TODO[ne]: Integration",
-        "body": "⚠TODO[ne]: Exploring and deepening the koshas through what we’ve integrated in the earlier sessions."
+        "label": "एकीकरण",
+        "body": "अघिल्ला सत्रहरूमा हामीले आत्मसात गरेका कुराहरू मार्फत कोशहरूलाई अन्वेषण गर्ने र अझ गहिरो बनाउने।"
       }
     ]
   },
@@ -66,71 +61,71 @@ window.KOSHAS_I18N.ne = {
       "n": 1,
       "sanskrit": "Annamaya",
       "devanagari": "अन्नमय",
-      "english": "⚠TODO[ne]: The Physical / Food Sheath",
+      "english": "भौतिक / अन्न कोश",
       "hue": 18,
       "etymology": {
-        "anna": "⚠TODO[ne]: food",
-        "maya": "⚠TODO[ne]: made of / pervaded by",
-        "kosha": "⚠TODO[ne]: sheath, that which covers"
+        "anna": "अन्न (anna / food)",
+        "maya": "बनेको / व्याप्त (made of / pervaded by)",
+        "kosha": "कोश (kosha / sheath, that which covers)"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[ne]: One translation of anna is ‘food’; maya is ‘layer’; and kosha is a layer, something that covers.",
+        "text": "अन्नको एउटा अनुवाद 'खाना' हो; मयको अर्थ 'तह' हो; र कोश भनेको ढाक्ने वा ढाकेको तह हो।",
         "ref": "transcript-en.md:100"
       },
-      "traditional": "⚠TODO[ne]: The physical sheath — skin, muscle, bone, and the inner system of organs, blood, fluids, nerves and fat. Called the ‘food layer’ because when we eat, we see the immediate effect on the body. Hatha Yoga brings awareness to its more internal layers.",
+      "traditional": "भौतिक शरीर — छाला, मांसपेशी, हड्डी, र भित्री अंगहरू, रगत, तरल पदार्थ, स्नायु (nerves) र बोसोको प्रणाली। यसलाई 'अन्नको तह' भनिन्छ किनभने जब हामी खान्छौं, हामी शरीरमा यसको प्रत्यक्ष प्रभाव देख्छौं। हठ योगले यसका अझ भित्री तहहरूमा सजगता ल्याउँछ।",
       "modernLens": {
-        "name": "⚠TODO[ne]: Entropy & Cohesion",
-        "body": "⚠TODO[ne]: Reframe the body not as a fixed object but as a system of energy conversion holding itself together against the universe’s tendency to dissolve. Nothing in physics requires your body to cohere — yet over decades this ‘cloud’ has stayed together. That is the miracle the yogis paid attention to."
+        "name": "एन्ट्रोपी र सामंजस्य (Entropy & Cohesion)",
+        "body": "शरीरलाई एक स्थिर वस्तुको रूपमा होइन, बरु ब्रह्माण्डको विघटन हुने प्रवृत्तिका विरुद्ध आफैलाई एकै ठाउँमा बाँधेर राख्ने ऊर्जा रूपान्तरण प्रणालीको रूपमा बुझ्नुहोस्। भौतिकशास्त्रमा कुनै पनि कुराले तपाईंको शरीरलाई एकजुट भएर बस्न बाध्य पार्दैन — तैपनि दशकौंदेखि यो 'बादल' एकै ठाउँमा रहेको छ। योगीहरूले ध्यान दिएको चमत्कार यही हो।"
       },
-      "carMetaphor": "⚠TODO[ne]: The car itself — chassis, seats, wheels, fuel: the tangible vehicle you travel in.",
+      "carMetaphor": "गाडी आफैं — चेसिस, सिटहरू, पाङ्ग्राहरू, इन्धन: तपाईंले यात्रा गर्ने ठोस सवारी साधन।",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Body-sized and personal — the layer most uniquely ‘yours.’ The whirlpool that is unmistakably one form, yet made of the same water as everything around it."
+        "text": "शरीरको आकारको र व्यक्तिगत — सबैभन्दा बढी विशिष्ट रूपमा 'तपाईंको' तह। एउटा भुमरी (whirlpool) जुन स्पष्ट रूपमा एउटा रूप हो, तर आफ्नो वरिपरिको सबै कुरा जस्तै पानीले बनेको हुन्छ।"
       },
       "density": {
         "source": "talk",
-        "text": "⚠TODO[ne]: The densest sheath: condensed energy. ‘The physical body is condensed energy. That’s not hippie science — that’s modern science.’ Matter you cannot push your finger through."
+        "text": "सबैभन्दा सघन कोश: संकुचित ऊर्जा। 'भौतिक शरीर संकुचित ऊर्जा हो। यो कुनै हिप्पी विज्ञान होइन — यो आधुनिक विज्ञान हो।' यस्तो वस्तु जसको वारपार तपाईंले आफ्नो औंला छिराउन सक्नुहुन्न।"
       },
       "nourishment": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Food, touch, breath-into-tissue, deliberate sensation. Massaging the arms to feel density and variation; asking of any sensation, ‘where did this come from?’ — because it came from outside the body."
+        "text": "खाना, स्पर्श, तन्तुहरूमा लिइने सास, र सचेत संवेदना। घनत्व र विविधता महसुस गर्न हातहरू मालिस गर्ने; कुनै भी संवेदनामा सोध्ने, 'यो कहाँबाट आयो?' — किनभने यो शरीर बाहिरबाट आएको हो।"
       },
       "quotes": [
         {
-          "text": "⚠TODO[ne]: A whirlpool is not different from the water — it is water — but it has a definite form and structure. That is what the human body is: a field of energy that has a definite form and a definite structure.",
+          "text": "भुमरी पानी भन्दा फरक छैन — यो पानी नै हो — तर यसको निश्चित रूप र संरचना हुन्छ। मानव शरीर पनि यही हो: ऊर्जाको एउटा क्षेत्र जसको निश्चित रूप र निश्चित संरचना हुन्छ।",
           "ref": "transcript-en.md:128"
         },
         {
-          "text": "⚠TODO[ne]: The physical body — the Annamaya kosha — is a system of energy conversion.",
+          "text": "भौतिक शरीर — अन्नमय कोश — ऊर्जा रूपान्तरणको एउटा प्रणाली हो।",
           "ref": "transcript-en.md:130"
         },
         {
-          "text": "⚠TODO[ne]: Entropy is this force or phenomenon in the universe… that dissolves everything.",
+          "text": "एन्ट्रोपी ब्रह्माण्डमा रहेको त्यस्तो शक्ति वा घटना हो... जसले सबै कुरालाई विघटन गर्छ।",
           "ref": "transcript-en.md:120"
         }
       ],
-      "practice": "⚠TODO[ne]: Each time you become aware of your physical body, ask: where did this come from? It definitely came from something outside the body itself.",
+      "practice": "प्रत्येक पटक जब तपाईं आफ्नो भौतिक शरीरप्रति सजग हुनुहुन्छ, सोध्नुहोस्: यो कहाँबाट आयो? यो निश्चित रूपमा शरीर बाहिरको कुनै कुराबाट आएको हो।",
       "practiceRef": "transcript-en.md:132",
       "qa": [
         {
-          "q": "⚠TODO[ne]: Why is the physical body called the “food sheath”?",
-          "a": "⚠TODO[ne]: Because anna means food: when we eat, we see the immediate effect on the body. It is the densest sheath, built and maintained by what we take in."
+          "q": "भौतिक शरीरलाई किन \"अन्न कोश\" भनिन्छ?",
+          "a": "किनभने अन्नको अर्थ खाना हो: जब हामी खान्छौं, हामी शरीरमा यसको प्रत्यक्ष प्रभाव देख्छौं। यो हामीले ग्रहण गर्ने कुराहरूबाट निर्मित र सञ्चालित हुने सबैभन्दा सघन कोश हो।"
         },
         {
-          "q": "⚠TODO[ne]: The talk says the body is “condensed energy.” How does the whirlpool make that concrete?",
-          "a": "⚠TODO[ne]: A whirlpool is not separate from the water — it is water given a definite form and structure. The body is likewise a field of energy holding a definite form; matter is energy, which aligns with modern physics."
+          "q": "प्रवचनमा भनिएको छ कि शरीर \"संकुचित ऊर्जा\" हो। भुमरीले यसलाई कसरी मूर्त रूप दिन्छ?",
+          "a": "भुमरी पानी भन्दा फरक छैन — यो पानीलाई दिइएको निश्चित रूप र संरचना हो। शरीर पनि त्यसैगरी एउटा निश्चित रूप धारण गर्ने ऊर्जाको क्षेत्र हो; पदार्थ नै ऊर्जा हो, जुन आधुनिक भौतिकशास्त्रसँग मेल खान्छ।"
         },
         {
-          "q": "⚠TODO[ne]: What is entropy, and why does cohesion matter here?",
-          "a": "⚠TODO[ne]: Entropy is the universal force that dissolves everything. Nothing in physics requires the body to hold together, yet over decades it does — a miracle of cohesion against dissolution, which the yogis studied closely."
+          "q": "एन्ट्रोपी के हो, र यहाँ सामंजस्य (cohesion) किन महत्त्वपूर्ण छ?",
+          "a": "एन्ट्रोपी ब्रह्माण्डको त्यो शक्ति हो जसले सबै कुरालाई विघटन गर्छ। भौतिकशास्त्रमा कुनै पनि कुराले शरीरलाई एकसाथ बाँध्न आवश्यक ठान्दैन, तैपनि दशकौंसम्म यो बाँधिएर रहन्छ — विघटनको विरुद्ध सामंजस्यको यो एउका चमत्कार हो, जसलाई योगीहरूले नजिकबाट अध्ययन गरे।"
         },
         {
-          "q": "⚠TODO[ne]: What changes when we treat the body as a “system of energy conversion” instead of “I am the body”?",
-          "a": "⚠TODO[ne]: “I am the body” leads us into problems. Seeing it as energy conversion lets us ask better questions — e.g. what in my environment is in contact with this energy and distorting my experience of the body right now?"
+          "q": "जब हामी शरीरलाई \"म शरीर हुँ\" भन्नुको सट्टा \"ऊर्जा रूपान्तरणको प्रणाली\" मान्छौं, तब के परिवर्तन हुन्छ?",
+          "a": "\"म शरीर हुँ\" भन्ने धारणाले हामीलाई समस्याहरूमा लैजान्छ। यसलाई ऊर्जा रूपान्तरणको रूपमा हेर्दा हामीले अझ राम्रा प्रश्नहरू सोध्न सक्छौं — जस्तै, मेरो वातावरणमा के त्यस्तो कुरा छ जुन यस ऊर्जासँग सम्पर्कमा छ र जसले अहिले मेरो शरीरको अनुभवलाई विकृत गरिरहेको छ?"
         },
         {
-          "q": "⚠TODO[ne]: What single practice anchors this kosha?",
-          "a": "⚠TODO[ne]: Each time you notice your physical body, ask “where did this come from?” It came from something outside the body itself — food, air, environment."
+          "q": "कुन एउटै अभ्यासले यस कोशलाई स्थापित गर्छ?",
+          "a": "प्रत्येक पटक जब तपाईं आफ्नो भौतिक शरीरलाई याद गर्नुहुन्छ, सोध्नुहोस् \"यो कहाँबाट आयो?\" यो शरीर बाहिरकै कुराबाट आएको हो — जस्तै खाना, हावा र वातावरण।"
         }
       ]
     },
@@ -139,68 +134,68 @@ window.KOSHAS_I18N.ne = {
       "n": 2,
       "sanskrit": "Pranamaya",
       "devanagari": "प्राणमय",
-      "english": "⚠TODO[ne]: The Energetic / Pranic Sheath",
+      "english": "ऊर्जावान / प्राणमय कोश",
       "hue": 35,
       "etymology": {
-        "prana": "⚠TODO[ne]: vital force, life-energy",
-        "maya": "⚠TODO[ne]: made of",
-        "kosha": "⚠TODO[ne]: sheath"
+        "prana": "प्राणशक्ति, जीवन-ऊर्जा (vital force, life-energy)",
+        "maya": "बनेको (made of)",
+        "kosha": "कोश (sheath)"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[ne]: Sometimes translated as the dimension of vitality or life-force… from the Hatha Yoga perspective, intimately connected to the nadis and the nervous system.",
+        "text": "कहिलेकाहीं यसलाई जीवनशक्ति वा प्राणको आयामको रूपमा अनुवाद गरिन्छ... हठ योगको दृष्टिकोणबाट, यो नाडीहरू र स्नायु प्रणालीसँग नजिकबाट जोडिएको छ।",
         "ref": "transcript-en.md:102"
       },
-      "traditional": "⚠TODO[ne]: The dimension of vitality. In esoteric talk, the aura or field around the body; in Hatha Yoga, intimately tied to the nadis and the nervous system. The talk reserves deep work here for later sessions.",
+      "traditional": "जीवनशक्तिको आयाम। आध्यात्मिक भाषामा, शरीरको वरिपरिको आभा (aura) वा क्षेत्र; हठ योगमा, यो नाडी र स्नायु प्रणालीसँग नजिकबाट जोडिएको छ। प्रवचनले यस तहमा गहिरो कामलाई पछिल्ला सत्रहरूका लागि सुरक्षित राखेको छ।",
       "modernLens": {
-        "name": "⚠TODO[ne]: State Transition",
-        "body": "⚠TODO[ne]: Energy is what lets you shift gears between situations. Life presents many emotional landscapes; ideally you have a gear to shift into and can say, ‘I know how to handle this new landscape.’ Your ability — or inability — to make that shift is what frees you or keeps you stuck."
+        "name": "अवस्था परिवर्तन (State Transition)",
+        "body": "ऊर्जा त्यस्तो कुरा हो जसले तपाईंलाई परिस्थिति अनुसार गियर परिवर्तन गर्न मद्दत गर्छ। जीवनले धेरै भावनात्मक परिदृश्यहरू प्रस्तुत गर्दछ; आदर्श रूपमा तपाईंसँग गियर परिवर्तन गर्ने क्षमता हुनुपर्छ ताकि तपाईं भन्न सक्नुहोस्, 'मलाई यो नयाँ परिदृश्य कसरी सम्हाल्ने थाहा छ।' त्यो परिवर्तन गर्ने तपाईंको क्षमता — वा अक्षमता — ले नै तपाईंलाई मुक्त गर्छ वा बन्धनमा राख्छ।"
       },
-      "carMetaphor": "⚠TODO[ne]: The gearbox / transmission — what lets you transition from two-wheel to four-wheel drive when you leave the highway for the mountain.",
+      "carMetaphor": "गियरबक्स / ट्रान्समिसन (transmission) — जसले तपाईंलाई राजमार्ग छोडेर पहाडतर्फ लाग्दा दुई-पाङ्ग्रे ड्राइभबाट चार-पाङ्ग्रे ड्राइभमा परिवर्तन गर्न अनुमति दिन्छ।",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[ne]: A field through and around the body — dynamic by nature, constantly fluctuating. It reminds us we are never static."
+        "text": "शरीरको भित्र र बाहिरको क्षेत्र — प्रकृतिले नै गतिशील, निरन्तर उतारचढाव भइरहने। यसले हामी कहिल्यै स्थिर छैनौं भन्ने कुरा सम्झाउँछ।"
       },
       "density": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Subtler than matter, more mobile — felt as flow, charge, and change of state rather than as solid form."
+        "text": "पदार्थ भन्दा सूक्ष्म, बढी गतिशील — ठोस रूपको सट्टा प्रवाह, चार्ज, र अवस्था परिवर्तनको रूपमा महसुस हुने।"
       },
       "nourishment": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Where does energy come from, and where is it lost? ‘What are the sources of energy? What are the exit points for prana? How do I attract it to myself? What is my capacity to retain it? And from what points do I lose it?’"
+        "text": "ऊर्जा कहाँबाट आउँछ, र यो कहाँ नष्ट हुन्छ? 'ऊर्जाका स्रोतहरू के हुन्? प्राणका निकास बिन्दुहरू के हुन्? म यसलाई कसरी आकर्षित गरुँ? मेरो यसलाई कायम राख्ने क्षमता कस्तो छ? र कुन-कुन बिन्दुहरूबाट मैले यसलाई गुमाउँछु?'"
       },
       "nourishmentRef": "transcript-en.md:102",
       "quotes": [
         {
-          "text": "⚠TODO[ne]: Your ability to shift on demand, to move from one situation to another, is called a state transition.",
+          "text": "आवश्यकता अनुसार एक परिस्थितिबाट अर्कोमा जान सक्ने तपाईंको क्षमतालाई नै अवस्था परिवर्तन (state transition) भनिन्छ।",
           "ref": "transcript-en.md:134"
         },
         {
-          "text": "⚠TODO[ne]: Life presents these various emotional landscapes, and ideally we have a gear we can shift to and say, ‘I know how to handle this.’",
+          "text": "जीवनले यी विभिन्न भावनात्मक परिदृश्यहरू प्रस्तुत गर्दछ, र आदर्श रूपमा हामीसँग यस्तो गियर हुनुपर्छ जहाँ हामी परिवर्तन गरेर भन्न सकौं, 'मलाई यो कसरी सम्हाल्ने थाहा छ।'",
           "ref": "transcript-en.md:134"
         }
       ],
-      "practice": "⚠TODO[ne]: Through the day, notice the moments of state transition — after dinner, after a shower, getting into the car. Name the gear you’re shifting into.",
+      "practice": "दिनभरि, अवस्था परिवर्तनका क्षणहरूलाई याद गर्नुहोस् — बेलुकाको खाना पछि, नुहाए पछि, गाडीमा चढ्दा। तपाईं कुन गियरमा जाँदै हुनुहुन्छ त्यसलाई नाम दिनुहोस्।",
       "practiceRef": "transcript-en.md:68",
       "qa": [
         {
-          "q": "⚠TODO[ne]: What is the modern lens for the energetic body?",
-          "a": "⚠TODO[ne]: State transition — the ability to shift gears between situations, like moving from two-wheel to four-wheel drive when the road changes from highway to mountain."
+          "q": "प्राणमय शरीरको लागि आधुनिक दृष्टिकोण के हो?",
+          "a": "अवस्था परिवर्तन — परिस्थिति अनुसार गियर परिवर्तन गर्ने क्षमता, जस्तै सडक राजमार्गबाट पहाडी बाटोमा परिणत हुँदा दुई-पाङ्ग्रे ड्राइभबाट चार-पाङ्ग्रे ड्राइभमा सर्नु।"
         },
         {
-          "q": "⚠TODO[ne]: In the car analogy, which part is the pranic body?",
-          "a": "⚠TODO[ne]: The gearbox / transmission — not the chassis or the fuel, but what lets you transition between modes on demand."
+          "q": "गाडीको तुलनामा, कुन भाग प्राणमय शरीर हो?",
+          "a": "गियरबक्स / ट्रान्समिसन — चेसिस वा इन्धन होइन, तर जसले तपाईंलाई आवश्यकता अनुसार विभिन्न मोडहरू बीच परिवर्तन गर्न मद्दत गर्दछ।"
         },
         {
-          "q": "⚠TODO[ne]: What four questions does the talk pose for evaluating your prana?",
-          "a": "⚠TODO[ne]: What are the sources of energy? What are the exit points for prana? How do I attract and retain it? And from what points do I lose it?"
+          "q": "तपाईंको प्राणको मूल्याङ्कन गर्नका लागि प्रवचनले कुन चारवटा प्रश्नहरू खडा गरेको छ?",
+          "a": "ऊर्जाका स्रोतहरू के हुन्? प्राणका निकास बिन्दुहरू के हुन्? म यसलाई कसरी आकर्षित र कायम राख्न सक्छु? र कुन बिन्दुहरूबाट मैले यसलाई गुमाउँछु?"
         },
         {
-          "q": "⚠TODO[ne]: Why is “state transition” practical for emotional life?",
-          "a": "⚠TODO[ne]: Life presents many emotional landscapes; ideally you have a gear to shift into and can say “I know how to handle this.” The inability to shift is what keeps us stuck in one landscape."
+          "q": "भावनात्मक जीवनका लागि \"अवस्था परिवर्तन\" किन व्यावहारिक छ?",
+          "a": "जीवनले धेरै भावनात्मक परिदृश्यहरू प्रस्तुत गर्दछ; आदर्श रूपमा तपाईंसँग गियर परिवर्तन गर्ने क्षमता हुनुपर्छ जसले गर्दा भन्न सकियोस् \"मलाई यो कसरी सम्हाल्ने थाहा छ।\" परिवर्तन गर्न नसक्दा हामी एउटै भावनात्मक परिदृश्यमा अड्किरहन्छौं।"
         },
         {
-          "q": "⚠TODO[ne]: How does this kosha relate to the nervous system?",
-          "a": "⚠TODO[ne]: From the Hatha Yoga perspective it is intimately connected to the nadis and the nervous system — the dimension of vitality, dynamic by nature and always fluctuating."
+          "q": "यो कोश स्नायु प्रणालीसँग कसरी सम्बन्धित छ?",
+          "a": "हठ योगको दृष्टिकोणबाट यो नाडी र स्नायु प्रणालीसँग नजिकबाट जोडिएको छ — जीवनशक्ति (vitality) को आयाम, जुन प्रकृतिले नै गतिशील र सधैं उतारचढाव भइरहने हुन्छ।"
         }
       ]
     },
@@ -209,67 +204,67 @@ window.KOSHAS_I18N.ne = {
       "n": 3,
       "sanskrit": "Manomaya",
       "devanagari": "मनोमय",
-      "english": "⚠TODO[ne]: The Mental Sheath",
+      "english": "मानसिक / मनोमय कोश",
       "hue": 190,
       "etymology": {
-        "manas": "⚠TODO[ne]: mind",
-        "maya": "⚠TODO[ne]: made of",
-        "kosha": "⚠TODO[ne]: sheath"
+        "manas": "मन (mind)",
+        "maya": "बनेको (made of)",
+        "kosha": "कोश (sheath)"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[ne]: Manu refers to the mind; maya again as a veil; kosha as the space of that mental layer.",
+        "text": "मनुले मनलाई बुझाउँछ; मयले फेरि एक घुम्टो वा पर्दालाई बुझाउँछ; कोश भनेको त्यो मानसिक तहको स्थान हो।",
         "ref": "transcript-en.md:104"
       },
-      "traditional": "⚠TODO[ne]: The mental layer, split usefully into the lower mind (perception, memory, some cognition) and the higher mind (intellect, discernment / viveka, reflection, contemplation, meditation). Much of Raja Yoga works here.",
+      "traditional": "मानसिक तह, जसलाई तल्लो मन (प्रत्यक्षीकरण/perception, स्मृति र केही संज्ञान) र उच्च मन (बुद्धि, विवेक/discernment, विचार, चिन्तन, ध्यान) मा उपयोगी रूपमा विभाजन गरिएको छ। राज योगको अधिकांश कार्य यहाँ हुन्छ।",
       "modernLens": {
-        "name": "⚠TODO[ne]: Attention Management",
-        "body": "⚠TODO[ne]: A great car you can drive still won’t save you from every situation. When the storm hits or the leopard jumps onto the road, what lets you respond is the capacity to direct attention. To work with the Manomaya kosha is to work with all the subsystems of attention."
+        "name": "ध्यान व्यवस्थापन (Attention Management)",
+        "body": "तपाईंले चलाउन सक्ने उत्कृष्ट गाडीले पनि तपाईंलाई हरेक परिस्थितिबाट बचाउन सक्दैन। जब आँधी आउँछ वा चितुवा सडकमा हामफाल्छ, तब तपाईंलाई प्रतिक्रिया दिन मद्दत गर्ने कुरा ध्यान निर्देशित गर्ने क्षमता हो। मनोमय कोशसँग काम गर्नु भनेको ध्यानका सबै उप-प्रणालीहरूसँग काम गर्नु हो।"
       },
-      "carMetaphor": "⚠TODO[ne]: Driving in changing conditions — are you on the Spotify playlist, or can you rotate attention to the leopard arriving on the road?",
+      "carMetaphor": "परिवर्तित परिस्थितिमा गाडी चलाउनु — के तपाईं स्पोटिफाई (Spotify) को गीतको सूचीमा व्यस्त हुनुहुन्छ, वा सडकमा आएको चितुवातर्फ आफ्नो ध्यान मोड्न सक्नुहुन्छ?",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Reaches across time — not just the present moment but the whole week, the last ten years. ‘Where was my attention in that moment, or over the whole week, or the last ten years?’"
+        "text": "समयको दायरा पार गर्छ — वर्तमान क्षण मात्र होइन तर पूरै हप्ता, विगत १० वर्ष। 'त्यो क्षणमा, वा पूरै हप्ता, वा विगत १० वर्षमा मेरो ध्यान कहाँ थियो?'"
       },
       "density": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Subtler than energy; experienced as thought, perception and discernment. Two strata: lower mind (perception/memory) and higher mind (intellect/viveka)."
+        "text": "ऊर्जा भन्दा सूक्ष्म; विचार, प्रत्यक्षीकरण (perception) र विवेकको रूपमा अनुभव गरिने। यसका दुई तह छन्: तल्लो मन (प्रत्यक्षीकरण/स्मृति) र उच्च मन (बुद्धि/विवेक)।"
       },
       "nourishment": {
         "source": "expansion",
-        "text": "⚠TODO[ne]: To develop: deliberate attention, study, quality sensory input, and Raja-yoga practices that train the mind to hold and redirect focus. (Talk emphasises attention as the trainable faculty here.)"
+        "text": "विकसित गर्नका लागि: सचेत ध्यान, अध्ययन, गुणस्तरीय संवेदी इनपुट (sensory input), र मनलाई एकाग्र राख्न र ध्यान मोड्न प्रशिक्षित गर्ने राज योगका अभ्यासहरू। (यहाँ प्रवचनले ध्यानलाई नै प्रशिक्षित गर्न सकिने संकायको रूपमा जोड दिएको छ।)"
       },
       "quotes": [
         {
-          "text": "⚠TODO[ne]: What lets you respond to the changes within that landscape is the capacity to direct attention, which is within the field of the Manomaya kosha.",
+          "text": "त्यस परिदृश्य भित्रका परिवर्तनहरूमा तपाईंलाई प्रतिक्रिया दिन मद्दत गर्ने क्षमता नै ध्यान निर्देशित गर्ने क्षमता हो, जुन मनोमय कोशको क्षेत्र भित्र पर्दछ।",
           "ref": "transcript-en.md:136"
         },
         {
-          "text": "⚠TODO[ne]: Many of the biggest problems we face as humans are not because a rock fell from the sky, but because we ignored a situation right in front of us for long periods of time.",
+          "text": "मानिसका रूपमा हामीले सामना गर्ने धेरै जसो ठूला समस्याहरू आकाशबाट ढुङ्गा खसेका कारणले होइनन्, बरु हाम्रा अगाडि रहेको परिस्थितिलाई लामो समयसम्म बेवास्ता गरेकाले सिर्जना हुन्छन्।",
           "ref": "transcript-en.md:138"
         }
       ],
-      "practice": "⚠TODO[ne]: Once a day ask: where was my attention most directed today? Chart it through to the last session — a simple sadhana journal that paints pictures you might not have realised.",
+      "practice": "दिनमा एक पटक सोध्नुहोस्: आज मेरो ध्यान सबैभन्दा बढी कहाँ केन्द्रित थियो? अन्तिम सत्रसम्म यसको लेखाजोखा राख्नुहोस् — एउटा साधारण साधना डायरी जसले तपाईंले नसोचेका पाटाहरू उजागर गर्छ।",
       "practiceRef": "transcript-en.md:200",
       "qa": [
         {
-          "q": "⚠TODO[ne]: What is the modern lens for the mental body?",
-          "a": "⚠TODO[ne]: Attention management — working with all the subsystems that direct and hold attention."
+          "q": "मानसिक शरीरको लागि आधुनिक दृष्टिकोण के हो?",
+          "a": "ध्यान व्यवस्थापन — ध्यान निर्देशित र एकाग्र राख्ने सबै उप-प्रणालीहरूसँग काम गर्नु।"
         },
         {
-          "q": "⚠TODO[ne]: What is the difference between the lower and higher mind?",
-          "a": "⚠TODO[ne]: Lower mind: perception, memory, some cognition. Higher mind: intellect, discernment (viveka), evaluation, reflection, contemplation, meditation — much of Raja Yoga’s domain."
+          "q": "तल्लो मन र उच्च मन बीच के फरक छ?",
+          "a": "तल्लो मन: प्रत्यक्षीकरण (perception), स्मृति (memory), केही संज्ञान (cognition)। उच्च मन: बुद्धि (intellect), विवेक (discernment/viveka), मूल्याङ्कन, विचार, चिन्तन, ध्यान — जुन राज योगको मुख्य क्षेत्र हो।"
         },
         {
-          "q": "⚠TODO[ne]: How does the leopard illustrate attention?",
-          "a": "⚠TODO[ne]: When a leopard jumps onto the road, can you rotate attention from the Spotify playlist to what is actually happening? Responding to a changing landscape is a function of directed attention."
+          "q": "चितुवाले ध्यानलाई कसरी स्पष्ट पार्छ?",
+          "a": "जब सडकमा चितुवा देखा पर्छ, के तपाईं स्पोटिफाईको गीतको सूचीबाट आफ्नो ध्यान हटाएर वास्तविक घटनामा केन्द्रित गर्न सक्नुहुन्छ? परिवर्तित परिदृश्यमा प्रतिक्रिया दिनु निर्देशित ध्यानकै कार्य हो।"
         },
         {
-          "q": "⚠TODO[ne]: How does the talk reframe many life problems as attention problems?",
-          "a": "⚠TODO[ne]: Many big problems are not a rock falling from the sky but a situation we ignored for a long time. The question becomes: where was my attention all that time — that week, those ten years?"
+          "q": "प्रवचनले कसरी जीवनका धेरै समस्याहरूलाई ध्यानको समस्याका रूपमा प्रस्तुत गर्छ?",
+          "a": "धेरै ठूला समस्याहरू आकाशबाट ढुङ्गा खसेजस्तो अकस्मात् आउँदैनन्, बरु ती हामीले लामो समयसम्म बेवास्ता गरेका परिस्थिति हुन्। मुख्य प्रश्न यो हो: त्यो सम्पूर्ण समयमा — त्यो हप्ता, ती १० वर्षमा मेरो ध्यान कहाँ थियो?"
         },
         {
-          "q": "⚠TODO[ne]: What practice trains this kosha?",
-          "a": "⚠TODO[ne]: Ask once a day “where was my attention most directed today?” and chart it — a simple sadhana journal that reveals patterns you didn’t notice."
+          "q": "कुन अभ्यासले यस कोशलाई प्रशिक्षित गर्छ?",
+          "a": "दिनमा एक पटक सोध्नुहोस् \"आज मेरो ध्यान सबैभन्दा बढी कहाँ केन्द्रित थियो?\" र यसलाई रेकर्ड गर्नुहोस् — एउटा साधारण साधना डायरी जसले तपाईंले याद नगरेका ढाँचाहरू (patterns) प्रकट गर्दछ।"
         }
       ]
     },
@@ -278,73 +273,73 @@ window.KOSHAS_I18N.ne = {
       "n": 4,
       "sanskrit": "Vijnanamaya",
       "devanagari": "विज्ञानमय",
-      "english": "⚠TODO[ne]: The Wisdom Sheath",
+      "english": "ज्ञान / विज्ञानमय कोश",
       "hue": 255,
       "etymology": {
-        "vijnana": "⚠TODO[ne]: wisdom, deep knowing",
-        "maya": "⚠TODO[ne]: made of",
-        "kosha": "⚠TODO[ne]: sheath"
+        "vijnana": "ज्ञान, गहिरो बोध (wisdom, deep knowing)",
+        "maya": "बनेको (made of)",
+        "kosha": "कोश (sheath)"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[ne]: Vijnana means wisdom, and maya kosha the space where that wisdom is expressed.",
+        "text": "विज्ञानको अर्थ ज्ञान (wisdom) हो, र मय कोश भनेको त्यो ज्ञान व्यक्त हुने स्थान हो।",
         "ref": "transcript-en.md:106"
       },
-      "traditional": "⚠TODO[ne]: The body of wisdom and intuition — more abstract. Where the physical body is unique to our personal identity, the wisdom body begins to draw us out of ourselves and place us within the context of a larger whole. A first level at which ideas like the collective conscious become useful.",
+      "traditional": "ज्ञान र अन्तर्ज्ञान (intuition) को शरीर — अझ अमूर्त। जहाँ भौतिक शरीर हाम्रो व्यक्तिगत पहिचानमा सीमित हुन्छ, ज्ञानको शरीरले हामीलाई आफूभन्दा बाहिर निकालेर वृहत्तर अस्तित्वको सन्दर्भमा राख्छ। यो पहिलो यस्तो तह हो जहाँ सामूहिक चेतना (collective conscious) जस्ता धारणाहरू उपयोगी बन्छन्।",
       "modernLens": {
-        "name": "⚠TODO[ne]: Pattern Recognition",
-        "body": "⚠TODO[ne]: The calmer driver says: ‘I’ve never had to hit a leopard. I don’t drive when the leopards are out — and I check the weather before storms.’ Pattern recognition is the root of yoga, of Ayurveda, of all the ancient and modern sciences: recognising ‘I have seen this before,’ and asking whether a thread connects every similar experience."
+        "name": "ढाँचा पहिचान (Pattern Recognition)",
+        "body": "एक शान्त चालकले भन्छ: 'मैले कहिल्यै चितुवालाई ठक्कर दिनु परेको छैन। चितुवाहरू बाहिर निस्कने समयमा म गाडी चलाउँदिन — र आँधी आउनु अघि मौसम जाँच गर्छु।' ढाँचा पहिचान (pattern recognition) नै योग, आयुर्वेद र सबै प्राचीन तथा आधुनिक विज्ञानको जड हो: 'मैले यो पहिले पनि देखेको छु' भनेर पहिचान गर्नु, र हरेक उस्तै अनुभवलाई एउटै सूत्रले जोड्छ कि भनी सोध्नु।"
       },
-      "carMetaphor": "⚠TODO[ne]: Not handling the road better — choosing when and where to drive at all, by reading the patterns of leopards and weather.",
+      "carMetaphor": "सडकलाई अझ राम्ररी सम्हाल्नु मात्र होइन — चितुवा र मौसमको ढाँचा बुझेर गाडी कहिले र कहाँ चलाउने भनेर छनौट गर्नु।",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[ne]: The widest yet — it pulls the point-self into a much larger space we call reality. ‘Phenomena scale at every layer’: what we see in the microcosm is possibly happening in the macrocosm at another scale."
+        "text": "अहिलेसम्मकै सबैभन्दा व्यापक — यसले हाम्रो सीमित 'म' लाई एउटा वृहत्तर क्षेत्रमा तान्छ जसलाई हामी वास्तविकता भन्छौं। 'घटनाहरू हरेक तहमा विस्तारित हुन्छन् (Phenomena scale at every layer)': हामीले सूक्ष्म जगत (microcosm) मा जे देख्छौं, त्यो सम्भवतः अर्को स्तरमा विशाल ब्रह्माण्ड (macrocosm) मा पनि घटिरहेको हुन्छ।"
       },
       "scaleRef": "transcript-en.md:144",
       "density": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Abstract and intuitive — ‘from this body onward it becomes a little more abstract.’ Felt less as content, more as connection and recognition."
+        "text": "अमूर्त र अन्तर्ज्ञानी — 'यस शरीरबाट अगाडि यो अलि बढी अमूर्त बन्दै जानछ।' यसलाई विषयवस्तु भन्दा बढी सम्बन्ध र पहिचानको रूपमा महसुस गरिन्छ।"
       },
       "nourishment": {
         "source": "expansion",
-        "text": "⚠TODO[ne]: To develop: reflection, contemplation, exposure to many experiences to compare, and imagination — ‘we can imagine what other people might be feeling, and connect with that emotion deeply.’"
+        "text": "विकसित गर्नका लागि: चिन्तन, मनन, तुलना गर्नका लागि धेरै अनुभवहरू लिनु, र कल्पनाशीलता — 'हामी अरू मानिसहरूले के महसुस गरिरहेका होलान् भनी कल्पना गर्न सक्छौं, र त्यस भावनात्मक अवस्थासँग गहिरो रूपमा जोडिन सक्छौं।'"
       },
       "nourishmentRef": "transcript-en.md:142",
       "quotes": [
         {
-          "text": "⚠TODO[ne]: Pattern recognition is the root of the whole field of yoga, of Ayurveda, of all the modern and ancient sciences.",
+          "text": "ढाँचा पहिचान (Pattern recognition) नै योगको सम्पूर्ण क्षेत्र, आयुर्वेद र सबै आधुनिक तथा प्राचीन विज्ञानको मूल आधार हो।",
           "ref": "transcript-en.md:142"
         },
         {
-          "text": "⚠TODO[ne]: If I can recognize personal patterns, in some way that is helping me to experience and explore universal patterns.",
+          "text": "यदि मैले आफ्ना व्यक्तिगत ढाँचाहरू पहिचान गर्न सकें भने, त्यसले मलाई ब्रह्माण्डीय ढाँचाहरू अनुभव गर्न र अन्वेषण गर्न मद्दत पुर्‍याउँछ।",
           "ref": "transcript-en.md:144"
         },
         {
-          "text": "⚠TODO[ne]: The wisdom body begins to draw us out of ourselves and place us within the context of a larger whole.",
+          "text": "ज्ञानको शरीरले हामीलाई आफूभन्दा बाहिर निकालेर वृहत्तर अस्तित्वको सन्दर्भमा राख्न थाल्छ।",
           "ref": "transcript-en.md:106"
         }
       ],
-      "practice": "⚠TODO[ne]: When something recurs in your life, hold the question: is there a connected thread between every point, every similar experience? Let that reflection place you in a larger context.",
+      "practice": "जब तपाईंको जीवनमा कुनै कुरा बारम्बार दोहोरिन्छ, यो प्रश्न मनमा राख्नुहोस्: के हरेक उस्तै अनुभव वा बिन्दुहरू बीच कुनै साझा धागो छ? त्यस चिन्तनले तपाईंलाई वृहत्तर सन्दर्भमा स्थापित गरोस्।",
       "practiceRef": "transcript-en.md:142",
       "qa": [
         {
-          "q": "⚠TODO[ne]: What is the modern lens for the wisdom body?",
-          "a": "⚠TODO[ne]: Pattern recognition — recognising “I have seen this before,” and asking whether a thread connects every similar experience."
+          "q": "ज्ञान शरीरको लागि आधुनिक दृष्टिकोण के हो?",
+          "a": "ढाँचा पहिचान — \"मैले यो पहिले पनि देखेको छु\" भनी बुझ्नु र हरेक समान अनुभवलाई कुनै साझा धागोले जोड्छ कि भनी खोजी गर्नु।"
         },
         {
-          "q": "⚠TODO[ne]: How does the “calmer driver” differ from the merely skilled one?",
-          "a": "⚠TODO[ne]: The skilled driver brakes for every leopard and powers through every storm. The calmer driver checks the weather and doesn’t drive when leopards are out — choosing when and where to drive, not just handling the road."
+          "q": "एक \"शान्त चालक\" केवल सीपालु चालक भन्दा कसरी भिन्न हुन्छ?",
+          "a": "सीपालु चालकले हरेक चितुवा देख्दा ब्रेक लगाउँछ र आँधीबेहरीमा पनि गाडी चलाउँछ। तर शान्त चालकले मौसम जाँच गर्छ र चितुवाहरू बाहिर निस्कने समयमा गाडी चलाउँदैन — उसले केवल सडक सम्हाल्ने मात्र होइन, गाडी कहिले र कहाँ चलाउने भन्ने निर्णय गर्छ।"
         },
         {
-          "q": "⚠TODO[ne]: Why is pattern recognition called the root of yoga, Ayurveda and the sciences?",
-          "a": "⚠TODO[ne]: All of them rest on recognising recurring patterns and connecting them; that capacity pulls the point-self into the larger space we call reality."
+          "q": "ढाँचा पहिचानलाई किन योग, आयुर्वेद र विज्ञानको मूल भनिन्छ?",
+          "a": "यी सबै विषयहरू बारम्बार दोहोरिने ढाँचाहरू पहिचान गर्न र तिनीहरूलाई जोड्नमा आधारित छन्; यस क्षमताले सीमित आत्मलाई त्यो विशाल क्षेत्रमा लैजान्छ जसलाई हामी वास्तविकता भन्छौं।"
         },
         {
-          "q": "⚠TODO[ne]: What does “phenomena scale at every layer” mean?",
-          "a": "⚠TODO[ne]: What we see in the microcosm is possibly happening in the macrocosm at another scale. Recognising personal patterns helps us explore universal ones."
+          "q": "\"घटनाहरू हरेक तहमा विस्तारित हुन्छन्\" भन्नुको अर्थ के हो?",
+          "a": "हामीले सूक्ष्म जगतमा जे देख्छौं, त्यो सम्भवतः अर्को स्तरमा विशाल ब्रह्माण्डमा पनि घटिरहेको हुन्छ। व्यक्तिगत ढाँचाहरू पहिचान गर्नाले हामीलाई ब्रह्माण्डीय ढाँचाहरू अन्वेषण गर्न मद्दत गर्दछ।"
         },
         {
-          "q": "⚠TODO[ne]: How does this kosha relate to empathy and imagination?",
-          "a": "⚠TODO[ne]: Recognising patterns lets us imagine a future we haven’t lived and imagine what others feel — connecting with that emotion deeply, drawing us out of ourselves into a larger whole."
+          "q": "यो कोश समानुभूति (empathy) र कल्पनाशीलतासँग कसरी सम्बन्धित छ?",
+          "a": "ढाँचा पहिचानले हामीलाई आफूले नभोगेको भविष्यको कल्पना गर्न र अरूले के महसुस गर्छन् भन्ने कुरा बुझ्न मद्दत गर्छ — तिनीहरूको भावनासँग गहिरो रूपमा जोडिएर हामीलाई आफूभन्दा बाहिर वृहत्तर अस्तित्वमा समाहित गराउँछ।"
         }
       ]
     },
@@ -353,161 +348,161 @@ window.KOSHAS_I18N.ne = {
       "n": 5,
       "sanskrit": "Anandamaya",
       "devanagari": "आनन्दमय",
-      "english": "⚠TODO[ne]: The Bliss Sheath",
+      "english": "आनन्द / आनन्दमय कोश",
       "hue": 45,
       "etymology": {
-        "ananda": "⚠TODO[ne]: bliss, beatitude; the unchanging",
-        "maya": "⚠TODO[ne]: made of",
-        "kosha": "⚠TODO[ne]: sheath"
+        "ananda": "आनन्द, परमसुख; अपरिवर्तनीय (bliss, beatitude; the unchanging)",
+        "maya": "बनेको (made of)",
+        "kosha": "कोश (sheath)"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[ne]: Ananda is usually translated as bliss or beatitude, but it can also be seen as the uniform, the pure, that which does not change.",
+        "text": "आनन्दलाई सामान्यतया परमानन्द वा परमसुखका रूपमा अनुवाद गरिन्छ, तर यसलाई एकरूप, शुद्ध र कहिल्यै परिवर्तन नहुने तत्त्वको रूपमा पनि हेर्न सकिन्छ।",
         "ref": "transcript-en.md:108"
       },
-      "traditional": "⚠TODO[ne]: The bliss body. Ananda as bliss or beatitude — but also as the uniform, the pure, that which does not change.",
+      "traditional": "आनन्द शरीर। आनन्द भन्नाले परमसुख वा परमानन्द — तर साथै एकरूप, शुद्ध, र कहिल्यै परिवर्तन नहुने अवस्था।",
       "modernLens": {
-        "name": "⚠TODO[ne]: Baseline Coherence",
-        "body": "⚠TODO[ne]: What is the felt sense when the car runs perfectly — transmission needing zero attention, every sensor reporting correct and on time, climate and steering right, and you know where you’re going? That harmony of all systems at their optimum is a hint of Anandamaya: a state of non-duality, of non-conflict with any other system."
+        "name": "आधारभूत सामंजस्य (Baseline Coherence)",
+        "body": "जब गाडी पूर्ण रूपमा चल्छ, तब कस्तो अनुभूति हुन्छ — ट्रान्समिसनमा कत्ति पनि ध्यान दिनु नपर्ने, हरेक सेन्सरले सही र समयमै रिपोर्ट गर्ने, वातानुकूलन र स्टेयरिङ ठीक हुने, र तपाईं कहाँ जाँदै हुनुहुन्छ भन्ने थाहा हुने? सबै प्रणालीहरूको उत्कृष्ट अवस्थाको त्यो सामंजस्य नै आनन्दमयको सङ्केत हो: अद्वैत (non-duality) को अवस्था, जहाँ अन्य कुनै प्रणालीसँग कुनै द्वन्द्व हुँदैन।"
       },
-      "carMetaphor": "⚠TODO[ne]: Not a part of the car — the felt sense when every part is working in harmony at once.",
+      "carMetaphor": "गाडीको कुनै भाग होइन — बरु गाडीको हरेक भाग एकैसाथ पूर्ण सामंजस्यमा चल्दाको अनुभूति।",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Universal and non-dual — ‘a frequency we align with… that pervades each of the koshas and the whole universe.’ Not a layer beside the others but the coherence underlying them."
+        "text": "ब्रह्माण्डीय र अद्वैत — 'त्यस्तो तरंग (frequency) जसमा हामी आफूलाई एकाकार गर्छौं... जसले प्रत्येक कोश र सम्पूर्ण ब्रह्माण्डलाई व्याप्त गर्दछ।' यो अन्य कोशहरू जस्तै एउटा तह होइन, बरु ती सबैको आधारमा रहेको सामंजस्य हो।"
       },
       "scaleRef": "transcript-en.md:214",
       "density": {
         "source": "talk",
-        "text": "⚠TODO[ne]: The uniform, the pure, that which does not change — the still ground beneath the four fluctuating sheaths."
+        "text": "एकरूप, शुद्ध, र कहिल्यै परिवर्तन नहुने — परिवर्तन भइरहने चार कोशहरूको मुनि रहेको स्थिर आधार।"
       },
       "nourishment": {
         "source": "talk",
-        "text": "⚠TODO[ne]: Not added from outside but uncovered: ‘peace is not something we have to add to ourselves; we only have to manage the other distractions.’ It is experienced when the other four koshas function harmoniously."
+        "text": "बाहिरबाट थपिने होइन बरु उजागर हुने: 'शान्ति हामीले आफूमा थप्नुपर्ने कुरा होइन; हामीले केवल अन्य अवरोध वा विचलनहरूलाई व्यवस्थापन गर्नुपर्छ।' जब अन्य चार कोशहरूले सामंजस्यपूर्ण रूपमा काम गर्छन्, तब यसको अनुभव हुन्छ।"
       },
       "nourishmentRef": "transcript-en.md:148",
       "quotes": [
         {
-          "text": "⚠TODO[ne]: Baseline coherence — a state of non-duality, or non-conflict with any other system.",
+          "text": "आधारभूत सामंजस्य — अद्वैतको अवस्था, वा अन्य कुनै प्रणालीसँग द्वन्द्व नभएको अवस्था।",
           "ref": "transcript-en.md:146"
         },
         {
-          "text": "⚠TODO[ne]: We are intrinsically beings of peace — peace is not something we have to add to ourselves; we only have to manage the other distractions.",
+          "text": "हामी स्वभावैले शान्तिका स्वरूप हौं — शान्ति हामीले बाहिरबाट थप्नुपर्ने कुरा होइन; हामीले केवल अरू विचलनहरूलाई व्यवस्थापन गरे पुग्छ।",
           "ref": "transcript-en.md:148"
         },
         {
-          "text": "⚠TODO[ne]: The Anandamaya kosha can truly be experienced when the other four koshas are functioning harmoniously.",
+          "text": "आनन्दमय कोशको वास्तविक अनुभव तब मात्र हुन सक्छ जब अन्य चार कोशहरूले सामंजस्यपूर्ण रूपमा काम गरिरहेका हुन्छन्।",
           "ref": "transcript-en.md:148"
         }
       ],
-      "practice": "⚠TODO[ne]: Recall a moment when every system felt right at once — body, energy, mind, knowing. Don’t reach for it; just notice it is already your baseline beneath the distractions.",
+      "practice": "यस्तो क्षणलाई सम्झनुहोस् जब सबै प्रणालीहरू — शरीर, ऊर्जा, मन, र ज्ञान — एकैसाथ ठीक महसुस भएका थिए। यसलाई प्राप्त गर्न प्रयास नगर्नुहोस्; केवल यो याद गर्नुहोस् कि यो विचलनहरूको मुनि अवस्थित तपाईंको आधारभूत अवस्था (baseline) नै हो।",
       "practiceRef": "transcript-en.md:146",
       "qa": [
         {
-          "q": "⚠TODO[ne]: What is the modern lens for the bliss body?",
-          "a": "⚠TODO[ne]: Baseline coherence — a state of non-duality, of non-conflict with any other system."
+          "q": "आनन्द शरीरको लागि आधुनिक दृष्टिकोण के हो?",
+          "a": "आधारभूत सामंजस्य — अद्वैतको अवस्था, वा अन्य कुनै प्रणालीसँग द्वन्द्व नभएको अवस्था।"
         },
         {
-          "q": "⚠TODO[ne]: How does the perfectly-running car point to ananda?",
-          "a": "⚠TODO[ne]: When the transmission needs zero attention, every sensor reports correct and on time, climate and steering are right, and you know where you’re going — that harmony of all systems at their optimum is a hint of Anandamaya."
+          "q": "पूर्ण रूपमा चलिरहेको गाडीले कसरी आनन्दतर्फ सङ्केत गर्छ?",
+          "a": "जब ट्रान्समिसनमा कत्ति पनि ध्यान दिनु पर्दैन, हरेक सेन्सरले सही र समयमै रिपोर्ट गर्छ, वातानुकूलन र स्टेयरिङ ठीक हुन्छ, र तपाईं कहाँ जाँदै हुनुहुन्छ भन्ने थाहा हुन्छ — ती सबै प्रणालीहरूको उत्कृष्ट अवस्थाको त्यो सामंजस्य नै आनन्दमयको सङ्केत हो।"
         },
         {
-          "q": "⚠TODO[ne]: What is the surprising claim about peace?",
-          "a": "⚠TODO[ne]: We are intrinsically beings of peace; peace is not something we add — we only have to manage the distractions in the other four koshas."
+          "q": "शान्तिको बारेमा आश्चर्यजनक दाबी के हो?",
+          "a": "हामी स्वभावैले शान्तिका स्वरूप हौं; शान्ति हामीले थप्ने कुरा होइन — हामीले केवल अन्य चार कोशहरूमा रहेका विचलनहरूलाई व्यवस्थापन गरे पुग्छ।"
         },
         {
-          "q": "⚠TODO[ne]: Besides “bliss,” how else can ananda be understood?",
-          "a": "⚠TODO[ne]: As the uniform, the pure, that which does not change — the still ground beneath the four fluctuating sheaths."
+          "q": "\"परमसुख\" बाहेक, आनन्दलाई अरू कसरी बुझ्न सकिन्छ?",
+          "a": "एकरूप, शुद्ध, र कहिल्यै परिवर्तन नहुने अवस्थाको रूपमा — जुन निरन्तर परिवर्तन भइरहने चार कोशहरू मुनि रहेको स्थिर आधार हो।"
         },
         {
-          "q": "⚠TODO[ne]: When can this kosha actually be experienced?",
-          "a": "⚠TODO[ne]: When the other four koshas are functioning harmoniously — which is why an integrated lifestyle attends to all of them rather than over-focusing on one."
+          "q": "यस कोशको वास्तविक अनुभव कहिले हुन सक्छ?",
+          "a": "जब अन्य चार कोशहरूले सामंजस्यपूर्ण रूपमा काम गरिरहेका हुन्छन् — त्यसैले एक एकीकृत जीवनशैलीले कुनै एक कोशमा मात्र बढी ध्यान दिनुको सट्टा ती सबैमा ध्यान दिन्छ।"
         }
       ]
     }
   ],
   "between": {
-    "lead": "⚠TODO[ne]: The richest material lives between the sheaths — where a phenomenon refuses to sit in one box, where imbalance in one layer leaks into another, and where the framework becomes a diagnostic tool for yourself and your students.",
+    "lead": "सबैभन्दा समृद्ध विषयवस्तु यी कोशहरूका बीचमा रहन्छ — जहाँ कुनै पनि घटना एउटै बाकसमा सीमित हुन मान्दैन, जहाँ एउटा तहको असन्तुलन अर्को तहमा सर्छ, र जहाँ यो ढाँचा तपाईं र तपाईंका विद्यार्थीहरूको लागि एक निदान उपकरण (diagnostic tool) बन्दछ।",
     "sections": [
       {
         "id": "emotions",
-        "title": "⚠TODO[ne]: Emotions cross the koshas",
+        "title": "भावनाहरूले कोशहरू पार गर्छन्",
         "source": "talk",
-        "body": "⚠TODO[ne]: A student asked whether emotions belong to the physical kosha. The answer: emotions don’t live in any single sheath — they arise and move through all of them. ‘Emotion is energy in motion’; when energy moves and connects with meaning, we feel it as emotion. The first interface for feeling is the body — ‘a marvellous interface’ — and if the body’s signals aren’t heard by the mind, we distort our environment until we ask, ‘wait, how did I get here?’",
+        "body": "भावनाहरू भौतिक कोशसँग सम्बन्धित छन् कि भनी एक विद्यार्थीले सोधेका थिए। उत्तर: भावनाहरू कुनै एउटै कोशमा मात्र बस्दैनन् — ती सबै कोशहरूमा उत्पन्न र प्रवाहित हुन्छन्। 'भावना गतिमा रहेको ऊर्जा हो (Emotion is energy in motion)'; जब ऊर्जा गतिशील हुन्छ र अर्थसँग जोडिन्छ, हामी त्यसलाई भावनाको रूपमा अनुभव गर्छौं। भावना महसुस गर्ने पहिलो माध्यम शरीर हो — 'एक अद्भुत माध्यम (interface)' — र यदि शरीरका सङ्केतहरू मनले सुनेन भने, हामी आफ्नो वातावरणलाई विकृत गर्छौं र अन्ततः सोच्छौं, 'पर्खनुहोस्, म यहाँ कसरी आइपुगें?'",
         "quotes": [
           {
-            "text": "⚠TODO[ne]: I don’t think emotions are in any one kosha, but a phenomenon that arises and moves through them.",
+            "text": "म भावनाहरू कुनै एउटै कोशमा सीमित छन् भन्ने ठान्दिन, तर यो एउटा यस्तो घटना हो जुन ती सबैमा उत्पन्न र प्रवाहित हुन्छ।",
             "ref": "transcript-en.md:176"
           },
           {
-            "text": "⚠TODO[ne]: It’s much easier to be physically balanced than emotionally balanced, on any timeline.",
+            "text": "कुनै पनि समयसीमामा भावनात्मक रूपमा सन्तुलित हुनु भन्दा भौतिक रूपमा सन्तुलित हुनु धेरै सजिलो छ।",
             "ref": "transcript-en.md:180"
           }
         ],
-        "aside": "⚠TODO[ne]: It’s not an accident that Bhakti Yoga comes fourth in the progression — emotion is an advanced class in being human."
+        "aside": "यो संयोग मात्र होइन कि भक्ति योग यस क्रममा चौथो स्थानमा आउँछ — भावना हुनु मानव हुनुको एक उच्च स्तरको पाठ हो।"
       },
       {
         "id": "rotation",
-        "title": "⚠TODO[ne]: Rotating awareness through all five",
+        "title": "पाँचै कोशहरूमा सजगता घुमाउनु",
         "source": "talk",
-        "body": "⚠TODO[ne]: The opening settling was itself a rotation of awareness through the koshas — body, energy, mind, knowing, bliss. It can be done any time of day; many traditions share this settling. Crucially: ‘awareness of that state itself seems to have the effect of regulating us.’ Sensing whether each system is balanced or imbalanced is already the intervention.",
+        "body": "शुरुआतको ध्यान (settling) आफैंमा कोशहरू — शरीर, ऊर्जा, मन, ज्ञान, आनन्द — मार्फत सजगता घुमाउने प्रक्रिया थियो। यो दिनको जुनसुकै समयमा पनि गर्न सकिन्छ; धेरै परम्पराहरूमा यो अभ्यास साझा छ। महत्त्वपूर्ण कुरा: 'त्यस अवस्थाप्रतिको सजगता आफैंले हामीलाई नियन्त्रित र व्यवस्थित गर्ने प्रभाव पार्छ जस्तो देखिन्छ।' प्रत्येक प्रणाली सन्तुलित वा असन्तुलित छ कि भनी महसुस गर्नु नै आफैंमा एउटा हस्तक्षेप (intervention) हो।",
         "quotes": [
           {
-            "text": "⚠TODO[ne]: The settling we just did is a way of rotating awareness through the koshas. It can be done at any time of day.",
+            "text": "हामीले भर्खरै गरेको ध्यानको अभ्यास कोशहरूमा सजगता घुमाउने एक तरिका हो। यो दिनको जुनसुकै समयमा पनि गर्न सकिन्छ।",
             "ref": "transcript-en.md:64"
           }
         ]
       },
       {
         "id": "self-and-class",
-        "title": "⚠TODO[ne]: Working with the koshas — on yourself and in a class",
+        "title": "कोशहरूसँग काम गर्नु — आफैमा र कक्षामा",
         "source": "expansion",
-        "body": "⚠TODO[ne]: To develop (Session 2 theme): how to use the koshas when working on yourself versus when leading students. Building a settling sequence that produces real change rather than ritual; reading the room across layers; and the teacher↔student connection through the sheaths. The talk’s seed: develop a short sequence you can do in any environment — getting in the car, stepping out of the shower, arriving home — and it will change how you interact with your students.",
+        "body": "विकसित गर्नका लागि (सत्र २ को विषयवस्तु): आफैमा काम गर्दा र विद्यार्थीहरूको नेतृत्व गर्दा कोशहरूको प्रयोग कसरी गर्ने। एउटा यस्तो ध्यानको क्रम (settling sequence) तयार गर्नु जसले औपचारिकता मात्र होइन, वास्तविक परिवर्तन ल्याओस्; विभिन्न तहहरूमा कोठाको वातावरण बुझ्नु; र कोशहरू मार्फत शिक्षक↔विद्यार्थी बीचको सम्बन्ध। प्रवचनको मुख्य विचार: कुनै पनि वातावरणमा — गाडीमा चढ्दा, नुहाएर निस्कँदा, घर आइपुग्दा — गर्न सकिने एउटा छोटो क्रम विकास गर्नुहोस्, र यसले तपाईंका विद्यार्थीहरूसँगको अन्तरक्रियालाई परिवर्तन गर्नेछ।",
         "quotes": [
           {
-            "text": "⚠TODO[ne]: When you begin to find a sequence that truly works for you… it will change the way you interact with others, including your students.",
+            "text": "जब तपाईंले आफ्नो लागि वास्तवमै काम गर्ने क्रम पत्ता लगाउन थाल्नुहुन्छ... यसले तपाईंका विद्यार्थीहरू लगायत अरू मानिसहरूसँगको अन्तरक्रियालाई परिवर्तन गर्नेछ।",
             "ref": "transcript-en.md:68"
           }
         ]
       },
       {
         "id": "imbalance",
-        "title": "⚠TODO[ne]: Diagnosing imbalance & restoring balance",
+        "title": "असन्तुलनको निदान र सन्तुलन पुनर्स्थापना",
         "source": "expansion",
-        "body": "⚠TODO[ne]: To develop: a practical method for spotting which kosha is over- or under-active in yourself and others, and choosing the branch of yoga that rebalances it. The talk’s seed: some people feel a lack of peace mentally and are drawn to Raja Yoga; others feel it through the body (allergies, digestion, illness, non-acceptance) and over-focus there — single-food diets, gym, too many supplements. ‘We all move, in different proportions, across this whole spectrum.’ An integrated lifestyle attends to all five.",
+        "body": "विकसित गर्नका लागि: आफैमा वा अरूमा कुन कोश बढी वा कम सक्रिय छ भनी पत्ता लगाउने र त्यसलाई पुन: सन्तुलित गर्ने योगको शाखा छनौट गर्ने व्यावहारिक विधि। प्रवचनको विचार: केही मानिसहरू मानसिक रूपमा शान्तिको कमी महसुस गर्छन् र राज योगतर्फ आकर्षित हुन्छन्; अरूले यसलाई शरीरको माध्यमबाट महसुस गर्छन् (एलर्जी, पाचन समस्या, बिरामी हुनु, शरीरलाई स्वीकार नगर्नु) र त्यहीं बढी ध्यान केन्द्रित गर्छन् — जस्तै एकथरी मात्र खाना खाने डाइट, जिम, धेरै सप्लिमेन्टहरू। 'हामी सबै फरक-फरक अनुपातमा यस सम्पूर्ण क्षेत्रमा हिंडिरहेका हुन्छौं।' एक एकीकृत जीवनशैलीले पाँचै कोशहरूमा ध्यान दिन्छ।",
         "quotes": [
           {
-            "text": "⚠TODO[ne]: An integrated yogic lifestyle would give attention to all of these koshas… the Anandamaya kosha can truly be experienced when the other four are functioning harmoniously.",
+            "text": "एक एकीकृत योगिक जीवनशैलीले यी सबै कोशहरूमा ध्यान दिनेछ... आनन्दमय कोशको वास्तविक अनुभव तब मात्र हुन सक्छ जब अन्य चार कोशहरूले सामंजस्यपूर्ण रूपमा काम गरिरहेका हुन्छन्।",
             "ref": "transcript-en.md:148"
           }
         ]
       },
       {
         "id": "lifestyle",
-        "title": "⚠TODO[ne]: Lifestyle choices ↔ the koshas",
+        "title": "जीवनशैलीका छनौटहरू ↔ कोशहरू",
         "source": "expansion",
-        "body": "⚠TODO[ne]: To develop: map everyday activities and lifestyle choices to the kosha they feed or deplete — diet and movement (annamaya), breath, rest and nature (pranamaya), media and study (manomaya), reflection and exposure to variety (vijnanamaya), and the conditions under which baseline coherence (anandamaya) surfaces. The awareness-work homework seeds this: list every component you think belongs to each kosha."
+        "body": "विकसित गर्नका लागि: दैनिक क्रियाकलाप र जीवनशैलीका छनौटहरूलाई तिनीहरूले पोषण दिने वा ह्रास गर्ने कोशहरूसँग नक्साङ्कन (map) गर्नु — खानपान र आन्दोलन (अन्नमय), श्वासप्रश्वास, आराम र प्रकृति (प्राणमय), सञ्चारमाध्यम र अध्ययन (मनोमय), विचार र विभिन्न अनुभवहरू लिनु (विज्ञानमय), र आधारभूत सामंजस्य (आनन्दमय) सतहमा आउने परिस्थितिहरू। सजगता कार्यको आधारभूत विचार यो हो: हरेक कोशमा कुन-कुन अवयवहरू पर्छन् जस्तो लाग्छ, त्यसको सूची बनाउनुहोस्।"
       },
       {
         "id": "elements",
-        "title": "⚠TODO[ne]: Five elements ↔ five koshas",
+        "title": "पञ्चमहाभूत ↔ पाँच कोशहरू",
         "source": "expansion",
-        "body": "⚠TODO[ne]: To develop (proposed mapping — not stated in the talk): the pancha mahabhuta as a parallel spectrum from gross to subtle — earth↔Annamaya (densest form), water/fire↔Pranamaya (flow & transformation), air↔Manomaya (movement of mind), ether/akasha↔Vijnanamaya (spacious knowing), and the beyond-elemental↔Anandamaya. Offered as an exploration to test against experience, in the spirit of ‘phenomena scale at every layer.’",
-        "flag": "⚠TODO[ne]: Proposed framework — verify against tradition before teaching as canonical."
+        "body": "विकसित गर्नका लागि (प्रस्तावित नक्साङ्कन — प्रवचनमा उल्लेख नगरिएको): पञ्चमहाभूतलाई स्थूलदेखि सूक्ष्मसम्मको समानान्तर क्षेत्रका रूपमा हेर्नु — पृथ्वी ↔ अन्नमय (सबैभन्दा सघन रूप), जल/अग्नि ↔ प्राणमय (प्रवाह र रूपान्तरण), वायु ↔ मनोमय (मनको गतिशीलता), आकाश ↔ विज्ञानमय (विशाल ज्ञान), र पञ्चतत्त्व भन्दा पर ↔ आनन्दमय। यसलाई 'घटनाहरू हरेक तहमा विस्तारित हुन्छन्' भन्ने भावनाका साथ अनुभवमा परीक्षण गर्न एक अन्वेषणको रूपमा प्रस्तुत गरिएको छ।",
+        "flag": "प्रस्तावित ढाँचा — यसलाई आधिकारिक रूपमा सिकाउनु अघि परम्परासँग रुजु गर्नुहोस्।"
       },
       {
         "id": "chakras",
-        "title": "⚠TODO[ne]: Chakras ↔ koshas (open question)",
+        "title": "चक्र ↔ कोशहरू (खुला प्रश्न)",
         "source": "expansion",
-        "body": "⚠TODO[ne]: To develop (open question — not in the talk): chakras live primarily within the pranamaya and manomaya fields, so a clean 1:1 chakra↔kosha mapping is unlikely. Worth exploring: how the seven-chakra vertical axis intersects the five-sheath nested model, and where they genuinely correspond versus where forcing a map distorts both.",
-        "flag": "⚠TODO[ne]: Open question — likely not a 1:1 mapping; explore carefully."
+        "body": "विकसित गर्नका लागि (खुला प्रश्न — प्रवचनमा नभएको): चक्रहरू मुख्यतया प्राणमय र मनोमय क्षेत्रहरू भन्तर रहन्छन्, त्यसैले चक्र र कोश बीच १:१ को स्पष्ट सम्बन्ध हुन सक्दैन। यो अन्वेषण गर्न योग्य छ: सात-चक्रको ठाडो अक्ष र पाँच-कोशको तहगत मोडेल कसरी एकअर्कामा जोडिन्छन्, र तिनीहरू कहाँ वास्तवमै मेल खान्छन् र कहाँ जबरजस्ती नक्साङ्कन गर्दा दुवै विकृत हुन सक्छन्।",
+        "flag": "खुला प्रश्न — सम्भवतः १:१ सम्बन्ध छैन; सावधानीपूर्वक अन्वेषण गर्नुहोस्।"
       },
       {
         "id": "scale-insight",
-        "title": "⚠TODO[ne]: Phenomena scale at every layer",
+        "title": "घटनाहरू हरेक तहमा विस्तारित हुन्छन्",
         "source": "talk",
-        "body": "⚠TODO[ne]: A core Vijnanamaya insight that ties the whole framework together: what shows up in the microcosm is possibly happening in the macrocosm at another scale. Recognising personal patterns becomes a way of exploring universal ones — which is why ‘scale’ and ‘density’ make natural axes for comparing the koshas to each other.",
+        "body": "विज्ञानमय कोशको एउटा मुख्य अन्तर्दृष्टि जसले यस ढाँचालाई एकसाथ बाँध्छ: जुन कुरा सूक्ष्म जगतमा देखा पर्छ, त्यो सम्भवतः अर्को स्तरमा विशाल ब्रह्माण्डमा पनि घटिरहेको हुन्छ। व्यक्तिगत ढाँचाहरू पहिचान गर्नु ब्रह्माण्डीय ढाँचाहरू अन्वेषण गर्ने एउटा माध्यम बन्दछ — त्यसैले 'पैमाना (scale)' र 'सघनता (density)' कोशहरूलाई एकअर्कासँग तुलना गर्ने प्राकृतिक आधार बन्दछन्।",
         "quotes": [
           {
-            "text": "⚠TODO[ne]: Phenomena scale at every layer — what we see in the microcosm is possibly happening in the macrocosm at another scale.",
+            "text": "घटनाहरू हरेक तहमा विस्तारित हुन्छन् — हामीले सूक्ष्म जगतमा जे देख्छौं, त्यो सम्भवतः अर्को स्तरमा विशाल ब्रह्माण्डमा पनि घटिरहेको हुन्छ।",
             "ref": "transcript-en.md:144"
           }
         ]
@@ -515,144 +510,144 @@ window.KOSHAS_I18N.ne = {
     ],
     "qa": [
       {
-        "q": "⚠TODO[ne]: Which kosha do emotions belong to?",
-        "a": "⚠TODO[ne]: None exclusively — emotions arise and move through all of them. “Emotion is energy in motion”; when energy moves and connects with meaning, we feel it as emotion."
+        "q": "भावनाहरू कुन कोशसँग सम्बन्धित छन्?",
+        "a": "कुनै एउटामा मात्र होइन — भावनाहरू सबै कोशहरूमा उत्पन्न र प्रवाहित हुन्छन्। \"भावना गतिमा रहेको ऊर्जा हो\"; जब ऊर्जा चल्छ र अर्थसँग जोडिन्छ, हामी त्यसलाई भावनाको रूपमा महसुस गर्छौं।"
       },
       {
-        "q": "⚠TODO[ne]: Why is the body called “the first interface for feeling”?",
-        "a": "⚠TODO[ne]: It is where feeling first registers. If the body’s signals aren’t heard by the mind, we distort our environment until we ask “how did I get here?” A sensitive, worked-with body keeps us attentive to what an emotion is pointing to."
+        "q": "शरीरलाई किन \"भावना महसुस गर्ने पहिलो माध्यम\" भनिन्छ?",
+        "a": "यो यस्तो ठाउँ हो जहाँ भावना सबैभन्दा पहिले दर्ता हुन्छ। यदि शरीरका सङ्केतहरू मनले सुनेन भने, हामी आफ्नो वातावरणलाई विकृत गर्छौं र अन्ततः सोच्छौं \"म यहाँ कसरी आइपुगें?\" एक संवेदनशील र राम्ररी बुझिएको शरीरले हामीलाई भावनाले कुन कुरातर्फ सङ्केत गरिरहेको छ भन्ने कुरामा सजग राख्छ।"
       },
       {
-        "q": "⚠TODO[ne]: Why is it “not an accident” that Bhakti Yoga comes fourth?",
-        "a": "⚠TODO[ne]: Emotion is an advanced class in being human — it is much easier to be physically balanced than emotionally balanced — so the devotional path sits later in the progression."
+        "q": "भक्ति योग चौथो स्थानमा आउनु किन \"संयोग मात्र होइन\"?",
+        "a": "भावना हुनु मानव हुनुको एक उच्च स्तरको पाठ हो — भावनात्मक रूपमा सन्तुलित हुनु भन्दा भौतिक रूपमा सन्तुलित हुनु धेरै सजिलो छ — त्यसैले भक्तिको मार्ग यस क्रममा पछि आउँछ।"
       },
       {
-        "q": "⚠TODO[ne]: How do you tell which kosha needs attention in yourself or a student?",
-        "a": "⚠TODO[ne]: Notice where peace feels missing: some feel it mentally and are drawn to Raja Yoga; others through the body — allergies, diet, illness, the gym. We all move across the spectrum; an integrated lifestyle attends to all five."
+        "q": "तपाईं आफैमा वा विद्यार्थीमा कुन कोशलाई ध्यान दिनु आवश्यक छ भनी कसरी भन्न सक्नुहुन्छ?",
+        "a": "ध्यान दिनुहोस् कि शान्ति कहाँ कम भएको महसुस भइरहेको छ: कसैले यसलाई मानसिक रूपमा महसुस गर्छन् र राज योगतर्फ आकर्षित हुन्छन्; अरूले शरीरको माध्यमबाट — जस्तै एलर्जी, खानपान, बिरामी हुनु, वा जिम जानु। हामी सबै यस क्षेत्रमा फरक-फरक रूपमा अघि बढ्छौं; एक एकीकृत जीवनशैलीले पाँचै कोशहरूमा ध्यान दिन्छ।"
       },
       {
-        "q": "⚠TODO[ne]: What is the point of “rotating awareness” through the koshas?",
-        "a": "⚠TODO[ne]: Settling through each layer lets you sense whether each system is balanced. Awareness of that state itself has the effect of regulating us — otherwise settling becomes a ritual, not real change."
+        "q": "कोशहरूमा \"सजगता घुमाउनु\" को उद्देश्य के हो?",
+        "a": "प्रत्येक तहमा सजगता लैजाँदा हामीलाई हरेक प्रणाली सन्तुलित छ कि छैन भनी बुझ्न मद्दत गर्छ। त्यस अवस्थाप्रतिको सजगता आफैंमा हामीलाई नियमित र व्यवस्थित गर्ने प्रभाव राख्छ — अन्यथा यो अभ्यास वास्तविक परिवर्तनको सट्टा एक औपचारिकता मात्र बन्न जानछ।"
       }
     ]
   },
   "practices": [
     {
       "id": "opening",
-      "title": "⚠TODO[ne]: Opening — Guided Settling",
-      "kind": "⚠TODO[ne]: Rotation of awareness through the koshas",
+      "title": "शुरुआत — निर्देशित ध्यान (Guided Settling)",
+      "kind": "कोशहरू मार्फत सजगता घुमाउने प्रक्रिया",
       "steps": [
-        "⚠TODO[ne]: Arrange the body as if you were going to sit for an hour — base stable, spine supported, symmetry from toes to hips on each side, hands in a mudra, eyes and mouth gently closed.",
-        "⚠TODO[ne]: Without focusing on anything in particular, notice: is attention drawn to a part or the whole body? To your energetic state? To movements of the mind — sounds, temperature, situations you’ve been turning over?",
-        "⚠TODO[ne]: Rewind the night: replay the hours before sleep like a film; sense when the shift toward sleep began; move through the night (deep or light? dreams?); recall the first details of waking and which parts of you woke first.",
-        "⚠TODO[ne]: Observe the breath and gradually deepen it in both directions — a little fuller each time — noticing how attending to breath involves body and mind together.",
-        "⚠TODO[ne]: Palming: rub the hands warm, cover the eyelids, let warmth enter the eyes and travel down the spine. Hari Om Tat Sat. Lower the hands and gently open the eyes."
+        "शरीरलाई यसरी मिलाएर राख्नुहोस् मानौं तपाईं एक घण्टाको लागि बस्न जाँदै हुनुहुन्छ — आधार स्थिर, मेरुदण्ड समर्थित, दुवै तर्फ खुट्टाका औंलादेखि कम्मरसम्म सन्तुलन, हातहरू मुद्रामै, आँखा र मुख बिस्तारै बन्द।",
+        "विशेष गरी कुनै पनि कुरामा ध्यान केन्द्रित नगरी याद गर्नुहोस्: के ध्यान शरीरको कुनै भागमा वा पूरै शरीरमा आकर्षित भएको छ? तपाईंको ऊर्जाको अवस्थामा? वा मनको गतिशीलतामा — जस्तै आवाज, तापक्रम, वा तपाईंले सोचिरहनुभएका परिस्थितिहरू?",
+        "बितेको रातलाई सम्झनुहोस्: सुत्नु भन्दा अघिका घण्टाहरूलाई चलचित्र जस्तै मनमा दोहोर्याउनुहोस्; सुत्ने तर्फको संक्रमण कहिले सुरु भयो महसुस गर्नुहोस्; रातभरिको अवस्था (गहिरो निन्द्रा कि हल्का? सपनाहरू?); ब्युँझदाका पहिलो विवरणहरू र तपाईंको कुन भाग पहिले ब्युँझियो सम्झनुहोस्।",
+        "श्वासप्रश्वासलाई अवलोकन गर्नुहोस् र बिस्तारै दुवै दिशामा गहिरो बनाउँदै लैजानुहोस् — हरेक पटक अलि बढी श्वास लिँदै — श्वासमा ध्यान दिँदा कसरी शरीर र मन दुवै सँगै संलग्न हुन्छन् भन्ने याद गर्नुहोस्।",
+        "हत्केला रगड्ने (Palming): हातहरू रगडेर न्यानो बनाउनुहोस्, आँखा छोप्नुहोस्, न्यानोपनलाई आँखाभित्र प्रवेश गर्न दिनुहोस् र मेरुदण्ड हुँदै तल जान दिनुहोस्। हरि ॐ तत् सत्। हातहरू तल राख्नुहोस् र बिस्तारै आँखा खोल्नुहोस्।"
       ],
       "ref": "transcript-en.md:34-56"
     },
     {
       "id": "closing",
-      "title": "⚠TODO[ne]: Closing — Breath through the Koshas + OM",
-      "kind": "⚠TODO[ne]: Integration",
+      "title": "समापन — कोशहरू मार्फत श्वासप्रश्वास + ॐ",
+      "kind": "एकीकरण (Integration)",
       "steps": [
-        "⚠TODO[ne]: Sit comfortably, body balanced, hands in a mudra, eyes and mouth gently closed. Notice how you are right now without reaching for any state.",
-        "⚠TODO[ne]: Take one full breath from physical toward causal — passing through each kosha, from Annamaya toward Anandamaya.",
-        "⚠TODO[ne]: Imagine OM pervading each kosha and the whole universe — a frequency you align with. Recite OM followed by shanti, shanti, shanti.",
-        "⚠TODO[ne]: A round of palming; cover the eyes with a little warmth. Breathe in; release the hands when ready. Hari Om Tat Sat."
+        "आरामसँग बस्नुहोस्, शरीर सन्तुलित, हातहरू मुद्रामै, आँखा र मुख बिस्तारै बन्द। कुनै पनि विशेष अवस्था प्राप्त गर्ने प्रयास नगरी तपाईं अहिले जस्तो हुनुहुन्छ त्यस्तै याद गर्नुहोस्।",
+        "भौतिक शरीरबाट कारण शरीरतर्फ एक पूर्ण श्वास लिनुहोस् — प्रत्येक कोश पार गर्दै, अन्नमयबाट आनन्दमय कोशतर्फ।",
+        "ॐ ले प्रत्येक कोश र सम्पूर्ण ब्रह्माण्डलाई व्याप्त गरेको कल्पना गर्नुहोस् — यस्तो तरंग जसमा तपाईं आफूलाई मिलाउनुहुन्छ। ॐ उच्चारण गर्नुहोस् र त्यसपछि शान्ति, शान्ति, शान्ति भन्नुहोस्।",
+        "हत्केला रगड्ने एक चक्र; आँखालाई थोरै न्यानोपनले ढाक्नुहोस्। श्वास भित्र लिनुहोस्; तयार भएपछि हातहरू छोड्नुहोस्। हरि ॐ तत् सत्।"
       ],
       "ref": "transcript-en.md:212-218"
     },
     {
       "id": "awareness-work",
-      "title": "⚠TODO[ne]: Awareness Work (not homework)",
-      "kind": "⚠TODO[ne]: Between sessions — optional",
+      "title": "सजगता कार्य (गृहकार्य होइन)",
+      "kind": "सत्रहरू बीच — ऐच्छिक",
       "steps": [
-        "⚠TODO[ne]: Once a day, ask: where was my attention most directed today? Chart it through to the last session — a spiritual journal, a sadhana.",
-        "⚠TODO[ne]: Go through the five koshas and list every component you think belongs to each — skeletal, muscular, respiratory… modern, yogic, or both. You may even ask ChatGPT and simply listen to its answer once before the next session.",
-        "⚠TODO[ne]: ‘If you do this, I’ll turn the data into graphs.’ No grading — it’s awareness work, not homework."
+        "दिनमा एक पटक सोध्नुहोस्: आज मेरो ध्यान सबैभन्दा बढी कहाँ केन्द्रित थियो? अन्तिम सत्रसम्म यसको रेखाचित्र बनाउनुहोस् — एउटा आध्यात्मिक डायरी, एक साधना।",
+        "पाँचै कोशहरूमा जानुहोस् र हरेक कोशमा कुन-कुन अवयवहरू पर्छन् जस्तो लाग्छ सूची बनाउनुहोस् — जस्तै कंकाल, मांसपेशी, श्वासप्रश्वास... आधुनिक, योगिक, वा दुवै। तपाईंले अर्को सत्र अघि च्याटजिपिटी (ChatGPT) लाई सोधेर त्यसको जवाफ एक पटक सुन्न पनि सक्नुहुन्छ।",
+        "'यदि तपाईंले यो गर्नुभयो भने, म यस विवरणलाई ग्राफमा परिवर्तन गर्नेछु।' कुनै मूल्याङ्कन हुने छैन — यो सजगताको कार्य हो, गृहकार्य होइन।"
       ],
       "ref": "transcript-en.md:200-202"
     }
   ],
   "awareness": {
-    "lead": "⚠TODO[ne]: Awareness work — not homework (it won’t be graded). Small, repeatable exercises from the talk that train each kosha in the flow of an ordinary day.",
+    "lead": "सजगता कार्य — गृहकार्य होइन (यसको मूल्याङ्कन हुने छैन)। सामान्य दिनचर्यामा हरेक कोशलाई प्रशिक्षित गर्ने प्रवचनका साना र दोहोर्याउन सकिने अभ्यासहरू।",
     "groups": [
       {
-        "kosha": "⚠TODO[ne]: Annamaya · the body",
+        "kosha": "Annamaya · शरीर",
         "hue": 18,
         "items": [
           {
-            "text": "⚠TODO[ne]: Each time you become aware of your physical body, ask: “where did this come from?” It came from something outside the body itself.",
+            "text": "प्रत्येक पटक जब तपाईं आफ्नो भौतिक शरीरप्रति सजग हुनुहुन्छ, सोध्नुहोस्: \"यो कहाँबाट आयो?\" यो निश्चित रूपमा शरीर बाहिरको कुनै कुराबाट आएको हो।",
             "ref": "transcript-en.md:132"
           },
           {
-            "text": "⚠TODO[ne]: Deeply massage your arms and fingers. In a coarse way, feel the matter of your body — that you cannot push your fingers through the skin — and notice the variation in density from skin to muscle to joint.",
+            "text": "हात र औंलाहरूलाई गहिरो मालिस गर्नुहोस्। स्थूल रूपमा, आफ्नो शरीरको तत्व महसुस गर्नुहोस् — कि तपाईं आफ्नो औंलाहरू छाला भित्र छिराउन सक्नुहुन्न — र छालादेखि मांसपेशी र जोर्नीसम्म घनत्वमा रहेको भिन्नता याद गर्नुहोस्।",
             "ref": "transcript-en.md:100"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[ne]: Pranamaya · energy",
+        "kosha": "Pranamaya · ऊर्जा",
         "hue": 35,
         "items": [
           {
-            "text": "⚠TODO[ne]: Evaluate your prana: where are its sources? Its exit points? How do you attract and retain it — and from what points do you lose it?",
+            "text": "आफ्नो प्राणको मूल्याङ्कन गर्नुहोस्: यसका स्रोतहरू कहाँ छन्? यसका निकास बिन्दुहरू कहाँ छन्? तपाईं यसलाई कसरी आकर्षित र कायम राख्नुहुन्छ — र कुन बिन्दुहरूबाट तपाईंले यसलाई गुमाउनुहुन्छ?",
             "ref": "transcript-en.md:102"
           },
           {
-            "text": "⚠TODO[ne]: Through the day, catch the moments of state transition — after dinner, stepping out of the shower, getting into the car — and name the gear you’re shifting into.",
+            "text": "दिनभरि, अवस्था परिवर्तनका क्षणहरूलाई याद गर्नुहोस् — बेलुकाको खाना पछि, नुहाएर निस्कँदा, गाडीमा चढ्दा — र तपाईं कुन गियरमा जाँदै हुनुहुन्छ त्यसलाई नाम दिनुहोस्।",
             "ref": "transcript-en.md:134"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[ne]: Manomaya · mind",
+        "kosha": "Manomaya · मन",
         "hue": 190,
         "items": [
           {
-            "text": "⚠TODO[ne]: Once a day, ask: “where was my attention most directed today?” Keep a short spiritual journal (sadhana) and chart it through to the last session.",
+            "text": "दिनमा एक पटक सोध्नुहोस्: \"आज मेरो ध्यान सबैभन्दा बढी कहाँ केन्द्रित थियो?\" एउटा छोटो आध्यात्मिक डायरी (साधना) राख्नुहोस् र अन्तिम सत्रसम्म यसको रेकर्ड राख्नुहोस्।",
             "ref": "transcript-en.md:200"
           },
           {
-            "text": "⚠TODO[ne]: When you feel pain or suffering, trace the cause back to attention: where was my attention in that moment — that week, those ten years?",
+            "text": "जब तपाईं दुख वा पीडा महसुस गर्नुहुन्छ, यसको कारण ध्यानतर्फ खोज्नुहोस्: त्यो क्षणमा — त्यो हप्तामा, ती १० वर्षमा मेरो ध्यान कहाँ थियो?",
             "ref": "transcript-en.md:138"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[ne]: Vijnanamaya · wisdom",
+        "kosha": "Vijnanamaya · विवेक",
         "hue": 255,
         "items": [
           {
-            "text": "⚠TODO[ne]: When something recurs, hold the question: is there a connected thread between every similar experience? Let it place you in a larger context.",
+            "text": "जब कुनै कुरा बारम्बार दोहोरिन्छ, यो प्रश्न मनमा राख्नुहोस्: के हरेक समान अनुभव वा बिन्दुहरू बीच कुनै साझा धागो छ? यसले तपाईंलाई वृहत्तर सन्दर्भमा स्थापित गरोस्।",
             "ref": "transcript-en.md:142"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[ne]: Anandamaya · bliss",
+        "kosha": "Anandamaya · आनन्द",
         "hue": 45,
         "items": [
           {
-            "text": "⚠TODO[ne]: Recall a moment when every system felt right at once — body, energy, mind, knowing. Don’t reach for it; just notice it as the baseline beneath the distractions.",
+            "text": "यस्तो क्षणलाई सम्झनुहोस् जब सबै प्रणालीहरू — शरीर, ऊर्जा, मन, र ज्ञान — एकैसाथ ठीक महसुस भएका थिए। यसलाई प्राप्त गर्न प्रयास नगर्नुहोस्; केवल यसलाई विचलनहरूको मुनि अवस्थित आफ्नो आधारभूत अवस्था (baseline) को रूपमा याद गर्नुहोस्।",
             "ref": "transcript-en.md:146"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[ne]: Across all five",
+        "kosha": "पाँचै कोशहरूमा",
         "hue": 280,
         "items": [
           {
-            "text": "⚠TODO[ne]: Go through the five koshas and list every component you think belongs to each — skeletal, muscular, respiratory… modern, yogic, or both. You may even ask ChatGPT and simply listen to its answer once before the next session.",
+            "text": "पाँचै कोशहरूमा जानुहोस् र हरेक कोशमा कुन-कुन अवयवहरू पर्छन् जस्तो लाग्छ सूची बनाउनुहोस् — जस्तै कंकाल, मांसपेशी, श्वासप्रश्वास... आधुनिक, योगिक, वा दुवै। तपाईंले अर्को सत्र अघि च्याटजिपिटी (ChatGPT) लाई सोधेर त्यसको जवाफ एक पटक सुन्न पनि सक्नुहुन्छ।",
             "ref": "transcript-en.md:202"
           },
           {
-            "text": "⚠TODO[ne]: Each time you hear or say a kosha’s name, repeat the word and bring your awareness to that body. Kept up across the four talks, it becomes a practice lasting weeks.",
+            "text": "प्रत्येक पटक जब तपाईं कुनै कोशको नाम सुन्नुहुन्छ वा भन्नुहुन्छ, त्यो शब्द दोहोर्याउनुहोस् र आफ्नो सजगतालाई त्यस शरीरतर्फ लैजानुहोस्। चारवटै प्रवचनहरूमा यो अभ्यास जारी राख्दा, यो हप्तौंसम्म चल्ने साधना बन्दछ।",
             "ref": "transcript-en.md:118"
           },
           {
-            "text": "⚠TODO[ne]: Ask yourself: over the past months, which kosha (one or two) have I been predominantly in? Not good or bad — just where you find yourself.",
+            "text": "आफैलाई सोध्नुहोस्: विगतका महिनाहरूमा, म मुख्यतया कुन कोश (एक वा दुई) मा रहें? यो राम्रो वा नराम्रो होइन — केवल तपाईंले आफूलाई कुन अवस्थामा पाउनुहुन्छ भन्ने कुरा हो।",
             "ref": "transcript-en.md:190"
           }
         ]

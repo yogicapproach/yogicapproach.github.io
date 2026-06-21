@@ -19,8 +19,8 @@
   const LANGS = [
     { code: "en", label: "EN" },
     { code: "es", label: "ES" },
-    { code: "ne", label: "ने" },   // Nepali (Devanagari) — stub-pending-nllb
-    { code: "pt", label: "PT" }    // Portuguese — stub-pending-nllb
+    { code: "ne", label: "ने" }    // Nepali (Devanagari)
+    // pt (Portuguese) held — re-add when pursued
   ];
 
   /* ---- graceful EN fallback ---------------------------------------------

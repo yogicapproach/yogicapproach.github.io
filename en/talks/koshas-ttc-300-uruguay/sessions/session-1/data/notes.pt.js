@@ -12,51 +12,51 @@
 window.KOSHAS_I18N = (window.KOSHAS_I18N || {});
 window.KOSHAS_I18N.pt = {
   "meta": {
-    "title": "⚠TODO[pt]: The Five Koshas",
-    "subtitle": "⚠TODO[pt]: A Framework for Awareness",
-    "session": "⚠TODO[pt]: Session 1 of 4",
-    "course": "⚠TODO[pt]: 300-Hour Teacher Training · Uruguay",
+    "title": "⚠MT[pt]: Os Cinco Koshas",
+    "subtitle": "⚠MT[pt]: Um Quadro para a Consciência",
+    "session": "⚠MT[pt]: Sessão 1 de 4",
+    "course": "⚠MT[pt]: Treinamento de Professor de 300 Horas · Uruguai",
     "teacher": "Satchidananda",
     "host": "Ale",
-    "date": "⚠TODO[pt]: 10 June 2026",
+    "date": "⚠MT[pt]: 10 de junho de 2026",
     "recording": "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
-    "note": "⚠TODO[pt]: Built from the Session-1 transcript. Quotes are the teacher's words (some reconstructed from the live Spanish translation — verify ⚠ blocks against the recording). Fields marked ‘to develop’ are framework seeds for Sessions 2–4."
+    "note": "⚠MT[pt]: Construído a partir do transcris da Sessão-1. As citações são palavras do professor (algumas reconstruídas da tradução em tempo real en español — verifique ⚠ contra o registro). Os campos marcados 'para desenvolver' são sementes de framework para as Sessões 2–4."
   },
   "overview": {
-    "lead": "⚠TODO[pt]: Don’t take the koshas as five boxes to memorise. Take them as a set of lenses — and learn to change the lens on demand.",
+    "lead": "⚠MT[pt]: Não pense nas koshas como cinco caixas para memorizar. Pense neles como um conjunto de lentes — e aprenda a mudar o lente à vontade.",
     "framework": {
-      "quote": "⚠TODO[pt]: I want you to see and experience the koshas as a framework — like a photographer who has a bag full of different lenses and puts on a different lens depending on the situation and the need. We want to be able to direct our awareness fluidly among the various koshas.",
+      "quote": "⚠MT[pt]: Queremos que veja e experimente os koshas como um quadro — como se fosse um fotógrafo com uma bolsa cheia de lentes diferentes e usa uma lente diferente dependendo da situação e do necessário. Queremos ser capazes de direcionar nossa consciência fluidamente entre os diversos koshas.",
       "ref": "transcript-en.md:90"
     },
     "why": {
-      "quote": "⚠TODO[pt]: Otherwise, settling at the beginning of a class becomes a ritual rather than a practice that generates real change.",
+      "quote": "⚠MT[pt]: De outra forma, estabelecer-se no início da aula se torna um ritual em vez de uma prática que gera verdadeiras mudanças.",
       "ref": "transcript-en.md:66"
     },
     "tradition": {
-      "quote": "⚠TODO[pt]: There is often a traditional presentation — which has immense value, because they are time-tested. But sometimes they are overly simplistic… it’s always left to the practitioner to take that and align it to themselves.",
+      "quote": "⚠MT[pt]: Há frequentemente uma apresentação tradicional — que tem um valor imenso, pois são testadas no tempo. Mas às vezes são demasiadamente simplistas… sempre resta ao praticante tomar aquilo e alinhá-lo com si mesmo.",
       "ref": "transcript-en.md:24"
     },
-    "carAnalogy": "⚠TODO[pt]: A single metaphor runs through the whole talk: you, driving. The physical and energetic bodies are the car itself; the mind is how you handle the road; wisdom is choosing when and where to drive at all; and bliss is the felt sense of every system running in harmony.",
+    "carAnalogy": "⚠MT[pt]: Um único metáfora percorre todo o discurso: você, dirigindo. O corpo físico e energético são o próprio carro; a mente é como você maneja a estrada; a sabedoria é escolher quando e onde dirigir de fato; e a felicidade é o sentido percebido de cada sistema funcionando em harmonia.",
     "courseArc": [
       {
         "n": 1,
-        "label": "⚠TODO[pt]: Today",
-        "body": "⚠TODO[pt]: Theory — the koshas from the traditional presentation toward a more alternative one."
+        "label": "⚠MT[pt]: Hoje",
+        "body": "⚠MT[pt]: Teoria — os koshas da apresentação tradicional para uma mais alternativa."
       },
       {
         "n": 2,
-        "label": "⚠TODO[pt]: Connection",
-        "body": "⚠TODO[pt]: The koshas from the perspective of how to connect — between students and teachers."
+        "label": "⚠MT[pt]: Conexão",
+        "body": "⚠MT[pt]: Os koshas do ponto de vista da conexão — entre alunos e professores."
       },
       {
         "n": 3,
-        "label": "⚠TODO[pt]: Society",
-        "body": "⚠TODO[pt]: The koshas in relation to society, and how that affects us within these layers."
+        "label": "⚠MT[pt]: Sociedade",
+        "body": "⚠MT[pt]: As koshas em relação à sociedade, e como isso nos afeta dentro dessas camadas."
       },
       {
         "n": 4,
-        "label": "⚠TODO[pt]: Integration",
-        "body": "⚠TODO[pt]: Exploring and deepening the koshas through what we’ve integrated in the earlier sessions."
+        "label": "⚠MT[pt]: Integração",
+        "body": "⚠MT[pt]: Explorando e aprofundando os koshas através do que integramos nas sessões anteriores."
       }
     ]
   },
@@ -66,71 +66,71 @@ window.KOSHAS_I18N.pt = {
       "n": 1,
       "sanskrit": "Annamaya",
       "devanagari": "अन्नमय",
-      "english": "⚠TODO[pt]: The Physical / Food Sheath",
+      "english": "⚠MT[pt]: A Camada Física / Camada Alimentar",
       "hue": 18,
       "etymology": {
-        "anna": "⚠TODO[pt]: food",
-        "maya": "⚠TODO[pt]: made of / pervaded by",
-        "kosha": "⚠TODO[pt]: sheath, that which covers"
+        "anna": "⚠MT[pt]: alimento",
+        "maya": "⚠MT[pt]: feito de / permeado por",
+        "kosha": "⚠MT[pt]: cúpula, que cobre"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[pt]: One translation of anna is ‘food’; maya is ‘layer’; and kosha is a layer, something that covers.",
+        "text": "⚠MT[pt]: Uma tradução de anna é 'alimento'; maya é 'camada'; e kosha é uma camada, algo que cobre.",
         "ref": "transcript-en.md:100"
       },
-      "traditional": "⚠TODO[pt]: The physical sheath — skin, muscle, bone, and the inner system of organs, blood, fluids, nerves and fat. Called the ‘food layer’ because when we eat, we see the immediate effect on the body. Hatha Yoga brings awareness to its more internal layers.",
+      "traditional": "⚠MT[pt]: A camada física — pele, músculo, osso e o sistema interno de órgãos, sangue, líquidos, nervos e gordura. Chamada de 'camada alimentar' porque quando comemos, vemos o efeito imediato no corpo. O Hatha Yoga traz a consciência para suas camadas mais internas.",
       "modernLens": {
-        "name": "⚠TODO[pt]: Entropy & Cohesion",
-        "body": "⚠TODO[pt]: Reframe the body not as a fixed object but as a system of energy conversion holding itself together against the universe’s tendency to dissolve. Nothing in physics requires your body to cohere — yet over decades this ‘cloud’ has stayed together. That is the miracle the yogis paid attention to."
+        "name": "⚠MT[pt]: Entropia e Coesão",
+        "body": "⚠MT[pt]: Refreie o corpo não como um objeto fixo, mas como um sistema de conversão de energia mantendo-se unido contra a tendência do universo de dissolver. Nada na física exige que seu corpo coeja — ainda assim, esta ‘nuvem’ permaneceu juntando-se ao longo de décadas. É esse o milagre aos quais os yogis prenderam atenção."
       },
-      "carMetaphor": "⚠TODO[pt]: The car itself — chassis, seats, wheels, fuel: the tangible vehicle you travel in.",
+      "carMetaphor": "⚠MT[pt]: O carro em si — chassi, assentos, rodas, combustível: o veículo tangível no qual viaja.",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Body-sized and personal — the layer most uniquely ‘yours.’ The whirlpool that is unmistakably one form, yet made of the same water as everything around it."
+        "text": "⚠MT[pt]: Corpo-sucedido e pessoal — o camada mais únicamente 'sua.' A espiral que é indiscutivelmente uma forma única, ainda feita da mesma água de tudo ao seu redor."
       },
       "density": {
         "source": "talk",
-        "text": "⚠TODO[pt]: The densest sheath: condensed energy. ‘The physical body is condensed energy. That’s not hippie science — that’s modern science.’ Matter you cannot push your finger through."
+        "text": "⚠MT[pt]: A casca mais densa: energia condensada. 'O corpo físico é energia condensada. Isso não é ciência hippie — é ciência moderna.' Matéria que você não pode empurrar com o dedo."
       },
       "nourishment": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Food, touch, breath-into-tissue, deliberate sensation. Massaging the arms to feel density and variation; asking of any sensation, ‘where did this come from?’ — because it came from outside the body."
+        "text": "⚠MT[pt]: Alimento, toque, respiração-na-massa-de-têxtil, sensação deliberada. Massageando os braços para sentir densidade e variação; perguntando a qualquer sensação: 'de onde veio isso?' — pois veio do exterior do corpo."
       },
       "quotes": [
         {
-          "text": "⚠TODO[pt]: A whirlpool is not different from the water — it is water — but it has a definite form and structure. That is what the human body is: a field of energy that has a definite form and a definite structure.",
+          "text": "⚠MT[pt]: Um vórtice não é diferente da água — é água —, mas tem uma forma e estrutura definidas. Assim é o corpo humano: um campo de energia que possui uma forma e uma estrutura definidas.",
           "ref": "transcript-en.md:128"
         },
         {
-          "text": "⚠TODO[pt]: The physical body — the Annamaya kosha — is a system of energy conversion.",
+          "text": "⚠MT[pt]: O corpo físico — o Annamaya kosha — é um sistema de conversão energética.",
           "ref": "transcript-en.md:130"
         },
         {
-          "text": "⚠TODO[pt]: Entropy is this force or phenomenon in the universe… that dissolves everything.",
+          "text": "⚠MT[pt]: A entropia é essa força ou fenômeno no universo… que dissolve tudo.",
           "ref": "transcript-en.md:120"
         }
       ],
-      "practice": "⚠TODO[pt]: Each time you become aware of your physical body, ask: where did this come from? It definitely came from something outside the body itself.",
+      "practice": "⚠MT[pt]: Cada vez que você se torna consciente de seu corpo físico, pergunte: de onde veio isso? Definitivamente veio de algo fora do próprio corpo.",
       "practiceRef": "transcript-en.md:132",
       "qa": [
         {
-          "q": "⚠TODO[pt]: Why is the physical body called the “food sheath”?",
-          "a": "⚠TODO[pt]: Because anna means food: when we eat, we see the immediate effect on the body. It is the densest sheath, built and maintained by what we take in."
+          "q": "⚠MT[pt]: Por que o corpo físico é chamado de \"sheath of food\" (annamaya kosha)?",
+          "a": "⚠MT[pt]: Porque anna significa comida: quando comemos, vemos o efeito imediato no corpo. É a casca mais densa, construída e mantida pelo que ingerimos."
         },
         {
-          "q": "⚠TODO[pt]: The talk says the body is “condensed energy.” How does the whirlpool make that concrete?",
-          "a": "⚠TODO[pt]: A whirlpool is not separate from the water — it is water given a definite form and structure. The body is likewise a field of energy holding a definite form; matter is energy, which aligns with modern physics."
+          "q": "⚠MT[pt]: O discurso diz que o corpo é \"energia condensada.\" Como faz o vórtice tornar isso concreto?",
+          "a": "⚠MT[pt]: Um vórtice não é separado da água — ele é água dada uma forma e estrutura definida. O corpo também é um campo de energia mantendo uma forma definida; matéria é energia, o que alinha com a física moderna."
         },
         {
-          "q": "⚠TODO[pt]: What is entropy, and why does cohesion matter here?",
-          "a": "⚠TODO[pt]: Entropy is the universal force that dissolves everything. Nothing in physics requires the body to hold together, yet over decades it does — a miracle of cohesion against dissolution, which the yogis studied closely."
+          "q": "⚠MT[pt]: O que é entropia, e por que a coesão importa aqui?",
+          "a": "⚠MT[pt]: A entropia é a força universal que dissolve tudo. Nada na física exige que o corpo permaneça unido, no entanto, durante décadas ele faz isso — um milagre de coesão contra a dissolução, que os yogis estudaram com atenção."
         },
         {
-          "q": "⚠TODO[pt]: What changes when we treat the body as a “system of energy conversion” instead of “I am the body”?",
-          "a": "⚠TODO[pt]: “I am the body” leads us into problems. Seeing it as energy conversion lets us ask better questions — e.g. what in my environment is in contact with this energy and distorting my experience of the body right now?"
+          "q": "⚠MT[pt]: O que muda quando tratamos o corpo como um \"sistema de conversão energética\" em vez de \"eu sou o corpo\"?",
+          "a": "⚠MT[pt]: \"Eu sou o corpo\" nos leva a problemas. Ao vê-lo como conversão de energia, podemos perguntar melhores questões — por exemplo, o que em meu ambiente está em contato com esta energia e distorcendo minha experiência do corpo neste momento?"
         },
         {
-          "q": "⚠TODO[pt]: What single practice anchors this kosha?",
-          "a": "⚠TODO[pt]: Each time you notice your physical body, ask “where did this come from?” It came from something outside the body itself — food, air, environment."
+          "q": "⚠MT[pt]: Qual única prática ancla este kosha?",
+          "a": "⚠MT[pt]: Cada vez que notar seu corpo físico, pergunte: \"De onde veio isso?\" Ele veio de algo fora do próprio corpo — alimento, ar, ambiente."
         }
       ]
     },
@@ -139,68 +139,68 @@ window.KOSHAS_I18N.pt = {
       "n": 2,
       "sanskrit": "Pranamaya",
       "devanagari": "प्राणमय",
-      "english": "⚠TODO[pt]: The Energetic / Pranic Sheath",
+      "english": "⚠MT[pt]: A Capa Energética / Prânica",
       "hue": 35,
       "etymology": {
-        "prana": "⚠TODO[pt]: vital force, life-energy",
-        "maya": "⚠TODO[pt]: made of",
-        "kosha": "⚠TODO[pt]: sheath"
+        "prana": "⚠MT[pt]: força vital, energia de vida",
+        "maya": "⚠MT[pt]: feito de",
+        "kosha": "⚠MT[pt]: camaço"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[pt]: Sometimes translated as the dimension of vitality or life-force… from the Hatha Yoga perspective, intimately connected to the nadis and the nervous system.",
+        "text": "⚠MT[pt]: Às vezes traduzido como o维度 de vitalidade ou força vital… do ponto de vista do Hatha Yoga, intimamente conectado às nadis e ao sistema nervoso.",
         "ref": "transcript-en.md:102"
       },
-      "traditional": "⚠TODO[pt]: The dimension of vitality. In esoteric talk, the aura or field around the body; in Hatha Yoga, intimately tied to the nadis and the nervous system. The talk reserves deep work here for later sessions.",
+      "traditional": "⚠MT[pt]: A dimensão da vitalidade. Em linguagem esotérica, o aura ou campo ao redor do corpo; na Hatha Yoga, intimamente ligado às nadis e ao sistema nervoso. O diálogo reserva trabalho profundo aqui para sessões posteriores.",
       "modernLens": {
-        "name": "⚠TODO[pt]: State Transition",
-        "body": "⚠TODO[pt]: Energy is what lets you shift gears between situations. Life presents many emotional landscapes; ideally you have a gear to shift into and can say, ‘I know how to handle this new landscape.’ Your ability — or inability — to make that shift is what frees you or keeps you stuck."
+        "name": "⚠MT[pt]: Transição de Estado",
+        "body": "⚠MT[pt]: A energia te permite mudar marchas entre situações. A vida apresenta muitos paisagens emocionais; idealmente você tem uma marcha para entrar e pode dizer, 'Sinto como lidar com essa nova paisagem.' Sua capacidade — ou incapacidade — de fazer esse ajuste é o que te liberta ou mantém preso."
       },
-      "carMetaphor": "⚠TODO[pt]: The gearbox / transmission — what lets you transition from two-wheel to four-wheel drive when you leave the highway for the mountain.",
+      "carMetaphor": "⚠MT[pt]: A caixa de câmbio / transmissão — o que permite a transição do duas rodas para quatro rodas quando você sai da estrada para as montanhas.",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[pt]: A field through and around the body — dynamic by nature, constantly fluctuating. It reminds us we are never static."
+        "text": "⚠MT[pt]: Um campo através e ao redor do corpo — dinâmico por natureza, constantemente fluctuante. Nos lembra que nunca somos estáticos."
       },
       "density": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Subtler than matter, more mobile — felt as flow, charge, and change of state rather than as solid form."
+        "text": "⚠MT[pt]: Menos substancial do que a matéria, mais móvel — sentida como fluxo, carga e mudança de estado em vez de forma sólida."
       },
       "nourishment": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Where does energy come from, and where is it lost? ‘What are the sources of energy? What are the exit points for prana? How do I attract it to myself? What is my capacity to retain it? And from what points do I lose it?’"
+        "text": "⚠MT[pt]: De onde a energia vem e para onde é perdida? 'Quais são as fontes de energia? Quais são os pontos de saída do prana? Como eu posso atrair a energia para mim mesma? Qual é minha capacidade de retê-la? E de quais pontos eu a perco?'"
       },
       "nourishmentRef": "transcript-en.md:102",
       "quotes": [
         {
-          "text": "⚠TODO[pt]: Your ability to shift on demand, to move from one situation to another, is called a state transition.",
+          "text": "⚠MT[pt]: Sua capacidade de se mover de um estado para outro conforme necessário é chamada de transição de estados.",
           "ref": "transcript-en.md:134"
         },
         {
-          "text": "⚠TODO[pt]: Life presents these various emotional landscapes, and ideally we have a gear we can shift to and say, ‘I know how to handle this.’",
+          "text": "⚠MT[pt]: A vida apresenta esses diversos paisagens emocionais, e idealmente temos uma marcha que podemos engatar e dizer, 'Sinto como lidar com isso.'",
           "ref": "transcript-en.md:134"
         }
       ],
-      "practice": "⚠TODO[pt]: Through the day, notice the moments of state transition — after dinner, after a shower, getting into the car. Name the gear you’re shifting into.",
+      "practice": "⚠MT[pt]: Ao longo do dia, observe os momentos de transição de estado — após o jantar, após o banho, ao entrar no carro. Nomeie a marcha em que você está engatando.",
       "practiceRef": "transcript-en.md:68",
       "qa": [
         {
-          "q": "⚠TODO[pt]: What is the modern lens for the energetic body?",
-          "a": "⚠TODO[pt]: State transition — the ability to shift gears between situations, like moving from two-wheel to four-wheel drive when the road changes from highway to mountain."
+          "q": "⚠MT[pt]: Qual é o olhar moderno sobre o corpo energético?",
+          "a": "⚠MT[pt]: Transição de estado — a capacidade de mudar de marcha entre situações, como passar do tração nas duas rodas para as quatro rodas quando o terreno muda de autoestrada para montanha."
         },
         {
-          "q": "⚠TODO[pt]: In the car analogy, which part is the pranic body?",
-          "a": "⚠TODO[pt]: The gearbox / transmission — not the chassis or the fuel, but what lets you transition between modes on demand."
+          "q": "⚠MT[pt]: No analogia do carro, qual parte é o corpo prânico?",
+          "a": "⚠MT[pt]: O câmbio / transmissão — não o chassi ou o combustível, mas o que permite a transição entre modos à vontade."
         },
         {
-          "q": "⚠TODO[pt]: What four questions does the talk pose for evaluating your prana?",
-          "a": "⚠TODO[pt]: What are the sources of energy? What are the exit points for prana? How do I attract and retain it? And from what points do I lose it?"
+          "q": "⚠MT[pt]: Qualquer quatro perguntas que o discurso pose para avaliar seu prana?",
+          "a": "⚠MT[pt]: Onde estão as fontes de energia? Quais são os pontos de saída para o prana? Como eu atrajo e retido ele? E de quais pontos eu perco ele?"
         },
         {
-          "q": "⚠TODO[pt]: Why is “state transition” practical for emotional life?",
-          "a": "⚠TODO[pt]: Life presents many emotional landscapes; ideally you have a gear to shift into and can say “I know how to handle this.” The inability to shift is what keeps us stuck in one landscape."
+          "q": "⚠MT[pt]: Por que \"transição de estado\" é prática para a vida emocional?",
+          "a": "⚠MT[pt]: A vida apresenta muitos paisagens emocionais; idealmente você tem uma marcha para engatar e pode dizer \"sei como lidar com isso.\" A incapacidade de engatar a marcha é o que nos mantém presos em uma única paisagem."
         },
         {
-          "q": "⚠TODO[pt]: How does this kosha relate to the nervous system?",
-          "a": "⚠TODO[pt]: From the Hatha Yoga perspective it is intimately connected to the nadis and the nervous system — the dimension of vitality, dynamic by nature and always fluctuating."
+          "q": "⚠MT[pt]: Como este kosha se relaciona com o sistema nervoso?",
+          "a": "⚠MT[pt]: De acordo com o perspectiva do Hatha Yoga, está intimamente conectado aos nadis e ao sistema nervoso — a dimensão da vitalidade, dinâmica por natureza e sempre fluctuante."
         }
       ]
     },
@@ -209,67 +209,67 @@ window.KOSHAS_I18N.pt = {
       "n": 3,
       "sanskrit": "Manomaya",
       "devanagari": "मनोमय",
-      "english": "⚠TODO[pt]: The Mental Sheath",
+      "english": "⚠MT[pt]: A Camada Mental",
       "hue": 190,
       "etymology": {
-        "manas": "⚠TODO[pt]: mind",
-        "maya": "⚠TODO[pt]: made of",
-        "kosha": "⚠TODO[pt]: sheath"
+        "manas": "⚠MT[pt]: mente",
+        "maya": "⚠MT[pt]: feito de",
+        "kosha": "⚠MT[pt]: camaço"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[pt]: Manu refers to the mind; maya again as a veil; kosha as the space of that mental layer.",
+        "text": "⚠MT[pt]: Manu refere ao mind; maya novamente como uma cortina; kosha como o espaço dessa camada mental.",
         "ref": "transcript-en.md:104"
       },
-      "traditional": "⚠TODO[pt]: The mental layer, split usefully into the lower mind (perception, memory, some cognition) and the higher mind (intellect, discernment / viveka, reflection, contemplation, meditation). Much of Raja Yoga works here.",
+      "traditional": "⚠MT[pt]: A camada mental, dividida útilmente em mente inferior (percepção, memória, algumas cognições) e mente superior (intelecto, discernimento/viveka, reflexão, contemplação, meditação). Muita do Raja Yoga trabalha aqui.",
       "modernLens": {
-        "name": "⚠TODO[pt]: Attention Management",
-        "body": "⚠TODO[pt]: A great car you can drive still won’t save you from every situation. When the storm hits or the leopard jumps onto the road, what lets you respond is the capacity to direct attention. To work with the Manomaya kosha is to work with all the subsystems of attention."
+        "name": "⚠MT[pt]: Administração da Atenção",
+        "body": "⚠MT[pt]: Um grande carro que você pode dirigir ainda não salvará de toda situação. Quando a tempestade chega ou o leopardo salta para o meio da estrada, o que lhe permite responder é a capacidade de direcionar a atenção. Trabalhar com o Manomaya kosha é trabalhar com todos os subsistemas da atenção."
       },
-      "carMetaphor": "⚠TODO[pt]: Driving in changing conditions — are you on the Spotify playlist, or can you rotate attention to the leopard arriving on the road?",
+      "carMetaphor": "⚠MT[pt]: Dirigindo em condições mudas — você está no播放列表上，还是可以将注意力转移到路上出现的豹子身上？",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Reaches across time — not just the present moment but the whole week, the last ten years. ‘Where was my attention in that moment, or over the whole week, or the last ten years?’"
+        "text": "⚠MT[pt]: Alcança além do tempo — não apenas o momento presente, mas toda a semana, os últimos dez anos. 'Onde estava minha atenção nesse momento, ou durante toda a semana, ou nos últimos dez anos?'"
       },
       "density": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Subtler than energy; experienced as thought, perception and discernment. Two strata: lower mind (perception/memory) and higher mind (intellect/viveka)."
+        "text": "⚠MT[pt]: Mais sutil que o prana; experienciado como pensamento, percepção e discernimento. Dois estratos: mente inferior (percepção/memória) e mente superior (intelecto/viveka)."
       },
       "nourishment": {
         "source": "expansion",
-        "text": "⚠TODO[pt]: To develop: deliberate attention, study, quality sensory input, and Raja-yoga practices that train the mind to hold and redirect focus. (Talk emphasises attention as the trainable faculty here.)"
+        "text": "⚠MT[pt]: Desenvolver: atenção deliberada, estudo, entrada sensorial de qualidade e práticas de Raja-Yoga que treinam a mente para manter e reorientar o foco. (O discurso enfatiza a atenção como o fator treinável aqui.)"
       },
       "quotes": [
         {
-          "text": "⚠TODO[pt]: What lets you respond to the changes within that landscape is the capacity to direct attention, which is within the field of the Manomaya kosha.",
+          "text": "⚠MT[pt]: O que lhe permite responder às mudanças nesse cenário é a capacidade de direcionar a atenção, que está no campo do Manomaya kosha.",
           "ref": "transcript-en.md:136"
         },
         {
-          "text": "⚠TODO[pt]: Many of the biggest problems we face as humans are not because a rock fell from the sky, but because we ignored a situation right in front of us for long periods of time.",
+          "text": "⚠MT[pt]: Muitos dos maiores problemas que enfrentamos como humanos não são devido a uma pedra caindo do céu, mas porque ignoramos uma situação em frente a nós mesmos durante períodos prolongados.",
           "ref": "transcript-en.md:138"
         }
       ],
-      "practice": "⚠TODO[pt]: Once a day ask: where was my attention most directed today? Chart it through to the last session — a simple sadhana journal that paints pictures you might not have realised.",
+      "practice": "⚠MT[pt]: Pede-se uma vez por dia: para onde foi mais direcionada minha atenção hoje? Trace-a até à última sessão — um simples jornal de sadhana que desenha imagens que você talvez não tenha percebido.",
       "practiceRef": "transcript-en.md:200",
       "qa": [
         {
-          "q": "⚠TODO[pt]: What is the modern lens for the mental body?",
-          "a": "⚠TODO[pt]: Attention management — working with all the subsystems that direct and hold attention."
+          "q": "⚠MT[pt]: Qual é o olhar moderno sobre o corpo mental?",
+          "a": "⚠MT[pt]: Administração da atenção — trabalhando com todos os subsistemas que direcionam e mantêm a atenção."
         },
         {
-          "q": "⚠TODO[pt]: What is the difference between the lower and higher mind?",
-          "a": "⚠TODO[pt]: Lower mind: perception, memory, some cognition. Higher mind: intellect, discernment (viveka), evaluation, reflection, contemplation, meditation — much of Raja Yoga’s domain."
+          "q": "⚠MT[pt]: Qual é a diferença entre o mente inferior e superior?",
+          "a": "⚠MT[pt]: Mente inferior: percepção, memória, algumas cognições. Mente superior: intelecto, discernimento (viveka), avaliação, reflexão, meditação — grande parte do domínio da Raja Yoga."
         },
         {
-          "q": "⚠TODO[pt]: How does the leopard illustrate attention?",
-          "a": "⚠TODO[pt]: When a leopard jumps onto the road, can you rotate attention from the Spotify playlist to what is actually happening? Responding to a changing landscape is a function of directed attention."
+          "q": "⚠MT[pt]: Como ilustra o leopardo a atenção?",
+          "a": "⚠MT[pt]: Quando um leopardo pula para o meio da estrada, você pode rotacionar a atenção do播放中，请稍候..."
         },
         {
-          "q": "⚠TODO[pt]: How does the talk reframe many life problems as attention problems?",
-          "a": "⚠TODO[pt]: Many big problems are not a rock falling from the sky but a situation we ignored for a long time. The question becomes: where was my attention all that time — that week, those ten years?"
+          "q": "⚠MT[pt]: Como o discurso reframa muitos problemas de vida como problemas de atenção?",
+          "a": "⚠MT[pt]: Muitos grandes problemas não são um pedaço de rocha caindo do céu, mas uma situação que ignoramos por muito tempo. A pergunta se torna: onde estava a minha atenção durante todo esse tempo — aquela semana, aqueles dez anos?"
         },
         {
-          "q": "⚠TODO[pt]: What practice trains this kosha?",
-          "a": "⚠TODO[pt]: Ask once a day “where was my attention most directed today?” and chart it — a simple sadhana journal that reveals patterns you didn’t notice."
+          "q": "⚠MT[pt]: Qual prática treina este kosha?",
+          "a": "⚠MT[pt]: Pergunte uma vez por dia: \"Para onde estava mais direcionada minha atenção hoje? \" e registre-a — um simples jornal de sadhana que revela padrões que você não notou."
         }
       ]
     },
@@ -278,73 +278,73 @@ window.KOSHAS_I18N.pt = {
       "n": 4,
       "sanskrit": "Vijnanamaya",
       "devanagari": "विज्ञानमय",
-      "english": "⚠TODO[pt]: The Wisdom Sheath",
+      "english": "⚠MT[pt]: A Capa da Sabedoria",
       "hue": 255,
       "etymology": {
-        "vijnana": "⚠TODO[pt]: wisdom, deep knowing",
-        "maya": "⚠TODO[pt]: made of",
-        "kosha": "⚠TODO[pt]: sheath"
+        "vijnana": "⚠MT[pt]: sabedoria, conhecimento profundo",
+        "maya": "⚠MT[pt]: feito de",
+        "kosha": "⚠MT[pt]: camaço"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[pt]: Vijnana means wisdom, and maya kosha the space where that wisdom is expressed.",
+        "text": "⚠MT[pt]: Vijnana significa sabedoria, e Maya kosha o espaço onde essa sabedoria é expressa.",
         "ref": "transcript-en.md:106"
       },
-      "traditional": "⚠TODO[pt]: The body of wisdom and intuition — more abstract. Where the physical body is unique to our personal identity, the wisdom body begins to draw us out of ourselves and place us within the context of a larger whole. A first level at which ideas like the collective conscious become useful.",
+      "traditional": "⚠MT[pt]: O corpo da sabedoria e da intuição — mais abstrato. Enquanto o corpo físico é único para nossa identidade pessoal, o corpo da sabedoria começa a nos tirar de nós mesmos e nos colocar no contexto de um todo maior. Um primeiro nível em que conceitos como o consciente coletivo se tornam úteis.",
       "modernLens": {
-        "name": "⚠TODO[pt]: Pattern Recognition",
-        "body": "⚠TODO[pt]: The calmer driver says: ‘I’ve never had to hit a leopard. I don’t drive when the leopards are out — and I check the weather before storms.’ Pattern recognition is the root of yoga, of Ayurveda, of all the ancient and modern sciences: recognising ‘I have seen this before,’ and asking whether a thread connects every similar experience."
+        "name": "⚠MT[pt]: Reconhecimento de Padrões",
+        "body": "⚠MT[pt]: O condutor mais calmo diz: 'Nunca tive que bater em um leopardo. Não dirijo quando os leões estão soltos — e verifico o tempo antes das tempestades.' A reconhecida padronização é a raiz da yoga, da ayurveda, de todas as ciências antigas e modernas: reconhecer 'Já vi isso antes', e perguntar se uma fio conecta toda experiência semelhante."
       },
-      "carMetaphor": "⚠TODO[pt]: Not handling the road better — choosing when and where to drive at all, by reading the patterns of leopards and weather.",
+      "carMetaphor": "⚠MT[pt]: Não gerenciar melhor o caminho — escolher quando e onde dirigir de todo, lendo os padrões dos leopardos e do tempo.",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[pt]: The widest yet — it pulls the point-self into a much larger space we call reality. ‘Phenomena scale at every layer’: what we see in the microcosm is possibly happening in the macrocosm at another scale."
+        "text": "⚠MT[pt]: A mais ampla ainda — puxa o eu-ponto para um espaço muito maior que chamamos de realidade. 'Fenômenos escalonam em cada camada': o que vemos no microcosmo pode estar acontecendo no macrocosmo em outro escala."
       },
       "scaleRef": "transcript-en.md:144",
       "density": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Abstract and intuitive — ‘from this body onward it becomes a little more abstract.’ Felt less as content, more as connection and recognition."
+        "text": "⚠MT[pt]: Abstrato e intuitivo — “de deste corpo em diante torna-se um pouco mais abstrato.” Sentido menos como conteúdo, mais como conexão e reconhecimento."
       },
       "nourishment": {
         "source": "expansion",
-        "text": "⚠TODO[pt]: To develop: reflection, contemplation, exposure to many experiences to compare, and imagination — ‘we can imagine what other people might be feeling, and connect with that emotion deeply.’"
+        "text": "⚠MT[pt]: Desenvolva: reflexão, contemplação, exposição a muitas experiências para comparar e imaginação — \"podemos imaginar o que outras pessoas podem estar sentindo, e nos conectar profundamente com essa emoção.\""
       },
       "nourishmentRef": "transcript-en.md:142",
       "quotes": [
         {
-          "text": "⚠TODO[pt]: Pattern recognition is the root of the whole field of yoga, of Ayurveda, of all the modern and ancient sciences.",
+          "text": "⚠MT[pt]: A reconhecimento de padrões é a raiz do campo inteiro da yoga, da ayurveda, de todas as ciências modernas e antigas.",
           "ref": "transcript-en.md:142"
         },
         {
-          "text": "⚠TODO[pt]: If I can recognize personal patterns, in some way that is helping me to experience and explore universal patterns.",
+          "text": "⚠MT[pt]: Se eu puder reconhecer padrões pessoais, de alguma forma isso está me auxiliando a experimentar e explorar padrões universais.",
           "ref": "transcript-en.md:144"
         },
         {
-          "text": "⚠TODO[pt]: The wisdom body begins to draw us out of ourselves and place us within the context of a larger whole.",
+          "text": "⚠MT[pt]: A sabedoria corpo começa a nos tirar de nós mesmos e colocar dentro do contexto de um todo maior.",
           "ref": "transcript-en.md:106"
         }
       ],
-      "practice": "⚠TODO[pt]: When something recurs in your life, hold the question: is there a connected thread between every point, every similar experience? Let that reflection place you in a larger context.",
+      "practice": "⚠MT[pt]: Quando algo se repete na sua vida, pergunte-se: há um fio condensado entre todos os pontos, todas as experiências semelhantes? Deixe essa reflexão colocá-lo em um contexto maior.",
       "practiceRef": "transcript-en.md:142",
       "qa": [
         {
-          "q": "⚠TODO[pt]: What is the modern lens for the wisdom body?",
-          "a": "⚠TODO[pt]: Pattern recognition — recognising “I have seen this before,” and asking whether a thread connects every similar experience."
+          "q": "⚠MT[pt]: Qual é o olhar moderno sobre o corpo da sabedoria?",
+          "a": "⚠MT[pt]: Reconhecimento de padrões — reconhecendo \"Eu já vi isso antes,\" e perguntando se uma trama conecta toda experiência semelhante."
         },
         {
-          "q": "⚠TODO[pt]: How does the “calmer driver” differ from the merely skilled one?",
-          "a": "⚠TODO[pt]: The skilled driver brakes for every leopard and powers through every storm. The calmer driver checks the weather and doesn’t drive when leopards are out — choosing when and where to drive, not just handling the road."
+          "q": "⚠MT[pt]: Como o \"motorista mais calmo\" difere do simplesmente habilidoso?",
+          "a": "⚠MT[pt]: O condutor habilidoso freia para cada leopardo e passa por toda tempestade. O condutor mais calmo verifica o tempo e não dirige quando os leopardos estão soltos — escolhendo quando e onde dirigir, não apenas lidando com a estrada."
         },
         {
-          "q": "⚠TODO[pt]: Why is pattern recognition called the root of yoga, Ayurveda and the sciences?",
-          "a": "⚠TODO[pt]: All of them rest on recognising recurring patterns and connecting them; that capacity pulls the point-self into the larger space we call reality."
+          "q": "⚠MT[pt]: Por que a reconhecimento de padrões é chamado de raiz do yoga, ayurveda e ciências?",
+          "a": "⚠MT[pt]: Todos eles se baseiam na reconhecimento de padrões recorrentes e em sua conexão; essa capacidade puxa o eu-ponto para o maior espaço que chamamos de realidade."
         },
         {
-          "q": "⚠TODO[pt]: What does “phenomena scale at every layer” mean?",
-          "a": "⚠TODO[pt]: What we see in the microcosm is possibly happening in the macrocosm at another scale. Recognising personal patterns helps us explore universal ones."
+          "q": "⚠MT[pt]: O que significa \"os fenômenos se escalonam em cada camada\"?",
+          "a": "⚠MT[pt]: O que vemos no microcosmo pode estar acontecendo no macrocosmo em outra escala. Reconhecendo padrões pessoais nos ajuda a explorar os universais."
         },
         {
-          "q": "⚠TODO[pt]: How does this kosha relate to empathy and imagination?",
-          "a": "⚠TODO[pt]: Recognising patterns lets us imagine a future we haven’t lived and imagine what others feel — connecting with that emotion deeply, drawing us out of ourselves into a larger whole."
+          "q": "⚠MT[pt]: Como este kosha se relaciona com a empatia e a imaginação?",
+          "a": "⚠MT[pt]: Reconhecendo padrões, podemos imaginar um futuro que ainda não vivemos e imaginar o que os outros sentem — conectando-nos profundamente com essa emoção, nos levando além de nós mesmos para uma unidade maior."
         }
       ]
     },
@@ -353,161 +353,161 @@ window.KOSHAS_I18N.pt = {
       "n": 5,
       "sanskrit": "Anandamaya",
       "devanagari": "आनन्दमय",
-      "english": "⚠TODO[pt]: The Bliss Sheath",
+      "english": "⚠MT[pt]: A Anandamaya Kosha",
       "hue": 45,
       "etymology": {
-        "ananda": "⚠TODO[pt]: bliss, beatitude; the unchanging",
-        "maya": "⚠TODO[pt]: made of",
-        "kosha": "⚠TODO[pt]: sheath"
+        "ananda": "⚠MT[pt]: alegria, beatitude; o imutável",
+        "maya": "⚠MT[pt]: feito de",
+        "kosha": "⚠MT[pt]: camaço"
       },
       "etymologyQuote": {
-        "text": "⚠TODO[pt]: Ananda is usually translated as bliss or beatitude, but it can also be seen as the uniform, the pure, that which does not change.",
+        "text": "⚠MT[pt]: O ananda é geralmente traduzido como alegria ou beatificação, mas também pode ser visto como o uniforme, o puro, aquilo que não muda.",
         "ref": "transcript-en.md:108"
       },
-      "traditional": "⚠TODO[pt]: The bliss body. Ananda as bliss or beatitude — but also as the uniform, the pure, that which does not change.",
+      "traditional": "⚠MT[pt]: O corpo da alegria. Ananda como alegria ou beatitude — mas também como o uniforme, o puro, aquilo que não muda.",
       "modernLens": {
-        "name": "⚠TODO[pt]: Baseline Coherence",
-        "body": "⚠TODO[pt]: What is the felt sense when the car runs perfectly — transmission needing zero attention, every sensor reporting correct and on time, climate and steering right, and you know where you’re going? That harmony of all systems at their optimum is a hint of Anandamaya: a state of non-duality, of non-conflict with any other system."
+        "name": "⚠MT[pt]: Coerência Básica",
+        "body": "⚠MT[pt]: Qual é o sentido percebido quando o carro funciona perfeitamente — a transmissão precisando de zero atenção, todos os sensores relatando corretamente e no tempo certo, climatização e direção certas, e você sabe exatamente onde está indo? Essa harmonia de todos os sistemas em seu óptimo é um indicativo da Anandamaya: um estado de não-dualidade, de não-conflito com qualquer outro sistema."
       },
-      "carMetaphor": "⚠TODO[pt]: Not a part of the car — the felt sense when every part is working in harmony at once.",
+      "carMetaphor": "⚠MT[pt]: Não parte do carro — o sentido intuitivo quando cada componente funciona em harmonia ao mesmo tempo.",
       "scale": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Universal and non-dual — ‘a frequency we align with… that pervades each of the koshas and the whole universe.’ Not a layer beside the others but the coherence underlying them."
+        "text": "⚠MT[pt]: Universal e não-dual — 'uma frequência com a qual nos alinhamos… que permeia cada um dos koshas e todo o universo.' Não uma camada ao lado das outras, mas a coerência subjacente a elas."
       },
       "scaleRef": "transcript-en.md:214",
       "density": {
         "source": "talk",
-        "text": "⚠TODO[pt]: The uniform, the pure, that which does not change — the still ground beneath the four fluctuating sheaths."
+        "text": "⚠MT[pt]: O uniforme, o puro, que não muda — a terra ainda sob as quatro camadas fluctuantes."
       },
       "nourishment": {
         "source": "talk",
-        "text": "⚠TODO[pt]: Not added from outside but uncovered: ‘peace is not something we have to add to ourselves; we only have to manage the other distractions.’ It is experienced when the other four koshas function harmoniously."
+        "text": "⚠MT[pt]: A paz não é algo que tenhamos que adicionar a nós mesmos; apenas temos que gerir as outras distrações. É experimentada quando os outros quatro koshas funcionam harmoniosamente."
       },
       "nourishmentRef": "transcript-en.md:148",
       "quotes": [
         {
-          "text": "⚠TODO[pt]: Baseline coherence — a state of non-duality, or non-conflict with any other system.",
+          "text": "⚠MT[pt]: Coerência base — um estado de nondualidade, ou não-conflito com qualquer outro sistema.",
           "ref": "transcript-en.md:146"
         },
         {
-          "text": "⚠TODO[pt]: We are intrinsically beings of peace — peace is not something we have to add to ourselves; we only have to manage the other distractions.",
+          "text": "⚠MT[pt]: Somos seres intrinsecamente de paz — a paz não é algo que tenhamos que adicionar a nós mesmos; apenas temos que gerir as outras distrações.",
           "ref": "transcript-en.md:148"
         },
         {
-          "text": "⚠TODO[pt]: The Anandamaya kosha can truly be experienced when the other four koshas are functioning harmoniously.",
+          "text": "⚠MT[pt]: O Anandamaya kosha pode ser realmente experimentado quando os outros quatro koshas funcionam harmônicamente.",
           "ref": "transcript-en.md:148"
         }
       ],
-      "practice": "⚠TODO[pt]: Recall a moment when every system felt right at once — body, energy, mind, knowing. Don’t reach for it; just notice it is already your baseline beneath the distractions.",
+      "practice": "⚠MT[pt]: Lembre-se de um momento em que todos os sistemas se sentiram certos ao mesmo tempo — corpo, energia, mente, conhecimento. Não busque por ele; apenas observe que já é seu ponto de base abaixo das distrações.",
       "practiceRef": "transcript-en.md:146",
       "qa": [
         {
-          "q": "⚠TODO[pt]: What is the modern lens for the bliss body?",
-          "a": "⚠TODO[pt]: Baseline coherence — a state of non-duality, of non-conflict with any other system."
+          "q": "⚠MT[pt]: Qual é o olhar moderno sobre o corpo da alegria?",
+          "a": "⚠MT[pt]: Coerência básica — um estado de nondualidade, de não-conflito com qualquer outro sistema."
         },
         {
-          "q": "⚠TODO[pt]: How does the perfectly-running car point to ananda?",
-          "a": "⚠TODO[pt]: When the transmission needs zero attention, every sensor reports correct and on time, climate and steering are right, and you know where you’re going — that harmony of all systems at their optimum is a hint of Anandamaya."
+          "q": "⚠MT[pt]: Como um carro perfeitamente funcionando aponta para ananda?",
+          "a": "⚠MT[pt]: Quando a transmissão requer zero atenção, todos os sensores relatam corretamente e em tempo hábil, o clima e a direção estão certos, e você sabe para onde está indo — essa harmonia de todos os sistemas em seu óptimo é um sinal da Anandamaya."
         },
         {
-          "q": "⚠TODO[pt]: What is the surprising claim about peace?",
-          "a": "⚠TODO[pt]: We are intrinsically beings of peace; peace is not something we add — we only have to manage the distractions in the other four koshas."
+          "q": "⚠MT[pt]: Qual é o surpreendente afirmação sobre paz?",
+          "a": "⚠MT[pt]: Somos seres intrinsecamente de paz; a paz não é algo que adicionamos — apenas temos que gerir as distrações nas outras quatro koshas."
         },
         {
-          "q": "⚠TODO[pt]: Besides “bliss,” how else can ananda be understood?",
-          "a": "⚠TODO[pt]: As the uniform, the pure, that which does not change — the still ground beneath the four fluctuating sheaths."
+          "q": "⚠MT[pt]: Além de \"alegria,\" como ananda pode ser compreendido de outra forma?",
+          "a": "⚠MT[pt]: Como o uniforme, o puro, que não muda — a stilla terra firme sob as quatro camadas fluctuantes."
         },
         {
-          "q": "⚠TODO[pt]: When can this kosha actually be experienced?",
-          "a": "⚠TODO[pt]: When the other four koshas are functioning harmoniously — which is why an integrated lifestyle attends to all of them rather than over-focusing on one."
+          "q": "⚠MT[pt]: Quando pode ser realmente experimentado este kosha?",
+          "a": "⚠MT[pt]: Quando os outros quatro koshas funcionam harmônicamente — é por isso que um estilo de vida integrado atende a todos eles em vez de se concentrar excessivamente em um."
         }
       ]
     }
   ],
   "between": {
-    "lead": "⚠TODO[pt]: The richest material lives between the sheaths — where a phenomenon refuses to sit in one box, where imbalance in one layer leaks into another, and where the framework becomes a diagnostic tool for yourself and your students.",
+    "lead": "⚠MT[pt]: A vida mais rica materialmente vive entre os koshas — onde um fenômeno se recusa a ficar em uma única caixa, onde o desequilíbrio em uma camada se infiltra em outra, e onde o quadro se torna um instrumento diagnóstico para você mesmo e seus alunos.",
     "sections": [
       {
         "id": "emotions",
-        "title": "⚠TODO[pt]: Emotions cross the koshas",
+        "title": "⚠MT[pt]: Emoções cruzam os koshas",
         "source": "talk",
-        "body": "⚠TODO[pt]: A student asked whether emotions belong to the physical kosha. The answer: emotions don’t live in any single sheath — they arise and move through all of them. ‘Emotion is energy in motion’; when energy moves and connects with meaning, we feel it as emotion. The first interface for feeling is the body — ‘a marvellous interface’ — and if the body’s signals aren’t heard by the mind, we distort our environment until we ask, ‘wait, how did I get here?’",
+        "body": "⚠MT[pt]: Um aluno perguntou se as emoções pertencem ao kosha físico. A resposta: as emoções não vivem em nenhum único manto — elas surgem e se movem por todos eles. 'Emoção é energia em movimento'; quando a energia se move e se conecta com significado, sentimos como emoção. O primeiro interface para sentir é o corpo — 'um maravilhoso interface' — e se as sinalizações do corpo não forem ouvidas pela mente, distorceremos nosso ambiente até perguntarmos, 'espera, como cheguei aqui?'",
         "quotes": [
           {
-            "text": "⚠TODO[pt]: I don’t think emotions are in any one kosha, but a phenomenon that arises and moves through them.",
+            "text": "⚠MT[pt]: Acho que as emoções não estão em nenhum único kosha, mas uma fenômeno que surge e se move através deles.",
             "ref": "transcript-en.md:176"
           },
           {
-            "text": "⚠TODO[pt]: It’s much easier to be physically balanced than emotionally balanced, on any timeline.",
+            "text": "⚠MT[pt]: É muito mais fácil ser fisicamente equilibrado do que emocionalmente equilibrado, em qualquer cronograma.",
             "ref": "transcript-en.md:180"
           }
         ],
-        "aside": "⚠TODO[pt]: It’s not an accident that Bhakti Yoga comes fourth in the progression — emotion is an advanced class in being human."
+        "aside": "⚠MT[pt]: Não é por acaso que o Bhakti Yoga vem em quarto lugar na progressão — emoção é uma classe avançada no ser humano."
       },
       {
         "id": "rotation",
-        "title": "⚠TODO[pt]: Rotating awareness through all five",
+        "title": "⚠MT[pt]: Rotando a consciência através de todos os cinco koshas,...",
         "source": "talk",
-        "body": "⚠TODO[pt]: The opening settling was itself a rotation of awareness through the koshas — body, energy, mind, knowing, bliss. It can be done any time of day; many traditions share this settling. Crucially: ‘awareness of that state itself seems to have the effect of regulating us.’ Sensing whether each system is balanced or imbalanced is already the intervention.",
+        "body": "⚠MT[pt]: O acomodamento inicial era em si uma rotação da consciência pelos koshas — corpo, energia, mente, conhecimento, prazer supremo. Pode ser feito a qualquer hora do dia; muitas tradições compartilham este acomodamento. Crucialmente: 'a consciência desse estado em si parece ter o efeito de nos regularizar.' Sensar se cada sistema está equilibrado ou imbalanced já é a intervenção.",
         "quotes": [
           {
-            "text": "⚠TODO[pt]: The settling we just did is a way of rotating awareness through the koshas. It can be done at any time of day.",
+            "text": "⚠MT[pt]: O acalma que acabamos de fazer é uma maneira de rotacionar a consciência pelos koshas. Pode ser feito em qualquer hora do dia.",
             "ref": "transcript-en.md:64"
           }
         ]
       },
       {
         "id": "self-and-class",
-        "title": "⚠TODO[pt]: Working with the koshas — on yourself and in a class",
+        "title": "⚠MT[pt]: Trabalhando com os koshas — em si mesmo e em uma classe",
         "source": "expansion",
-        "body": "⚠TODO[pt]: To develop (Session 2 theme): how to use the koshas when working on yourself versus when leading students. Building a settling sequence that produces real change rather than ritual; reading the room across layers; and the teacher↔student connection through the sheaths. The talk’s seed: develop a short sequence you can do in any environment — getting in the car, stepping out of the shower, arriving home — and it will change how you interact with your students.",
+        "body": "⚠MT[pt]: Para desenvolver (tema da sessão 2): como usar os koshas ao trabalhar consigo mesmo versus quando levar alunos. Construir uma sequência de acomodação que produza verdadeiras mudanças em vez de rituais; ler o ambiente nas camadas; e a conexão professor↔aluno através das camadas. A semente do discurso: desenvolver uma sequência curta que você possa fazer em qualquer ambiente — entrar no carro, sair da banheira, chegar em casa — e isso mudará como você interage com seus alunos.",
         "quotes": [
           {
-            "text": "⚠TODO[pt]: When you begin to find a sequence that truly works for you… it will change the way you interact with others, including your students.",
+            "text": "⚠MT[pt]: Quando você começar a encontrar uma sequência que realmente funcione para você… ela mudará o jeito como interage com outros, incluindo seus alunos.",
             "ref": "transcript-en.md:68"
           }
         ]
       },
       {
         "id": "imbalance",
-        "title": "⚠TODO[pt]: Diagnosing imbalance & restoring balance",
+        "title": "⚠MT[pt]: Diagnóstico de desequilíbrio & restauração do equilíbrio",
         "source": "expansion",
-        "body": "⚠TODO[pt]: To develop: a practical method for spotting which kosha is over- or under-active in yourself and others, and choosing the branch of yoga that rebalances it. The talk’s seed: some people feel a lack of peace mentally and are drawn to Raja Yoga; others feel it through the body (allergies, digestion, illness, non-acceptance) and over-focus there — single-food diets, gym, too many supplements. ‘We all move, in different proportions, across this whole spectrum.’ An integrated lifestyle attends to all five.",
+        "body": "⚠MT[pt]: Desenvolver: um método prático para identificar qual kosha está sobredominante ou subdominante em si mesmo e nos outros, e escolher a ramificação da yoga que o rebalanceia. A semente do discurso: alguns sentem falta de paz mental e se inclinam para Raja Yoga; outros sentem isso no corpo (alergias, digestão, doenças, não-aceitação) e se sobrecarregam com isso — dietas monodietárias, academia, suplementos em excesso. 'Todos nós nos movemos, em diferentes proporções, ao longo deste espectro todo.' Um estilo de vida integrado atende a todos os cinco.",
         "quotes": [
           {
-            "text": "⚠TODO[pt]: An integrated yogic lifestyle would give attention to all of these koshas… the Anandamaya kosha can truly be experienced when the other four are functioning harmoniously.",
+            "text": "⚠MT[pt]: Uma vida yogica integrada daria atenção a todos esses koshas… o kosha Anandamaya pode ser realmente experimentado quando os outros quatro estão funcionando harmônicamente.",
             "ref": "transcript-en.md:148"
           }
         ]
       },
       {
         "id": "lifestyle",
-        "title": "⚠TODO[pt]: Lifestyle choices ↔ the koshas",
+        "title": "⚠MT[pt]: Escolhas de estilo de vida ↔ os koshas",
         "source": "expansion",
-        "body": "⚠TODO[pt]: To develop: map everyday activities and lifestyle choices to the kosha they feed or deplete — diet and movement (annamaya), breath, rest and nature (pranamaya), media and study (manomaya), reflection and exposure to variety (vijnanamaya), and the conditions under which baseline coherence (anandamaya) surfaces. The awareness-work homework seeds this: list every component you think belongs to each kosha."
+        "body": "⚠MT[pt]: Desenvolva: mapeie as atividades diárias e escolhas de estilo de vida com os koshas a que eles alimentam ou desgastam — dieta e movimento (annamaya), respiração, descanso e natureza (pranamaya), mídia e estudo (manomaya), reflexão e exposição à variedade (vijnanamaya), e as condições em que a coerença básica (anandamaya) emerge. O trabalho de consciência da tarefa casa-se com isso: liste todos os componentes que você pensa pertencerem a cada kosha."
       },
       {
         "id": "elements",
-        "title": "⚠TODO[pt]: Five elements ↔ five koshas",
+        "title": "⚠MT[pt]: Cinco elementos ↔ cinco koshas",
         "source": "expansion",
-        "body": "⚠TODO[pt]: To develop (proposed mapping — not stated in the talk): the pancha mahabhuta as a parallel spectrum from gross to subtle — earth↔Annamaya (densest form), water/fire↔Pranamaya (flow & transformation), air↔Manomaya (movement of mind), ether/akasha↔Vijnanamaya (spacious knowing), and the beyond-elemental↔Anandamaya. Offered as an exploration to test against experience, in the spirit of ‘phenomena scale at every layer.’",
-        "flag": "⚠TODO[pt]: Proposed framework — verify against tradition before teaching as canonical."
+        "body": "⚠MT[pt]: Desenvolver (mapeamento proposto — não mencionado no discurso): os pancha mahabhuta como um espectro paralelo de grosso a sutileza — terra↔Annamaya (forma mais densa), água/fora↔Pranamaya (fluxo e transformação), ar↔Manomaya (movimento da mente), éter/akasha↔Vijnanamaya (conhecimento espaçoso), e além do elemento↔Anandamaya. Oferecido como uma exploração para testar contra a experiência, no espírito de 'fenômenos escalonados em cada camada.'",
+        "flag": "⚠MT[pt]: Estrutura proposta — verifique contra a tradição antes de ensinar como canônica."
       },
       {
         "id": "chakras",
-        "title": "⚠TODO[pt]: Chakras ↔ koshas (open question)",
+        "title": "⚠MT[pt]: Cakra ↔ kosha",
         "source": "expansion",
-        "body": "⚠TODO[pt]: To develop (open question — not in the talk): chakras live primarily within the pranamaya and manomaya fields, so a clean 1:1 chakra↔kosha mapping is unlikely. Worth exploring: how the seven-chakra vertical axis intersects the five-sheath nested model, and where they genuinely correspond versus where forcing a map distorts both.",
-        "flag": "⚠TODO[pt]: Open question — likely not a 1:1 mapping; explore carefully."
+        "body": "⚠MT[pt]: Para desenvolver (pergunta aberta — não na palestra): os chakras vivem principalmente nos campos pranamaya e manomaya, então uma mapeamento 1:1 chakra↔kosha é improvável. Vale explorar: como o eixo vertical dos sete chakras se intersecta com o modelo aninhado de cinco camadas, e onde eles correspondem genuinamente versus onde forçar um mapa distorce ambos.",
+        "flag": "⚠MT[pt]: Pergunta aberta — provavelmente não tem uma correspondência 1:1; explore com cuidado."
       },
       {
         "id": "scale-insight",
-        "title": "⚠TODO[pt]: Phenomena scale at every layer",
+        "title": "⚠MT[pt]: Fenômenos se escalonam em cada camada",
         "source": "talk",
-        "body": "⚠TODO[pt]: A core Vijnanamaya insight that ties the whole framework together: what shows up in the microcosm is possibly happening in the macrocosm at another scale. Recognising personal patterns becomes a way of exploring universal ones — which is why ‘scale’ and ‘density’ make natural axes for comparing the koshas to each other.",
+        "body": "⚠MT[pt]: Uma insight fundamental do Vijnanamaya que une todo o framework: o que aparece no microcosmo pode estar acontecendo no macrocosmo em outra escala. Reconhecer padrões pessoais se torna uma maneira de explorar os universais — por isso, 'escala' e 'densidade' fazem axiomas naturais para comparar os koshas entre si.",
         "quotes": [
           {
-            "text": "⚠TODO[pt]: Phenomena scale at every layer — what we see in the microcosm is possibly happening in the macrocosm at another scale.",
+            "text": "⚠MT[pt]: As fenômenos se escalonam em cada camada — o que vemos no microcosmo pode estar acontecendo no macrocosmo em outra escala.",
             "ref": "transcript-en.md:144"
           }
         ]
@@ -515,144 +515,144 @@ window.KOSHAS_I18N.pt = {
     ],
     "qa": [
       {
-        "q": "⚠TODO[pt]: Which kosha do emotions belong to?",
-        "a": "⚠TODO[pt]: None exclusively — emotions arise and move through all of them. “Emotion is energy in motion”; when energy moves and connects with meaning, we feel it as emotion."
+        "q": "⚠MT[pt]: A qual kosha as emoções pertencem?",
+        "a": "⚠MT[pt]: Nenhuma delas exclusivamente — emoções surgem e se movimentam por todas elas. \"Emoção é energia em movimento\"; quando a energia se move e se conecta com significado, sentimos como emoção."
       },
       {
-        "q": "⚠TODO[pt]: Why is the body called “the first interface for feeling”?",
-        "a": "⚠TODO[pt]: It is where feeling first registers. If the body’s signals aren’t heard by the mind, we distort our environment until we ask “how did I get here?” A sensitive, worked-with body keeps us attentive to what an emotion is pointing to."
+        "q": "⚠MT[pt]: Por que o corpo é chamado \"a primeira interface para o sentimento\"?",
+        "a": "⚠MT[pt]: É onde o sentimento primeiro registra. Se os sinais do corpo não são ouvidos pela mente, distorcemos nosso ambiente até perguntarmos \"como cheguei aqui? \". Um corpo sensível e trabalhado nos mantém atentos ao que um emoção está apontando."
       },
       {
-        "q": "⚠TODO[pt]: Why is it “not an accident” that Bhakti Yoga comes fourth?",
-        "a": "⚠TODO[pt]: Emotion is an advanced class in being human — it is much easier to be physically balanced than emotionally balanced — so the devotional path sits later in the progression."
+        "q": "⚠MT[pt]: Por que é \"não um acidente\" que o Bhakti Yoga vem em quarto lugar?",
+        "a": "⚠MT[pt]: A emoção é uma classe avançada de ser humano — é muito mais fácil estar fisicamente equilibrado do que emocionalmente equilibrado — portanto, o caminho devocional ocupa um lugar posterior na progressão."
       },
       {
-        "q": "⚠TODO[pt]: How do you tell which kosha needs attention in yourself or a student?",
-        "a": "⚠TODO[pt]: Notice where peace feels missing: some feel it mentally and are drawn to Raja Yoga; others through the body — allergies, diet, illness, the gym. We all move across the spectrum; an integrated lifestyle attends to all five."
+        "q": "⚠MT[pt]: Como você determina qual kosha precisa de atenção em si mesmo ou em um aluno?",
+        "a": "⚠MT[pt]: Noticie onde a paz se sente ausente: alguns se sentem assim mentalmente e são atraídos para o Raja Yoga; outros através do corpo — alergias, dieta, doença, o ginásio. Todos nós nos movemos ao longo do espectro; um estilo de vida integrado atende a todos os cinco."
       },
       {
-        "q": "⚠TODO[pt]: What is the point of “rotating awareness” through the koshas?",
-        "a": "⚠TODO[pt]: Settling through each layer lets you sense whether each system is balanced. Awareness of that state itself has the effect of regulating us — otherwise settling becomes a ritual, not real change."
+        "q": "⚠MT[pt]: Qual é o propósito de \"rotacionar a consciência\" através dos koshas?",
+        "a": "⚠MT[pt]: Acomodando-se através de cada camada, você pode perceber se cada sistema está equilibrado. A consciência desse estado em si tem o efeito de regularmos-nos — caso contrário, a acomodação se torna um ritual, não uma verdadeira mudança."
       }
     ]
   },
   "practices": [
     {
       "id": "opening",
-      "title": "⚠TODO[pt]: Opening — Guided Settling",
-      "kind": "⚠TODO[pt]: Rotation of awareness through the koshas",
+      "title": "⚠MT[pt]: Abertura — Conjunto Guiado de Acalmação",
+      "kind": "⚠MT[pt]: Rotação da consciência através dos koshas",
       "steps": [
-        "⚠TODO[pt]: Arrange the body as if you were going to sit for an hour — base stable, spine supported, symmetry from toes to hips on each side, hands in a mudra, eyes and mouth gently closed.",
-        "⚠TODO[pt]: Without focusing on anything in particular, notice: is attention drawn to a part or the whole body? To your energetic state? To movements of the mind — sounds, temperature, situations you’ve been turning over?",
-        "⚠TODO[pt]: Rewind the night: replay the hours before sleep like a film; sense when the shift toward sleep began; move through the night (deep or light? dreams?); recall the first details of waking and which parts of you woke first.",
-        "⚠TODO[pt]: Observe the breath and gradually deepen it in both directions — a little fuller each time — noticing how attending to breath involves body and mind together.",
-        "⚠TODO[pt]: Palming: rub the hands warm, cover the eyelids, let warmth enter the eyes and travel down the spine. Hari Om Tat Sat. Lower the hands and gently open the eyes."
+        "⚠MT[pt]: Ajeite o corpo como se fosse sentar por uma hora — base estável, espinha suportada, simetria dos dedos aos quadris em cada lado, mãos em uma mudra, olhos e boca levemente fechados.",
+        "⚠MT[pt]: Sem concentrar em nada de forma particular, observe: a atenção é direcionada para uma parte ou o todo do corpo? Para seu estado energético? Para movimentos da mente — sons, temperatura, situações que você tem vindo a refletir?",
+        "⚠MT[pt]: Rebobinar a noite: reprisa as horas antes do sono como um filme; sinta quando começou o movimento para o sono; passe pela noite (profunda ou leve? sonhos?); recorde os primeiros detalhes da vigília e quais partes de você acordaram primeiro.",
+        "⚠MT[pt]: Observa a respiração e gradualmente profunda-a em ambas as direções — um pouco mais cheia cada vez — notando como prestar atenção à respiração envolve corpo e mente juntos.",
+        "⚠MT[pt]: Palmando: aqueça as mãos, cubra os olhos, deixe o calor entrar nos olhos e viajar pela coluna vertebral. Hari Om Tat Sat. Baixe as mãos e abra gentilmente os olhos."
       ],
       "ref": "transcript-en.md:34-56"
     },
     {
       "id": "closing",
-      "title": "⚠TODO[pt]: Closing — Breath through the Koshas + OM",
-      "kind": "⚠TODO[pt]: Integration",
+      "title": "⚠MT[pt]: Fechando — Respirar através dos Koshas + OM",
+      "kind": "⚠MT[pt]: Integração",
       "steps": [
-        "⚠TODO[pt]: Sit comfortably, body balanced, hands in a mudra, eyes and mouth gently closed. Notice how you are right now without reaching for any state.",
-        "⚠TODO[pt]: Take one full breath from physical toward causal — passing through each kosha, from Annamaya toward Anandamaya.",
-        "⚠TODO[pt]: Imagine OM pervading each kosha and the whole universe — a frequency you align with. Recite OM followed by shanti, shanti, shanti.",
-        "⚠TODO[pt]: A round of palming; cover the eyes with a little warmth. Breathe in; release the hands when ready. Hari Om Tat Sat."
+        "⚠MT[pt]: Assente-se confortavelmente, corpo em equilíbrio, mãos em uma mudra, olhos e boca levemente fechados. Nota-se como se está agora sem buscar por nenhum estado.",
+        "⚠MT[pt]: Tome uma respiração completa do físico até o causal — passando por cada kosha, de Annamaya até Anandamaya.",
+        "⚠MT[pt]: Imaginem o OM preenchendo cada kosha e todo o universo — uma frequência com a qual alinhais-vos. Reцитai OM seguido de shanti, shanti, shanti.",
+        "⚠MT[pt]: Uma rodada de palmar; cubra os olhos com um pouco de calor. Inspire; solte as mãos quando estiver pronto. Hari Om Tat Sat."
       ],
       "ref": "transcript-en.md:212-218"
     },
     {
       "id": "awareness-work",
-      "title": "⚠TODO[pt]: Awareness Work (not homework)",
-      "kind": "⚠TODO[pt]: Between sessions — optional",
+      "title": "⚠MT[pt]: Trabalho de Consciência (não trabalho para casa)",
+      "kind": "⚠MT[pt]: Entre as sessões — opcional",
       "steps": [
-        "⚠TODO[pt]: Once a day, ask: where was my attention most directed today? Chart it through to the last session — a spiritual journal, a sadhana.",
-        "⚠TODO[pt]: Go through the five koshas and list every component you think belongs to each — skeletal, muscular, respiratory… modern, yogic, or both. You may even ask ChatGPT and simply listen to its answer once before the next session.",
-        "⚠TODO[pt]: ‘If you do this, I’ll turn the data into graphs.’ No grading — it’s awareness work, not homework."
+        "⚠MT[pt]: Cada dia, pergunta: para onde foi mais direcionada minha atenção hoje? Trace-a até a última sessão — um diário espiritual, uma prática de sadhana.",
+        "⚠MT[pt]: Passem pelos cinco koshas e liste todos os componentes que você acredita pertencer a cada um — esqueléticos, musculares, respiratórios... modernos, yogic ou ambos. Você até pode perguntar ao ChatGPT e simplesmente ouvir sua resposta uma vez antes da próxima sessão.",
+        "⚠MT[pt]: 'Se você fizer isso, vou transformar os dados em gráficos.' Não há graduação — é trabalho de consciência, não trabalho de casa."
       ],
       "ref": "transcript-en.md:200-202"
     }
   ],
   "awareness": {
-    "lead": "⚠TODO[pt]: Awareness work — not homework (it won’t be graded). Small, repeatable exercises from the talk that train each kosha in the flow of an ordinary day.",
+    "lead": "⚠MT[pt]: Trabalho de consciência — não trabalho para casa (não será avaliado). Pequenos exercícios repetíveis do discurso que treinam cada kosha no fluxo de um dia comum.",
     "groups": [
       {
-        "kosha": "⚠TODO[pt]: Annamaya · the body",
+        "kosha": "⚠MT[pt]: Annamaya · o corpo",
         "hue": 18,
         "items": [
           {
-            "text": "⚠TODO[pt]: Each time you become aware of your physical body, ask: “where did this come from?” It came from something outside the body itself.",
+            "text": "⚠MT[pt]: Cada vez que você se torna consciente de seu corpo físico, pergunte: \"de onde veio isso?\" Ele veio de algo fora do próprio corpo.",
             "ref": "transcript-en.md:132"
           },
           {
-            "text": "⚠TODO[pt]: Deeply massage your arms and fingers. In a coarse way, feel the matter of your body — that you cannot push your fingers through the skin — and notice the variation in density from skin to muscle to joint.",
+            "text": "⚠MT[pt]: Massajeie seus braços e dedos com profundidade. De maneira grosseira, sinta o corpo material — que você não pode empurrar os dedos através da pele — e note a variação na densidade da pele até o músculo até o joelho.",
             "ref": "transcript-en.md:100"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[pt]: Pranamaya · energy",
+        "kosha": "⚠MT[pt]: Pranamaya · energia",
         "hue": 35,
         "items": [
           {
-            "text": "⚠TODO[pt]: Evaluate your prana: where are its sources? Its exit points? How do you attract and retain it — and from what points do you lose it?",
+            "text": "⚠MT[pt]: avalie seu prana: de onde são suas fontes? quais são seus pontos de saída? como você atrai e retém o prana — e por quais pontos você o perde?",
             "ref": "transcript-en.md:102"
           },
           {
-            "text": "⚠TODO[pt]: Through the day, catch the moments of state transition — after dinner, stepping out of the shower, getting into the car — and name the gear you’re shifting into.",
+            "text": "⚠MT[pt]: Ao longo do dia, capture os momentos de transição de estado — após o jantar, ao sair da banheira, ao entrar no carro — e nomeie a marcha em que está engatando.",
             "ref": "transcript-en.md:134"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[pt]: Manomaya · mind",
+        "kosha": "⚠MT[pt]: Manomaya · mente",
         "hue": 190,
         "items": [
           {
-            "text": "⚠TODO[pt]: Once a day, ask: “where was my attention most directed today?” Keep a short spiritual journal (sadhana) and chart it through to the last session.",
+            "text": "⚠MT[pt]: Cada dia, pergunta: \"onde estava mais direcionada minha atenção hoje?\" Mantenha um breve diário espiritual (sadhana) e trace-o até a última sessão.",
             "ref": "transcript-en.md:200"
           },
           {
-            "text": "⚠TODO[pt]: When you feel pain or suffering, trace the cause back to attention: where was my attention in that moment — that week, those ten years?",
+            "text": "⚠MT[pt]: Quando sente dor ou sofrimento, tracem o motivo à atenção: onde estava minha atenção nesse momento — naquele dia, nos últimos dez anos?",
             "ref": "transcript-en.md:138"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[pt]: Vijnanamaya · wisdom",
+        "kosha": "⚠MT[pt]: Vijnanamaya · sabedora",
         "hue": 255,
         "items": [
           {
-            "text": "⚠TODO[pt]: When something recurs, hold the question: is there a connected thread between every similar experience? Let it place you in a larger context.",
+            "text": "⚠MT[pt]: Quando algo se repete, mantenha a pergunta: há um fio condensador entre todas as experiências semelhantes? Deixe que isso o coloque em um contexto maior.",
             "ref": "transcript-en.md:142"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[pt]: Anandamaya · bliss",
+        "kosha": "⚠MT[pt]: Anandamaya · felicidade",
         "hue": 45,
         "items": [
           {
-            "text": "⚠TODO[pt]: Recall a moment when every system felt right at once — body, energy, mind, knowing. Don’t reach for it; just notice it as the baseline beneath the distractions.",
+            "text": "⚠MT[pt]: Lembre-se de um momento em que todos os sistemas se sentiram certos ao mesmo tempo — corpo, energia, mente, conhecimento. Não busque por ele; apenas observe-o como a base abaixo das distrações.",
             "ref": "transcript-en.md:146"
           }
         ]
       },
       {
-        "kosha": "⚠TODO[pt]: Across all five",
+        "kosha": "⚠MT[pt]: Ao longo de todos os cinco",
         "hue": 280,
         "items": [
           {
-            "text": "⚠TODO[pt]: Go through the five koshas and list every component you think belongs to each — skeletal, muscular, respiratory… modern, yogic, or both. You may even ask ChatGPT and simply listen to its answer once before the next session.",
+            "text": "⚠MT[pt]: Passem pelos cinco koshas e liste todos os componentes que você acredita pertencer a cada um — esqueléticos, musculares, respiratórios... modernos, yogic ou ambos. Você até pode perguntar ao ChatGPT e simplesmente ouvir sua resposta uma vez antes da próxima sessão.",
             "ref": "transcript-en.md:202"
           },
           {
-            "text": "⚠TODO[pt]: Each time you hear or say a kosha’s name, repeat the word and bring your awareness to that body. Kept up across the four talks, it becomes a practice lasting weeks.",
+            "text": "⚠MT[pt]: Cada vez que ouvir ou disser o nome de um kosha, repita a palavra e traga sua consciência para aquele corpo. Mantido ao longo das quatro palestras, se torna uma prática durando semanas.",
             "ref": "transcript-en.md:118"
           },
           {
-            "text": "⚠TODO[pt]: Ask yourself: over the past months, which kosha (one or two) have I been predominantly in? Not good or bad — just where you find yourself.",
+            "text": "⚠MT[pt]: Pergunte-se: nos últimos meses, em qual (ou quais) um ou dois koshas você tem se encontrado predominantemente? Não bom ou mau — apenas onde você se encontra.",
             "ref": "transcript-en.md:190"
           }
         ]
