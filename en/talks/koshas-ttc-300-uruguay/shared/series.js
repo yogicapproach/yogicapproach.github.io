@@ -46,20 +46,20 @@ window.KOSHAS_SERIES = {
      home.js deep-merges this over the EN catalog, so anything omitted falls back.
      -------------------------------------------------------------------------- */
   ne: {
-    title: "⚠TODO[ne]: The Five Koshas",
-    subtitle: "⚠TODO[ne]: A Framework for Awareness",
-    course: "⚠TODO[ne]: 300-Hour Teacher Training · Uruguay",
+    title: "पाँच कोशहरू",
+    subtitle: "सजगताको लागि एक ढाँचा",
+    course: "३००-घण्टे शिक्षक प्रशिक्षण · उरुग्वे",
     teacher: "Satchidananda",
     host: "Ale",
-    blurb: "⚠TODO[ne]: A four-session journey through the five sheaths — from the traditional map toward a living, practical framework you can teach from and practise within.",
+    blurb: "पाँच कोशहरूको माध्यमबाट चार सत्रको यात्रा — परम्परागत नक्साबाट एक जीवन्त, व्यावहारिक ढाँचातर्फ जसबाट तपाईं सिकाउन र अभ्यास गर्न सक्नुहुन्छ।",
     recording: "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
-    upcoming_label: "⚠TODO[ne]: Notes appear after the class",
-    open_label: "⚠TODO[ne]: Open notes",
+    upcoming_label: "कक्षापछि नोटहरू देखा पर्नेछन्",
+    open_label: "नोटहरू खोल्नुहोस्",
     sessions: [
-      { n: 1, id: "session-1", title: "⚠TODO[ne]: The Five Koshas", theme: "⚠TODO[ne]: Theory — from the traditional presentation toward a modern reframe.", date: "⚠TODO[ne]: 10 Jun 2026", status: "ready", href: "sessions/session-1/" },
-      { n: 2, id: "session-2", title: "⚠TODO[ne]: Connection", theme: "⚠TODO[ne]: The koshas from the perspective of how to connect — between students and teachers.", date: "⚠TODO[ne]: 16 Jun 2026", status: "upcoming", href: "sessions/session-2/" },
-      { n: 3, id: "session-3", title: "⚠TODO[ne]: Society", theme: "⚠TODO[ne]: The koshas in relation to society, and how that affects us within these layers.", date: "—", status: "upcoming", href: "sessions/session-3/" },
-      { n: 4, id: "session-4", title: "⚠TODO[ne]: Integration", theme: "⚠TODO[ne]: Exploring and deepening the koshas through what we’ve integrated in the earlier sessions.", date: "—", status: "upcoming", href: "sessions/session-4/" }
+      { n: 1, id: "session-1", title: "पाँच कोशहरू", theme: "सिद्धान्त — परम्परागत प्रस्तुतिबाट आधुनिक पुनर्संरचनातर्फ।", date: "१० जुन २०२६", status: "ready", href: "sessions/session-1/" },
+      { n: 2, id: "session-2", title: "जडान", theme: "जडानको दृष्टिकोणबाट कोशहरू — विद्यार्थी र शिक्षकहरूका बीचमा।", date: "१६ जुन २०२६", status: "upcoming", href: "sessions/session-2/" },
+      { n: 3, id: "session-3", title: "समाज", theme: "समाजसँगको सम्बन्धमा कोशहरू, र त्यसले यी तहहरूभित्र हामीलाई कसरी असर गर्छ।", date: "—", status: "upcoming", href: "sessions/session-3/" },
+      { n: 4, id: "session-4", title: "एकीकरण", theme: "अघिल्ला सत्रहरूमा एकीकृत गरेका कुराहरूमार्फत कोशहरूको अन्वेषण र गहिराइ।", date: "—", status: "upcoming", href: "sessions/session-4/" }
     ]
   },
 
