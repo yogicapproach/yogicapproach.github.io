@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Session 2 · The Five Koshas</title>
+  <title>The Five Koshas · Student Notes · Session 2</title>
+  <meta name="description" content="Interactive multilingual student notes on the five koshas — grounded in the Session-2 TTC-300 talk by Satchidananda (Connection: wakefulness, scale & the gunas)." />
   <script>
     (function () {
       try {
@@ -30,11 +31,23 @@
       </div>
       <div class="controls" id="controls"></div>
     </div>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Sections"></nav>
   </header>
-  <main id="view" class="view" role="main"></main>
+
+  <main id="view" class="view" role="main"><!-- rendered by session.js --></main>
+
+  <footer class="footer">
+    <p id="footNote"></p>
+    <p class="foot-meta" id="footMeta"></p>
+  </footer>
+
+  <!-- shared UI strings + series catalog, session content bundles, then the engine -->
   <script src="../../shared/i18n.js"></script>
   <script src="../../shared/series.js"></script>
-  <script src="../../shared/placeholder.js"></script>
+  <script src="data/notes.en.js"></script>
+  <script src="data/notes.es.js"></script>
+  <script src="data/notes.ne.js"></script>
+  <script src="../../shared/session.js"></script>
   <script src="../../shared/footer.js"></script>
 </body>
 </html>
