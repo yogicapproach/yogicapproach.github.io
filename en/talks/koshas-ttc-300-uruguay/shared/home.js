@@ -36,9 +36,12 @@
   const seriesFor = (lang) =>
     (lang === "en" || !SERIES.en) ? SERIES[lang] : deepFallback(SERIES.en, SERIES[lang]);
 
-  let LOCALE = localStorage.getItem("kosha_lang") ||
+  // precedence: ?lang= (shareable URL) > localStorage > navigator
+  let LOCALE = (new URLSearchParams(location.search).get("lang") || "").toLowerCase() ||
+    localStorage.getItem("kosha_lang") ||
     ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
   if (!SERIES[LOCALE]) LOCALE = "en";
+  localStorage.setItem("kosha_lang", LOCALE);   // persist a ?lang= choice across pages
   let THEME = document.documentElement.dataset.theme || "dark";
   let S = seriesFor(LOCALE);
 
@@ -82,6 +85,8 @@
   function setLocale(lang) {
     if (lang === LOCALE || !SERIES[lang]) return;
     LOCALE = lang; localStorage.setItem("kosha_lang", lang); S = seriesFor(lang);
+    { const u = new URL(location.href); u.searchParams.set("lang", lang);   // shareable URL
+      history.replaceState(null, "", u.pathname + u.search + location.hash); }
     paintMeta(); buildControls(); render();
   }
 

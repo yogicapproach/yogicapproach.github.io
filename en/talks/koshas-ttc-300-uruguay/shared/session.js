@@ -46,9 +46,12 @@
     (lang === "en" || !I18N.en) ? I18N[lang] : deepFallback(I18N.en, I18N[lang]);
 
   /* ---- state ------------------------------------------------------------- */
-  let LOCALE = localStorage.getItem("kosha_lang") ||
+  // precedence: ?lang= (shareable URL) > localStorage > navigator
+  let LOCALE = (new URLSearchParams(location.search).get("lang") || "").toLowerCase() ||
+    localStorage.getItem("kosha_lang") ||
     ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
   if (!I18N[LOCALE]) LOCALE = "en";
+  localStorage.setItem("kosha_lang", LOCALE);   // persist a ?lang= choice across pages
   let THEME = document.documentElement.dataset.theme || "dark";
   let current = (location.hash.slice(1) || "overview");
 
@@ -113,6 +116,8 @@
   function setLocale(lang) {
     if (lang === LOCALE || !I18N[lang]) return;
     LOCALE = lang; localStorage.setItem("kosha_lang", lang); D = dataFor(lang);
+    { const u = new URL(location.href); u.searchParams.set("lang", lang);   // shareable URL, keep #hash
+      history.replaceState(null, "", u.pathname + u.search + location.hash); }
     paintMeta(); buildTabs(); buildControls(); go(current);
   }
 
