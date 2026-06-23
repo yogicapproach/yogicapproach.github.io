@@ -88,10 +88,24 @@
           <span class="scard-cta">${cta} <span class="scard-arrow">→</span></span>
         </a>`;
     }).join("");
+    const gLabel = { en: "Knowledge Graph", es: "Grafo de conocimiento", ne: "ज्ञान ग्राफ" }[LOCALE] || "Knowledge Graph";
+    const gSub = {
+      en: "Explore how the koshas connect across all four sessions — tap a node, follow a thread, jump to the moment in the recording.",
+      es: "Explora cómo se conectan los koshas a lo largo de las cuatro sesiones — toca un nodo, sigue un hilo, salta al momento de la grabación.",
+      ne: "चारवटै सत्रमा कोशहरू कसरी जोडिन्छन् अन्वेषण गर्नुहोस् — नोडमा थिच्नुहोस्, सूत्र पछ्याउनुहोस्।",
+    }[LOCALE] || "Explore how the koshas connect across all four sessions.";
     view.innerHTML = `<div class="reveal">
       <h2 class="section-h home-h">${esc(S.subtitle)}</h2>
       <p class="lead home-lead">${esc(S.blurb)}</p>
       <div class="scard-grid">${cards}</div>
+      <section class="graph-embed">
+        <h2 class="section-h">${esc(gLabel)}</h2>
+        <p class="lead">${esc(gSub)}</p>
+        <div class="graph-frame-wrap">
+          <iframe class="graph-frame" src="graph/" title="${esc(gLabel)}" loading="lazy"></iframe>
+        </div>
+        <p class="graph-cta"><a class="scard-cta" href="graph/" target="_blank" rel="noopener">${esc(gLabel)} <span class="scard-arrow">↗</span></a></p>
+      </section>
     </div>`;
   }
   function t_open() { return esc(S.open_label); }

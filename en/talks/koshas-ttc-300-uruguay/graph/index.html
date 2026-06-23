@@ -110,6 +110,9 @@
     .chip { font-family:var(--mono); font-size:11px; letter-spacing:.03em; color:var(--ink-soft);
       border:1px solid var(--line); border-radius:100px; padding:5px 11px; background:var(--panel); }
     .chip.ses { cursor:default; }
+    a.chip.chip-link { cursor:pointer; text-decoration:none; color:var(--ink); transition:border-color .15s, background .15s; }
+    a.chip.chip-link:hover { border-color:var(--accent, #b6894a); background:var(--panel-2, rgba(182,137,74,.12)); }
+    a.chip.chip-link::after { content:" \2197"; opacity:.5; font-size:9px; }
 
     /* legend + controls */
     #legend { position:fixed; left:20px; bottom:20px; z-index:15; max-width:260px;

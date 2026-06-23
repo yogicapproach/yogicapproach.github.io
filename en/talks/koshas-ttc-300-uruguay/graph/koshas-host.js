@@ -108,7 +108,12 @@
       ses.appendChild(lbl);
       var chips = document.createElement("div"); chips.className = "chips";
       (d.sessions || []).forEach(function (sid) {
-        var c = document.createElement("span"); c.className = "chip ses";
+        // S1..S4 chips link to that session's notes page (../sessions/session-N/);
+        // any non-Sxx tag (e.g. an audio-only event) stays a plain span.
+        var m = /^S(\d+)$/.exec(sid);
+        var c = document.createElement(m ? "a" : "span");
+        c.className = "chip ses" + (m ? " chip-link" : "");
+        if (m) { c.href = "../sessions/session-" + m[1] + "/"; }
         c.title = (sessions[sid] && sessions[sid].label) || sid;
         c.textContent = sid + (sessions[sid] ? " · " + sessions[sid].date : "");
         chips.appendChild(c);
