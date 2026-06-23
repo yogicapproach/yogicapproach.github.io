@@ -441,6 +441,9 @@
       focusNode: focusNode,
       clearFocus: clearFocus,
       closePanel: closePanel,
+      // The currently focused node datum (or null) — lets a host re-render the
+      // open panel after it changes label/desc (e.g. on a language switch).
+      focused: function () { return focused; },
       recolor: recolor,
       reheat: reheat,
       layer: layer,

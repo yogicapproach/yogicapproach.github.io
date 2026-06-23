@@ -15,6 +15,23 @@
   "use strict";
 
   var THEME_KEY = "kosha_theme";
+  // Shared with the koshas-notes app: language follows the reader across the site.
+  var LANG_KEY = "kosha_lang";
+  var LANGS = [
+    { key: "en", label: "EN" },
+    { key: "es", label: "ES" },
+    { key: "ne", label: "ने" },
+  ];
+  function validLang(l) { return l === "en" || l === "es" || l === "ne"; }
+  function initialLang() {
+    try {
+      var q = (new URLSearchParams(location.search)).get("lang");
+      if (validLang(q)) return q;
+      var s = localStorage.getItem(LANG_KEY);
+      if (validLang(s)) return s;
+    } catch (e) {}
+    return "en";
+  }
   // Where a node with no resolvable audio cite still gets a real, clickable
   // source: the own-transcript corpus search page (reused, not duplicated).
   var CORPUS_INDEX = "../../202606-koshas-ttc-300-uruguay/artifacts/corpus/index.html";
@@ -254,5 +271,91 @@
       syncThemeGlyph();
       graph.recolor();
     });
+
+    /* ---- language toggle (EN · ES · ने) -------------------------------------
+       Multilingual without forking the engine: graph.json carries parallel
+       label_es/label_ne + desc_es/desc_ne per node, label_es/label_ne per
+       community, and a meta.rel_i18n map keyed by the EN rel string. The host
+       swaps the ACTIVE-language text onto the in-memory nodes / links /
+       communities (EN originals preserved in the *_en stash) and re-renders the
+       live engine selections + legend + any open panel. Sanskrit (the Devanagari
+       `sanskrit` field, kosha names, mantra names) is never translated — it lives
+       in the data verbatim across languages. Cites, session/layout/community
+       toggles are untouched: only label/desc/rel text changes. */
+    var relI18n = (data.meta && data.meta.rel_i18n) || {};
+
+    // Stash EN originals once so switching back to EN is lossless.
+    graph.nodes.forEach(function (n) {
+      if (n._label_en === undefined) n._label_en = n.label;
+      if (n._desc_en === undefined) n._desc_en = n.desc;
+    });
+    graph.edges.forEach(function (l) {
+      if (l._rel_en === undefined) l._rel_en = l.rel;
+    });
+    Object.keys(communities).forEach(function (c) {
+      if (communities[c]._label_en === undefined) communities[c]._label_en = communities[c].label;
+    });
+
+    function pick(obj, base, lang) {
+      // base = "label" | "desc"; falls back to EN when a translation is absent.
+      if (lang === "en") return obj["_" + base + "_en"];
+      var v = obj[base + "_" + lang];
+      return (v != null && v !== "") ? v : obj["_" + base + "_en"];
+    }
+
+    function applyLang(lang, persist) {
+      if (!validLang(lang)) lang = "en";
+      document.documentElement.lang = lang;
+      document.documentElement.dataset.lang = lang;
+      if (persist) { try { localStorage.setItem(LANG_KEY, lang); } catch (e) {} }
+
+      // Node label + desc (engine reads d.label / d.desc directly).
+      graph.nodes.forEach(function (n) {
+        n.label = pick(n, "label", lang);
+        n.desc = pick(n, "desc", lang);
+      });
+      // Edge rel (linkLabel + connections list read l.rel).
+      graph.edges.forEach(function (l) {
+        var en = l._rel_en;
+        var tr = relI18n[en] && relI18n[en][lang];
+        l.rel = (lang === "en" || !tr) ? en : tr;
+      });
+      // Community label (legend + panel kicker read communities[c].label).
+      Object.keys(communities).forEach(function (c) {
+        var en = communities[c]._label_en;
+        communities[c].label = (lang === "en") ? en
+          : (communities[c]["label_" + lang] || en);
+      });
+
+      // Re-render the live engine selections that show language.
+      graph.selections.node.select("text.main-label").text(function (d) { return d.label; });
+      graph.selections.linkLabel.text(function (d) { return d.rel || ""; });
+      graph.layer.buildLegend();
+      // Re-open the focused node so its panel (kicker/title/desc + connections) re-renders.
+      if (graph.focused && graph.focused()) graph.focusNode(graph.focused().id);
+
+      syncLangButtons();
+    }
+
+    var langBar = document.getElementById("langBar");
+    function syncLangButtons() {
+      if (!langBar) return;
+      var cur = document.documentElement.dataset.lang || "en";
+      Array.prototype.forEach.call(langBar.children, function (b) {
+        b.classList.toggle("on", b.dataset.key === cur);
+      });
+    }
+    if (langBar) {
+      LANGS.forEach(function (L) {
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "lang-btn"; b.dataset.key = L.key;
+        b.textContent = L.label;
+        b.title = L.key.toUpperCase();
+        b.addEventListener("click", function () { applyLang(L.key, true); });
+        langBar.appendChild(b);
+      });
+    }
+    // Apply the bootstrapped language (from ?lang / kosha_lang) on first paint.
+    applyLang(initialLang(), false);
   }
 })();

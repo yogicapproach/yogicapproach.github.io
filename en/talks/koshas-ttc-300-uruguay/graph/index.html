@@ -14,6 +14,22 @@
         document.documentElement.dataset.theme = t;
       } catch (e) { document.documentElement.dataset.theme = "dark"; }
     })();
+    // Language: ?lang= wins, else the SHARED kosha_lang key (same key the notes
+    // app uses) so language follows the reader across the whole site, else EN.
+    (function () {
+      var LANGS = { en: 1, es: 1, ne: 1 };
+      var lang = "en";
+      try {
+        var q = (new URLSearchParams(location.search)).get("lang");
+        if (q && LANGS[q]) { lang = q; localStorage.setItem("kosha_lang", q); }
+        else {
+          var s = localStorage.getItem("kosha_lang");
+          if (s && LANGS[s]) lang = s;
+        }
+      } catch (e) {}
+      document.documentElement.lang = lang;
+      document.documentElement.dataset.lang = lang;
+    })();
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -169,6 +185,23 @@
     .lay-btn.on { color:var(--accent); border-color:var(--accent-dim);
       background:hsl(var(--hue) 60% 50% / .12); }
 
+    /* language toggle — a grouped control bar (EN · ES · ने), styled to match
+       the #sessions / #layouts groups. */
+    #langs { display:flex; align-items:center; gap:7px;
+      background:hsl(var(--hue) 22% 7% / .5); backdrop-filter:blur(8px);
+      border:1px solid var(--line); border-radius:100px; padding:4px 10px 4px 12px; }
+    :root[data-theme="light"] #langs { background:hsl(var(--hue) 30% 96% / .6); }
+    .lang-cap { font-family:var(--mono); font-size:10px; letter-spacing:.14em;
+      text-transform:uppercase; color:var(--ink-faint); }
+    .lang-bar { display:flex; gap:4px; }
+    .lang-btn { font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:var(--ink-soft);
+      background:transparent; cursor:pointer; border:1px solid transparent; border-radius:100px;
+      padding:5px 10px; transition:border-color .2s,color .2s,background .2s; }
+    .lang-btn[data-key="ne"] { font-family:var(--deva); font-size:13px; }
+    .lang-btn:hover { color:var(--ink); border-color:var(--accent-dim); }
+    .lang-btn.on { color:var(--accent); border-color:var(--accent-dim);
+      background:hsl(var(--hue) 60% 50% / .12); }
+
     #hint { position:fixed; right:20px; bottom:20px; z-index:15; font-family:var(--mono);
       font-size:10.5px; letter-spacing:.04em; color:var(--ink-faint); text-align:right; line-height:1.7; }
 
@@ -210,6 +243,10 @@
     <div id="layouts" title="Re-position the same graph: force-directed, nested koshic rings, or an overlap-free adjacency matrix">
       <span class="lay-cap">Layout</span>
       <div id="layBar" class="lay-bar"></div>
+    </div>
+    <div id="langs" title="Language — node labels, descriptions, legend and edge labels (Sanskrit terms stay as-is)">
+      <span class="lang-cap">Lang</span>
+      <div id="langBar" class="lang-bar"></div>
     </div>
   </div>
 
