@@ -113,7 +113,7 @@
         var m = /^S(\d+)$/.exec(sid);
         var c = document.createElement(m ? "a" : "span");
         c.className = "chip ses" + (m ? " chip-link" : "");
-        if (m) { c.href = "../sessions/session-" + m[1] + "/"; }
+        if (m) { c.href = "../sessions/session-" + m[1] + "/"; c.target = "_blank"; c.rel = "noopener"; }
         c.title = (sessions[sid] && sessions[sid].label) || sid;
         c.textContent = sid + (sessions[sid] ? " · " + sessions[sid].date : "");
         chips.appendChild(c);
@@ -134,10 +134,37 @@
       renderPanelBody: renderPanelBody,
     });
 
+    /* ---- session filter (watch the graph build, session by session) ----
+       Cumulative by default; "All" resets. Composes with the community layer
+       toggle: each filter only sets style("display"), and the session filter is
+       handed an `isLayerHidden` predicate so the two intersect instead of fighting.
+       When a session is picked we re-settle the force layout on the visible
+       subgraph (sim alpha bump via graph.reheat). */
+    var sessionFilter = window.SessionFilter ? window.SessionFilter.create({
+      sessions: sessions,
+      selections: graph.selections,
+      barEl: document.getElementById("sesBar"),
+      isLayerHidden: function (community) { return graph.layer.hidden.has(community); },
+      onChange: function () { graph.reheat(); },
+    }) : null;
+
+    /* Keep the two filters in sync: after the community toggle changes anything,
+       re-apply the session filter so a layer un-hide can't reveal a node the
+       session filter means to keep hidden (intersection, not override). */
+    if (sessionFilter && graph.onLayerChange) {
+      graph.onLayerChange(function () { sessionFilter.applyVisibility(); });
+    }
+
     /* close button (host chrome) */
     document.getElementById("pclose").addEventListener("click", function () {
       graph.closePanel();
     });
+
+    /* reset button also clears the session filter back to "All" */
+    var resetBtnEl = document.getElementById("resetBtn");
+    if (resetBtnEl && sessionFilter) {
+      resetBtnEl.addEventListener("click", function () { sessionFilter.reset(); });
+    }
 
     /* theme toggle recolors the engine */
     themeBtn.addEventListener("click", function () {

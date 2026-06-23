@@ -21,6 +21,9 @@
    * @param {object} opts.selections   { node, link, linkLabel } D3 selections
    * @param {HTMLElement} opts.legendEl container to render legend rows into
    * @param {function(string):string} opts.colorFor  community key -> CSS color
+   * @param {function():void} [opts.onChange]  called after every visibility change
+   *        (toggle or reset), so a sibling filter (e.g. SessionFilter) can re-apply
+   *        and the two filters stay intersected rather than overriding each other.
    * @returns {{ hidden:Set, applyVisibility:function, buildLegend:function,
    *             reset:function }}
    */
@@ -29,6 +32,7 @@
     var sel = opts.selections || {};
     var legendEl = opts.legendEl;
     var colorFor = opts.colorFor || function () { return "currentColor"; };
+    var onChange = opts.onChange || function () {};
 
     var hidden = new Set();
 
@@ -68,6 +72,7 @@
           if (hidden.has(key)) hidden.delete(key); else hidden.add(key);
           applyVisibility();
           buildLegend();
+          onChange();
         });
         legendEl.appendChild(row);
       });
@@ -77,6 +82,7 @@
       hidden.clear();
       applyVisibility();
       buildLegend();
+      onChange();
     }
 
     buildLegend();

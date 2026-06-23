@@ -144,12 +144,16 @@
       nbr[s].add(t); nbr[t].add(s);
     });
 
-    /* ---- layer toggle (community legend + filter) ---- */
+    /* ---- layer toggle (community legend + filter) ----
+       A mutable hook lets a host-side sibling filter (SessionFilter) re-apply
+       after every community toggle, so the two filters intersect. */
+    var layerChangeHook = function () {};
     var layer = root.LayerToggle ? root.LayerToggle.create({
       communities: communities,
       selections: { node: node, link: link, linkLabel: linkLabel },
       legendEl: dom.legend,
       colorFor: colorFor,
+      onChange: function () { layerChangeHook(); },
     }) : { applyVisibility: function () {}, buildLegend: function () {}, reset: function () {} };
 
     /* ---- focus + side panel ---- */
@@ -277,14 +281,25 @@
     if (dom.loading) dom.loading.style.display = "none";
     if (config.onReady) config.onReady();
 
+    /* Re-settle the simulation on the currently visible subgraph (used by the
+       session filter so the layout reflows when nodes are added/removed). */
+    function reheat() { sim.alpha(0.6).restart(); }
+
     return {
       focusNode: focusNode,
       clearFocus: clearFocus,
       closePanel: closePanel,
       recolor: recolor,
+      reheat: reheat,
       layer: layer,
+      // Host registers a callback fired after each community-toggle change, so a
+      // sibling filter (SessionFilter) can re-apply and the filters stay intersected.
+      onLayerChange: function (fn) { layerChangeHook = fn || function () {}; },
       nodes: nodes,
       byId: byId,
+      // Raw D3 selections so a host-side filter (e.g. SessionFilter) can compose
+      // with the engine's own visibility without re-querying the DOM.
+      selections: { node: node, link: link, linkLabel: linkLabel },
     };
   }
 
