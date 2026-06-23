@@ -1,0 +1,126 @@
+/* ===========================================================================
+   portal-engine.css — structural styles for the reusable transcript portal.
+
+   Theme-AGNOSTIC: every colour is read from a CSS custom property the HOST page
+   defines. Drop this in, define the variables below in your own stylesheet, and
+   the portal inherits your palette. No koshas-specific rules live here.
+
+   Required host variables (with safe fallbacks baked in):
+     --tp-bg         search-field / chip background     (fallback #1b1613)
+     --tp-bg-2       result hover background            (fallback #211a16)
+     --tp-line       borders / dividers                 (fallback #322823)
+     --tp-ink        primary text                       (fallback #ece3d6)
+     --tp-ink-soft   secondary text                     (fallback #b9ad9c)
+     --tp-ink-faint  tertiary text / labels             (fallback #7d7264)
+     --tp-accent     highlight / focus / links          (fallback #d8a24a)
+     --tp-accent-dim muted accent (borders)             (fallback #8a6a36)
+     --tp-accent-glow focus ring / mark bg              (fallback hsl(38 80% 60% / .22))
+     --tp-radius     corner radius                      (fallback 16px)
+     --tp-serif      body font                          (fallback Georgia, serif)
+     --tp-mono       chip/label font                    (fallback monospace)
+     --tp-display    empty-state heading font           (fallback Georgia, serif)
+   Optional per-language accents (fallback to --tp-ink-soft):
+     --tp-lang-en, --tp-lang-es, … one per language code you ship.
+   =========================================================================== */
+
+/* ---- search bar ---- */
+.tp-searchwrap { position: relative; margin-bottom: 18px; }
+.tp-search {
+  width: 100%; font-family: var(--tp-serif, Georgia, serif); font-size: 1.25rem;
+  color: var(--tp-ink, #ece3d6); background: var(--tp-bg, #1b1613);
+  border: 1px solid var(--tp-line, #322823); border-radius: var(--tp-radius, 16px);
+  padding: 20px 54px 20px 22px; outline: none; transition: border-color .3s, box-shadow .3s;
+  box-sizing: border-box;
+}
+.tp-search::placeholder { color: var(--tp-ink-faint, #7d7264); font-style: italic; }
+.tp-search:focus {
+  border-color: var(--tp-accent-dim, #8a6a36);
+  box-shadow: 0 0 0 4px var(--tp-accent-glow, hsl(38 80% 60% / .22));
+}
+.tp-search-ic {
+  position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+  color: var(--tp-ink-faint, #7d7264); pointer-events: none; font-size: 1.2rem;
+}
+
+/* ---- filters ---- */
+.tp-filters { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin-bottom: 8px; }
+.tp-fgroup { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.tp-flabel {
+  font-family: var(--tp-mono, monospace); font-size: 10px; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--tp-ink-faint, #7d7264);
+}
+.tp-pill {
+  appearance: none; cursor: pointer; font-family: var(--tp-mono, monospace); font-size: 11px;
+  letter-spacing: .04em; color: var(--tp-ink-soft, #b9ad9c); background: var(--tp-bg, #1b1613);
+  border: 1px solid var(--tp-line, #322823); padding: 6px 12px; border-radius: 100px;
+  transition: all .25s cubic-bezier(.22,.61,.36,1);
+}
+.tp-pill:hover { color: var(--tp-ink, #ece3d6); border-color: var(--tp-accent-dim, #8a6a36); }
+.tp-pill[aria-pressed="true"] {
+  color: var(--tp-on-accent, #0e0c0b); background: var(--tp-accent, #d8a24a);
+  border-color: var(--tp-accent, #d8a24a);
+}
+
+.tp-meta-line {
+  font-family: var(--tp-mono, monospace); font-size: 11px; letter-spacing: .04em;
+  color: var(--tp-ink-faint, #7d7264);
+  margin: 20px 2px 14px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+}
+
+/* ---- results ---- */
+.tp-results { display: flex; flex-direction: column; gap: 12px; }
+.tp-hit {
+  display: block; text-decoration: none; color: inherit;
+  background: var(--tp-bg, #1b1613); border: 1px solid var(--tp-line, #322823);
+  border-left: 3px solid var(--tp-accent-dim, #8a6a36);
+  border-radius: var(--tp-radius, 16px); padding: 16px 18px;
+  transition: border-color .25s, background .25s, transform .15s cubic-bezier(.22,.61,.36,1);
+}
+.tp-hit:hover {
+  border-color: var(--tp-accent-dim, #8a6a36); border-left-color: var(--tp-accent, #d8a24a);
+  background: var(--tp-bg-2, #211a16); transform: translateX(2px);
+}
+.tp-hit[aria-disabled="true"] { cursor: default; }
+.tp-hit[aria-disabled="true"]:hover { transform: none; }
+.tp-hit-top { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+.tp-chip {
+  font-family: var(--tp-mono, monospace); font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 100px; border: 1px solid var(--tp-line, #322823);
+  color: var(--tp-ink-soft, #b9ad9c);
+}
+.tp-chip.tp-sess { color: var(--tp-accent, #d8a24a); border-color: var(--tp-accent-dim, #8a6a36); }
+.tp-chip.tp-lang { color: var(--tp-ink-soft, #b9ad9c); }
+.tp-chip.tp-lang-en { color: var(--tp-lang-en, var(--tp-ink-soft, #b9ad9c)); }
+.tp-chip.tp-lang-es { color: var(--tp-lang-es, var(--tp-ink-soft, #b9ad9c)); }
+.tp-chip.tp-spk { color: var(--tp-ink-faint, #7d7264); }
+.tp-chip.tp-time {
+  margin-left: auto; color: var(--tp-ink-soft, #b9ad9c); display: inline-flex; align-items: center; gap: 6px;
+}
+.tp-chip.tp-time .tp-play {
+  width: 0; height: 0; border-left: 7px solid currentColor;
+  border-top: 5px solid transparent; border-bottom: 5px solid transparent;
+}
+.tp-hit-text { margin: 0; font-size: 1.05rem; line-height: 1.55; }
+.tp-hit-text mark {
+  background: var(--tp-accent-glow, hsl(38 80% 60% / .22)); color: var(--tp-ink, #ece3d6);
+  border-radius: 3px; padding: 0 2px;
+}
+
+.tp-empty { text-align: center; color: var(--tp-ink-faint, #7d7264); padding: 60px 20px; font-style: italic; }
+.tp-empty .tp-big {
+  font-family: var(--tp-display, Georgia, serif); font-size: 1.4rem; color: var(--tp-ink-soft, #b9ad9c);
+  display: block; margin-bottom: 8px; font-style: normal;
+}
+
+.tp-loadmore-wrap { text-align: center; margin-top: 22px; }
+.tp-loadmore {
+  appearance: none; cursor: pointer; font-family: var(--tp-mono, monospace); font-size: 12px;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--tp-ink-soft, #b9ad9c);
+  background: var(--tp-bg, #1b1613); border: 1px solid var(--tp-line, #322823);
+  padding: 12px 26px; border-radius: 100px; transition: all .25s;
+}
+.tp-loadmore:hover { color: var(--tp-ink, #ece3d6); border-color: var(--tp-accent-dim, #8a6a36); }
+
+@media (max-width: 620px) {
+  .tp-chip.tp-time { margin-left: 0; }
+}

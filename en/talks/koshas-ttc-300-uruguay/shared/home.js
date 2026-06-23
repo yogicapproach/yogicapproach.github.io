@@ -55,7 +55,9 @@
       </div>
       <button class="theme-btn" id="themeBtn" aria-label="${esc(t("theme_label"))}" title="${esc(t("theme_label"))}">${THEME === "dark" ? "☾" : "☀"}</button>
       <a class="rec-link" href="${esc(S.recording)}" target="_blank" rel="noopener"><span class="rec-dot"></span> ${esc(t("recording"))}</a>
-      <a class="rec-link graph-link" href="graph/"><span class="rec-dot"></span> ${esc({ en: "Knowledge Graph", es: "Grafo de conocimiento", ne: "ज्ञान ग्राफ" }[LOCALE] || "Knowledge Graph")}</a>`;
+      <a class="rec-link graph-link" href="graph/"><span class="rec-dot"></span> ${esc({ en: "Knowledge Graph", es: "Grafo de conocimiento", ne: "ज्ञान ग्राफ" }[LOCALE] || "Knowledge Graph")}</a>
+      <a class="rec-link transcript-link" href="transcript/"><span class="rec-dot"></span> ${esc({ en: "Transcript", es: "Transcripción", ne: "ट्रान्सक्रिप्ट" }[LOCALE] || "Transcript")}</a>
+      <a class="rec-link search-link" href="search/"><span class="rec-dot"></span> ${esc({ en: "Search", es: "Buscar", ne: "खोज" }[LOCALE] || "Search")}</a>`;
     c.querySelectorAll("[data-lang]").forEach((b) => b.addEventListener("click", () => setLocale(b.dataset.lang)));
     c.querySelector("#themeBtn").addEventListener("click", toggleTheme);
   }

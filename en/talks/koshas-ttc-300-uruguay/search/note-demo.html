@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Note + citations demo — Koshas corpus</title>
+  <meta name="description" content="A sample student note whose inline citations resolve live to the teacher's own recorded words." />
+  <!-- Engine (structural + note-popover styles) + koshas HOST palette. -->
+  <link rel="stylesheet" href="engine/engine.css" />
+  <link rel="stylesheet" href="koshas-corpus.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="kicker">Demonstration · inline citations</p>
+      <h1>A note, grounded in the recordings</h1>
+      <p class="lede">This is a sample student note. The small numbered marks are citations —
+        hover or focus one to see the teacher’s actual words from the corpus and a link to that
+        moment in the recording.</p>
+      <p class="lede" id="noteStatus" style="color:var(--cx-accent);font-weight:600">Resolving citations…</p>
+    </header>
+
+    <article class="note" id="note">Loading…</article>
+
+    <p style="margin-top:18px"><a href="index.html">← back to corpus search</a></p>
+
+    <!-- The note content. Citations use the corpus reference syntax; they are
+         resolved at render time by the engine (note-render.js + cite-resolver).
+         Both refs below are REAL passages from Session 1. -->
+    <script type="text/note" id="noteSource">
+**Annamaya — the physical (food) layer.** The first sheath is the body itself.
+Satchidananda names it directly in Session 1: the physical layer is the
+*annamaya kosha*, and "anna" means food [[cite: s1#29:42]].
+
+The reframe that makes it land: rather than thinking of the body as merely
+flesh, he asks us to see it as an anti-entropy system — "our physical bodies
+are an incredible miracle in being an anti-entropy system" [[cite: s1#44:43]].
+Entropy pulls everything apart; the body holds cohesion against it. That is the
+quiet miracle of annamaya.
+    </script>
+  </main>
+
+  <!-- resolver (compat mirror, defines window.Cite) → engine note renderer.
+       note-render.js auto-boots because a #note element is present. -->
+  <script src="assets/cite.js"></script>
+  <script src="engine/note-render.js"></script>
+</body>
+</html>

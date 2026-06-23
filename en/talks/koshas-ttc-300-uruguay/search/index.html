@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corpus — the teacher’s own words (Koshas · TTC-300)</title>
+  <meta name="description" content="Search a corpus of the teacher's own recorded transcripts. Every passage carries a timestamp you can cite and a click-to-audio link." />
+  <!-- Engine (theme-agnostic structural styles) + koshas HOST palette. -->
+  <link rel="stylesheet" href="engine/engine.css" />
+  <link rel="stylesheet" href="koshas-corpus.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="kicker">Own-transcript corpus · v1c</p>
+      <h1>Search the teacher’s own words</h1>
+      <p class="lede">A searchable corpus of the actual recordings — to ground notes and the
+        concept map in real, citable passages. Only these recordings; not classical texts.</p>
+
+      <details class="about">
+        <summary>How citations work</summary>
+        <p>Each result shows which <strong>session</strong>, the <strong>language</strong>, the
+          <strong>speaker</strong>, and the moment in the recording. The
+          <code>[[cite: …]]</code> token is a reference you can paste into a note — click it to
+          copy. When an online recording exists, the timestamp is a link that opens the video at
+          that exact second. Audio-only sessions (Piriápolis) still resolve to the source line,
+          just without a video link.</p>
+      </details>
+    </header>
+
+    <div class="searchbar">
+      <div class="searchbox">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="q" type="search" placeholder="Search a word or phrase…" autocomplete="off" aria-label="Search the corpus" />
+      </div>
+
+      <div class="filters">
+        <div class="filter-group" id="langFilters">
+          <span class="lbl">Language</span>
+          <button class="pill" type="button" data-lang="all" aria-pressed="true">All</button>
+          <button class="pill" type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button class="pill" type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <div class="filter-group" id="sessFilters">
+          <span class="lbl">Session</span>
+          <!-- session pills injected by the engine (corpus-search.js) -->
+        </div>
+      </div>
+    </div>
+
+    <div class="statusrow">
+      <span id="status">Loading the corpus…</span>
+      <span id="counts"></span>
+    </div>
+
+    <div id="results"></div>
+
+    <div id="loadMoreWrap" hidden>
+      <button id="loadMore" type="button">Show more passages</button>
+    </div>
+
+    <footer>
+      <span id="footMeta">Own-transcript corpus</span><br />
+      Built statically by <code>build-corpus.py</code> · resolver
+      <code>engine/cite-resolver.js</code> · see <a href="engine/README.md">engine README</a> ·
+      <a href="note-demo.html">note demo →</a>
+    </footer>
+  </main>
+
+  <!-- Module load order (each one job):
+       1. MiniSearch — LOCAL vendored copy ONLY (no CDN; works offline / on Pages).
+       2. cite.js    — compat mirror of engine/cite-resolver.js (defines window.Cite).
+       3. engine     — the reusable search controller (no koshas hardcoding).
+       4. host       — koshas pill/lang/footer wiring (the only koshas-aware file). -->
+  <script src="assets/minisearch.min.js"></script>
+  <script src="assets/cite.js"></script>
+  <script src="engine/corpus-search.js"></script>
+  <script src="koshas-corpus-host.js"></script>
+</body>
+</html>

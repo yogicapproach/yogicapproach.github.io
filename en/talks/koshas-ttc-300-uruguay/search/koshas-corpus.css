@@ -1,0 +1,26 @@
+/* ===========================================================================
+   koshas-corpus.css — the koshas HOST palette for the drishti-corpus engine.
+
+   The engine (engine/engine.css) is theme-agnostic and reads --cx-* variables.
+   This file is the ONE place the koshas look lives: it defines the warm,
+   parchment palette and maps it onto the engine's --cx-* contract. Swap this
+   file (and the host JS) and the same engine renders a different theme.
+   =========================================================================== */
+:root {
+  /* koshas palette */
+  --k-bg: #faf7f2; --k-panel: #fffdf9; --k-ink: #2b2620; --k-ink-soft: #6c6358;
+  --k-line: #e8e0d4; --k-accent: #b07d3a; --k-accent-soft: #f0e3cd;
+  --k-en: #3a6ea5; --k-es: #b0573a; --k-mark: #ffe7a8;
+  --k-radius: 14px;
+  --k-shadow: 0 1px 2px rgba(40,30,15,.05), 0 8px 24px rgba(40,30,15,.06);
+  --k-font: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --k-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* map the koshas palette onto the engine's --cx-* contract */
+  --cx-bg: var(--k-bg); --cx-panel: var(--k-panel); --cx-ink: var(--k-ink);
+  --cx-ink-soft: var(--k-ink-soft); --cx-line: var(--k-line);
+  --cx-accent: var(--k-accent); --cx-accent-soft: var(--k-accent-soft);
+  --cx-en: var(--k-en); --cx-es: var(--k-es); --cx-mark: var(--k-mark);
+  --cx-radius: var(--k-radius); --cx-shadow: var(--k-shadow);
+  --cx-font: var(--k-font); --cx-sans: var(--k-sans);
+}

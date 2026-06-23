@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transcript Portal · The Five Koshas (TTC-300, Uruguay)</title>
+  <meta name="description" content="Searchable bilingual (EN/ES) transcript portal for the four-session Koshas teaching — search across sessions, jump to the recording at the matching timestamp." />
+
+  <!-- Set theme before paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("kosha_theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.dataset.theme = t;
+      } catch (e) { document.documentElement.dataset.theme = "dark"; }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Reusable, theme-agnostic engine styles (search bar / filters / results). -->
+  <link rel="stylesheet" href="engine/portal-engine.css" />
+
+  <style>
+    /* ======================================================================
+       Transcript portal — contemplative editorial theme, lifted from the
+       koshas student-notes engine (shared/styles.css). Self-contained.
+       ====================================================================== */
+    :root {
+      --hue: 38;
+      --bg:        #0e0c0b;
+      --bg-2:      #15110f;
+      --panel:     #1b1613;
+      --panel-2:   #211a16;
+      --ink:       #ece3d6;
+      --ink-soft:  #b9ad9c;
+      --ink-faint: #7d7264;
+      --line:      #322823;
+      --accent:    hsl(var(--hue) 70% 62%);
+      --accent-dim:hsl(var(--hue) 45% 42%);
+      --accent-glow:hsl(var(--hue) 80% 60% / .22);
+      --max: 1080px;
+      --r: 16px;
+      --ease: cubic-bezier(.22,.61,.36,1);
+      --serif: "Spectral", Georgia, "Times New Roman", serif;
+      --display: "Fraunces", Georgia, serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+      --en: 205;   /* hue for EN chips */
+      --es: 14;    /* hue for ES chips */
+
+      /* ---- map this host's palette onto the engine's --tp-* contract ---- */
+      --tp-bg:         var(--panel);
+      --tp-bg-2:       var(--panel-2);
+      --tp-line:       var(--line);
+      --tp-ink:        var(--ink);
+      --tp-ink-soft:   var(--ink-soft);
+      --tp-ink-faint:  var(--ink-faint);
+      --tp-accent:     var(--accent);
+      --tp-accent-dim: var(--accent-dim);
+      --tp-accent-glow:var(--accent-glow);
+      --tp-on-accent:  var(--bg);
+      --tp-radius:     var(--r);
+      --tp-serif:      var(--serif);
+      --tp-mono:       var(--mono);
+      --tp-display:    var(--display);
+      --tp-lang-en:    hsl(var(--en) 55% 65%);
+      --tp-lang-es:    hsl(var(--es) 65% 66%);
+    }
+    html[data-theme="light"] {
+      --bg:        #f6f1e8;
+      --bg-2:      #efe7d8;
+      --panel:     #fffaf2;
+      --panel-2:   #f4ecdd;
+      --ink:       #2a2018;
+      --ink-soft:  #5e5142;
+      --ink-faint: #8c7d6a;
+      --line:      #e0d4c0;
+      --accent:    hsl(var(--hue) 55% 42%);
+      --accent-dim:hsl(var(--hue) 40% 55%);
+      --accent-glow:hsl(var(--hue) 70% 55% / .2);
+      --tp-on-accent: #fffaf2;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(120% 80% at 50% -10%, hsl(var(--hue) 40% 12%) 0%, transparent 55%),
+        radial-gradient(80% 60% at 90% 110%, var(--bg-2) 0%, transparent 60%),
+        var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 18px; line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+      transition: background .8s var(--ease), color .4s var(--ease);
+      min-height: 100vh;
+    }
+    html[data-theme="light"] body {
+      background:
+        radial-gradient(120% 80% at 50% -10%, hsl(var(--hue) 50% 88%) 0%, transparent 55%),
+        radial-gradient(80% 60% at 90% 110%, var(--bg-2) 0%, transparent 60%),
+        var(--bg);
+    }
+    .grain {
+      position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: .035;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    ::selection { background: var(--accent-glow); color: var(--ink); }
+    a { color: inherit; }
+
+    /* ---- Masthead -------------------------------------------------------- */
+    .masthead {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, hsl(var(--hue) 22% 7% / .92), hsl(var(--hue) 22% 7% / .72));
+      border-bottom: 1px solid var(--line);
+    }
+    html[data-theme="light"] .masthead {
+      background: linear-gradient(180deg, hsl(var(--hue) 30% 96% / .94), hsl(var(--hue) 30% 96% / .78));
+    }
+    .mast-inner {
+      max-width: var(--max); margin: 0 auto; padding: 18px 26px 14px;
+      display: flex; align-items: center; gap: 20px;
+    }
+    .sigil { width: 50px; height: 50px; flex: none; position: relative; }
+    .sigil span {
+      position: absolute; inset: 0; margin: auto; border-radius: 50%;
+      border: 1.5px solid hsl(var(--hue) 55% 55% / .55);
+    }
+    .mast-text { flex: 1; min-width: 0; }
+    .eyebrow {
+      margin: 0 0 2px; font-family: var(--mono); font-size: 11px; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--accent); opacity: .9;
+    }
+    .mast-title {
+      margin: 0; font-family: var(--display); font-weight: 600;
+      font-size: clamp(1.4rem, 3vw, 2.1rem); line-height: 1; letter-spacing: -.01em;
+    }
+    .mast-sub { margin: 4px 0 0; color: var(--ink-soft); font-size: .82rem; }
+    .controls { display: flex; gap: 8px; align-items: center; }
+    .ctrl {
+      appearance: none; cursor: pointer; font-family: var(--mono); font-size: 11px;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
+      background: none; border: 1px solid var(--line); padding: 8px 12px; border-radius: 100px;
+      transition: border-color .3s, color .3s; white-space: nowrap;
+    }
+    .ctrl:hover { color: var(--ink); border-color: var(--accent-dim); }
+
+    /* ---- Layout shell (the engine owns search/filters/results styling) --- */
+    .view { max-width: var(--max); margin: 0 auto; padding: 40px 26px 60px; position: relative; z-index: 2; }
+
+    /* Per-language chip BORDERS (engine sets the text colour via --tp-lang-*). */
+    .tp-chip.tp-lang-en { border-color: hsl(var(--en) 40% 40% / .6); }
+    .tp-chip.tp-lang-es { border-color: hsl(var(--es) 50% 45% / .6); }
+
+    .footer { max-width: var(--max); margin: 0 auto; padding: 30px 26px 50px; border-top: 1px solid var(--line); position: relative; z-index: 2; }
+    .footer p { margin: 0; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--ink-faint); line-height: 1.8; }
+    .footer a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px dotted var(--ink-faint); }
+    .footer a:hover { color: var(--accent); }
+
+    @media (max-width: 620px) {
+      .mast-inner { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="mast-inner">
+      <div class="sigil" aria-hidden="true">
+        <span style="width:50px;height:50px"></span>
+        <span style="width:36px;height:36px"></span>
+        <span style="width:22px;height:22px"></span>
+        <span style="width:9px;height:9px;background:var(--accent);border:none"></span>
+      </div>
+      <div class="mast-text">
+        <p class="eyebrow">Transcript Portal · TTC-300 · Uruguay</p>
+        <h1 class="mast-title">The Five Koshas — Search the Teachings</h1>
+        <p class="mast-sub">Search across all sessions in English &amp; Spanish · click a result to open the recording at that moment.</p>
+      </div>
+      <div class="controls">
+        <button class="ctrl" id="themeBtn" type="button" title="Toggle light/dark">◐ Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="view" role="main">
+    <div class="tp-searchwrap">
+      <input class="tp-search" id="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Search the koshas teachings — try “prana”, “annamaya”, “respiración”…" aria-label="Search transcripts" />
+      <span class="tp-search-ic" aria-hidden="true">⌕</span>
+    </div>
+
+    <div class="tp-filters">
+      <div class="tp-fgroup" id="langFilters">
+        <span class="tp-flabel">Language</span>
+        <button class="tp-pill" data-lang="all" aria-pressed="true" type="button">All</button>
+        <button class="tp-pill" data-lang="en" aria-pressed="false" type="button">English</button>
+        <button class="tp-pill" data-lang="es" aria-pressed="false" type="button">Español</button>
+      </div>
+      <div class="tp-fgroup" id="sessFilters">
+        <span class="tp-flabel">Session</span>
+        <button class="tp-pill" data-sess="all" aria-pressed="true" type="button">All</button>
+        <!-- session pills injected -->
+      </div>
+    </div>
+
+    <div class="tp-meta-line">
+      <span id="status">Loading transcripts…</span>
+      <span id="counts"></span>
+    </div>
+
+    <div class="tp-results" id="results"></div>
+    <div class="tp-loadmore-wrap" id="loadMoreWrap" hidden>
+      <button class="tp-loadmore" id="loadMore" type="button">Show more results</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p id="footMeta"></p>
+    <p>Built from the timestamped <code>audio.srt</code> of each session · client-side search (MiniSearch) · no server, no tracking.<br />
+       The original recordings are the source of truth — re-run <code>build-index.py</code> if a transcript changes.</p>
+  </footer>
+
+  <!-- MiniSearch: local vendored copy — no CDN dependency, fully offline / GH-Pages-safe. -->
+  <script src="assets/minisearch.min.js"></script>
+  <!-- Reusable drishti-portal engine (no koshas hardcoding). -->
+  <script src="engine/resolver.js"></script>
+  <script src="engine/portal-engine.js"></script>
+  <!-- Thin koshas host: session registry / YouTube ids / theme. -->
+  <script src="assets/koshas-host.js"></script>
+</body>
+</html>
