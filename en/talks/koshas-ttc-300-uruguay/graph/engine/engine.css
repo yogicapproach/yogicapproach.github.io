@@ -1,0 +1,76 @@
+/* ===========================================================================
+   engine.css — structural styles for the reusable force-graph engine.
+
+   Theme-AGNOSTIC: every colour is read from a CSS custom property the HOST page
+   defines. Drop this in, define the variables below in your own stylesheet, and
+   the graph inherits your palette. No koshas-specific rules live here.
+
+   Required host variables (with safe fallbacks baked in):
+     --fg-bg        canvas / text-halo background      (fallback #0e0c0b)
+     --fg-line      edges, arrowheads, borders         (fallback #322823)
+     --fg-ink       primary text                       (fallback #ece3d6)
+     --fg-ink-soft  secondary text                     (fallback #b9ad9c)
+     --fg-ink-faint tertiary text / labels             (fallback #7d7264)
+     --fg-accent    highlight / focus / links          (fallback #d8a24a)
+     --fg-panel     side-panel background              (fallback #1b1613)
+     --fg-radius    panel/legend corner radius         (fallback 16px)
+   =========================================================================== */
+
+/* ---- canvas ---- */
+.fg-svg { width: 100%; height: 100%; display: block; cursor: grab; }
+.fg-svg.dragging { cursor: grabbing; }
+
+.link {
+  stroke: var(--fg-line, #322823); stroke-opacity: .55;
+  transition: stroke-opacity .2s, stroke .2s;
+}
+.link.hl { stroke: var(--fg-accent, #d8a24a); stroke-opacity: .9; }
+.fg-arrowhead { color: var(--fg-line, #322823); }
+
+.link-label {
+  font-family: var(--fg-mono, ui-monospace, monospace); font-size: 8.5px;
+  fill: var(--fg-ink-faint, #7d7264); pointer-events: none;
+  opacity: 0; transition: opacity .2s;
+}
+.link-label.show { opacity: .9; }
+
+.node circle {
+  stroke: var(--fg-bg, #0e0c0b); stroke-width: 1.5px; cursor: pointer;
+  transition: stroke-width .2s, filter .2s;
+}
+.node.dim { opacity: .16; }
+.node.focus circle { stroke: var(--fg-ink, #ece3d6); stroke-width: 2.5px; }
+.node text {
+  font-family: var(--fg-display, Georgia, serif); font-weight: 500;
+  fill: var(--fg-ink, #ece3d6); pointer-events: none; paint-order: stroke;
+  stroke: var(--fg-bg, #0e0c0b); stroke-width: 3px; stroke-linejoin: round;
+}
+.node.dim text { opacity: .25; }
+
+/* ---- side panel: connections + source ---- */
+.p-sect {
+  font-family: var(--fg-mono, ui-monospace, monospace); font-size: 10px;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--fg-ink-faint, #7d7264); margin: 14px 0 8px;
+}
+.rel-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.rel-list li { font-size: .9rem; color: var(--fg-ink-soft, #b9ad9c); }
+.rel-list a {
+  color: var(--fg-ink, #ece3d6); text-decoration: none;
+  border-bottom: 1px solid var(--fg-accent, #d8a24a); cursor: pointer;
+}
+.rel-list a:hover { color: var(--fg-accent, #d8a24a); }
+.rel-rel {
+  font-family: var(--fg-mono, ui-monospace, monospace); font-size: 10px;
+  color: var(--fg-ink-faint, #7d7264); letter-spacing: .04em;
+}
+
+/* ---- legend (layer toggle) ---- */
+.leg-row {
+  display: flex; align-items: center; gap: 9px; padding: 3px 0; cursor: pointer;
+  font-size: .86rem; color: var(--fg-ink-soft, #b9ad9c);
+  transition: color .2s, opacity .2s;
+}
+.leg-row:hover { color: var(--fg-ink, #ece3d6); }
+.leg-row.off { opacity: .32; }
+.leg-dot { width: 11px; height: 11px; border-radius: 50%; flex: none; }

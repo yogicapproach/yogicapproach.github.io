@@ -1,0 +1,1663 @@
+/* AUTO-GENERATED from graph.json by scripts/mirror.py — do not edit by hand.
+   Embedded copy so index.html works on file:// (fetch of graph.json is
+   CORS-blocked there). The test suite asserts this mirrors graph.json. */
+window.__GRAPH__ = {
+  "meta": {
+    "title": "The Five Koshas — Knowledge Graph",
+    "subtitle": "Concept map of a four-session TTC-300 series · Satchidananda · Uruguay 2026",
+    "built_from": [
+      "20260610-koshas-ttc-300-uruguay/notes.md (Session 1)",
+      "20260616-koshas-ttc-300-uruguay/notes.md (Session 2)",
+      "20260618-koshas-ttc-300-uruguay/notes.md (Session 3)",
+      "20260623-koshas-ttc-300-uruguay/ (Session 4 — transcript + notes from the recording wXDXmb4MMR0)"
+    ],
+    "method": "LLM-authored by reasoning over the session notes/transcripts (stage-2 curation of the auto-extractor output), not hand-written — see artifacts/koshas-graph/pipeline/.",
+    "sessions": {
+      "S1": {
+        "label": "Session 1 — Framework & Reframe",
+        "date": "2026-06-10",
+        "hue": 38
+      },
+      "S2": {
+        "label": "Session 2 — Connection, Scale, Density, Gunas",
+        "date": "2026-06-16",
+        "hue": 150
+      },
+      "S3": {
+        "label": "Session 3 — Sound, Mantra, Branches",
+        "date": "2026-06-18",
+        "hue": 268
+      },
+      "S4": {
+        "label": "Session 4 — Sound, Mantra & Visualization (Integration)",
+        "date": "2026-06-23",
+        "hue": 12
+      }
+    },
+    "communities": {
+      "koshas": {
+        "label": "The Five Koshas",
+        "hue": 38
+      },
+      "concepts": {
+        "label": "Core Concepts",
+        "hue": 200
+      },
+      "gunas": {
+        "label": "The Gunas",
+        "hue": 150
+      },
+      "metaphors": {
+        "label": "Metaphors & Images",
+        "hue": 28
+      },
+      "practices": {
+        "label": "Practices & Branches",
+        "hue": 268
+      },
+      "structure": {
+        "label": "Framing & Pedagogy",
+        "hue": 320
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "annamaya",
+      "label": "Annamaya",
+      "sanskrit": "अन्नमय",
+      "english": "food / physical body",
+      "community": "koshas",
+      "size": 30,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "Physical / 'food' layer. Anna = food. External skin-muscle-bone + internal organs-fluids-nerves. Reframed as an entropy-resisting energy-conversion system. The first interface for feeling.",
+      "cite": "s1#7:27"
+    },
+    {
+      "id": "pranamaya",
+      "label": "Pranamaya",
+      "sanskrit": "प्राणमय",
+      "english": "vital / energetic body",
+      "community": "koshas",
+      "size": 30,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "Energetic / vital-force layer. Tied to the nadis and nervous system. Reframed as 'state transition' (the gearbox). Fluid; reaches hundreds of metres.",
+      "cite": "s1#35:16"
+    },
+    {
+      "id": "manomaya",
+      "label": "Manomaya",
+      "sanskrit": "मनोमय",
+      "english": "mental body",
+      "community": "koshas",
+      "size": 30,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "Mental layer. Manu = mind. Lower mind (perception, memory, cognition) vs higher mind (intellect, viveka, reflection). Reframed as attention management.",
+      "cite": "s1#36:07"
+    },
+    {
+      "id": "vijnanamaya",
+      "label": "Vijnanamaya",
+      "sanskrit": "विज्ञानमय",
+      "english": "wisdom / intuitive body",
+      "community": "koshas",
+      "size": 30,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "Wisdom / intuition / knowledge body. Reframed as pattern recognition; gateway to collective consciousness and expanded vision. The realm of prayer and the akashic library.",
+      "cite": "s1#1:00:24"
+    },
+    {
+      "id": "anandamaya",
+      "label": "Anandamaya",
+      "sanskrit": "आनन्दमय",
+      "english": "bliss / causal body",
+      "community": "koshas",
+      "size": 30,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "Bliss body. Ananda = bliss; also the uniform, pure, unchanging. Reframed as baseline coherence / non-duality. Effectively infinite; the potential the others emerge from. Reached via willpower & causal introspection.",
+      "cite": "s1#41:40"
+    },
+    {
+      "id": "kosha",
+      "label": "Kosha",
+      "sanskrit": "कोश",
+      "english": "sheath / covering",
+      "community": "structure",
+      "size": 22,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "Sheath / covering / 'the space of a layer'. The five koshas are the organizing framework of the whole series — a flexible lens, not a fixed doctrine.",
+      "cite": "s1#42:54"
+    },
+    {
+      "id": "framework-lens",
+      "label": "Framework, not doctrine",
+      "community": "structure",
+      "size": 16,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "The koshas offered as an alternative presentation alongside the traditional — students are asked to argue with it, refine it, make it their own.",
+      "cite": "s1#4:02"
+    },
+    {
+      "id": "rotating-awareness",
+      "label": "Rotating awareness",
+      "community": "structure",
+      "size": 16,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "desc": "Settling = scanning body → energy → mind → breath, a portable 'rotation' through the koshas. Without genuine sensing it degrades into empty ritual.",
+      "cite": "s1#20:20"
+    },
+    {
+      "id": "modern-reframe",
+      "label": "Modern-science reframe",
+      "community": "structure",
+      "size": 18,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "Each kosha re-described in contemporary/scientific language — the heart of Session 1.",
+      "cite": "s1#42:54"
+    },
+    {
+      "id": "self-to-others",
+      "label": "Self → Others",
+      "community": "structure",
+      "size": 16,
+      "sessions": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "Sensitizing to one's own koshas is the ground for sensitizing to others. 'Be the change'; 'don't teach what you haven't touched.'",
+      "cite": "s2#28:27"
+    },
+    {
+      "id": "integration-handoff",
+      "label": "Integration & hand-off",
+      "community": "structure",
+      "size": 17,
+      "sessions": [
+        "S4"
+      ],
+      "desc": "The closing arc of the final session: draw the four sessions together (framework → connection → philosophy/sound → willpower/integration), then 'you're on your own to discover and to share back to the whole world.' Scanned and integrated as one table."
+    },
+    {
+      "id": "teacher-craft",
+      "label": "Teacher's craft",
+      "community": "structure",
+      "size": 15,
+      "sessions": [
+        "S2",
+        "S3"
+      ],
+      "desc": "Reading a room and a student layer by layer, with minimal projection; choosing the practice for the kosha state in front of you."
+    },
+    {
+      "id": "drashta",
+      "label": "Drashta (the observer)",
+      "community": "structure",
+      "size": 14,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "The witness/observer — grounded in one's own practice so as to read others with minimal projection or guessing.",
+      "cite": "s3#6:07"
+    },
+    {
+      "id": "prana",
+      "label": "Prana",
+      "sanskrit": "प्राण",
+      "english": "life-force",
+      "community": "concepts",
+      "size": 22,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "desc": "Life-force / vital energy. Sources, retention, and leak-points. 'Prana is life' — all life responds to sound because it is tied to prana.",
+      "cite": "s1#33:14"
+    },
+    {
+      "id": "nadis",
+      "label": "Nadis",
+      "sanskrit": "नाडी",
+      "english": "energy rivers",
+      "community": "concepts",
+      "size": 16,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "desc": "Subtle energy channels. 'A nadi is a river of prana' (in Nepali a river is a nadi).",
+      "cite": "s1#4:11"
+    },
+    {
+      "id": "awareness",
+      "label": "Awareness",
+      "community": "concepts",
+      "size": 22,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "desc": "The faculty directed fluidly among the koshas. 'Where was my attention today?' The monk extends awareness into another's body — 'like their body is my body.'",
+      "cite": "s1#3:33"
+    },
+    {
+      "id": "attention",
+      "label": "Attention management",
+      "community": "concepts",
+      "size": 18,
+      "sessions": [
+        "S1",
+        "S2"
+      ],
+      "desc": "The manomaya reframe. Suffering often traces to where attention was over long periods, not just external causes.",
+      "cite": "s1#7:52"
+    },
+    {
+      "id": "emotion",
+      "label": "Emotion",
+      "community": "concepts",
+      "size": 20,
+      "sessions": [
+        "S1",
+        "S3"
+      ],
+      "desc": "'Energy in motion connected to meaning.' Crosses all koshas — a phenomenon that arises and moves through them. Emotional balance is an advanced attainment.",
+      "cite": "s1#1:03:30"
+    },
+    {
+      "id": "entropy",
+      "label": "Entropy & cohesion",
+      "community": "concepts",
+      "size": 16,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "The force that dissolves everything; the body is a miracle of holding cohesion against entropy. The annamaya reframe.",
+      "cite": "s1#44:43"
+    },
+    {
+      "id": "state-transition",
+      "label": "State transition",
+      "community": "concepts",
+      "size": 16,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "The pranamaya reframe — capacity to shift between situations / emotional landscapes on demand (the gearbox).",
+      "cite": "s1#17:37"
+    },
+    {
+      "id": "pattern-recognition",
+      "label": "Pattern recognition",
+      "community": "concepts",
+      "size": 18,
+      "sessions": [
+        "S1",
+        "S3"
+      ],
+      "desc": "The vijnanamaya reframe — recognizing recurring threads → expanded vision, imagination, empathy. Root of yoga, Ayurveda, all sciences.",
+      "cite": "s1#1:03:10"
+    },
+    {
+      "id": "baseline-coherence",
+      "label": "Baseline coherence",
+      "community": "concepts",
+      "size": 16,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "The anandamaya reframe — the felt state when all systems run in harmony; peace is intrinsic, uncovered rather than added.",
+      "cite": "s1#1:05:22"
+    },
+    {
+      "id": "scale",
+      "label": "Property: Scale",
+      "community": "concepts",
+      "size": 15,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "Each kosha is orders of magnitude larger than the prior: body ~2 m; prana hundreds of metres; mind across time/space; vijnanamaya all-that-can-be-known; anandamaya effectively infinite.",
+      "cite": "s2#37:57"
+    },
+    {
+      "id": "density",
+      "label": "Property: Density",
+      "community": "concepts",
+      "size": 15,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "Body dense; prana fluid → the nadis. Subtler koshas progressively less dense.",
+      "cite": "s2#5:19"
+    },
+    {
+      "id": "wakefulness",
+      "label": "Wakefulness",
+      "community": "concepts",
+      "size": 15,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "'How awake are we, really?' Applied layer by layer. Two alarms: the ones we set vs. the ones nature set out of love.",
+      "cite": "s2#35:09"
+    },
+    {
+      "id": "willpower",
+      "label": "Willpower",
+      "community": "concepts",
+      "size": 18,
+      "sessions": [
+        "S4"
+      ],
+      "desc": "The Anandamaya emphasis of Session 4 — practices that build resolve, chiefly making sankalpas and sticking to them (also tapas, vows)."
+    },
+    {
+      "id": "sankalpa",
+      "label": "Sankalpa",
+      "sanskrit": "संकल्प",
+      "english": "resolve / seed of change",
+      "community": "concepts",
+      "size": 17,
+      "sessions": [
+        "S3",
+        "S4"
+      ],
+      "desc": "A planted seed of change / resolve set in the quiet states at each layer. Callback across S3→S4; core of willpower work.",
+      "cite": "s3#8:52"
+    },
+    {
+      "id": "causal-introspection",
+      "label": "Causal introspection",
+      "community": "concepts",
+      "size": 16,
+      "sessions": [
+        "S3",
+        "S4"
+      ],
+      "desc": "Tracing anything that troubles or fascinates us inward to its root/causal layer. 'What am I being invited to experience?'",
+      "cite": "s3#37:57"
+    },
+    {
+      "id": "tapas",
+      "label": "Tapas (austerity / vows)",
+      "sanskrit": "तपस्",
+      "english": "austerity / sustained resolve",
+      "community": "concepts",
+      "size": 14,
+      "sessions": [
+        "S4"
+      ],
+      "desc": "Austerity, vows, and sustained resolve — the willpower practices beyond sankalpa named in the Session 4 lesson plan. The friction that forges will and thereby touches Anandamaya."
+    },
+    {
+      "id": "intuitive-body",
+      "label": "Cultivating intuition",
+      "community": "concepts",
+      "size": 16,
+      "sessions": [
+        "S2",
+        "S3"
+      ],
+      "desc": "Practices to develop Vijnanamaya: feel into the depths, take the larger perspective, advise younger/future self, read sattvic content, Mother Nature.",
+      "cite": "s2#3:10"
+    },
+    {
+      "id": "sound-mantra",
+      "label": "Sound & Mantra",
+      "community": "concepts",
+      "size": 18,
+      "sessions": [
+        "S3",
+        "S4"
+      ],
+      "desc": "OM as first manifest aspect of the unmanifest. Chakra petals = sounds of prana; each Sanskrit letter maps to a nerve 'leaf'. A mantra plays the pranic keyboard of the nervous system.",
+      "cite": "s3#11:15"
+    },
+    {
+      "id": "collective-consciousness",
+      "label": "Collective consciousness",
+      "community": "concepts",
+      "size": 14,
+      "sessions": [
+        "S1",
+        "S3"
+      ],
+      "desc": "Where the personal opens into the larger whole; 'phenomena scale at every layer' — microcosm reflects macrocosm.",
+      "cite": "s1#39:50"
+    },
+    {
+      "id": "tamas",
+      "label": "Tamas",
+      "sanskrit": "तमस्",
+      "english": "inertia",
+      "community": "gunas",
+      "size": 14,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "The guna of inertia/dullness. A quality of what we feed/expose each kosha to.",
+      "cite": "s2#1:09:56"
+    },
+    {
+      "id": "rajas",
+      "label": "Rajas",
+      "sanskrit": "रजस्",
+      "english": "activity",
+      "community": "gunas",
+      "size": 14,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "The guna of activity/agitation. A rajasic/sattvic puppy wakes a tamasic room.",
+      "cite": "s2#1:09:56"
+    },
+    {
+      "id": "sattva",
+      "label": "Sattva",
+      "sanskrit": "सत्त्व",
+      "english": "harmony",
+      "community": "gunas",
+      "size": 14,
+      "sessions": [
+        "S2",
+        "S3"
+      ],
+      "desc": "The guna of harmony/clarity. 'Read sattvic content daily from wise humans.'",
+      "cite": "s2#1:09:56"
+    },
+    {
+      "id": "gunas",
+      "label": "The Gunas",
+      "community": "gunas",
+      "size": 18,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "Tamas/rajas/sattva as the quality of inputs to each kosha. 'Always read the gunas.' Practices stimulate, tranquilize, or balance — 'algorithms to tune ourselves to any moment.'",
+      "cite": "s2#1:09:34"
+    },
+    {
+      "id": "nourishment",
+      "label": "Nourishment & lifestyle",
+      "community": "gunas",
+      "size": 14,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "Which lifestyle choices over-expand vs. over-focus each kosha; what nourishes the intuitive dimension.",
+      "cite": "s2#1:01:03"
+    },
+    {
+      "id": "imbalance-elements",
+      "label": "Imbalance & elements",
+      "community": "gunas",
+      "size": 14,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "Over/under-fed koshas → dysregulation. Elements ↔ koshas as a model: anxiety is airy/mind → antidote is earth/Annamaya (cold showers, gardening).",
+      "cite": "s2#1:20:32"
+    },
+    {
+      "id": "whirlpool",
+      "label": "Whirlpool / Eddy",
+      "community": "metaphors",
+      "size": 18,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "'A whirlpool is not different from water — it IS water — but with a definite form and structure.' The body as a field of energy with definite form. (Jorge's contribution.)",
+      "cite": "s1#46:30"
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud",
+      "community": "metaphors",
+      "size": 13,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "A cloud that stays together through change — image of cohesion against entropy (Annamaya).",
+      "cite": "s1#45:22"
+    },
+    {
+      "id": "car-gearbox",
+      "label": "Car & Gearbox",
+      "community": "metaphors",
+      "size": 18,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "Body+energy = all the parts of the car; the pranic system is the gearbox/transmission — shifting gears on demand to move between situations.",
+      "cite": "s1#52:06"
+    },
+    {
+      "id": "skilled-driver",
+      "label": "Skilled driver / leopard",
+      "community": "metaphors",
+      "size": 15,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "'I don't drive when the leopards are out — I drive when they sleep; I check the weather.' Anticipation / pattern recognition (Vijnanamaya).",
+      "cite": "s1#55:26"
+    },
+    {
+      "id": "old-new-car",
+      "label": "Old car vs new car",
+      "community": "metaphors",
+      "size": 15,
+      "sessions": [
+        "S3",
+        "S4"
+      ],
+      "desc": "The modern car full of sensors (from the S3 podcast) — sensitivity analogy; a sensing/integration image landed in the S4 integration section."
+    },
+    {
+      "id": "photographer-lenses",
+      "label": "Photographer's lenses",
+      "community": "metaphors",
+      "size": 14,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "A bag of lenses switched per situation — direct awareness fluidly among the koshas.",
+      "cite": "s1#29:03"
+    },
+    {
+      "id": "software-interface",
+      "label": "Software / interface",
+      "community": "metaphors",
+      "size": 13,
+      "sessions": [
+        "S1"
+      ],
+      "desc": "Data moves through server/database but you can't see it until you build an interface — the body is the first interface for feeling.",
+      "cite": "s1#1:16:01"
+    },
+    {
+      "id": "stream-dam",
+      "label": "Stream / dam",
+      "community": "metaphors",
+      "size": 14,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "Clearing leaf-blocks from a forest stream multiplied the fish — 'we clear the blocks, we increase the flow… conduits for life force, speakers for the music called life.'",
+      "cite": "s2#3:10"
+    },
+    {
+      "id": "monk",
+      "label": "The healing monk",
+      "community": "metaphors",
+      "size": 17,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "The Buddhist monk Satchidananda lived with — predicted his day to train accuracy; read a hidden elbow injury by extending awareness into the body, 'like their body is my body.'",
+      "cite": "s2#1:22:19"
+    },
+    {
+      "id": "fusion-energy",
+      "label": "Fusion energy",
+      "community": "metaphors",
+      "size": 14,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "Emotion as intensely powerful, dangerous if uncontained: lab → city → world. 'Don't shut the feeling down — give it the largest, safest container.'"
+    },
+    {
+      "id": "golden-flame",
+      "label": "Golden / divine flame",
+      "community": "metaphors",
+      "size": 15,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "A steady golden flame at the eyebrow/heart center in the settling practice — image for the inner light at the causal core.",
+      "cite": "s3#10:00"
+    },
+    {
+      "id": "akashic-library",
+      "label": "Akashic library",
+      "community": "metaphors",
+      "size": 14,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "Image of Vijnanamaya — a library of all that can be known; adepts 'know which floor, which shelf, which book.'",
+      "cite": "s3#1:21:44"
+    },
+    {
+      "id": "mother-nature",
+      "label": "Mother Nature",
+      "community": "metaphors",
+      "size": 13,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "The oldest and youngest teacher (~13.8 bn years, yet 'born every moment') — 'anything we have, she already had, and does better.'",
+      "cite": "s3#46:35"
+    },
+    {
+      "id": "table",
+      "label": "The table",
+      "community": "metaphors",
+      "size": 13,
+      "sessions": [
+        "S4"
+      ],
+      "desc": "An integration/scanning image for laying the koshas out together — paired with old-vs-new-car in the S4 integration section."
+    },
+    {
+      "id": "hatha",
+      "label": "Hatha Yoga",
+      "community": "practices",
+      "size": 16,
+      "sessions": [
+        "S1",
+        "S3"
+      ],
+      "desc": "Works with the physical & energetic (deeper-body, nadi) layers — asana, pranayama, shatkarmas.",
+      "cite": "s1#32:10"
+    },
+    {
+      "id": "raja",
+      "label": "Raja Yoga",
+      "community": "practices",
+      "size": 16,
+      "sessions": [
+        "S1",
+        "S3"
+      ],
+      "desc": "Works with the mental dimension (manomaya) — pratyahara, dharana, meditation.",
+      "cite": "s1#37:05"
+    },
+    {
+      "id": "bhakti",
+      "label": "Bhakti Yoga",
+      "community": "practices",
+      "size": 15,
+      "sessions": [
+        "S1",
+        "S3"
+      ],
+      "desc": "Devotion/emotion. Appears 'fourth in the progression', linked to the advanced work of emotional balance — kirtan, japa, Pratipaksha Bhavana.",
+      "cite": "s1#1:22:12"
+    },
+    {
+      "id": "karma",
+      "label": "Karma Yoga",
+      "community": "practices",
+      "size": 13,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "Seva; watching the ego in interactions.",
+      "cite": "s3#52:16"
+    },
+    {
+      "id": "jnana",
+      "label": "Jnana Yoga",
+      "community": "practices",
+      "size": 13,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "Self-inquiry; SWAN (Strengths, Weaknesses, Ambitions, Needs).",
+      "cite": "s3#36:28"
+    },
+    {
+      "id": "kriya",
+      "label": "Kriya Yoga",
+      "community": "practices",
+      "size": 13,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "Awakens deep psychic energies; influences all koshas.",
+      "cite": "s3#53:25"
+    },
+    {
+      "id": "pranayama",
+      "label": "Pranayama",
+      "community": "practices",
+      "size": 15,
+      "sessions": [
+        "S2",
+        "S3"
+      ],
+      "desc": "Breath regulation — Kapalabhati, Nadi Shodhana / Anuloma Viloma, Ujjayi, Bhramari. Primary tool for Pranamaya.",
+      "cite": "s2#5:19"
+    },
+    {
+      "id": "asana",
+      "label": "Asana",
+      "community": "practices",
+      "size": 13,
+      "sessions": [
+        "S3",
+        "S4"
+      ],
+      "desc": "Postural practice — primary tool for Annamaya. Also body-shaking, palming, Shavasana.",
+      "cite": "s3#5:25"
+    },
+    {
+      "id": "antarmouna",
+      "label": "Antarmouna / Pratyahara",
+      "community": "practices",
+      "size": 13,
+      "sessions": [
+        "S2",
+        "S3"
+      ],
+      "desc": "Inner silence; rotating the five senses; sense-withdrawal — attention training for Manomaya.",
+      "cite": "s3#52:51"
+    },
+    {
+      "id": "shatkarma",
+      "label": "Shatkarmas",
+      "community": "practices",
+      "size": 12,
+      "sessions": [
+        "S3"
+      ],
+      "desc": "Cleansing practices — Neti, Kunjal, Shankhaprakshalana, fasting. Annamaya/Pranamaya.",
+      "cite": "s3#48:46"
+    },
+    {
+      "id": "mantra-set",
+      "label": "Three mantras",
+      "community": "practices",
+      "size": 15,
+      "sessions": [
+        "S3",
+        "S4"
+      ],
+      "desc": "Mahamrityunjaya → Annamaya+Pranamaya; Gayatri → Manomaya+Vijnanamaya; 32 Names of Durga → Anandamaya. Each with a sankalpa.",
+      "cite": "s4#22:37"
+    },
+    {
+      "id": "saha-navavatu",
+      "label": "Saha Nāvavatu",
+      "community": "practices",
+      "size": 13,
+      "sessions": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "Opening peace-invocation (Taittirīya / Kṛṣṇa-Yajurveda): 'May we both be protected and nourished together; may we study with vigour; may our learning be illuminating; may we never quarrel.' The teacher frames it as learning with no hierarchy — teacher and student, and vidyā itself, advancing together.",
+      "cite": "s2#8:32"
+    },
+    {
+      "id": "om",
+      "label": "OM",
+      "sanskrit": "ॐ",
+      "english": "primordial sound",
+      "community": "practices",
+      "size": 16,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "desc": "The first manifest aspect of the unmanifest. Imagined pervading every kosha and the universe; the bookend of every session's closing.",
+      "cite": "s1#0:51"
+    },
+    {
+      "id": "journal-sadhana",
+      "label": "Journal / Sadhana",
+      "community": "practices",
+      "size": 14,
+      "sessions": [
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "desc": "Daily attention/kosha journal charted over the course; per-kosha component list; a guna read of inputs. 'Find the boundaries of your experience.'"
+    },
+    {
+      "id": "ale",
+      "label": "Ale (host / translator)",
+      "community": "structure",
+      "size": 14,
+      "sessions": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "desc": "The host who invited Satchidananda and ran the live Spanish translation across the sessions ('thanking Ale for inviting me'). The reason the opening Saha Nāvavatu — no distinction between teacher and student — is lived, not just recited. Promoted in Stage-2 curation (auto-extractor caught ~26 mentions; the prior hand-pass missed the real person behind them).",
+      "cite": "s1#0:59"
+    },
+    {
+      "id": "kapalabhati",
+      "label": "Kapalabhati",
+      "sanskrit": "कपालभाति",
+      "english": "skull-shining breath",
+      "community": "practices",
+      "size": 13,
+      "sessions": [
+        "S2",
+        "S3"
+      ],
+      "desc": "Skull-shining rapid-exhalation pranayama — 'the first pranayama being kapalabhati'. A pranic shatkarma/breath used to awaken and move prana; in S3 done rhythmically with body-shaking. A concrete tool of the Pranamaya layer. Promoted in Stage-2 (auto-extractor found 5 mentions across S2/S3 the prior pass folded only generically into 'pranayama').",
+      "cite": "s2#16:00"
+    },
+    {
+      "id": "chidakash",
+      "label": "Chidakash",
+      "sanskrit": "चिदाकाश",
+      "english": "the space of consciousness",
+      "community": "concepts",
+      "size": 13,
+      "sessions": [
+        "S2"
+      ],
+      "desc": "The dark inner 'screen' / space of consciousness seen behind closed eyes — 'anything you see in this darkened space that we call Chidakash'. The field of inner perception worked with in the settling/antarmouna practice (palming, awareness behind the eyes). Promoted in Stage-2 (auto-extractor caught 4 mentions; the prior pass had no node for the inner mind-space itself).",
+      "cite": "s2#10:10"
+    },
+    {
+      "id": "visualization",
+      "label": "Visualization",
+      "community": "concepts",
+      "size": 11,
+      "sessions": [
+        "S4"
+      ],
+      "desc": "The affirmation skill at the heart of S4's mantras: as you make an affirmation (sankalpa), WAKE the emotional feeling of it already coming true AND VISUALIZE that state — 'feel cold when you think cold, start to sweat when you think hot.' It can take years to awaken to full potential, and is a prerequisite for the higher branches (bhakti, kriya yoga). Validated by modern neuroplasticity.",
+      "cite": "s4#21:50"
+    },
+    {
+      "id": "external-internal",
+      "label": "Externalization ↔ Internalization",
+      "community": "concepts",
+      "size": 10,
+      "sessions": [
+        "S4"
+      ],
+      "desc": "Yoga's in-and-out priming: externalization projects awareness outward (sensing the room, another's state, waking each kosha); internalization (pratyahara) draws it inward to the witness and the causal seed. A complete sadhana trains both directions, moving fluidly between them."
+    },
+    {
+      "id": "tantra",
+      "label": "Tantra",
+      "community": "concepts",
+      "size": 12,
+      "sessions": [
+        "S4"
+      ],
+      "cite": "s4#15:59",
+      "desc": "Mantra is a tool of Tantra — 'anything that expands consciousness and liberates energy.' It predates yoga (tantric discoveries), and was adopted by yoga and later religions."
+    },
+    {
+      "id": "yoga-nidra",
+      "label": "Yoga Nidra",
+      "community": "practices",
+      "size": 11,
+      "sessions": [
+        "S4"
+      ],
+      "cite": "s4#16:20",
+      "desc": "A short, sound-based yoga nidra: complete stillness, the practitioner guided by external (and in advanced stages internal) sound. A vehicle for planting a sankalpa in the quiet state."
+    },
+    {
+      "id": "indriyas",
+      "label": "Indriyas — sense pathways",
+      "community": "concepts",
+      "size": 11,
+      "sessions": [
+        "S4"
+      ],
+      "cite": "s4#13:50",
+      "desc": "Elements map to sense organs (indriyas) by density: earth->smell, water->taste, fire->sight, air->touch, ether/space->sound; subtlest of all is the mind. Sound, being subtlest, pervades the others — which is why mantra reaches every kosha."
+    },
+    {
+      "id": "subconscious-affirmation",
+      "label": "Subconscious & affirmations",
+      "community": "concepts",
+      "size": 12,
+      "sessions": [
+        "S4"
+      ],
+      "cite": "s4#17:45",
+      "desc": "On waking the subconscious is still accessible (dreams slip away with movement); it may drive 70%+ of waking life across the koshas. Positive affirmations planted on waking — reinforced through the day — create a positive feedback loop into it. Why the three mantras are traditionally done instantly on waking (Satyananda tradition)."
+    },
+    {
+      "id": "neuroplasticity",
+      "label": "Neuroplasticity — 'The Brain That Changes Itself'",
+      "community": "concepts",
+      "size": 10,
+      "sessions": [
+        "S4"
+      ],
+      "cite": "s4#26:04",
+      "desc": "Norman Doidge's 'The Brain That Changes Itself' — modern case studies validating the ancient claim that visualization can actually change the body. Cited as evidence for cultivating the imagine-and-feel capacity."
+    },
+    {
+      "id": "laghoo-shankhaprakshalana",
+      "label": "Laghoo Shankhaprakshalana",
+      "community": "practices",
+      "size": 10,
+      "sessions": [
+        "S4"
+      ],
+      "desc": "The short digestive-cleanse practice. In this session its FIVE asanas were delivered (Tadasana, Tiryaka Tadasana, Kati Chakrasana, Tiryaka Bhujangasana, Udarakarshanasana); the salt-water cleanse itself was omitted. Falls outside the wXDXmb4MMR0 recording, which captures only the opening + mantra portion (ends at the Durga chant ~44:19)."
+    }
+  ],
+  "edges": [
+    {
+      "source": "kosha",
+      "target": "annamaya",
+      "rel": "comprises"
+    },
+    {
+      "source": "kosha",
+      "target": "pranamaya",
+      "rel": "comprises"
+    },
+    {
+      "source": "kosha",
+      "target": "manomaya",
+      "rel": "comprises"
+    },
+    {
+      "source": "kosha",
+      "target": "vijnanamaya",
+      "rel": "comprises"
+    },
+    {
+      "source": "kosha",
+      "target": "anandamaya",
+      "rel": "comprises"
+    },
+    {
+      "source": "annamaya",
+      "target": "pranamaya",
+      "rel": "subtler than"
+    },
+    {
+      "source": "pranamaya",
+      "target": "manomaya",
+      "rel": "subtler than"
+    },
+    {
+      "source": "manomaya",
+      "target": "vijnanamaya",
+      "rel": "subtler than"
+    },
+    {
+      "source": "vijnanamaya",
+      "target": "anandamaya",
+      "rel": "subtler than"
+    },
+    {
+      "source": "annamaya",
+      "target": "entropy",
+      "rel": "reframed as"
+    },
+    {
+      "source": "pranamaya",
+      "target": "state-transition",
+      "rel": "reframed as"
+    },
+    {
+      "source": "manomaya",
+      "target": "attention",
+      "rel": "reframed as"
+    },
+    {
+      "source": "vijnanamaya",
+      "target": "pattern-recognition",
+      "rel": "reframed as"
+    },
+    {
+      "source": "anandamaya",
+      "target": "baseline-coherence",
+      "rel": "reframed as"
+    },
+    {
+      "source": "modern-reframe",
+      "target": "entropy",
+      "rel": "produces"
+    },
+    {
+      "source": "modern-reframe",
+      "target": "state-transition",
+      "rel": "produces"
+    },
+    {
+      "source": "modern-reframe",
+      "target": "attention",
+      "rel": "produces"
+    },
+    {
+      "source": "modern-reframe",
+      "target": "pattern-recognition",
+      "rel": "produces"
+    },
+    {
+      "source": "modern-reframe",
+      "target": "baseline-coherence",
+      "rel": "produces"
+    },
+    {
+      "source": "pranamaya",
+      "target": "prana",
+      "rel": "carries"
+    },
+    {
+      "source": "prana",
+      "target": "nadis",
+      "rel": "flows through"
+    },
+    {
+      "source": "pranamaya",
+      "target": "nadis",
+      "rel": "structured by"
+    },
+    {
+      "source": "prana",
+      "target": "sound-mantra",
+      "rel": "responds to"
+    },
+    {
+      "source": "annamaya",
+      "target": "whirlpool",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "annamaya",
+      "target": "cloud",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "entropy",
+      "target": "whirlpool",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "pranamaya",
+      "target": "car-gearbox",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "state-transition",
+      "target": "car-gearbox",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "vijnanamaya",
+      "target": "skilled-driver",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "pattern-recognition",
+      "target": "skilled-driver",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "kosha",
+      "target": "photographer-lenses",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "framework-lens",
+      "target": "photographer-lenses",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "emotion",
+      "target": "software-interface",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "annamaya",
+      "target": "software-interface",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "prana",
+      "target": "stream-dam",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "nadis",
+      "target": "stream-dam",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "intuitive-body",
+      "target": "monk",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "awareness",
+      "target": "monk",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "emotion",
+      "target": "fusion-energy",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "anandamaya",
+      "target": "golden-flame",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "vijnanamaya",
+      "target": "akashic-library",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "intuitive-body",
+      "target": "mother-nature",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "kosha",
+      "target": "table",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "intuitive-body",
+      "target": "old-new-car",
+      "rel": "illustrated by"
+    },
+    {
+      "source": "annamaya",
+      "target": "emotion",
+      "rel": "first interface for"
+    },
+    {
+      "source": "emotion",
+      "target": "pranamaya",
+      "rel": "crosses"
+    },
+    {
+      "source": "emotion",
+      "target": "manomaya",
+      "rel": "crosses"
+    },
+    {
+      "source": "emotion",
+      "target": "bhakti",
+      "rel": "balanced via"
+    },
+    {
+      "source": "manomaya",
+      "target": "attention",
+      "rel": "governs"
+    },
+    {
+      "source": "vijnanamaya",
+      "target": "pattern-recognition",
+      "rel": "enables"
+    },
+    {
+      "source": "vijnanamaya",
+      "target": "collective-consciousness",
+      "rel": "opens into"
+    },
+    {
+      "source": "pattern-recognition",
+      "target": "collective-consciousness",
+      "rel": "scales into"
+    },
+    {
+      "source": "vijnanamaya",
+      "target": "intuitive-body",
+      "rel": "cultivated by"
+    },
+    {
+      "source": "kosha",
+      "target": "rotating-awareness",
+      "rel": "practised via"
+    },
+    {
+      "source": "rotating-awareness",
+      "target": "awareness",
+      "rel": "directs"
+    },
+    {
+      "source": "framework-lens",
+      "target": "kosha",
+      "rel": "frames"
+    },
+    {
+      "source": "modern-reframe",
+      "target": "kosha",
+      "rel": "re-describes"
+    },
+    {
+      "source": "gunas",
+      "target": "tamas",
+      "rel": "includes"
+    },
+    {
+      "source": "gunas",
+      "target": "rajas",
+      "rel": "includes"
+    },
+    {
+      "source": "gunas",
+      "target": "sattva",
+      "rel": "includes"
+    },
+    {
+      "source": "gunas",
+      "target": "kosha",
+      "rel": "qualify inputs to"
+    },
+    {
+      "source": "gunas",
+      "target": "nourishment",
+      "rel": "governs"
+    },
+    {
+      "source": "nourishment",
+      "target": "kosha",
+      "rel": "feeds"
+    },
+    {
+      "source": "gunas",
+      "target": "imbalance-elements",
+      "rel": "read to detect"
+    },
+    {
+      "source": "imbalance-elements",
+      "target": "annamaya",
+      "rel": "earth antidote in"
+    },
+    {
+      "source": "scale",
+      "target": "kosha",
+      "rel": "property of"
+    },
+    {
+      "source": "density",
+      "target": "kosha",
+      "rel": "property of"
+    },
+    {
+      "source": "wakefulness",
+      "target": "kosha",
+      "rel": "applied across"
+    },
+    {
+      "source": "scale",
+      "target": "pranamaya",
+      "rel": "measured in"
+    },
+    {
+      "source": "density",
+      "target": "nadis",
+      "rel": "fluid as"
+    },
+    {
+      "source": "willpower",
+      "target": "anandamaya",
+      "rel": "reaches"
+    },
+    {
+      "source": "causal-introspection",
+      "target": "anandamaya",
+      "rel": "reaches"
+    },
+    {
+      "source": "willpower",
+      "target": "sankalpa",
+      "rel": "exercised via"
+    },
+    {
+      "source": "willpower",
+      "target": "tapas",
+      "rel": "exercised via"
+    },
+    {
+      "source": "tapas",
+      "target": "anandamaya",
+      "rel": "reaches"
+    },
+    {
+      "source": "sankalpa",
+      "target": "causal-introspection",
+      "rel": "pairs with"
+    },
+    {
+      "source": "integration-handoff",
+      "target": "self-to-others",
+      "rel": "culminates in"
+    },
+    {
+      "source": "integration-handoff",
+      "target": "kosha",
+      "rel": "draws together"
+    },
+    {
+      "source": "self-to-others",
+      "target": "teacher-craft",
+      "rel": "grounds"
+    },
+    {
+      "source": "teacher-craft",
+      "target": "drashta",
+      "rel": "embodied as"
+    },
+    {
+      "source": "drashta",
+      "target": "awareness",
+      "rel": "rests on"
+    },
+    {
+      "source": "hatha",
+      "target": "annamaya",
+      "rel": "primary layer"
+    },
+    {
+      "source": "hatha",
+      "target": "pranamaya",
+      "rel": "primary layer"
+    },
+    {
+      "source": "raja",
+      "target": "manomaya",
+      "rel": "primary layer"
+    },
+    {
+      "source": "bhakti",
+      "target": "emotion",
+      "rel": "works with"
+    },
+    {
+      "source": "jnana",
+      "target": "vijnanamaya",
+      "rel": "works with"
+    },
+    {
+      "source": "kriya",
+      "target": "kosha",
+      "rel": "influences all"
+    },
+    {
+      "source": "karma",
+      "target": "self-to-others",
+      "rel": "trains"
+    },
+    {
+      "source": "hatha",
+      "target": "asana",
+      "rel": "uses"
+    },
+    {
+      "source": "hatha",
+      "target": "pranayama",
+      "rel": "uses"
+    },
+    {
+      "source": "hatha",
+      "target": "shatkarma",
+      "rel": "uses"
+    },
+    {
+      "source": "raja",
+      "target": "antarmouna",
+      "rel": "uses"
+    },
+    {
+      "source": "asana",
+      "target": "annamaya",
+      "rel": "practice for"
+    },
+    {
+      "source": "pranayama",
+      "target": "pranamaya",
+      "rel": "practice for"
+    },
+    {
+      "source": "pranayama",
+      "target": "prana",
+      "rel": "regulates"
+    },
+    {
+      "source": "antarmouna",
+      "target": "manomaya",
+      "rel": "practice for"
+    },
+    {
+      "source": "intuitive-body",
+      "target": "vijnanamaya",
+      "rel": "practice for"
+    },
+    {
+      "source": "willpower",
+      "target": "anandamaya",
+      "rel": "practice for"
+    },
+    {
+      "source": "sound-mantra",
+      "target": "om",
+      "rel": "centres on"
+    },
+    {
+      "source": "sound-mantra",
+      "target": "mantra-set",
+      "rel": "applies via"
+    },
+    {
+      "source": "sound-mantra",
+      "target": "prana",
+      "rel": "plays"
+    },
+    {
+      "source": "mantra-set",
+      "target": "annamaya",
+      "rel": "Mahamrityunjaya for"
+    },
+    {
+      "source": "mantra-set",
+      "target": "pranamaya",
+      "rel": "Mahamrityunjaya for"
+    },
+    {
+      "source": "mantra-set",
+      "target": "manomaya",
+      "rel": "Gayatri for"
+    },
+    {
+      "source": "mantra-set",
+      "target": "vijnanamaya",
+      "rel": "Gayatri for"
+    },
+    {
+      "source": "mantra-set",
+      "target": "anandamaya",
+      "rel": "Durga for"
+    },
+    {
+      "source": "mantra-set",
+      "target": "sankalpa",
+      "rel": "each carries"
+    },
+    {
+      "source": "saha-navavatu",
+      "target": "self-to-others",
+      "rel": "intends"
+    },
+    {
+      "source": "om",
+      "target": "kosha",
+      "rel": "pervades all"
+    },
+    {
+      "source": "journal-sadhana",
+      "target": "awareness",
+      "rel": "tracks"
+    },
+    {
+      "source": "journal-sadhana",
+      "target": "kosha",
+      "rel": "charts across"
+    },
+    {
+      "source": "journal-sadhana",
+      "target": "gunas",
+      "rel": "adds read of"
+    },
+    {
+      "source": "sattva",
+      "target": "intuitive-body",
+      "rel": "nourishes"
+    },
+    {
+      "source": "ale",
+      "target": "saha-navavatu",
+      "rel": "opens with"
+    },
+    {
+      "source": "ale",
+      "target": "teacher-craft",
+      "rel": "makes possible"
+    },
+    {
+      "source": "pranayama",
+      "target": "kapalabhati",
+      "rel": "includes"
+    },
+    {
+      "source": "kapalabhati",
+      "target": "pranamaya",
+      "rel": "practice for"
+    },
+    {
+      "source": "manomaya",
+      "target": "chidakash",
+      "rel": "perceived in"
+    },
+    {
+      "source": "antarmouna",
+      "target": "chidakash",
+      "rel": "observes"
+    },
+    {
+      "source": "sankalpa",
+      "target": "visualization",
+      "rel": "realized through"
+    },
+    {
+      "source": "mantra-set",
+      "target": "visualization",
+      "rel": "practised with"
+    },
+    {
+      "source": "visualization",
+      "target": "vijnanamaya",
+      "rel": "strengthens"
+    },
+    {
+      "source": "external-internal",
+      "target": "visualization",
+      "rel": "trained by"
+    },
+    {
+      "source": "antarmouna",
+      "target": "external-internal",
+      "rel": "deepens"
+    },
+    {
+      "source": "mantra-set",
+      "target": "tantra",
+      "rel": "rooted in"
+    },
+    {
+      "source": "sound-mantra",
+      "target": "yoga-nidra",
+      "rel": "applied in"
+    },
+    {
+      "source": "sound-mantra",
+      "target": "indriyas",
+      "rel": "works via"
+    },
+    {
+      "source": "subconscious-affirmation",
+      "target": "sankalpa",
+      "rel": "planted via"
+    },
+    {
+      "source": "subconscious-affirmation",
+      "target": "visualization",
+      "rel": "uses"
+    },
+    {
+      "source": "visualization",
+      "target": "neuroplasticity",
+      "rel": "validated by"
+    },
+    {
+      "source": "visualization",
+      "target": "bhakti",
+      "rel": "prerequisite for"
+    },
+    {
+      "source": "visualization",
+      "target": "kriya",
+      "rel": "prerequisite for"
+    },
+    {
+      "source": "shatkarma",
+      "target": "laghoo-shankhaprakshalana",
+      "rel": "includes"
+    },
+    {
+      "source": "laghoo-shankhaprakshalana",
+      "target": "annamaya",
+      "rel": "awakens"
+    }
+  ]
+};

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Five Koshas · Knowledge Graph</title>
+  <meta name="description" content="Interactive force-directed concept map of the five koshas — built by text analysis of a four-session TTC-300 series by Satchidananda." />
+
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("kosha_theme");
+        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.dataset.theme = t;
+      } catch (e) { document.documentElement.dataset.theme = "dark"; }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Reusable engine: structural graph/panel/legend styles (theme-agnostic). -->
+  <link rel="stylesheet" href="engine/engine.css" />
+
+  <style>
+    /* ---- koshas palette + chrome (the HOST theme) ---- */
+    :root {
+      --hue: 38;
+      --bg:#0e0c0b; --bg-2:#15110f; --panel:#1b1613; --panel-2:#211a16;
+      --ink:#ece3d6; --ink-soft:#b9ad9c; --ink-faint:#7d7264; --line:#322823;
+      --accent:hsl(var(--hue) 70% 62%); --accent-dim:hsl(var(--hue) 45% 42%);
+      --accent-glow:hsl(var(--hue) 80% 60% / .22);
+      --r:16px; --ease:cubic-bezier(.22,.61,.36,1);
+      --serif:"Spectral",Georgia,serif; --display:"Fraunces",Georgia,serif;
+      --deva:"Noto Serif Devanagari","Spectral",serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+
+      /* Map the host palette onto the engine's contract variables. */
+      --fg-bg:var(--bg); --fg-line:var(--line); --fg-ink:var(--ink);
+      --fg-ink-soft:var(--ink-soft); --fg-ink-faint:var(--ink-faint);
+      --fg-accent:var(--accent); --fg-panel:var(--panel); --fg-radius:var(--r);
+      --fg-mono:var(--mono); --fg-display:var(--display);
+    }
+    :root[data-theme="light"] {
+      --bg:#f4eee4; --bg-2:#eae0d0; --panel:#fdfaf4; --panel-2:#f3ebdd;
+      --ink:#2b2218; --ink-soft:#5d5142; --ink-faint:#93826c; --line:#e2d7c4;
+      --accent:hsl(var(--hue) 58% 40%); --accent-dim:hsl(var(--hue) 38% 62%);
+      --accent-glow:hsl(var(--hue) 72% 52% / .14);
+    }
+    * { box-sizing:border-box; }
+    html,body { height:100%; margin:0; }
+    body {
+      background:
+        radial-gradient(120% 80% at 50% -10%, hsl(var(--hue) 40% 12%) 0%, transparent 55%),
+        radial-gradient(80% 60% at 90% 110%, var(--bg-2) 0%, transparent 60%),
+        var(--bg);
+      color:var(--ink); font-family:var(--serif); -webkit-font-smoothing:antialiased;
+      overflow:hidden; transition:background .8s var(--ease);
+    }
+    :root[data-theme="light"] body {
+      background:
+        radial-gradient(120% 80% at 50% -10%, hsl(var(--hue) 45% 88%) 0%, transparent 55%),
+        radial-gradient(80% 60% at 90% 110%, var(--bg-2) 0%, transparent 60%),
+        var(--bg);
+    }
+    .grain { position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.035;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+    :root[data-theme="light"] .grain { opacity:.02; }
+
+    /* masthead */
+    .masthead { position:fixed; top:0; left:0; right:0; z-index:20;
+      backdrop-filter:blur(14px);
+      background:linear-gradient(180deg, hsl(var(--hue) 22% 7% / .92), hsl(var(--hue) 22% 7% / .55));
+      border-bottom:1px solid var(--line); }
+    :root[data-theme="light"] .masthead {
+      background:linear-gradient(180deg, hsl(var(--hue) 30% 96% / .94), hsl(var(--hue) 30% 96% / .6)); }
+    .mast-inner { display:flex; align-items:center; gap:18px; padding:14px 24px 12px; }
+    .mast-text { flex:1; min-width:0; }
+    .eyebrow { margin:0 0 2px; font-family:var(--mono); font-size:11px; letter-spacing:.28em;
+      text-transform:uppercase; color:var(--accent); opacity:.9; }
+    .mast-title { margin:0; font-family:var(--display); font-weight:600;
+      font-size:clamp(1.3rem,2.6vw,2rem); line-height:1; letter-spacing:-.01em; }
+    .mast-sub { margin:4px 0 0; color:var(--ink-soft); font-size:.8rem; }
+    .theme-btn { appearance:none; cursor:pointer; width:34px; height:34px; border-radius:50%;
+      border:1px solid var(--line); background:var(--panel); color:var(--ink-soft);
+      font-size:15px; transition:border-color .25s,color .25s,transform .3s var(--ease); flex:none; }
+    .theme-btn:hover { color:var(--ink); border-color:var(--accent-dim); transform:rotate(18deg); }
+
+    /* canvas */
+    #stage { position:fixed; inset:0; z-index:2; }
+
+    /* side panel (host chrome — the engine fills the connections + source) */
+    #panel { position:fixed; top:0; right:0; bottom:0; width:360px; max-width:86vw; z-index:30;
+      background:linear-gradient(180deg,var(--panel),var(--panel-2));
+      border-left:1px solid var(--line); box-shadow:-30px 0 80px -40px #000;
+      transform:translateX(102%); transition:transform .42s var(--ease);
+      display:flex; flex-direction:column; padding:74px 26px 24px; overflow-y:auto; }
+    #panel.open { transform:none; }
+    #panel .pclose { position:absolute; top:64px; right:20px; appearance:none; background:none;
+      border:none; cursor:pointer; font-size:1.5rem; color:var(--ink-faint); transition:color .2s; }
+    #panel .pclose:hover { color:var(--ink); }
+    .p-deva { font-family:var(--deva); font-size:2.6rem; line-height:1; color:var(--accent);
+      text-shadow:0 0 30px var(--accent-glow); margin:0 0 6px; min-height:0; }
+    .p-kicker { font-family:var(--mono); font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--accent); margin:0 0 4px; }
+    .p-title { font-family:var(--display); font-weight:600; font-size:1.7rem; line-height:1.05; margin:0 0 2px; }
+    .p-eng { font-style:italic; color:var(--ink-soft); margin:0 0 16px; font-size:1rem; }
+    .p-desc { color:var(--ink-soft); font-size:.96rem; line-height:1.6; margin:0 0 20px; }
+    .chips { display:flex; flex-wrap:wrap; gap:7px; margin:0 0 8px; }
+    .chip { font-family:var(--mono); font-size:11px; letter-spacing:.03em; color:var(--ink-soft);
+      border:1px solid var(--line); border-radius:100px; padding:5px 11px; background:var(--panel); }
+    .chip.ses { cursor:default; }
+
+    /* legend + controls */
+    #legend { position:fixed; left:20px; bottom:20px; z-index:15; max-width:260px;
+      background:hsl(var(--hue) 22% 7% / .5); backdrop-filter:blur(8px);
+      border:1px solid var(--line); border-radius:var(--r); padding:14px 16px; }
+    :root[data-theme="light"] #legend { background:hsl(var(--hue) 30% 96% / .6); }
+    #legend h4 { font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+      color:var(--ink-faint); margin:0 0 9px; font-weight:400; }
+
+    #toolbar { position:fixed; top:74px; left:20px; z-index:15; display:flex; gap:8px; flex-wrap:wrap;
+      align-items:center; max-width:62vw; }
+    #search { font-family:var(--mono); font-size:12px; color:var(--ink);
+      background:hsl(var(--hue) 22% 7% / .5); backdrop-filter:blur(8px);
+      border:1px solid var(--line); border-radius:100px; padding:8px 14px; width:200px;
+      outline:none; transition:border-color .2s; }
+    :root[data-theme="light"] #search { background:hsl(var(--hue) 30% 96% / .6); }
+    #search:focus { border-color:var(--accent-dim); }
+    #search::placeholder { color:var(--ink-faint); }
+    .tool-btn { font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:var(--ink-soft);
+      background:hsl(var(--hue) 22% 7% / .5); backdrop-filter:blur(8px); cursor:pointer;
+      border:1px solid var(--line); border-radius:100px; padding:8px 13px; transition:border-color .2s,color .2s; }
+    :root[data-theme="light"] .tool-btn { background:hsl(var(--hue) 30% 96% / .6); }
+    .tool-btn:hover { color:var(--ink); border-color:var(--accent-dim); }
+    .tool-btn.on { color:var(--accent); border-color:var(--accent-dim); }
+
+    #hint { position:fixed; right:20px; bottom:20px; z-index:15; font-family:var(--mono);
+      font-size:10.5px; letter-spacing:.04em; color:var(--ink-faint); text-align:right; line-height:1.7; }
+
+    #loading { position:fixed; inset:0; z-index:40; display:grid; place-items:center;
+      font-family:var(--display); font-style:italic; color:var(--ink-soft); font-size:1.1rem; }
+
+    @media (max-width:760px) {
+      #toolbar { max-width:90vw; }
+      #search { width:140px; }
+      #legend { max-width:200px; font-size:.8rem; }
+      #hint { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="mast-inner">
+      <div class="mast-text">
+        <p class="eyebrow" id="eyebrow">The Five Koshas · Knowledge Graph</p>
+        <h1 class="mast-title">Sheaths, Concepts &amp; Metaphors</h1>
+        <p class="mast-sub" id="mastSub">Force-directed map built by text analysis of a four-session TTC-300 series</p>
+      </div>
+      <button class="theme-btn" id="themeBtn" title="Toggle light/dark" aria-label="Toggle theme">☾</button>
+    </div>
+  </header>
+
+  <div id="stage"><svg id="svg" class="fg-svg" aria-label="Koshas knowledge graph"></svg></div>
+
+  <div id="toolbar">
+    <input id="search" type="search" placeholder="search a node…" autocomplete="off" />
+    <button class="tool-btn" id="labelsBtn" title="Show edge labels">edge labels</button>
+    <button class="tool-btn" id="resetBtn" title="Reset view">reset</button>
+  </div>
+
+  <aside id="panel" aria-live="polite">
+    <button class="pclose" id="pclose" aria-label="Close">×</button>
+    <div class="p-deva" id="pDeva"></div>
+    <p class="p-kicker" id="pKicker"></p>
+    <h2 class="p-title" id="pTitle"></h2>
+    <p class="p-eng" id="pEng"></p>
+    <p class="p-desc" id="pDesc"></p>
+    <div id="pSessions"></div>
+    <div id="pRels"></div>
+    <div id="pSource"></div>
+  </aside>
+
+  <div id="legend"><h4>Communities — click to filter</h4><div id="legRows"></div></div>
+  <div id="hint">click a node to explore · drag to reposition · scroll to zoom</div>
+  <div id="loading">drawing the sheaths…</div>
+
+  <!-- Embedded graph data: lets the page work on file:// (fetch of graph.json is
+       CORS-blocked there). Over http, fetch('graph.json') is tried first. -->
+  <script src="graph-data.js"></script>
+
+  <!-- Reusable engine modules (data-driven; no koshas hardcoding). -->
+  <script src="engine/layer-toggle.js"></script>
+  <script src="engine/cite-link.js"></script>
+  <script src="engine/force-graph.js"></script>
+
+  <!-- Citation resolver shared with the own-transcript corpus (reused, not
+       duplicated). Optional — the graph still works if these are absent; nodes
+       then fall back to a transcript link, never a bare ref. -->
+  <script src="cite.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"
+          integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i"
+          crossorigin="anonymous"></script>
+
+  <!-- Koshas HOST: theme glue + the app-specific panel body, on top of the engine. -->
+  <script src="koshas-host.js"></script>
+</body>
+</html>
