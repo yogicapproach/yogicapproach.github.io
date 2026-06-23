@@ -65,6 +65,18 @@
   color: var(--fg-ink-faint, #7d7264); letter-spacing: .04em;
 }
 
+/* ---- alternate layouts: ring decorations + matrix cells (talks#29/#57) ---- */
+.ring {
+  fill: none; stroke: var(--fg-line, #322823); stroke-opacity: .5; stroke-dasharray: 3 5;
+}
+.ring-label {
+  font-family: var(--fg-mono, ui-monospace, monospace); font-size: 11px;
+  letter-spacing: .12em; text-transform: uppercase; fill: var(--fg-ink-faint, #7d7264);
+}
+.mx-cell { stroke: var(--fg-bg, #0e0c0b); stroke-width: .5px; }
+.mx-label { font-family: var(--fg-mono, ui-monospace, monospace); fill: var(--fg-ink-faint, #7d7264); }
+.mx-label.hl { fill: var(--fg-accent, #d8a24a); }
+
 /* ---- legend (layer toggle) ---- */
 .leg-row {
   display: flex; align-items: center; gap: 9px; padding: 3px 0; cursor: pointer;

@@ -153,6 +153,22 @@
     .ses-btn.on { color:var(--accent); border-color:var(--accent-dim);
       background:hsl(var(--hue) 60% 50% / .12); }
 
+    /* layout switch — a grouped control bar (Force · Concentric · Matrix),
+       styled to match the #sessions group. */
+    #layouts { display:flex; align-items:center; gap:7px;
+      background:hsl(var(--hue) 22% 7% / .5); backdrop-filter:blur(8px);
+      border:1px solid var(--line); border-radius:100px; padding:4px 10px 4px 12px; }
+    :root[data-theme="light"] #layouts { background:hsl(var(--hue) 30% 96% / .6); }
+    .lay-cap { font-family:var(--mono); font-size:10px; letter-spacing:.14em;
+      text-transform:uppercase; color:var(--ink-faint); }
+    .lay-bar { display:flex; gap:4px; }
+    .lay-btn { font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:var(--ink-soft);
+      background:transparent; cursor:pointer; border:1px solid transparent; border-radius:100px;
+      padding:5px 10px; transition:border-color .2s,color .2s,background .2s; }
+    .lay-btn:hover { color:var(--ink); border-color:var(--accent-dim); }
+    .lay-btn.on { color:var(--accent); border-color:var(--accent-dim);
+      background:hsl(var(--hue) 60% 50% / .12); }
+
     #hint { position:fixed; right:20px; bottom:20px; z-index:15; font-family:var(--mono);
       font-size:10.5px; letter-spacing:.04em; color:var(--ink-faint); text-align:right; line-height:1.7; }
 
@@ -191,6 +207,10 @@
       <span class="ses-cap">Sessions</span>
       <div id="sesBar" class="ses-bar"></div>
     </div>
+    <div id="layouts" title="Re-position the same graph: force-directed, nested koshic rings, or an overlap-free adjacency matrix">
+      <span class="lay-cap">Layout</span>
+      <div id="layBar" class="lay-bar"></div>
+    </div>
   </div>
 
   <aside id="panel" aria-live="polite">
@@ -218,6 +238,12 @@
   <script src="engine/session-filter.js"></script>
   <script src="engine/cite-link.js"></script>
   <script src="engine/force-graph.js"></script>
+
+  <!-- Alternate layout geometry, REUSED from the layouts-lab prototype (not
+       forked): each registers window.KoshaLayouts.<key>.compute(ctx). The host
+       (koshas-host.js) applies their output to the MAIN graph's own nodes/SVG. -->
+  <script src="layouts-lab/layouts/concentric.js"></script>
+  <script src="layouts-lab/layouts/matrix.js"></script>
 
   <!-- Citation resolver shared with the own-transcript corpus (reused, not
        duplicated). Optional — the graph still works if these are absent; nodes

@@ -79,12 +79,18 @@
     });
     svg.call(zoom);
 
+    // Layer order: decorations (rings) behind, then links, a matrix layer
+    // (used only by alternate layouts), then nodes on top.
+    var decoG = rootG.append("g").attr("class", "deco-layer");
+
     var link = rootG.append("g").selectAll("line").data(links).join("line")
       .attr("class", "link").attr("marker-end", "url(#fg-arrow)");
 
     var linkLabel = rootG.append("g").selectAll("text").data(links).join("text")
       .attr("class", "link-label").attr("text-anchor", "middle")
       .text(function (d) { return d.rel || ""; });
+
+    var matrixG = rootG.append("g").attr("class", "matrix-layer").style("display", "none");
 
     var node = rootG.append("g").selectAll("g").data(nodes).join("g")
       .attr("class", "node")
@@ -102,6 +108,10 @@
       .attr("font-size", function (d) { return (10 + sizeOf(d) * 0.16).toFixed(1) + "px"; })
       .text(function (d) { return d.label; });
 
+    // Layout state (declared before the sim so the first tick sees simActive=true).
+    var simActive = true;          // is the force sim currently driving tick()?
+    var matrixMode = false;        // is the matrix cell grid showing?
+
     var sim = d3.forceSimulation(nodes)
       .force("link", d3.forceLink(links).id(function (d) { return d.id; })
         .distance(function (l) {
@@ -116,6 +126,7 @@
       .on("tick", tick);
 
     function tick() {
+      if (!simActive) return;   // a static/matrix layout owns positions now
       link.attr("x1", function (d) { return d.source.x; })
         .attr("y1", function (d) { return d.source.y; })
         .attr("x2", function (d) { return d.target.x; })
@@ -230,6 +241,8 @@
     /* ---- recolor (theme switch) ---- */
     function recolor() {
       node.selectAll("circle").attr("fill", function (d) { return colorFor(d.community); });
+      matrixG.selectAll("rect.mx-cell")
+        .attr("fill", function (d) { return colorFor(byId[d.source].community); });
       layer.buildLegend();
     }
 
@@ -264,9 +277,16 @@
         layer.reset();
         if (dom.search) dom.search.value = "";
         svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
-        sim.alpha(0.5).restart();
+        // Only re-heat the force sim if a force layout is active; for a static
+        // or matrix layout, ask the host to re-apply the current layout instead.
+        if (simActive && !matrixMode) sim.alpha(0.5).restart();
+        else relayoutHook();
       });
     }
+
+    /* A host can register a callback that re-applies the currently selected
+       (static/matrix) layout — used on reset + resize when force isn't active. */
+    var relayoutHook = function () {};
 
     /* ---- resize ---- */
     window.addEventListener("resize", function () {
@@ -275,7 +295,8 @@
       sim.force("center", d3.forceCenter(W / 2, H / 2));
       sim.force("x", d3.forceX(W / 2).strength(0.04));
       sim.force("y", d3.forceY(H / 2).strength(0.05));
-      sim.alpha(0.3).restart();
+      if (simActive && !matrixMode) sim.alpha(0.3).restart();
+      else relayoutHook();   // re-fit the static/matrix layout to the new size
     });
 
     if (dom.loading) dom.loading.style.display = "none";
@@ -283,7 +304,138 @@
 
     /* Re-settle the simulation on the currently visible subgraph (used by the
        session filter so the layout reflows when nodes are added/removed). */
-    function reheat() { sim.alpha(0.6).restart(); }
+    function reheat() { if (simActive) sim.alpha(0.6).restart(); }
+
+    /* ===================================================================
+       LAYOUT SWITCHING (talks#29/#57) — reuse the layouts-lab geometry on
+       the MAIN graph. The lab's KoshaLayouts.* modules compute static
+       positions / matrix cells; here we apply them to THIS engine's own
+       nodes/links/SVG. The force simulation is stopped for static + matrix
+       layouts (`simActive=false` so tick() can't fight the static x/y) and
+       restarted for Force. Node click -> panel, cites, session chips,
+       legend and the session filter all keep working because we only
+       move geometry; we never rebuild the node/link selections.
+       =================================================================== */
+    function stopSim() { simActive = false; sim.stop(); }
+    function startSim() {
+      simActive = true;
+      matrixMode = false;
+      matrixG.style("display", "none");
+      link.style("display", null); linkLabel.style("display", null);
+      node.style("display", null);
+      drawDecorations([]);
+      sim.alpha(0.6).restart();
+    }
+
+    /* Apply a static positions map { id: {x,y} } to nodes + links, with an
+       optional smooth transition. Decorations (rings/labels) are drawn from
+       the layout result. */
+    function applyPositions(positions, decorations, animate) {
+      simActive = false;
+      matrixMode = false;
+      sim.stop();
+      matrixG.style("display", "none");
+      link.style("display", null); linkLabel.style("display", null);
+      node.style("display", null);
+      drawDecorations(decorations || []);
+
+      // keep d.x/d.y in sync so neighbour highlight + reheat math stay valid
+      nodes.forEach(function (d) {
+        var p = positions[d.id];
+        if (p) { d.x = p.x; d.y = p.y; d.fx = null; d.fy = null; }
+      });
+
+      var dur = animate ? 760 : 0;
+      node.transition().duration(dur)
+        .attr("transform", function (d) {
+          var p = positions[d.id];
+          return p ? "translate(" + p.x + "," + p.y + ")" : null;
+        });
+      link.transition().duration(dur)
+        .attr("x1", function (d) { var p = positions[endId(d.source)]; return p ? p.x : 0; })
+        .attr("y1", function (d) { var p = positions[endId(d.source)]; return p ? p.y : 0; })
+        .attr("x2", function (d) { var p = positions[endId(d.target)]; return p ? p.x : 0; })
+        .attr("y2", function (d) { var p = positions[endId(d.target)]; return p ? p.y : 0; });
+      linkLabel.transition().duration(dur)
+        .attr("x", function (d) {
+          var a = positions[endId(d.source)], b = positions[endId(d.target)];
+          return a && b ? (a.x + b.x) / 2 : 0;
+        })
+        .attr("y", function (d) {
+          var a = positions[endId(d.source)], b = positions[endId(d.target)];
+          return a && b ? (a.y + b.y) / 2 : 0;
+        });
+    }
+
+    function endId(x) { return typeof x === "object" ? x.id : x; }
+
+    /* Render an adjacency-matrix view from a layout result { order, cells }.
+       Node-link layers hide; clickable row/col labels still open the panel. */
+    function renderMatrix(res, colorOf) {
+      simActive = false; matrixMode = true;
+      sim.stop();
+      drawDecorations([]);
+      link.style("display", "none"); linkLabel.style("display", "none");
+      node.style("display", "none");
+      matrixG.style("display", null);
+      matrixG.selectAll("*").remove();
+
+      var order = res.order, cells = res.cells, n = order.length;
+      var topMargin = 90, sideMargin = 170, bottomMargin = 50;
+      var size = Math.min(W - sideMargin - 60, H - topMargin - bottomMargin);
+      var c = size / n;
+      var ox = (W - size) / 2 + 50;
+      var oy = topMargin + Math.max(0, (H - topMargin - bottomMargin - size) / 2);
+      var color = colorOf || function () { return "currentColor"; };
+
+      matrixG.append("g").selectAll("rect.mx-cell").data(cells).join("rect")
+        .attr("class", "mx-cell")
+        .attr("x", function (d) { return ox + d.c * c; })
+        .attr("y", function (d) { return oy + d.r * c; })
+        .attr("width", c).attr("height", c)
+        .attr("fill", function (d) { return color(byId[d.source].community); })
+        .attr("opacity", 0.9)
+        .append("title").text(function (d) {
+          return byId[d.source].label + " — " + (d.rel || "") + " → " + byId[d.target].label;
+        });
+
+      var lf = Math.max(6, Math.min(11, c - 1));
+      matrixG.append("g").selectAll("text.row").data(order).join("text")
+        .attr("class", "mx-label row").attr("x", ox - 6)
+        .attr("y", function (d, i) { return oy + (i + 0.5) * c; })
+        .attr("text-anchor", "end").attr("dominant-baseline", "middle")
+        .attr("font-size", lf + "px").style("cursor", "pointer")
+        .text(function (d) { return d.label; })
+        .on("click", function (ev, d) { ev.stopPropagation(); focusNode(d.id); });
+
+      matrixG.append("g").selectAll("text.col").data(order).join("text")
+        .attr("class", "mx-label col")
+        .attr("transform", function (d, i) {
+          return "translate(" + (ox + (i + 0.5) * c) + "," + (oy - 6) + ") rotate(-60)";
+        })
+        .attr("text-anchor", "start").attr("font-size", lf + "px").style("cursor", "pointer")
+        .text(function (d) { return d.label; })
+        .on("click", function (ev, d) { ev.stopPropagation(); focusNode(d.id); });
+    }
+
+    /* decorations: dashed rings + ring labels (concentric needs these) */
+    function drawDecorations(list) {
+      var rings = list.filter(function (d) { return d.type === "ring"; });
+      var ringLabels = list.filter(function (d) { return d.type === "ringLabel"; });
+
+      var r = decoG.selectAll("circle.ring").data(rings);
+      r.exit().remove();
+      r.enter().append("circle").attr("class", "ring").merge(r)
+        .attr("cx", function (d) { return d.cx; }).attr("cy", function (d) { return d.cy; })
+        .attr("r", function (d) { return d.r; });
+
+      var rl = decoG.selectAll("text.ring-label").data(ringLabels);
+      rl.exit().remove();
+      rl.enter().append("text").attr("class", "ring-label").merge(rl)
+        .attr("x", function (d) { return d.x; }).attr("y", function (d) { return d.y; })
+        .attr("text-anchor", function (d) { return d.anchor || "middle"; })
+        .text(function (d) { return d.text; });
+    }
 
     return {
       focusNode: focusNode,
@@ -296,10 +448,27 @@
       // sibling filter (SessionFilter) can re-apply and the filters stay intersected.
       onLayerChange: function (fn) { layerChangeHook = fn || function () {}; },
       nodes: nodes,
+      edges: links,
       byId: byId,
       // Raw D3 selections so a host-side filter (e.g. SessionFilter) can compose
       // with the engine's own visibility without re-querying the DOM.
       selections: { node: node, link: link, linkLabel: linkLabel },
+
+      /* ---- layout switching (talks#29/#57) ---- */
+      // Current canvas dimensions, for building a layout context.
+      dimensions: function () { return { W: W, H: H }; },
+      // Apply a static positions map (Concentric/etc.) with optional animation.
+      applyPositions: applyPositions,
+      // Render the adjacency-matrix cell grid (Matrix). colorOf: community->css.
+      renderMatrix: renderMatrix,
+      // Stop the force sim (so a static layout owns x/y) / restart it (Force).
+      stopSim: stopSim,
+      startSim: startSim,
+      // Is the matrix cell grid currently showing? (panel/filters stay live.)
+      isMatrix: function () { return matrixMode; },
+      // Host registers a re-apply-current-layout callback for reset + resize
+      // while a non-force layout is active.
+      onRelayout: function (fn) { relayoutHook = fn || function () {}; },
     };
   }
 

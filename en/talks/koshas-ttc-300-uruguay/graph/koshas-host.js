@@ -155,6 +155,86 @@
       graph.onLayerChange(function () { sessionFilter.applyVisibility(); });
     }
 
+    /* ---- layout switch: Force · Concentric · Matrix (talks#29/#57) ----------
+       Re-positions the SAME main graph between three views by REUSING the lab's
+       geometry (window.KoshaLayouts.{concentric,matrix}) and applying it to the
+       engine's own nodes/SVG via graph.applyPositions / graph.renderMatrix. The
+       node-click panel, audio cites, session chips, legend and the session
+       filter all keep working because only geometry moves — the node/link
+       selections are never rebuilt. Force restarts the live simulation; the
+       static/matrix layouts stop it so the layout owns x/y. */
+    var LAYOUTS = [
+      { key: "force", label: "Force" },
+      { key: "concentric", label: "Concentric" },
+      { key: "matrix", label: "Matrix" },
+    ];
+    // Community order (koshas first) for the matrix axes — same as the lab.
+    var communityOrder = ["koshas", "concepts", "gunas", "metaphors", "practices", "structure"]
+      .filter(function (c) { return communities[c]; });
+    Object.keys(communities).forEach(function (c) {
+      if (communityOrder.indexOf(c) < 0) communityOrder.push(c);
+    });
+
+    function layoutCtx() {
+      var dim = graph.dimensions();
+      return {
+        nodes: graph.nodes, edges: graph.edges, byId: graph.byId,
+        W: dim.W, H: dim.H, communityOrder: communityOrder,
+        meta: data.meta,
+      };
+    }
+
+    var currentLayout = "force";
+
+    function applyLayout(key, animate) {
+      currentLayout = key;
+      var KL = window.KoshaLayouts || {};
+      if (key === "concentric" && KL.concentric) {
+        var res = KL.concentric.compute(layoutCtx());
+        graph.applyPositions(res.positions, res.decorations, animate);
+      } else if (key === "matrix" && KL.matrix) {
+        graph.renderMatrix(KL.matrix.compute(layoutCtx()), communityColor);
+      } else {
+        currentLayout = "force";
+        graph.startSim();
+      }
+      // Re-apply the session+community filters so visibility survives the switch
+      // in the node-link layouts (Force, Concentric) — the same node/link
+      // selections are filtered. In Matrix the node-link layers are hidden and
+      // the cell grid is its own view, so re-applying the filter would re-reveal
+      // the hidden node layer on top of the matrix — skip it there.
+      if (currentLayout !== "matrix") {
+        if (sessionFilter) sessionFilter.applyVisibility();
+        else graph.layer.applyVisibility();
+      }
+      syncLayoutButtons();
+    }
+
+    var layBar = document.getElementById("layBar");
+    function syncLayoutButtons() {
+      if (!layBar) return;
+      Array.prototype.forEach.call(layBar.children, function (b) {
+        b.classList.toggle("on", b.dataset.key === currentLayout);
+      });
+    }
+    if (layBar) {
+      LAYOUTS.forEach(function (L) {
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "lay-btn"; b.dataset.key = L.key;
+        b.textContent = L.label;
+        b.addEventListener("click", function () { applyLayout(L.key, true); });
+        layBar.appendChild(b);
+      });
+      syncLayoutButtons();
+    }
+    // When force isn't active, reset/resize ask the engine to re-apply the
+    // current static/matrix layout (re-fitted to the new canvas size).
+    if (graph.onRelayout) {
+      graph.onRelayout(function () {
+        if (currentLayout !== "force") applyLayout(currentLayout, false);
+      });
+    }
+
     /* close button (host chrome) */
     document.getElementById("pclose").addEventListener("click", function () {
       graph.closePanel();
