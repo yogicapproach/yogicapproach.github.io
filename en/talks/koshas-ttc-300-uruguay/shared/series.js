@@ -18,7 +18,7 @@ window.KOSHAS_SERIES = {
       { n: 1, id: "session-1", title: "The Five Koshas", theme: "Theory — from the traditional presentation toward a modern reframe.", date: "10 Jun 2026", status: "ready", href: "sessions/session-1/" },
       { n: 2, id: "session-2", title: "Connection", theme: "The koshas from the perspective of how to connect — between students and teachers.", date: "16 Jun 2026", status: "ready", href: "sessions/session-2/" },
       { n: 3, id: "session-3", title: "Sound & Mantra", theme: "The power of sound and mantra — three mantras mapped to the koshas, planting a sankalpa, and the inner observer.", date: "18 Jun 2026", status: "ready", href: "sessions/session-3/" },
-      { n: 4, id: "session-4", title: "Integration", theme: "Exploring and deepening the koshas through what we’ve integrated in the earlier sessions.", date: "—", status: "upcoming", href: "sessions/session-4/" }
+      { n: 4, id: "session-4", title: "Sound, Mantra & Visualization", theme: "Integration through practice — the morning mantras with their sankalpa, the five asanas, Yoga Nidra, Antarmouna, and the table of the five koshas.", date: "23 Jun 2026", status: "ready", href: "sessions/session-4/" }
     ]
   },
   es: {
@@ -35,7 +35,7 @@ window.KOSHAS_SERIES = {
       { n: 1, id: "session-1", title: "Los Cinco Koshas", theme: "Teoría — de la presentación tradicional hacia una relectura moderna.", date: "10 jun 2026", status: "ready", href: "sessions/session-1/" },
       { n: 2, id: "session-2", title: "Conexión", theme: "Los koshas desde la perspectiva de cómo conectar — entre estudiantes y docentes.", date: "16 jun 2026", status: "ready", href: "sessions/session-2/" },
       { n: 3, id: "session-3", title: "Sonido y Mantra", theme: "El poder del sonido y el mantra — tres mantras vinculados a los koshas, plantar un sankalpa, y el observador interior.", date: "—", status: "ready", href: "sessions/session-3/" },
-      { n: 4, id: "session-4", title: "Integración", theme: "Explorar y profundizar los koshas a través de lo integrado en las clases anteriores.", date: "—", status: "upcoming", href: "sessions/session-4/" }
+      { n: 4, id: "session-4", title: "Sonido, Mantra y Visualización", theme: "Integración a través de la práctica — los mantras de la mañana con su sankalpa, las cinco asanas, Yoga Nidra, Antarmouna, y la mesa de los cinco koshas.", date: "23 jun 2026", status: "ready", href: "sessions/session-4/" }
     ]
   },
 
@@ -59,7 +59,7 @@ window.KOSHAS_SERIES = {
       { n: 1, id: "session-1", title: "पाँच कोशहरू", theme: "सिद्धान्त — परम्परागत प्रस्तुतिबाट आधुनिक पुनर्संरचनातर्फ।", date: "१० जुन २०२६", status: "ready", href: "sessions/session-1/" },
       { n: 2, id: "session-2", title: "जडान", theme: "जडानको दृष्टिकोणबाट कोशहरू — विद्यार्थी र शिक्षकहरूका बीचमा।", date: "१६ जुन २०२६", status: "ready", href: "sessions/session-2/" },
       { n: 3, id: "session-3", title: "ध्‍वनि र मन्त्र", theme: "ध्‍वनि र मन्त्रको शक्ति — कोशहरूसँग जोडिएका तीन मन्त्र, सङ्कल्प, र भित्री द्रष्टा।", date: "—", status: "ready", href: "sessions/session-3/" },
-      { n: 4, id: "session-4", title: "एकीकरण", theme: "अघिल्ला सत्रहरूमा एकीकृत गरेका कुराहरूमार्फत कोशहरूको अन्वेषण र गहिराइ।", date: "—", status: "upcoming", href: "sessions/session-4/" }
+      { n: 4, id: "session-4", title: "ध्वनि, मन्त्र र दृश्यकल्पना", theme: "अभ्यासमार्फत एकीकरण — सङ्कल्पसहितका बिहानका मन्त्रहरू, पाँच asana, Yoga Nidra, Antarmouna, र पाँच कोशको टेबल।", date: "२३ जुन २०२६", status: "ready", href: "sessions/session-4/" }
     ]
   },
 
@@ -81,7 +81,7 @@ window.KOSHAS_SERIES = {
       { n: 1, id: "session-1", title: "⚠TODO[pt]: The Five Koshas", theme: "⚠TODO[pt]: Theory — from the traditional presentation toward a modern reframe.", date: "⚠TODO[pt]: 10 Jun 2026", status: "ready", href: "sessions/session-1/" },
       { n: 2, id: "session-2", title: "⚠TODO[pt]: Connection", theme: "⚠TODO[pt]: The koshas from the perspective of how to connect — between students and teachers.", date: "⚠TODO[pt]: 16 Jun 2026", status: "upcoming", href: "sessions/session-2/" },
       { n: 3, id: "session-3", title: "⚠TODO[pt]: Society", theme: "⚠TODO[pt]: The koshas in relation to society, and how that affects us within these layers.", date: "—", status: "upcoming", href: "sessions/session-3/" },
-      { n: 4, id: "session-4", title: "⚠TODO[pt]: Integration", theme: "⚠TODO[pt]: Exploring and deepening the koshas through what we’ve integrated in the earlier sessions.", date: "—", status: "upcoming", href: "sessions/session-4/" }
+      { n: 4, id: "session-4", title: "⚠TODO[pt]: Sound, Mantra & Visualization", theme: "⚠TODO[pt]: Integration through practice — the morning mantras with their sankalpa, the five asanas, Yoga Nidra, Antarmouna, and the table of the five koshas.", date: "23 Jun 2026", status: "ready", href: "sessions/session-4/" }
     ]
   }
 };

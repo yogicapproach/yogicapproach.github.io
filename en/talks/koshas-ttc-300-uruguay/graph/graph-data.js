@@ -690,7 +690,8 @@ window.__GRAPH__ = {
       "sessions": [
         "S4"
       ],
-      "desc": "An integration/scanning image for laying the koshas out together — paired with old-vs-new-car in the S4 integration section."
+      "desc": "The closing integration image (delivered in S4): the four koshas are the four LEGS of a table and Anandamaya is the table's stability/surface — scan and integrate the layers as one whole.",
+      "cite": "s4#78:10"
     },
     {
       "id": "hatha",
