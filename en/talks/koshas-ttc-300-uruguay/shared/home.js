@@ -9,30 +9,11 @@
   const view = document.getElementById("view");
   const KOSHA_HUES = [18, 35, 190, 255, 45];
 
-  const LANGS = [
-    { code: "en", label: "EN" },
-    { code: "es", label: "ES" },
-    { code: "ne", label: "ने" }    // Nepali (Devanagari)
-    // pt (Portuguese) held — re-add when pursued
-  ];
+  const LANGS = window.KoshaLocale.LANGS;   // single source: shared/locale.js
 
   /* Deep EN fallback so partial (stub) locales render cleanly — missing keys
      fall back to the EN catalog rather than showing `undefined`.            */
-  function deepFallback(base, over) {
-    if (over == null) return base;
-    if (Array.isArray(base)) {
-      if (!Array.isArray(over)) return over;
-      return base.map((b, i) => (i < over.length ? deepFallback(b, over[i]) : b));
-    }
-    if (base && typeof base === "object") {
-      if (typeof over !== "object" || Array.isArray(over)) return over;
-      const out = {};
-      for (const k of Object.keys(base)) out[k] = deepFallback(base[k], over[k]);
-      for (const k of Object.keys(over)) if (!(k in out)) out[k] = over[k];
-      return out;
-    }
-    return over === undefined ? base : over;
-  }
+  const deepFallback = window.KoshaLocale.deepFallback;   // single source: shared/locale.js
   const seriesFor = (lang) =>
     (lang === "en" || !SERIES.en) ? SERIES[lang] : deepFallback(SERIES.en, SERIES[lang]);
 

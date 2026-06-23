@@ -16,32 +16,13 @@
      at the repo root. The manifest is the authoritative source for language
      metadata (label, native, status); this array controls what the app renders.
      To add a language: add it to the manifest AND add it here.              */
-  const LANGS = [
-    { code: "en", label: "EN" },
-    { code: "es", label: "ES" },
-    { code: "ne", label: "ने" }    // Nepali (Devanagari)
-    // pt (Portuguese) held — re-add when pursued
-  ];
+  const LANGS = window.KoshaLocale.LANGS;   // single source: shared/locale.js
 
   /* ---- graceful EN fallback ---------------------------------------------
      Stub locales (e.g. ne / pt) may be partial. Deep-merge the locale's
      content OVER the EN content so any key still missing falls back to EN
      rather than rendering `undefined`. EN is the base for every locale.    */
-  function deepFallback(base, over) {
-    if (over == null) return base;
-    if (Array.isArray(base)) {
-      if (!Array.isArray(over)) return over;
-      return base.map((b, i) => (i < over.length ? deepFallback(b, over[i]) : b));
-    }
-    if (base && typeof base === "object") {
-      if (typeof over !== "object" || Array.isArray(over)) return over;
-      const out = {};
-      for (const k of Object.keys(base)) out[k] = deepFallback(base[k], over[k]);
-      for (const k of Object.keys(over)) if (!(k in out)) out[k] = over[k];
-      return out;
-    }
-    return over === undefined ? base : over;   // primitive: prefer locale, fall back to EN
-  }
+  const deepFallback = window.KoshaLocale.deepFallback;   // single source: shared/locale.js
   const dataFor = (lang) =>
     (lang === "en" || !I18N.en) ? I18N[lang] : deepFallback(I18N.en, I18N[lang]);
 
