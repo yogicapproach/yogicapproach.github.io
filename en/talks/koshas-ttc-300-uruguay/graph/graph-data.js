@@ -941,8 +941,8 @@ window.__GRAPH__ = {
       "sessions": [
         "S4"
       ],
-      "cite": "s4#16:20",
-      "desc": "A short, sound-based yoga nidra: complete stillness, the practitioner guided by external (and in advanced stages internal) sound. A vehicle for planting a sankalpa in the quiet state."
+      "cite": "s4#61:01",
+      "desc": "A sound-based Yoga Nidra actually performed in this session (after the asana set): lie in Shavasana, release the body's weight to the earth, become a 'sensitive radar' for sound, rotate awareness through the body, and plant a sankalpa in the quiet causal state."
     },
     {
       "id": "indriyas",
@@ -985,7 +985,8 @@ window.__GRAPH__ = {
       "sessions": [
         "S4"
       ],
-      "desc": "The short digestive-cleanse practice. In this session its FIVE asanas were delivered (Tadasana, Tiryaka Tadasana, Kati Chakrasana, Tiryaka Bhujangasana, Udarakarshanasana); the salt-water cleanse itself was omitted. Falls outside the wXDXmb4MMR0 recording, which captures only the opening + mantra portion (ends at the Durga chant ~44:19)."
+      "desc": "The short digestive-cleanse practice. In this session its FIVE asanas were delivered as a guided movement set (not named in Sanskrit) — spine-stretch/balance (Tadasana), side-bend (Tiryaka Tadasana), waist-twist (Kati Chakrasana), feet-apart cobra-twist (Tiryaka Bhujangasana), squat-and-twist (Udarakarshanasana) — done WITHOUT the salt-water cleanse, to bring awareness into the Annamaya kosha before Yoga Nidra.",
+      "cite": "s4#46:44"
     }
   ],
   "edges": [
