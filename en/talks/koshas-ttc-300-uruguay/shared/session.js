@@ -82,9 +82,36 @@
         ${LANGS.filter((l) => I18N[l.code]).map((l) => `<button data-lang="${l.code}" lang="${l.code}" class="${LOCALE === l.code ? "on" : ""}" aria-pressed="${LOCALE === l.code}">${l.label}</button>`).join("")}
       </div>
       <button class="theme-btn" id="themeBtn" aria-label="${esc(t("theme_label"))}" title="${esc(t("theme_label"))}">${THEME === "dark" ? "☾" : "☀"}</button>
-      <a class="rec-link" href="${esc(D.meta.recording)}" target="_blank" rel="noopener"><span class="rec-dot"></span> ${esc(t("recording"))}</a>`;
+      <a class="rec-link" href="${esc(D.meta.recording)}" target="_blank" rel="noopener"><span class="rec-dot"></span> ${esc(t("recording"))}</a>
+      <a class="rec-link graph-link" href="../../graph/"><span class="rec-dot"></span> ${esc({ en: "Knowledge Graph", es: "Grafo de conocimiento", ne: "ज्ञान ग्राफ" }[LOCALE] || "Knowledge Graph")}</a>
+      <a class="rec-link transcript-link" href="../../transcript/"><span class="rec-dot"></span> ${esc({ en: "Transcript", es: "Transcripción", ne: "ट्रान्सक्रिप्ट" }[LOCALE] || "Transcript")}</a>
+      <a class="rec-link search-link" href="../../search/"><span class="rec-dot"></span> ${esc({ en: "Search", es: "Buscar", ne: "खोज" }[LOCALE] || "Search")}</a>`;
     c.querySelectorAll("[data-lang]").forEach((b) => b.addEventListener("click", () => setLocale(b.dataset.lang)));
     c.querySelector("#themeBtn").addEventListener("click", toggleTheme);
+  }
+
+  /* ---- per-session knowledge-graph embed (filtered to THIS session) -------- */
+  function injectGraphEmbed() {
+    const n = (location.pathname.match(/session-(\d+)/) || [])[1];
+    if (!n) return;
+    const ex = document.getElementById("sessionGraph"); if (ex) ex.remove();
+    const label = { en: "Knowledge Graph", es: "Grafo de conocimiento", ne: "ज्ञान ग्राफ" }[LOCALE] || "Knowledge Graph";
+    const sub = {
+      en: `This session within the whole concept map — the koshas up to and including Session ${n}.`,
+      es: `Esta sesión dentro del mapa conceptual completo — los koshas hasta la Sesión ${n}.`,
+      ne: `सम्पूर्ण अवधारणा नक्सामा यो सत्र — सत्र ${n} सम्मका कोशहरू।`,
+    }[LOCALE] || `The koshas up to and including Session ${n}.`;
+    const sec = el(`
+      <section class="graph-embed" id="sessionGraph">
+        <h2 class="section-h">${esc(label)}</h2>
+        <p class="lead">${esc(sub)}</p>
+        <div class="graph-frame-wrap">
+          <iframe class="graph-frame" src="../../graph/?session=S${n}&lang=${LOCALE}" title="${esc(label)}" loading="lazy"></iframe>
+        </div>
+        <p class="graph-cta"><a class="scard-cta" href="../../graph/?session=S${n}" target="_blank" rel="noopener">${esc(label)} ↗</a></p>
+      </section>`);
+    const view = document.getElementById("view");
+    view.parentNode.insertBefore(sec, view.nextSibling);
   }
 
   function applyTheme() {
@@ -99,7 +126,7 @@
     LOCALE = lang; localStorage.setItem("kosha_lang", lang); D = dataFor(lang);
     { const u = new URL(location.href); u.searchParams.set("lang", lang);   // shareable URL, keep #hash
       history.replaceState(null, "", u.pathname + u.search + location.hash); }
-    paintMeta(); buildTabs(); buildControls(); go(current);
+    paintMeta(); buildTabs(); buildControls(); go(current); injectGraphEmbed();
   }
 
   /* ---- tabs -------------------------------------------------------------- */
@@ -258,4 +285,5 @@
   buildTabs();
   window.addEventListener("hashchange", () => { const h = location.hash.slice(1) || "overview"; if (h !== current) go(h); });
   go(current);
+  injectGraphEmbed();
 })();

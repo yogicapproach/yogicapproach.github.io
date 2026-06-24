@@ -165,6 +165,20 @@
       onChange: function () { graph.reheat(); },
     }) : null;
 
+    /* Pre-filter from ?session=Sx — used by the per-session graph embeds on the
+       session notes pages (each shows the graph up to and including its session). */
+    var sesParam = (new URLSearchParams(location.search).get("session") || "").toUpperCase();
+    if (sessionFilter && sesParam && sessionFilter.order.indexOf(sesParam) !== -1) {
+      // The engine binds its node selection asynchronously; if we set() before
+      // that, applyVisibility runs against an empty selection and no-ops. Defer
+      // until the node selection actually has elements.
+      (function applyWhenReady(tries) {
+        var s = graph.selections && graph.selections.node;
+        if (s && (typeof s.size !== "function" || s.size() > 0)) { sessionFilter.set(sesParam); }
+        else if (tries > 0) { requestAnimationFrame(function () { applyWhenReady(tries - 1); }); }
+      })(180);
+    }
+
     /* Keep the two filters in sync: after the community toggle changes anything,
        re-apply the session filter so a layer un-hide can't reveal a node the
        session filter means to keep hidden (intersection, not override). */
