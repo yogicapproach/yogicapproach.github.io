@@ -96,7 +96,8 @@
       text-transform:uppercase; color:var(--accent); opacity:.9; }
     .mast-title { margin:0; font-family:var(--display); font-weight:600;
       font-size:clamp(1.3rem,2.6vw,2rem); line-height:1; letter-spacing:-.01em; }
-    .mast-sub { margin:4px 0 0; color:var(--ink-soft); font-size:.8rem; }
+    .mast-sub { margin:4px 0 0; color:var(--ink-soft); font-size:.8rem;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
     .theme-btn { appearance:none; cursor:pointer; width:34px; height:34px; border-radius:50%;
       border:1px solid var(--line); background:var(--panel); color:var(--ink-soft);
       font-size:15px; transition:border-color .25s,color .25s,transform .3s var(--ease); flex:none; }
@@ -138,8 +139,8 @@
     #legend h4 { font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase;
       color:var(--ink-faint); margin:0 0 9px; font-weight:400; }
 
-    #toolbar { position:fixed; top:74px; left:20px; z-index:15; display:flex; gap:8px; flex-wrap:wrap;
-      align-items:center; max-width:62vw; }
+    #toolbar { position:fixed; top:108px; left:20px; z-index:15; display:flex; gap:8px; flex-wrap:wrap;
+      align-items:center; max-width:72vw; }
     #search { font-family:var(--mono); font-size:12px; color:var(--ink);
       background:hsl(var(--hue) 22% 7% / .5); backdrop-filter:blur(8px);
       border:1px solid var(--line); border-radius:100px; padding:8px 14px; width:200px;
