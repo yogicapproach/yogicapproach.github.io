@@ -1,0 +1,206 @@
+{
+  "title": {
+    "default": "Five Koshas Series — Feedback",
+    "es": "Serie de los Cinco Koshas — Comentarios"
+  },
+  "description": {
+    "default": "Thank you for joining the four sessions on the five koshas. This short, anonymous form (~3 minutes) helps us improve the teaching and the resources, and to follow how these talks land over time. There are no wrong answers — your honest sense is exactly what's useful.",
+    "es": "Gracias por acompañarnos en las cuatro sesiones sobre los cinco koshas. Este formulario breve y anónimo (~3 minutos) nos ayuda a mejorar la enseñanza y los recursos, y a observar cómo resuenan estas charlas con el tiempo. No hay respuestas incorrectas — tu percepción honesta es justo lo útil."
+  },
+  "locale": "en",
+  "completedHtml": {
+    "default": "<h3>Thank you — this directly shapes the next series. <em>Hari Om.</em></h3>",
+    "es": "<h3>Gracias — esto da forma directamente a la próxima serie. <em>Hari Om.</em></h3>"
+  },
+  "showQuestionNumbers": "on",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "q1_overall",
+          "title": {
+            "default": "Overall, how would you rate the teaching and content of the four sessions?",
+            "es": "En general, ¿cómo calificarías la enseñanza y el contenido de las cuatro sesiones?"
+          },
+          "isRequired": true,
+          "rateCount": 5,
+          "rateMin": 1,
+          "rateMax": 5,
+          "minRateDescription": {
+            "default": "poor",
+            "es": "malo"
+          },
+          "maxRateDescription": {
+            "default": "excellent",
+            "es": "excelente"
+          }
+        },
+        {
+          "type": "rating",
+          "name": "q2_nps",
+          "title": {
+            "default": "How likely are you to recommend these sessions to a fellow practitioner?",
+            "es": "¿Qué tan probable es que recomiendes estas sesiones a otro practicante?"
+          },
+          "isRequired": true,
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "displayMode": "buttons",
+          "minRateDescription": {
+            "default": "Not at all",
+            "es": "Nada"
+          },
+          "maxRateDescription": {
+            "default": "Extremely",
+            "es": "Muchísimo"
+          }
+        },
+        {
+          "type": "matrix",
+          "name": "q3_resources",
+          "title": {
+            "default": "Rate how useful each resource was to you.",
+            "es": "Califica qué tan útil te resultó cada recurso."
+          },
+          "description": {
+            "default": "1 = not useful … 5 = very useful · N/A = didn't use",
+            "es": "1 = no útil … 5 = muy útil · N/D = no lo usé"
+          },
+          "isRequired": true,
+          "columns": [
+            { "value": "1", "text": { "default": "1", "es": "1" } },
+            { "value": "2", "text": { "default": "2", "es": "2" } },
+            { "value": "3", "text": { "default": "3", "es": "3" } },
+            { "value": "4", "text": { "default": "4", "es": "4" } },
+            { "value": "5", "text": { "default": "5", "es": "5" } },
+            { "value": "na", "text": { "default": "N/A", "es": "N/D" } }
+          ],
+          "rows": [
+            { "value": "slides", "text": { "default": "Slides", "es": "Diapositivas" } },
+            { "value": "podcast", "text": { "default": "Podcast / audio recap", "es": "Pódcast / resumen en audio" } },
+            { "value": "visuals", "text": { "default": "Visuals & infographics", "es": "Imágenes e infografías" } },
+            { "value": "knowledge_graph", "text": { "default": "Knowledge graph (interactive map)", "es": "Grafo de conocimiento (mapa interactivo)" } },
+            { "value": "transcripts", "text": { "default": "Transcripts & notes", "es": "Transcripciones y apuntes" } }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "q4_learning",
+          "title": {
+            "default": "Thinking back, rate your understanding of the koshas before the series, and now, after it.",
+            "es": "Mirando hacia atrás, califica tu comprensión de los koshas antes de la serie y ahora, después de ella."
+          },
+          "description": {
+            "default": "1 = none … 5 = strong",
+            "es": "1 = ninguna … 5 = sólida"
+          },
+          "isRequired": true,
+          "columns": [
+            { "value": "1", "text": { "default": "1", "es": "1" } },
+            { "value": "2", "text": { "default": "2", "es": "2" } },
+            { "value": "3", "text": { "default": "3", "es": "3" } },
+            { "value": "4", "text": { "default": "4", "es": "4" } },
+            { "value": "5", "text": { "default": "5", "es": "5" } }
+          ],
+          "rows": [
+            { "value": "before", "text": { "default": "Before the series", "es": "Antes de la serie" } },
+            { "value": "after", "text": { "default": "After the series", "es": "Después de la serie" } }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "q5_affective",
+          "title": {
+            "default": "After the series, I feel…",
+            "es": "Después de la serie, me siento…"
+          },
+          "isRequired": true,
+          "choices": [
+            { "value": "intrigued", "text": { "default": "More intrigued and curious", "es": "Más intrigado/a y con curiosidad" } },
+            { "value": "same", "text": { "default": "About the same as before", "es": "Más o menos igual que antes" } },
+            { "value": "confused", "text": { "default": "More confused / overwhelmed", "es": "Más confundido/a / abrumado/a" } },
+            { "value": "mix", "text": { "default": "A mix — intrigued and challenged", "es": "Una mezcla — con intriga y desafío" } }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "q6a_value",
+          "title": {
+            "default": "\"These sessions added value to my yogic journey and daily life.\"",
+            "es": "\"Estas sesiones aportaron valor a mi camino yóguico y a mi vida diaria.\""
+          },
+          "isRequired": true,
+          "rateCount": 5,
+          "rateMin": 1,
+          "rateMax": 5,
+          "minRateDescription": {
+            "default": "strongly disagree",
+            "es": "muy en desacuerdo"
+          },
+          "maxRateDescription": {
+            "default": "strongly agree",
+            "es": "muy de acuerdo"
+          }
+        },
+        {
+          "type": "radiogroup",
+          "name": "q6b_intent",
+          "title": {
+            "default": "\"I intend to apply something from them this week.\"",
+            "es": "\"Tengo la intención de aplicar algo de ellas esta semana.\""
+          },
+          "isRequired": true,
+          "choices": [
+            { "value": "yes", "text": { "default": "Yes", "es": "Sí" } },
+            { "value": "maybe", "text": { "default": "Maybe", "es": "Quizás" } },
+            { "value": "no", "text": { "default": "No", "es": "No" } }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "q7_muddiest",
+          "title": {
+            "default": "What's one thing that's still unclear, or that you'd like more of?",
+            "es": "¿Qué es algo que todavía no te queda claro, o de lo que te gustaría más?"
+          },
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "q8_valuable",
+          "title": {
+            "default": "What was the single most valuable thing you took from the series?",
+            "es": "¿Qué fue lo más valioso que te llevaste de la serie?"
+          },
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "q9_improvement",
+          "title": {
+            "default": "What's one thing we could change to make these sessions better?",
+            "es": "¿Qué es algo que podríamos cambiar para mejorar estas sesiones?"
+          },
+          "isRequired": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "q10_pace",
+          "title": {
+            "default": "The pace and depth were…",
+            "es": "El ritmo y la profundidad fueron…"
+          },
+          "isRequired": false,
+          "choices": [
+            { "value": "too_basic", "text": { "default": "Too basic", "es": "Demasiado básicos" } },
+            { "value": "just_right", "text": { "default": "Just right", "es": "Adecuados" } },
+            { "value": "too_advanced", "text": { "default": "Too advanced", "es": "Demasiado avanzados" } }
+          ]
+        }
+      ]
+    }
+  ]
+}

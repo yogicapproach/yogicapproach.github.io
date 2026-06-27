@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Five Koshas — Feedback / Comentarios</title>
+
+  <!-- ===================================================================== -->
+  <!-- COLLECTOR_URL — the Cloudflare Worker endpoint that receives responses. -->
+  <!-- FILL THIS IN after `wrangler deploy` (see ../README.md). Leave as ""     -->
+  <!-- to run the form standalone (it will show a graceful "saved locally"     -->
+  <!-- style notice instead of a network error).                               -->
+  <!-- ===================================================================== -->
+  <script>
+    window.COLLECTOR_URL = ""; // e.g. "https://koshas-feedback.<account>.workers.dev/submit"
+    window.SURVEY_ID = "koshas-2026-06"; // identifies this survey instance in the DB
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Vendored SurveyJS (pinned 2.5.30) — offline-safe, no CDN at runtime. -->
+  <link href="vendor/survey-core.min.css" type="text/css" rel="stylesheet" />
+  <script src="vendor/survey.core.min.js"></script>
+  <script src="vendor/i18n/spanish.min.js"></script>
+  <script src="vendor/themes/borderless-dark.min.js"></script>
+  <script src="vendor/survey-js-ui.min.js"></script>
+
+  <style>
+    /* ---- koshas palette (host theme, dark default) ---- */
+    :root {
+      --hue: 38;
+      --bg:#0e0c0b; --bg-2:#15110f; --panel:#1b1613; --panel-2:#211a16;
+      --ink:#ece3d6; --ink-soft:#b9ad9c; --ink-faint:#7d7264; --line:#322823;
+      --accent:hsl(var(--hue) 70% 62%); --accent-dim:hsl(var(--hue) 45% 42%);
+      --accent-glow:hsl(var(--hue) 80% 60% / .22);
+      --r:16px; --ease:cubic-bezier(.22,.61,.36,1);
+      --serif:"Spectral",Georgia,serif; --display:"Fraunces",Georgia,serif;
+      --mono:"IBM Plex Mono",ui-monospace,monospace;
+    }
+    html,body { margin:0; min-height:100%; }
+    body {
+      background:
+        radial-gradient(120% 80% at 50% -10%, hsl(var(--hue) 40% 12%) 0%, transparent 55%),
+        radial-gradient(80% 60% at 90% 110%, var(--bg-2) 0%, transparent 60%),
+        var(--bg);
+      color:var(--ink); font-family:var(--serif); -webkit-font-smoothing:antialiased;
+      padding-bottom:4rem;
+    }
+    .masthead {
+      position:sticky; top:0; z-index:20;
+      display:flex; align-items:center; justify-content:space-between; gap:1rem;
+      padding:14px clamp(16px,4vw,40px);
+      background:linear-gradient(180deg, hsl(var(--hue) 22% 7% / .94), hsl(var(--hue) 22% 7% / .6));
+      border-bottom:1px solid var(--line); backdrop-filter:blur(8px);
+    }
+    .mast-l { min-width:0; }
+    .eyebrow { margin:0 0 2px; font-family:var(--mono); font-size:11px; letter-spacing:.28em;
+      text-transform:uppercase; color:var(--accent); opacity:.9; }
+    .mast-title { margin:0; font-family:var(--display); font-weight:600;
+      font-size:clamp(1.2rem,2.6vw,1.7rem); line-height:1.05; letter-spacing:-.01em; }
+    /* EN/ES toggle */
+    .lang-toggle { display:flex; gap:0; border:1px solid var(--line); border-radius:999px;
+      overflow:hidden; flex:none; background:var(--panel); }
+    .lang-toggle button { appearance:none; border:none; background:none; cursor:pointer;
+      font-family:var(--mono); font-size:12px; letter-spacing:.14em; padding:7px 14px;
+      color:var(--ink-faint); transition:color .2s,background .2s; }
+    .lang-toggle button[aria-pressed="true"] { color:var(--bg); background:var(--accent); }
+    .lang-toggle button:hover:not([aria-pressed="true"]) { color:var(--ink); }
+
+    .wrap { max-width:760px; margin:0 auto; padding:clamp(16px,4vw,40px) clamp(16px,4vw,24px); }
+
+    /* SurveyJS chrome is themed via survey.applyTheme(...) in JS (the supported path);
+       these few rules only blend its outer container into the koshas page + set fonts. */
+    .sd-root-modern, .sd-container-modern, .sd-body { background:transparent !important; }
+    .sd-title, .sd-question__title { font-family:var(--display); }
+    .sd-description, .sd-question__description { font-family:var(--serif); }
+    .sd-navigation__complete-btn, .sd-btn { font-family:var(--mono); letter-spacing:.06em; }
+
+    /* status banner for submit success/error */
+    #status { display:none; margin:1rem auto 0; max-width:760px; padding:14px 18px;
+      border-radius:var(--r); font-family:var(--mono); font-size:13px; line-height:1.5; }
+    #status.show { display:block; }
+    #status.ok  { background:hsl(var(--hue) 40% 16%); border:1px solid var(--accent-dim); color:var(--ink); }
+    #status.err { background:hsl(8 45% 18%); border:1px solid hsl(8 50% 45%); color:#f3d9d2; }
+    #status.info{ background:var(--panel); border:1px solid var(--line); color:var(--ink-soft); }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="mast-l">
+      <p class="eyebrow">TTC-300 · Uruguay</p>
+      <h1 class="mast-title" data-i18n="masthead">Five Koshas — Feedback</h1>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+      <button id="lang-es" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </header>
+
+  <div id="status" role="status" aria-live="polite"></div>
+  <main class="wrap">
+    <div id="surveyContainer"></div>
+  </main>
+
+  <script>
+  (function () {
+    "use strict";
+
+    var MASTHEAD = { en: "Five Koshas — Feedback", es: "Cinco Koshas — Comentarios" };
+    var STATUS_MSGS = {
+      ok:   { en: "Thank you — your response was saved. Hari Om.",
+              es: "Gracias — tu respuesta fue guardada. Hari Om." },
+      err:  { en: "We couldn't reach the server, but your answers were captured. Please tell the facilitator.",
+              es: "No pudimos contactar al servidor, pero tus respuestas quedaron registradas. Avisá al facilitador." },
+      nourl:{ en: "Preview mode: no collector configured, so nothing was sent. (This is expected during setup.)",
+              es: "Modo de vista previa: no hay colector configurado, no se envió nada. (Esto es normal durante la configuración.)" }
+    };
+
+    var survey;       // SurveyJS model
+    var currentLang = "en";
+
+    function setStatus(kind, lang) {
+      var el = document.getElementById("status");
+      el.className = "show " + (kind === "ok" ? "ok" : kind === "err" ? "err" : "info");
+      el.textContent = (STATUS_MSGS[kind] || STATUS_MSGS.info)[lang] || (STATUS_MSGS[kind] || {}).en || "";
+    }
+
+    // Derive the two headline analysis fields from the survey answers.
+    function summarize(data) {
+      var overall = (typeof data.q1_overall === "number") ? data.q1_overall : null;
+      var nps = (typeof data.q2_nps === "number") ? data.q2_nps : null;
+      return { overall: overall, nps: nps };
+    }
+
+    // POST the completed response to the collector, with graceful UI either way.
+    function submitResponse(sender) {
+      var data = sender.data || {};
+      var s = summarize(data);
+      var payload = {
+        survey: window.SURVEY_ID || "koshas",
+        lang: currentLang,
+        overall: s.overall,
+        nps: s.nps,
+        payload: data
+      };
+
+      if (!window.COLLECTOR_URL) {
+        // No endpoint configured — do not attempt a network call. Surface clearly.
+        setStatus("nourl", currentLang);
+        // eslint-disable-next-line no-console
+        console.warn("[feedback] COLLECTOR_URL is empty — response not transmitted.", payload);
+        return;
+      }
+
+      fetch(window.COLLECTOR_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          if (!res.ok) { throw new Error("HTTP " + res.status); }
+          setStatus("ok", currentLang);
+        })
+        .catch(function (err) {
+          // Never swallow silently — log it and tell the user gracefully.
+          // eslint-disable-next-line no-console
+          console.error("[feedback] submit failed:", err);
+          setStatus("err", currentLang);
+        });
+    }
+
+    // Take SurveyJS' dark theme (proper contrast + dark panels) and retint its
+    // CSS variables to the koshas warm/gold palette. Falls back gracefully if the
+    // theme bundle didn't load.
+    function koshasTheme() {
+      var base = (window.SurveyTheme && window.SurveyTheme.BorderlessDark) || null;
+      if (!base) { return null; }
+      var v = Object.assign({}, base.cssVariables, {
+        "--sjs-general-backcolor": "rgba(27, 22, 19, 1)",        /* panel */
+        "--sjs-general-backcolor-dark": "rgba(33, 26, 22, 1)",   /* panel-2 */
+        "--sjs-general-backcolor-dim": "rgba(14, 12, 11, 1)",    /* page bg */
+        "--sjs-general-backcolor-dim-light": "rgba(21, 17, 15, 1)",
+        "--sjs-general-forecolor": "rgba(236, 227, 214, 1)",     /* ink */
+        "--sjs-general-forecolor-light": "rgba(185, 173, 156, 1)",
+        "--sjs-general-dim-forecolor": "rgba(236, 227, 214, 1)",
+        "--sjs-general-dim-forecolor-light": "rgba(185, 173, 156, 1)",
+        "--sjs-primary-backcolor": "hsl(38, 70%, 62%)",          /* koshas gold */
+        "--sjs-primary-backcolor-light": "hsl(38, 70%, 62%, .12)",
+        "--sjs-primary-backcolor-dark": "hsl(38, 55%, 52%)",
+        "--sjs-primary-forecolor": "rgba(14, 12, 11, 1)",
+        "--sjs-border-default": "rgba(50, 40, 35, 1)",           /* line */
+        "--sjs-border-light": "rgba(50, 40, 35, .6)"
+      });
+      return Object.assign({}, base, { cssVariables: v });
+    }
+
+    function buildSurvey(json) {
+      var s = new Survey.Model(json);
+      var theme = koshasTheme();
+      if (theme && typeof s.applyTheme === "function") { s.applyTheme(theme); }
+      s.locale = currentLang;
+      s.onComplete.add(submitResponse);
+      return s;
+    }
+
+    function applyLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      if (survey) { survey.locale = lang; }
+      var mt = document.querySelector('[data-i18n="masthead"]');
+      if (mt) { mt.textContent = MASTHEAD[lang] || MASTHEAD.en; }
+      document.getElementById("lang-en").setAttribute("aria-pressed", String(lang === "en"));
+      document.getElementById("lang-es").setAttribute("aria-pressed", String(lang === "es"));
+      // refresh an open status banner into the new language
+      var st = document.getElementById("status");
+      if (st.classList.contains("show")) {
+        var kind = st.classList.contains("ok") ? "ok" : st.classList.contains("err") ? "err" : "nourl";
+        setStatus(kind, lang);
+      }
+    }
+
+    function wireToggle() {
+      ["en", "es"].forEach(function (lg) {
+        document.getElementById("lang-" + lg).addEventListener("click", function () { applyLang(lg); });
+      });
+    }
+
+    function fatal(msg) {
+      var el = document.getElementById("status");
+      el.className = "show err";
+      el.textContent = msg;
+      // eslint-disable-next-line no-console
+      console.error("[feedback]", msg);
+    }
+
+    function init() {
+      if (typeof Survey === "undefined" || !Survey.Model) {
+        return fatal("SurveyJS failed to load (vendor/ scripts). The form cannot render.");
+      }
+      wireToggle();
+      fetch("survey.json")
+        .then(function (r) {
+          if (!r.ok) { throw new Error("survey.json HTTP " + r.status); }
+          return r.json();
+        })
+        .then(function (json) {
+          survey = buildSurvey(json);
+          survey.render(document.getElementById("surveyContainer"));
+          // Test hook: expose the model only when ?test=1 (used by the verification suite).
+          if (/[?&]test=1\b/.test(location.search)) { window.__feedbackSurvey = survey; }
+        })
+        .catch(function (err) {
+          fatal("Could not load survey.json: " + err.message);
+        });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+  </script>
+</body>
+</html>
