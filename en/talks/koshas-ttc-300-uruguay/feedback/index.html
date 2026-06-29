@@ -77,6 +77,9 @@
     .sd-title, .sd-question__title { font-family:var(--display); }
     .sd-description, .sd-question__description { font-family:var(--serif); }
     .sd-navigation__complete-btn, .sd-btn { font-family:var(--mono); letter-spacing:.06em; }
+    /* Sticky masthead (~60px) can cover a question when SurveyJS scrolls to it
+       (e.g. validation focus or deep-link). Offset scroll targets so the title stays visible. */
+    .sd-question, .sd-panel, .sd-page, .sd-row { scroll-margin-top: 84px; }
 
     /* status banner for submit success/error */
     #status { display:none; margin:1rem auto 0; max-width:760px; padding:14px 18px;

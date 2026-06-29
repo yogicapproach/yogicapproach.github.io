@@ -24,7 +24,7 @@
             "default": "Overall, how would you rate the teaching and content of the four sessions?",
             "es": "En general, ¿cómo calificarías la enseñanza y el contenido de las cuatro sesiones?"
           },
-          "isRequired": true,
+          "isRequired": false,
           "rateCount": 5,
           "rateMin": 1,
           "rateMax": 5,
@@ -44,7 +44,7 @@
             "default": "How likely are you to recommend these sessions to a fellow practitioner?",
             "es": "¿Qué tan probable es que recomiendes estas sesiones a otro practicante?"
           },
-          "isRequired": true,
+          "isRequired": false,
           "rateCount": 11,
           "rateMin": 0,
           "rateMax": 10,
@@ -69,7 +69,7 @@
             "default": "1 = not useful … 5 = very useful · N/A = didn't use",
             "es": "1 = no útil … 5 = muy útil · N/D = no lo usé"
           },
-          "isRequired": true,
+          "isRequired": false,
           "columns": [
             { "value": "1", "text": { "default": "1", "es": "1" } },
             { "value": "2", "text": { "default": "2", "es": "2" } },
@@ -97,7 +97,7 @@
             "default": "1 = none … 5 = strong",
             "es": "1 = ninguna … 5 = sólida"
           },
-          "isRequired": true,
+          "isRequired": false,
           "columns": [
             { "value": "1", "text": { "default": "1", "es": "1" } },
             { "value": "2", "text": { "default": "2", "es": "2" } },
@@ -117,7 +117,7 @@
             "default": "After the series, I feel…",
             "es": "Después de la serie, me siento…"
           },
-          "isRequired": true,
+          "isRequired": false,
           "choices": [
             { "value": "intrigued", "text": { "default": "More intrigued and curious", "es": "Más intrigado/a y con curiosidad" } },
             { "value": "same", "text": { "default": "About the same as before", "es": "Más o menos igual que antes" } },
@@ -132,7 +132,7 @@
             "default": "\"These sessions added value to my yogic journey and daily life.\"",
             "es": "\"Estas sesiones aportaron valor a mi camino yóguico y a mi vida diaria.\""
           },
-          "isRequired": true,
+          "isRequired": false,
           "rateCount": 5,
           "rateMin": 1,
           "rateMax": 5,
@@ -152,7 +152,7 @@
             "default": "\"I intend to apply something from them this week.\"",
             "es": "\"Tengo la intención de aplicar algo de ellas esta semana.\""
           },
-          "isRequired": true,
+          "isRequired": false,
           "choices": [
             { "value": "yes", "text": { "default": "Yes", "es": "Sí" } },
             { "value": "maybe", "text": { "default": "Maybe", "es": "Quizás" } },
@@ -166,7 +166,7 @@
             "default": "What's one thing that's still unclear, or that you'd like more of?",
             "es": "¿Qué es algo que todavía no te queda claro, o de lo que te gustaría más?"
           },
-          "isRequired": true
+          "isRequired": false
         },
         {
           "type": "comment",
@@ -175,7 +175,7 @@
             "default": "What was the single most valuable thing you took from the series?",
             "es": "¿Qué fue lo más valioso que te llevaste de la serie?"
           },
-          "isRequired": true
+          "isRequired": false
         },
         {
           "type": "comment",
