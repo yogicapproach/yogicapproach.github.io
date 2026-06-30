@@ -1,0 +1,26 @@
+{
+  "_README": "Editable UI copy for the feedback form. Change text here — no code edits needed. Re-run scripts/deploy-feedback.sh to publish. (The questions, intro, and the post-submit THANK-YOU live in ../survey.json: 'description' = intro, 'completedHtml' = thank-you.)",
+
+  "masthead": {
+    "en": "Five Koshas — Feedback",
+    "es": "Cinco Koshas — Comentarios"
+  },
+
+  "_showOkBanner": "false = on a successful submit, show ONLY the survey's thank-you page (no extra banner). Set true to also show the 'ok' status line below.",
+  "showOkBanner": false,
+
+  "status": {
+    "ok": {
+      "en": "Thank you — your response was saved. Hari Om.",
+      "es": "Gracias — tu respuesta fue guardada. Hari Om."
+    },
+    "err": {
+      "en": "We couldn't reach the server, but your answers were captured. Please tell the facilitator.",
+      "es": "No pudimos contactar al servidor, pero tus respuestas quedaron registradas. Avisá al facilitador."
+    },
+    "nourl": {
+      "en": "Preview mode: no collector configured, so nothing was sent. (This is expected during local setup; it never appears on the live site.)",
+      "es": "Modo de vista previa: no hay colector configurado, no se envió nada. (Es normal durante la configuración local; nunca aparece en el sitio publicado.)"
+    }
+  }
+}

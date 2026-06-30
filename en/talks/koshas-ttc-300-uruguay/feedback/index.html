@@ -132,6 +132,8 @@
       nourl:{ en: "Preview mode: no collector configured, so nothing was sent. (This is expected during setup.)",
               es: "Modo de vista previa: no hay colector configurado, no se envió nada. (Esto es normal durante la configuración.)" }
     };
+    // false = on success show ONLY the survey's thank-you page (no extra banner). content.json wins.
+    var SHOW_OK_BANNER = false;
 
     var survey;       // SurveyJS model
     // Spanish-first: this is a Uruguayan (Spanish-speaking) cohort and everything was translated.
@@ -182,7 +184,9 @@
       })
         .then(function (res) {
           if (!res.ok) { throw new Error("HTTP " + res.status); }
-          setStatus("ok", currentLang);
+          // The survey's own completion page (completedHtml in survey.json) is the thank-you.
+          // Only show the extra status line if content.json opts in (showOkBanner: true).
+          if (SHOW_OK_BANNER) { setStatus("ok", currentLang); }
         })
         .catch(function (err) {
           // Never swallow silently — log it and tell the user gracefully.
@@ -256,13 +260,30 @@
       console.error("[feedback]", msg);
     }
 
+    function loadContent() {
+      // Editable UI copy lives in content.json — fetched at runtime so the masthead + status
+      // text can be changed without touching this file. Falls back to the embedded defaults
+      // above if content.json is absent (e.g. opened via file://).
+      return fetch("content.json")
+        .then(function (r) { if (!r.ok) { throw new Error("content.json HTTP " + r.status); } return r.json(); })
+        .then(function (c) {
+          if (c.masthead) { MASTHEAD = c.masthead; }
+          if (c.status) { STATUS_MSGS = c.status; }
+          if (typeof c.showOkBanner === "boolean") { SHOW_OK_BANNER = c.showOkBanner; }
+        })
+        .catch(function () { /* keep the embedded defaults */ });
+    }
+
     function init() {
       if (typeof Survey === "undefined" || !Survey.Model) {
         return fatal("SurveyJS failed to load (vendor/ scripts). The form cannot render.");
       }
       wireToggle();
-      applyLang(currentLang);   // sync masthead + toggle + <html lang> to the resolved language
-      fetch("survey.json")
+      loadContent()
+        .then(function () {
+          applyLang(currentLang);   // sync masthead + toggle + <html lang> (copy from content.json)
+          return fetch("survey.json");
+        })
         .then(function (r) {
           if (!r.ok) { throw new Error("survey.json HTTP " + r.status); }
           return r.json();
