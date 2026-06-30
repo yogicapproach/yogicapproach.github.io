@@ -1,0 +1,56 @@
+{
+  "_README": "Resources shown in the feedback form — links open in a new tab. Grouped to match survey.json Q3 rows. All self-hosted on yogicapproach.com (deployed via scripts/deploy-resources.sh). Rich per-item metadata + summaries live in artifacts/resources/catalog.json. talks#88.",
+  "intro": {
+    "es": "Recursos del curso — abrí cualquiera en una pestaña nueva para revisarlo",
+    "en": "Course resources — open any in a new tab to review"
+  },
+  "base_url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay",
+  "groups": [
+    {
+      "key": "knowledge_graph",
+      "title": { "es": "Grafo de conocimiento", "en": "Knowledge graph" },
+      "items": [
+        { "label": { "es": "Mapa interactivo de la serie", "en": "Interactive series map" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/graph/" }
+      ]
+    },
+    {
+      "key": "transcripts",
+      "title": { "es": "Transcripciones y apuntes", "en": "Transcripts & notes" },
+      "items": [
+        { "label": { "es": "Portal de transcripciones (4 sesiones)", "en": "Transcript portal (4 sessions)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/transcript/" }
+      ]
+    },
+    {
+      "key": "visuals",
+      "title": { "es": "Imágenes e infografías", "en": "Visuals & infographics" },
+      "items": [
+        { "label": { "es": "Los 5 Koshas del Ser", "en": "The 5 Koshas of Being" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/infographics/los-5-koshas-del-ser.png" },
+        { "label": { "es": "Metáfora del Automóvil (Sesión 1)", "en": "Car metaphor (Session 1)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/infographics/modelo-koshas-metafora-del-automovil.png" },
+        { "label": { "es": "La Resonancia de la Conexión (Sesión 3)", "en": "Resonance of Connection (Session 3)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/infographics/la-resonancia-de-la-conexion.png" }
+      ]
+    },
+    {
+      "key": "podcast",
+      "title": { "es": "Pódcast / resumen en audio", "en": "Podcast / audio recap" },
+      "items": [
+        { "label": { "es": "Cómo integrar tus cinco koshas (Sesión 4)", "en": "How to integrate your five koshas (S4)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/como-integrar-tus-cinco-koshas.m4a", "transcript": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/como-integrar-tus-cinco-koshas-es.txt" },
+        { "label": { "es": "Maneja tu energía (Sesión 1)", "en": "Manage your energy (Session 1)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/maneja-tu-energia-con-los-cinco-koshas.m4a", "transcript": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/maneja-tu-energia-con-los-cinco-koshas-es.txt" },
+        { "label": { "es": "Reprograma tu interior", "en": "Reprogram your interior" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/reprograma-tu-interior-con-los-cinco-koshas.m4a", "transcript": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/reprograma-tu-interior-con-los-cinco-koshas-es.txt" },
+        { "label": { "es": "El sonido que organiza la materia (Sesión 3)", "en": "The sound that organizes matter (S3)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/session-3-4-el-sonido-que-organiza-la-materia.m4a", "transcript": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/session-3-4-el-sonido-que-organiza-la-materia-es.txt" }
+      ]
+    },
+    {
+      "key": "slides",
+      "title": { "es": "Diapositivas", "en": "Slides" },
+      "items": [
+        { "label": { "es": "Integrar los cinco koshas (Sesión 4)", "en": "Integrating the Five Koshas (S4)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/integrating-the-five-koshas.pdf" },
+        { "label": { "es": "La Física de la Conexión (Sesión 2)", "en": "The Physics of Connection (S2)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/the-physics-of-connection.pdf" },
+        { "label": { "es": "Sonido, Mantra y el Arte de Enseñar (Sesión 3)", "en": "Sound, Mantra & Teaching (S3)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/resonant-teaching-mastery.pdf" },
+        { "label": { "es": "Koshas como Sistema de Control Vivo", "en": "Koshas as a Living Control System" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/the-human-operating-system.pdf" },
+        { "label": { "es": "Kosha Cybernetics (sistemas)", "en": "Kosha Cybernetics (systems)" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/kosha-cybernetics.pdf" },
+        { "label": { "es": "De la Conexión a la Resonancia", "en": "From Connection to Resonance" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/resonant-yoga-craft.pdf" },
+        { "label": { "es": "La Cosmología del Sonido", "en": "The Cosmology of Sound" }, "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/tuning-the-teacher-s-craft.pdf" }
+      ]
+    }
+  ]
+}
