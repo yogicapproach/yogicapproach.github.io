@@ -1,0 +1,140 @@
+{
+  "_README": "Searchable metadata catalog of the public Koshas-series resources — each with a short written summary for later discovery/search. Self-hosted under base_url. Companion to feedback/resources.json (which maps these to the form's Q3 rows). Generated for talks#88.",
+  "talk": "The Five Koshas — TTC-300, Uruguay (June 2026)",
+  "teacher": "Swami Satchidananda",
+  "base_url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay",
+  "resources": [
+    {
+      "id": "slides-integrating-the-five-koshas",
+      "type": "slides", "format": "pdf", "pages": 10, "lang": ["es", "en", "sa"],
+      "audience": "participant", "session": 4,
+      "title": "Integrating the Five Koshas",
+      "summary": "Session 4 integration lesson deck (bilingual ES/EN + Sanskrit). Opening prayer (Saha Nāvavatu), the Mahāmṛtyuñjaya mantra and the koshic mantra map, and the practice of weaving all five sheaths into daily life.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/integrating-the-five-koshas.pdf"
+    },
+    {
+      "id": "slides-kosha-cybernetics",
+      "type": "slides", "format": "pdf", "pages": 14, "lang": ["en"],
+      "audience": "participant", "session": null,
+      "title": "Kosha Cybernetics — Anatomy of a Living System",
+      "summary": "Re-engineers the koshas through cybernetics, neuroscience and systems theory: from the static nesting-doll model to multi-directional feedback cycles (a living, self-regulating system rather than layers you peel).",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/kosha-cybernetics.pdf"
+    },
+    {
+      "id": "slides-resonant-teaching-mastery",
+      "type": "slides", "format": "pdf", "pages": 10, "lang": ["es", "en"],
+      "audience": "facilitator", "session": 3,
+      "title": "Resonant Teaching Mastery — Sound, Mantra & the Teacher's Craft (Session 3)",
+      "summary": "Session 3 teaching deck (bilingual). Class flow — Kapalabhati wake-up, Shavasana stillness, guided rotation through the five koshas — framed as the teacher's craft of sound and mantra.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/resonant-teaching-mastery.pdf"
+    },
+    {
+      "id": "slides-resonant-yoga-craft",
+      "type": "slides", "format": "pdf", "pages": 8, "lang": ["es"],
+      "audience": "facilitator", "session": 3,
+      "title": "Resonant Yoga Craft — De la Conexión a la Resonancia",
+      "summary": "The art of teaching yoga through sound and mantra; 'reading the space' — sensing the room's state (rajásico / sáttvico / tamásico) and returning the student to seeing, feeling, and self-observation.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/resonant-yoga-craft.pdf"
+    },
+    {
+      "id": "slides-the-human-operating-system",
+      "type": "slides", "format": "pdf", "pages": 10, "lang": ["es"],
+      "audience": "participant", "session": null,
+      "title": "The Human Operating System — Del Modelo Clásico al Sistema de Control Vivo",
+      "summary": "Reframes the five koshas as interdependent subsystems of one living organism — not envelopes you peel off, but a dynamic integrated network (static model vs dynamic model).",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/the-human-operating-system.pdf"
+    },
+    {
+      "id": "slides-the-physics-of-connection",
+      "type": "slides", "format": "pdf", "pages": 9, "lang": ["es", "en"],
+      "audience": "facilitator", "session": 2,
+      "title": "The Physics of Connection (Session 2)",
+      "summary": "Session 2 deck (bilingual): teaching through the sheaths, each kosha as a function — Annamaya = entropy/cohesion, Pranamaya = state-transition, Manomaya = attention, Vijnanamaya = pattern-recognition, Anandamaya = baseline-coherence. 'We don't connect mind to mind; we connect kosha to kosha.'",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/the-physics-of-connection.pdf"
+    },
+    {
+      "id": "slides-tuning-the-teacher-s-craft",
+      "type": "slides", "format": "pdf", "pages": 13, "lang": ["en"],
+      "audience": "facilitator", "session": null,
+      "title": "Tuning the Teacher's Craft — The Cosmology of Sound",
+      "summary": "Tuning practice through mantra, awareness and neuro-resonance; 'the map so far' — the koshas as a practical framework (scale, density and function of each sheath, from ~2-metre physical to effectively-infinite causal).",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/slides/tuning-the-teacher-s-craft.pdf"
+    },
+    {
+      "id": "infographic-los-5-koshas-del-ser",
+      "type": "infographic", "format": "png", "lang": ["es"],
+      "audience": "participant", "session": null,
+      "title": "Los 5 Koshas del Ser",
+      "summary": "Single-image overview of the five koshas of being — the layered map at a glance.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/infographics/los-5-koshas-del-ser.png"
+    },
+    {
+      "id": "infographic-modelo-koshas-metafora-del-automovil",
+      "type": "infographic", "format": "png", "lang": ["es"],
+      "audience": "participant", "session": 1,
+      "title": "Modelo Koshas — Metáfora del Automóvil",
+      "summary": "The Session 1 car metaphor as a diagram: Annamaya as the chassis, Pranamaya the transmission, Manomaya the alert dashboard — the koshas as a practical energy-management system.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/infographics/modelo-koshas-metafora-del-automovil.png"
+    },
+    {
+      "id": "infographic-la-resonancia-de-la-conexion",
+      "type": "infographic", "format": "png", "lang": ["es"],
+      "audience": "participant", "session": 3,
+      "title": "La Resonancia de la Conexión",
+      "summary": "Session 3 visual on sound, resonance and connection — how vibration organizes and links the sheaths.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/infographics/la-resonancia-de-la-conexion.png"
+    },
+    {
+      "id": "podcast-como-integrar-tus-cinco-koshas",
+      "type": "podcast", "format": "m4a", "lang": ["es"], "speakers": 1, "duration": "1:54",
+      "audience": "participant", "session": 4,
+      "title": "Cómo integrar tus cinco koshas",
+      "summary": "Single-narrator ES recap of the final integration session: tuning each kosha with its mantra (Mahāmṛtyuñjaya, Gayatri, the 32 names of Durga), the laghoo cleanse + yoga nidra, antarmona meditation, and the table metaphor for living all five layers.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/como-integrar-tus-cinco-koshas.m4a",
+      "transcript": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/como-integrar-tus-cinco-koshas-es.txt"
+    },
+    {
+      "id": "podcast-maneja-tu-energia-con-los-cinco-koshas",
+      "type": "podcast", "format": "m4a", "lang": ["es"], "speakers": 1, "duration": "1:40",
+      "audience": "participant", "session": 1,
+      "title": "Maneja tu energía con los cinco koshas",
+      "summary": "Single-narrator ES recap of Session 1's car metaphor: the koshas as a vehicle — Annamaya the chassis, Pranamaya the transmission, Manomaya the dashboard — a practical system for regulating daily energy.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/maneja-tu-energia-con-los-cinco-koshas.m4a",
+      "transcript": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/maneja-tu-energia-con-los-cinco-koshas-es.txt"
+    },
+    {
+      "id": "podcast-reprograma-tu-interior-con-los-cinco-koshas",
+      "type": "podcast", "format": "m4a", "lang": ["es"], "speakers": 2, "duration": "5:45",
+      "audience": "participant", "session": null,
+      "title": "Reprograma tu interior con los cinco koshas",
+      "summary": "Two-host ES dialogue (Voz 1 / Voz 2) reviewing the first three sessions: the koshas as interactive energy fields (the dark-road/leopard analogy), the body as chassis, prana as engine — reprogramming the inner layers.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/reprograma-tu-interior-con-los-cinco-koshas.m4a",
+      "transcript": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/reprograma-tu-interior-con-los-cinco-koshas-es.txt"
+    },
+    {
+      "id": "podcast-el-sonido-que-organiza-la-materia",
+      "type": "podcast", "format": "m4a", "lang": ["es"], "speakers": 2, "duration": "5:21",
+      "audience": "participant", "session": 3,
+      "title": "El sonido que organiza la materia (Sesión 3)",
+      "summary": "Two-host ES dialogue (Voz 1 / Voz 2) on Session 3: how sound and mantra organize matter and attention — resonance as the connective tissue of the sheaths.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/session-3-4-el-sonido-que-organiza-la-materia.m4a",
+      "transcript": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/resources/podcasts/session-3-4-el-sonido-que-organiza-la-materia-es.txt"
+    },
+    {
+      "id": "knowledge-graph",
+      "type": "interactive", "lang": ["en", "es", "ne"],
+      "audience": "participant", "session": null,
+      "title": "Knowledge graph (interactive map)",
+      "summary": "The flagship interactive D3 map of the whole series — 77 nodes of koshas concepts, mantras, practices and sessions, with session/layout/language toggles and audio-deep-link citations.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/graph/"
+    },
+    {
+      "id": "transcripts-portal",
+      "type": "text", "lang": ["en", "es", "ne"],
+      "audience": "participant", "session": null,
+      "title": "Transcripts & notes",
+      "summary": "Searchable transcript portal for all four sessions — verbatim, timestamped, multilingual, with per-session notes.",
+      "url": "https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/transcript/"
+    }
+  ]
+}
