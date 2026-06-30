@@ -81,6 +81,18 @@
        (e.g. validation focus or deep-link). Offset scroll targets so the title stays visible. */
     .sd-question, .sd-panel, .sd-page, .sd-row { scroll-margin-top: 84px; }
 
+    /* Rating matrices (Q3 resources 1–5+N/A, Q4 before/after 1–5) must FIT the container — no
+       horizontal scroll — on desktop AND phone. SurveyJS's `sd-table--columnsautowidth` sets each
+       value column to width:10000px/min-width:120px, which overflows a 680px card. Neutralise that
+       sizing and let the table fill 100% so the columns share the available width and fit. */
+    .sd-matrix__table { width: 100%; }
+    .sd-matrix__table.sd-table--columnsautowidth .sd-table__cell { width: auto !important; min-width: 0 !important; }
+    .sd-matrix__table .sd-table__cell { padding-left: 6px; padding-right: 6px; }
+    .sd-matrix__table .sd-table__cell--header { text-align: center; }
+    @media (max-width: 480px) {
+      .sd-matrix__table .sd-table__cell { padding-left: 2px; padding-right: 2px; font-size: .86em; }
+    }
+
     /* status banner for submit success/error */
     #status { display:none; margin:1rem auto 0; max-width:760px; padding:14px 18px;
       border-radius:var(--r); font-family:var(--mono); font-size:13px; line-height:1.5; }
