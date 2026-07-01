@@ -30,6 +30,10 @@
     #content hr { border: none; border-top: 1px solid #eee; margin: 1.6em 0; }
     #content a { color: #2a6496; }
     .notice { background: #faf6ec; border: 1px solid #e5d9b8; border-radius: 8px; padding: 14px 16px; color: #6b5a2e; margin: 16px 0; font-size: .95em; }
+    /* discreet clickable timestamp -> YouTube deep-link (article stays the focus) */
+    #content a.ts { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .72em; color: #b7ac93;
+      text-decoration: none; vertical-align: .15em; margin-right: .15em; letter-spacing: .02em; }
+    #content a.ts:hover { color: #7a5c1e; }
     #loading { text-align: center; padding: 40px; color: #999; }
     footer { text-align: center; padding: 26px 0 10px; border-top: 1px solid #ddd; margin-top: 36px; color: #999; font-size: .85em; }
     footer a { color: #7a5c1e; }
@@ -60,11 +64,27 @@
     // ES = the translator's ORIGINAL spoken Spanish — being re-extracted from the audio via the
     // Shruti bilingual pipeline (not a re-translation), so add es files as they land.
     var SESSIONS = [
-      { id: "s1", n: 1, date: "June 10, 2026", en: true,  es: false },
-      { id: "s2", n: 2, date: "June 16, 2026", en: true,  es: false },
-      { id: "s3", n: 3, date: "June 18, 2026", en: true,  es: false },
-      { id: "s4", n: 4, date: "June 23, 2026", en: true,  es: false }
+      { id: "s1", n: 1, date: "June 10, 2026", en: true, es: false, yt: "fDUM_Rr7H-Q" },
+      { id: "s2", n: 2, date: "June 16, 2026", en: true, es: false, yt: "ePMCVVGHEKU" },
+      { id: "s3", n: 3, date: "June 18, 2026", en: true, es: false, yt: "7A1pu2XUiX4" },
+      { id: "s4", n: 4, date: "June 23, 2026", en: true, es: false, yt: "wXDXmb4MMR0" }
     ];
+
+    // Present as a clean article: drop the processing/meta header, and turn [mm:ss] (or [h:mm:ss])
+    // paragraph markers into DISCREET clickable YouTube deep-links (watch at that moment).
+    function toArticle(md, ytId) {
+      var i = md.indexOf("\n---");                      // strip title + processing note (first --- block)
+      if (i > -1) md = md.slice(i + 4);
+      md = md.replace(/\*{0,2}\[(\d{1,2}):(\d{2})(?::(\d{2}))?\]\*{0,2}\s*/g, function (_, a, b, c) {
+        var sec, label;
+        if (c !== undefined) { sec = (+a) * 3600 + (+b) * 60 + (+c); label = a + ":" + b + ":" + c; }
+        else { sec = (+a) * 60 + (+b); label = a + ":" + b; }
+        var href = ytId ? "https://www.youtube.com/watch?v=" + ytId + "&t=" + sec + "s" : "#";
+        return '<a class="ts" href="' + href + '" target="_blank" rel="noopener" ' +
+               'title="Watch this moment on YouTube">' + label + "</a> ";
+      });
+      return md.trim();
+    }
     var ES_PENDING = {
       en: "Spanish (the translator's original spoken words) is being extracted cleanly from the session audio via the Shruti bilingual pipeline — it will appear here as the translator's own words (not a re-translation of the English), so the two can be compared.",
       es: "El español (las palabras originales de la traductora en vivo) se está extrayendo del audio de la sesión con el sistema bilingüe de Shruti — aparecerá aquí en las palabras propias de la traductora (no una re-traducción del inglés), para poder compararlas."
@@ -97,7 +117,7 @@
       el.innerHTML = '<p id="loading">Loading…</p>';
       fetch(state.session + "-" + state.lang + ".md")
         .then(function (r) { if (!r.ok) throw 0; return r.text(); })
-        .then(function (md) { el.innerHTML = marked.parse(md); })
+        .then(function (md) { el.innerHTML = marked.parse(toArticle(md, meta.yt)); })
         .catch(function () {
           el.innerHTML = '<div class="notice">' + ES_PENDING[state.lang === "es" ? "es" : "en"] + "</div>";
         });
