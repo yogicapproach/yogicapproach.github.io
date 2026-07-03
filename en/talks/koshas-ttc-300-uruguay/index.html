@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Five Koshas · A Four-Session Series</title>
-  <meta name="description" content="Interactive bilingual student notes on the five koshas — a four-session TTC-300 series by Satchidananda." />
-
-  <!-- Set theme before paint to avoid a flash of the wrong theme -->
-  <script>
-    (function () {
-      try {
-        var s = localStorage.getItem("kosha_theme");
-        var t = s || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-        document.documentElement.dataset.theme = t;
-      } catch (e) { document.documentElement.dataset.theme = "dark"; }
-    })();
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="shared/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exploring the Koshas — A Framework for Awareness | The Five Koshas, TTC-300 Uruguay</title>
+  <meta name="description" content="A synthesis of a four-session teacher-training on the five koshas by Satchidananda — Uruguay, June 2026. Bilingual (English / Spanish).">
+  <link rel="stylesheet" href="_assets/shared.css">
+  <link rel="stylesheet" href="_assets/eleventy-extra.css">
 </head>
-<body class="home">
-  <div class="grain" aria-hidden="true"></div>
+<body>
+  <a href="#content" class="skip-nav">Skip to content</a>
 
-  <header class="masthead">
-    <div class="mast-inner">
-      <div class="sigil" id="sigil" aria-hidden="true"></div>
-      <div class="mast-text">
-        <p class="eyebrow" id="eyebrow"></p>
-        <h1 class="mast-title" id="mastTitle"></h1>
-        <p class="mast-sub" id="mastSub"></p>
-      </div>
-      <div class="controls" id="controls"></div>
-    </div>
+  <header data-pagefind-ignore>
+    <h1>Exploring the Koshas</h1>
+    <p id="header-subtitle">Satchidananda &mdash; 300-Hour Teacher Training, Uruguay &mdash; June 2026</p>
   </header>
 
-  <main id="view" class="view" role="main"><!-- rendered by home.js --></main>
+  <div class="lang-toggle" data-pagefind-ignore>
+    <a href="?lang=en" onclick="loadSynthesis('en');return false;" class="lang-btn active" role="button" aria-pressed="true"
+       id="btn-en"><span class="lang-full">English</span><span class="lang-abbr" aria-hidden="true">Eng.</span><span class="lang-sublabel lang-sublabel-full">Original</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">Orig.</span></a>
+    <a href="?lang=es" onclick="loadSynthesis('es');return false;" class="lang-btn" role="button" aria-pressed="false"
+       id="btn-es"><span class="lang-full">Espa&ntilde;ol</span><span class="lang-abbr" aria-hidden="true">Esp.</span><span class="lang-sublabel lang-sublabel-full">IA Traducido</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">IA Trad.</span></a>
+  </div>
 
-  <footer class="footer">
-    <p id="footNote"></p>
-    <p class="foot-meta" id="footMeta"></p>
+  <div id="other-talks" data-pagefind-ignore>
+    <span id="other-talks-label" data-href="#">Read a session:</span>
+    <select id="talk-select" aria-label="Select a session" onchange="if(this.value)window.location.href=this.value">
+      <option value="">-- Choose --</option>
+      <option value="s1/?lang=en">Session 1 — The Five Koshas</option>
+      <option value="s2/?lang=en">Session 2 — Connection</option>
+      <option value="s3/?lang=en">Session 3 — Sound &amp; Mantra</option>
+      <option value="s4/?lang=en">Session 4 — Sound, Mantra &amp; Visualization</option>
+      <option value="glossary/?lang=en">Glossary of Terms</option>
+    </select>
+  </div>
+
+  <div id="content" data-pagefind-body><p id="loading">Loading&hellip;</p></div>
+
+  <footer data-pagefind-ignore>
+    <a id="footer-nav" href="https://yogicapproach.com/en/talks/koshas-ttc-300-uruguay/">&#8592; The Five Koshas</a>
+    <div id="site-credit" class="site-credit">Made with 🧠❤️🙏 by <a href="https://yogicapproach.com" target="_blank" rel="noopener">YogicApproach</a>.</div>
   </footer>
 
-  <script src="shared/locale.js"></script>
-  <script src="shared/i18n.js"></script>
-  <script src="shared/series.js"></script>
-  <script src="shared/home.js"></script>
-  <script src="shared/footer.js"></script>
+  <script src="_assets/marked.min.js"></script>
+  <script src="_assets/shared.js"></script>
+  <script>
+    function loadSynthesis(lang) {
+      ["en", "es"].forEach(function (l) { document.getElementById("btn-" + l).classList.toggle("active", lang === l); });
+      document.documentElement.lang = lang;
+      var u = new URL(location); u.searchParams.set("lang", lang); history.replaceState(null, "", u);
+      var el = document.getElementById("content");
+      el.innerHTML = '<p id="loading">Loading&hellip;</p>';
+      fetch("synthesis-" + lang + ".md").then(function (r) { if (!r.ok) throw 0; return r.text(); })
+        .then(function (md) { el.innerHTML = marked.parse(md); if (location.hash) { var t = document.querySelector(location.hash); if (t) t.scrollIntoView(); } })
+        .catch(function () { el.innerHTML = '<p style="color:#b3402a;text-align:center;padding:40px;">Could not load the synthesis.</p>'; });
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      loadSynthesis(new URLSearchParams(location.search).get("lang") === "es" ? "es" : "en");
+    });
+  </script>
 </body>
 </html>

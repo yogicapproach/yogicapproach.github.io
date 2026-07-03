@@ -1,0 +1,226 @@
+# Sound & Mantra
+## Talk by Satchidananda
+### Hosted by Ale · 300-Hour Teacher Training, Uruguay
+### June 18, 2026
+
+---
+
+**Note on This Transcript:** This document was created through human-AI collaboration using Whisper transcription technology. The original talk was delivered in English with real-time Spanish translation. While efforts have been made to ensure accuracy, transcription errors may occur. Please refer to the original video recording as the definitive source: [https://www.youtube.com/watch?v=7A1pu2XUiX4](https://www.youtube.com/watch?v=7A1pu2XUiX4)
+
+*New to the yoga terms in this talk? See the <a href="../glossary/?lang=en" target="_blank">Glossary of Terms</a>.*
+
+---
+
+## Opening and Introduction [03:49]
+
+*Hari Om Tat Sat* to everyone. I hope this finds you all very, very well. And I recognize and remind myself that it is your morning and it's my afternoon. So if my thoughts and words are ever too fast or excited, it's because I'm excited to see you and share. And you really are invited to give feedback via the chat or to Ale directly if you need things to slow down a bit. We'll start with a short settling as a way to bring our whole selves into this session.
+
+---
+
+## Opening Practice: Settling and Shantipat [03:49]
+
+> *PRACTICE — Guided settling and Shantipat: witnessing, breath, the golden flame, mantra OM*
+
+The sequence I communicate is one that works very well and is traditional to my training. Keep in mind what works for you. Bring yourself into any comfortable meditative *asana*. Position that allows the spine to be comfortably upright. The two halves of the body symmetrical and balanced. With the hands resting on the thighs or knees in a *mudra* of your choice. The mouth gently closed, and if appropriate, the eyes gently closed or downcast. Allow yourself to just be the witness or observer of what you feel, experience, and recognize in these passing moments.
+
+Visualize the space that you're actually in. The energy of this time of day.
+
+The sensory input coming to you, such as sounds or smells.
+
+And draw this awareness deeper into you. Visualize the inner space, the shape of your body, the shape of your sitting position. Feel for any signs of *prana*, including movement of heart and breath.
+
+Awareness of any thoughts, emotions, or psychic activity.
+
+Start to make the breathing more intentional, very gradually, so that each new breath in and out is more complete or deep than the previous.
+
+So that over a number of rounds, you find you're utilizing your lungs' full capacity to empty and fill.
+
+With the next breath in, guide the awareness to the eyebrow center or the heart center. Visualize there or imagine a steady golden flame. See the shape, the size, the colors of that flame. Illuminating the inner space. The warmth coming from that flame. Even if this psychic image does not remain stable, continue to redirect the mind to that idea of inner light at the psychic center. So chant the mantra *Aum*. Three times together, and for anyone who knows *Om Sahana Bhavatu*, you can join me out loud or mentally. For chanting the mantra *OM*, allow the vibrations to be felt in the body, the *mantra* to be felt moving through the mouth and throat. Any effect the vibrations have on the mind or heart. And imagine that you're connecting to the vibrations that pervade the entire universe and reality. Slow full breath in to chant the mantra *OM*.
+
+*Sahana Bhavatu, Sahano Bhunaktu, Sahavidhyam Karavavahe, Tejas Vinavaditamastu, Mavid Vishavahe. O shanti, shanti, shanti, hari.*
+
+We make the intention to come together in the spirit of learning. And the spirit of growing internally. And we do so with an agreement to share and to be friendly with each other. Can you bring the hands into prayer position or *pranamudra*, thumbs touching the sternum. Take a very deep breath in and out, feeling the whole torso expand and contract. And then move into a vigorous round of palming. When you have peace or warmth to share back to yourself, cover the eyes. Notice what you feel coming from the palms, what you see in that darkened space. What you smell. Then take a deep breath in through the eyes, pulling that warmth back into yourself, and exhale as you lower the hands. *Hari Om*, that's it.
+
+---
+
+## Welcome Back: Working the Koshas Through Sound [12:30]
+
+So welcome back for this third out of four sessions on the topic of *koshas*. It has been my intention to include other aspects of yoga philosophy and even practices throughout these sessions. With the intention of modeling the interconnectedness of *koshas* to the entire yoga *vidya*. And the need for us to ground theory in actual practices that we can bring into daily life. And because for many of us, our daily lives are dynamic in varying environments, the ongoing experiment and *sadhana* is how to bring the essence of a practice into any setting, any time of day or night. So when we become aware that we have disconnected from the awareness of one part of ourselves, we can reconnect to ourselves willfully. And the only reason we might want to do that, according to me, is because we like the experience of being alive. And that experience of being alive is enhanced, fuller, and deeper when all layers of ourselves are vibrating at their most sensitive capacity.
+
+I want to play a short recording of what I hope AI has produced as an overview of this class. My Spanish is not fluent enough to where I know exactly what it's saying and I didn't screen it. So pardon me if it has some extra bits in it.
+
+I will share that audio as well as other audios. I find that podcast summaries are a great way to digest sometimes complex or a lot of information in an easy way. And that's one of the main themes of today's class is the power of sound and how we're going to be experimenting with one of the yogic tools called *mantras* for working with the *koshas*.
+
+---
+
+## Practice: Kapalabhati with Body-Shaking [19:20]
+
+> *PRACTICE — Kapalabhati with body-shaking, then stillness in Shavasana*
+
+And before we do that, I would like us to practice just to wake up a little bit. I'm going to invite you to stand up and clear a little bit of space. You want enough space to be able to come down into *Shavasana* or sit comfortably for at least three to four minutes after the short practice. The practice itself is to do *kapalabhati* breathing with body shaking. And you're going to find a rhythm that you can sustain for about a minute and a half or two minutes. At any time, if your body or breath say to slow down or stop, please listen to that inner voice. Otherwise, continue until asked to stop and when asked to stop, immediately come into stillness in *shavasana* or a seated position. So go ahead and come into standing. See if I can get more of you on the screen here. I'll demonstrate with y'all for the first few seconds and you continue on your own. You're going to try and get movement into all of your different bones. While doing rhythmic *kapalabhati*. Move in asymmetrical ways like you're a puppet being controlled. Find a rhythm you can maintain. It doesn't have to be high capacity, but it has to be for up to two minutes.
+
+Be the observer. Feel the changes taking place in the different *koshas* as you move through this practice.
+
+And then over the next 20 seconds, begin to slow down. And then come to stop, lie down in *Shavasana* or sitting, be completely still, natural breath.
+
+Notice what you feel at the sensory level in the body.
+
+The intensity of the sensations, the variety of the sensations, the movement or stillness of those sensations.
+
+Observe the natural breath with the attitude of a witness. You're watching the body breathe itself. And how that breath is naturally managed internally, how it slows down back into a rhythmic breath.
+
+Allow the mind to be aware of but detached simultaneously from various sensory inputs. Can you feel the floor in contact with the body? Can you hear the sounds around and within you?
+
+And you feel the awareness of these sensory inputs actually moving through the sensory organs into the mind. The vibrations of sound creating vibrations of thought.
+
+Take one step farther back and consider what power is aware of everything that you're aware of?
+
+And notice how that layer of awareness does not fluctuate in the same way that the layers beneath are constantly changing.
+
+That part of you which is present when you wake up before you remember your name. Before you recall where you are. That part of you that is present in your dreams, even when there is no ego identity.
+
+Bring to mind a favorite memory or image or person or experience. Try and amplify the emotions that they evoke. Really feel it in your body when you think of this inspiring, uplifting, or loving idea.
+
+Begin to deepen the breath and to breathe more intentionally. Guiding each inhalation to the base of the pelvic floor, filling upwards to the tops of the shoulders. Exhaling in the reverse order, pushing the navel towards the spine, emptying the lungs completely. Deepen into this full yogic breath for a few more rounds, allowing it to externalize you.
+
+And then bring the palms together and move into a good round of palming. After that round of palming, from whichever position you're in, you can give yourself a long spinal stretch by raising the arms up, the toes in the opposite direction. And then gradually find your way to a comfortable position to resume the class.
+
+---
+
+## The Student–Teacher Relationship and the Observer [31:52]
+
+I'm going to be using the slides for a little bit here. Hopefully everyone can see it on the screen. Of course, if you find it to be too much information for this time or too busy, there's nothing that you need on it that won't be coming through speech. I have intentionally left the Q&A portion for after about 10 or 15 minutes so you can also consider any questions that have accumulated from previous classes or today. Where we left off last week was — sorry, where we left off two days ago was just starting to talk about the student-teacher relationship in relationship to *koshas*. And I think one of the last ideas I had mentioned was we really want to be grounded in our own practice and our own self-awareness so we can begin to see that externally. So we can tune into it externally with minimal projection, minimal guessing, but really getting a good sense of what's happening in the landscape in front of us. And even though I'm framing this as a teacher-student interaction, of course, this is between any two people in any environment. This is something that we did just now in a visual form. And it's a very simple way and a reliable way for me to give my body some attention. To stimulate my *pranas* in the morning or when I need to. And to create an experience that is going to be the exact opposite what I'm moving into, which is stillness. And this is something that works very well for most of us and has been observed for a long time as a way to enter effortless quiet or stillness. And finally, in that stillness and inner quiet, to guide the awareness through rotation of the various *koshas*.
+
+### Planting Seeds: Sankalpa Across the Koshas [31:52]
+
+It's in those quieter states where we have access to our subconscious and unconscious that we would ideally start to plant the seeds of change. Through affirmations, through *sankalpa*. So we can plant them at the body level, one of the grosser external layers. The pranic level which pervades every layer. The mental layer, which modern and ancient psychology has acknowledged as a fertile ground for planting mental seeds and psychic seeds. Where we can try and access and plant them at the layer of *vijnanamaya kosha* which is now global and I would say in the realm of practices such as prayer. Various yogis, saints, and spiritual practitioners have written and spoken that the power of prayer is partly because it connects to something larger than the self. And there's universal power in that. Charging a battery with a bicycle versus the waves of the ocean. And then finally, there is this possibility, at least in theory, of connecting our *sankalpa* or aligning our *sankalpa* at the causal level. Which by definition, at least, is where all things manifest from at their root. At that point, the inner dialogue is less what change do I want to bring into my life and more what am I being guided to experience in this life. Yeah, the subtle difference between what do I want or what do I want to change? And what am I being invited to experience? What has been prepared for me?
+
+### The Observer (Drashta) and Self-Regulation [31:52]
+
+One of the pillars of practicing yoga or teaching yoga is the quality of being the observer. The *drashta*: to know the practices thoroughly, to have an experience of them. In as much variety as possible, which essentially means having experienced multiple branches of yoga. And to cultivate an attitude of giving space for someone to have an experience rather than overly direct that person's experience. And of course, that practice has to start from oneself. I observe a wave of anger rising in me of irritation, building to frustration, building to anger. I know that *merudanda asana* or *nadi shodhana* have had positive effects in the past. But I'm also careful not to shut down that feeling, but work with it to the capacity that I can stay self-regulated. So that whatever inner experience is arising has the full, the largest, safest container to express itself and move out. This is essentially what we're doing with fusion energy. Extremely potent, extremely dangerous if not contained. So the evolution of that technology is to start in very small laboratory settings and then evolve to a point where we can supply it to a city, to the whole world.
+
+And that's what the yogic tools are providing to us, is how do I work with these intensely powerful, world-changing internal energies? Learn to observe and read their movements. Apply the practices real-time to contain them safely and to work and channel them positively. And to share that energy with others so that they can evolve along their own trajectory, not our trajectory, but their own timeline. And that's a very wonderful and sustainable responsibility to cultivate for all of us. In my opinion.
+
+---
+
+## A Survey of Practices Across the Branches of Yoga [42:21]
+
+So let's quickly go through a list of what practices we do have available across some of the classical branches of yoga. At this point, I invite you to turn on your microphones if you don't have an opera in the background. And I'm going to take contributions from you all on some examples of these high-level categories I have put on the screen. And of course, you can also write these in the chat window. So I believe confidently that many of us have been introduced to a variety of *asana* and *pranayama*. So I'm going to move over *asanas* and go right to *pranayama*. What are some *pranayamas* that you have personally connected with? Silence. Silence is a good practice, not under *pranayama*. Come on.
+
+### Pranayama [45:30]
+
+Ale, what was the first contribution? Yeah, *Nadi Shodhana*. Some traditions call it *Anuloma Viloma*. There might be a subtle difference in there. I've seen them sometimes used interchangeably. That *pranayama*, if you've never looked into it, is considered one *pranayama* you can do your whole life. Any time, day, or night with positive benefits. It is empirically observed to harmonize sympathetic and parasympathetic nervous systems. It is a balancing *pranayama*. And it can lead to one of the subtlest experiences of the wave-like nature of the breath and the *pranas* in particular. And when progressed properly and safely over a number of years, it will put some of the most demanding stress on the nervous system. Train the mind to remain calm under that imposed stress. Which becomes directly transferable, automatic skill in the real world. What other *pranayamas* have you personally connected with? *Ujjayi*. That's throat breathing, soft sound. Anyone, any other *pranayamas*? There's like over 30 at least. Some for stimulating *prana*, some for tranquilizing *prana*, some for harmonizing *prana*. Please in your yogic journey, find a workshop, a session, a course to have a survey of different *pranayama* techniques, especially once you've established yourself in *asana* and feel like you can breathe with more control and depth.
+
+### Shatkarmas and the Other Branches [48:46]
+
+And what about *shatkarmas* or cleanses? What cleanses have y'all tried or experienced? *Neti*, nasal irrigation, very nice. Anything else? Have any of y'all heard of *Kunjal* or therapeutic vomiting? You drink about a liter or two of salt water and almost immediately get it all out from the stomach. Very worthwhile especially if you've experienced anxiety or grief or emotional stuckness. Thank you. Any negative or unwanted history with digestion or relationships to food. Wonderful for maintaining, um, the body and the energy levels, uh, when we're feeling *tamasic*. Develops amazing control of autonomic functions such as vomiting. *Hatha yoga* largely is designed to help us touch the autonomic systems and develop control over them. And there is a *shatkarma* where you also drink salt water and do *asanas* and it comes out through the anus. Within about 30 minutes to an hour. So it's a very gentle and for the large population safe way to wash the stomach. You've never. Exactly. Nice. If you've never experienced how much influence the body has, how much influence food has on the body and mind, you must try this practice. And a simple version is fast for two or three nights. Just skip dinner and do your *asana* practice in the morning and see how your body feels and journal it. There are many *shatkarmas* using water, using air, using breath. At this speed, it'll take a while. So I'm going to jump into *Karma Yoga*. There are practices of *Karma Yoga*. Which includes engaging in volunteer activities or *seva*. Through every act of the day, seeing how the personality or ego responds to interactions in the world. In *Raja Yoga*, there's *pratyahara* practices or sensory engagement and management. *Dharana* focusing the mind intentionally on an object of choice. In *bhakti yoga*, we have *kirtan* and *japa*, which is repetition of a *mantra*. Or *pratipaksha bhavana*, which is working with generating opposite emotions willfully. *Kriya Yoga*, *Bhoji*. Has its own set of many, many practices. Designed to awaken deep psychic energies but which immediately influence all the *koshas*. And *jnana yoga* practices such as self-inquiry or *swan*, where we're constantly reviewing what has this... person called me, um, accumulated in terms of patterns. What are my strengths, my weaknesses, my ambitions, my actual needs? For the body, for the mind, for relationships, for work. You can apply *swan* to any aspect of life. And this is just a scratch of the surface of the available practices in the major branches of yoga. There are many subtler branches and not often taught practices as well, or not widely taught practices. So thank you, Ale, for starting us off with the first question. I open the floor to other questions related to these sessions.
+
+---
+
+## Break and Sharing [56:41]
+
+Let's do this. Let's take a two-minute break. You can use the restroom, get water, stretch your body, anything while you're doing that. Review what we've been learning about *koshas*, and when we come back in two minutes, come with something to share. Doesn't have to be a question. Can be something new to you, something old to you, a realization, an insight, anything.
+
+See you in two minutes.
+
+Is the pace okay?
+
+What do we have to share now for everyone as it relates to questions, insights, connections, reminders? A lot of time when we are in a space of sharing and learning, we're just reminded of what we already know.
+
+Don't imagine that you're speaking to me, we're all speaking to each other here.
+
+I see them now. Thank you. I was unaware. We start with Huli. I think Pauli was contributing earlier. So we start with Huli. Go ahead.
+
+I'm so glad to hear that. Thank you for that feedback on your experience. Recognizing and having a direct experience that we can willfully, skillfully shift our awareness into different *koshas* and multiple *koshas* is a skill. I've worked with youth and adults of the whole human age spectrum for much of my life. And I find this ability to guide people into different *koshas* is very valuable for a wide variety of situations.
+
+And this ability to share is only enhanced when we've exercised that capacity ourselves. So I'm glad you experienced that. That was the intention of sharing a short sequence like that. That recipe is borrowed from yoga. That is a classic algorithm or sequence. Work with the body, work with the breath. Engage with the senses. Concentrate on a chosen object. Become aware of the witness, which is behind the scenes, noticing everything that's happening. Next, uh, Boli.
+
+Oh thanks, and we'll do *shatkarmas*, that's what I forgot to say also, so thank you all for reminding.
+
+---
+
+## Cultivating Intuition: The Vijnanamaya Kosha [1:08:14]
+
+First of all, thanks for your honesty, because we have to be clear where we are in relating to each of these ideas in the beginning. And no one should assume that any of these layers can be contacted until they are contacted and experienced. So the question is exactly that. How do I do that?
+
+Let's look at the name of the *Kosha* itself to just ground us in what it is claiming. To embody. So *Vijnanamaya Kosha* is the wisdom body or the intuitive body. How does one cultivate intuition? And maybe a prior question is, do any of us have a real idea or sense of what that means? Some people in cultures will say that feeling of knowing it's embodied in the gut. It's the gut feeling. Some cultures and people say, nah, it's my heart's deepest, truest voice. And some people in cultures experience it in the head, but like the third eye, the center of intuition, the *guru chakra*, the inner guide. But in all cases... It's coming from. A deeper space that bypasses other layers and bypasses pure thinking or intellectualization or even the ego. So on one hand for *Vijnanamaya Kosha*, one of the practices is feeling into the depths of ourselves and letting those innermost feelings come to our conscious mind. And gradually extending the trust to act on them. That has been my practice in developing *Vijnanamaya Kosha*. And that's also what I've observed in masters that I've been blessed to learn under is their intuitive faculty is profound.
+
+They have guided or advised me in ways where I don't see the connection and often disregarded the advice and learned from suffering like, wow, they saw that months or years in advance.
+
+What did they see or feel that? Was blind to me. And so what perspective are they coming from that lets them see a bigger picture?
+
+### The Larger Perspective and the Future Self [1:13:05]
+
+You're in a forest, trees everywhere, no way out. You take the perspective of a bird, all of a sudden the outline of the forest becomes clear, the valleys, the rivers, now it's a clearer map. You take the perspective from space and now entire weather systems, entire continents seem to have a pattern. So another practice for *vijnanamaya kosha* is constantly to take the larger perspective, to step out of ourselves, allow ourselves to be the ego interacting in the world, but simultaneously be the witness of everything that's taking place.
+
+We have terms like systems thinking and holistic design or perspective to describe this zoomed-out state. And on a slightly more practical grounded level, ask yourself if you were to give advice to yourself at age three, at age five, seven, nine, eleven, thirteen, all the way to your current age, what have you accumulated in terms of actual wisdom to guide yourself in that copy of yourself growing through the world again? Do you have advice?
+
+I was having this conversation with a friend saying, you know, I want to spend more time imagining what my future self would tell me now. So that I could live now in a way maybe with less ignorance or unneeded suffering.
+
+And they tweaked that practice and said, no, be still now and listen for that voice. Like your future self is talking to you right now, listen to it. And as soon as I heard that, even when I say it now, I can feel it in my skin. Like, oh yeah, it's already happening.
+
+The *jnanamaya kosha* is free of this temporal point perspective and is larger in all dimensions. So it has to be exercised. We have to move into those dimensions. So to answer the question, how do I do it? You do it by doing it. It's true in martial arts when we're stuck, linear movement, and the teacher says, you have two dimensions, you just have to start moving in two dimensions to start making it feel natural.
+
+So with any decision, what do I want to do now? How would my future self, what would my future self say? What would my child self say? What would my father say? What would my master say? Taking on multiple perspectives. And really seeing all those perspectives as counselors, as fragments of ourself.
+
+### Mother Nature and the Akashic Records [1:18:27]
+
+And one final practice that I'm trying to constantly remind myself, read *sattvic* content from inspirers. Daily, random page, random line, or through the whole book, but nourish *Vijnanamaya Kosha* through the words and a teachings of wise, positive, deeply experienced humans. Who is one of the oldest teachers that all of us know? They've experienced nearly everything that can be experienced, maybe more. Who is that? Mother Nature. She is old! 13.8 billion years old, at least in our universe. And at the same time, she's the youngest person we know because she's born every moment. And she's a profoundly deep teacher. She's the inspirer of everything we humans have ever claimed to be our own. Anything we have, she already had, and she does it better. I'll take one more question and then I want to end with a practice.
+
+The Akashic Records, for me, are a good example of the space of *vijnanamaya kosha*. Not only a record of everything that has happened, but a space where anything that can be known can be accessed like the drawers or shelves of a library. So individuals who are able to traverse the Akashic records essentially in my understanding, can move through *Vijnanamaya Kosha* in very specific ways. They know which floor to go to, which shelf to go to, which book to open, and how to look that up.
+
+And this is one reason for safety. It's always been stressed and emphasized, strengthen all the *koshas* gradually and simultaneously. Sometimes intuiting something about someone or yourself or having a deep memory from the very very very very far past or seeing something in a dream of the future it can be unsettling.
+
+Or sometimes we really want access to information that's profound or deep or life-changing, but we don't even know how to take care of our basic diet or sleep patterns. So there's this trust that when we take care of the... *koshas* that are easier to work with, that the other *koshas* begin to open up. The *Vijnanamaya kosha*, the Akashic records, become available on their own. When we're ready.
+
+---
+
+## The Power of Sound and the Sanskrit Alphabet [1:23:50]
+
+Okay, so with the five minutes that we have left, I just want to say a few words about sound and at least do three *mantras* once through. Sound is particularly interesting that I could talk for two hours on sound in relationship to yoga because it's in so many different branches. But from the global perspective, sound comes up in a lot of society's origin stories. In the mantra *OM*, for example, is considered the first manifest aspect of unmanifest reality. In the Old Testament, you have lines like, In the beginning was the Word, and the Word was He. I follow a lot of research headlines, technology in particular. Right now they're using sound as an alternative to light-based technologies. Light, like light, loose. Even the petals of the chakra are considered the sounds of *prana* entering that junction or chakra in the body.
+
+And each letter of the Sanskrit alphabet maps directly to one of the leaves of these nerve structures throughout our body. So when you're doing a *mantra* from any spiritual tradition, you're playing the pranic keyboard of your subtle and gross nervous system. Which is one reason I think all life seems to respond to sound and frequency. Because it's completely connected to the pranic level and *prana* is life. Ale, a sincere question, is it okay to do each of these *mantras* once and go five minutes over, or is that going to stress people? I don't expect anyone who hasn't been experimenting with *mantras* to take them on board at first go. But having tested them, experimented with them, and developed a relationship to them, I feel it's my heartfelt duty to at least introduce some *mantras* to anyone who's willing to listen. Because they have had very positive effects on me and many people that I know, and they bypass the intellect largely.
+
+---
+
+## The Three Mantras [1:26:58]
+
+> *PRACTICE — Guided mantras: Mahamrityunjaya, Gayatri, and the Durga mantra*
+
+We will. Here, three *mantras* today, *Mahamrityunjaya* mantra for the two *koshas*, *Gayatri* mantra for the mental higher and lower mind *koshas*, and the *Durga* mantra for the causal body.
+
+These *mantras* were intuited by *rishis*, spiritual scientists from the past. They shared their intuitive finding and it resonated with others at their level and managed to survive until now because of their benefit.
+
+Let's bring this up now. So for each of these *mantras*, we keep a *sankalpa* or an affirmation in mind. To give direction to the energies that start to come out of the vibrations of the *mantra*. No need to take the translated sentence too literally, they're deeply symbolic. Come into a comfortable sitting posture where you can be still and balanced. For this first *mantra*, awareness at the navel center, the trigger point for *Manipura Chakra*. Which regulates *prana* through the whole body and brings us vitality and health. As you hear this *mantra*, imagine a field of safety and protection around you. I will repeat it just one time. You can listen with your eyes open and follow along or closed.
+
+*Om Trayambakam Yajamahe Sugandhim Pushthivardhanam Purvarukamivabandhanan Mrityurmukhshihamamritat. Om Shanti Shanti Shanti Hari Om.*
+
+The second *mantra* vitalizes and nourishes the *Manomaya* and *Vijnanamaya Kosha*. It is specifically a *mantra* for awakening intuition. You can put your awareness at the eyebrow center and imagine a growing inner light. And imagine developing a connection to your deepest, wisest self that spans all time.
+
+*Om, ho, vasvaha tatsavitur varenyam, bhargo devasya dhimahi, dhiyo yona prachodayat. Shanti, Shanti, Shanti, Hari.*
+
+And finally, the third *mantra*. Connects to the causal body. *Durga* or the cosmic mother, the actual manifest universe. The affirmation, the *sankalpa* is to connect to peace and harmony and to make an effort to overcome difficulties, challenges, and obstacles in life. You can place the awareness at the heart center and connect to that part of yourself or someone you know who gives you that courage and motivation. To live life to the fullest, no matter what we are going through.
+
+*Om Durga, Durga Arthishamani, Durga Padvinivarini, Durga Machedini, Durga Sadhini, Durga Nashini, Durga Todharini, Durga Nihantri, Durga Mappaha, Durga Magyanada, Durga Detyaloka Davanala, Durga Ma, Durga Maloka, Durga Matmasvarupini, Durga Marga Prada, Durga Mavidya, Durgam Ashrita, Durgam Ajnana Samsthana, Durgam Ajnana Bhasini, Durgam Oha, Durgam Agha, Durgam Arthaswarupini, Durgam Asurasamhantri, Durgam Ayudhadharini, Durgam Angi, Durgam Atta, Durgam Yadur, Durgam Eshwari, Durgabhimma, Durgabhama, Durgabha, Durgadharini. Om Shanti Shanti Shanti Hari Om.*
+
+---
+
+## Closing [1:35:46]
+
+> *PRACTICE — Closing: mantra Aum and Aum Shanti, palming*
+
+And with that, we conclude with. The mantra *Aum* and *Aum Shanti* three times. Feel your body, feel the breath moving through it. Place the awareness at a single point such as the eyebrow center or the heart center and visualize there a bright point of light. Deep breath in to chant the mantra *Aum*.
+
+*Shanti, Shanti, Shanti, Hari, Om.*
+
+Hands in *prana mudra*, thumbs in contact with the sternum. Deep breath in and out, feel the torso expand and contract. Move into a vigorous round of palming, feel the sensations, feel the heat. When you cover the eyes, feel the warmth, notice anything in the darkened space. Inhale the *prana*, the energy back in through your eyes, into your head. Exhale down the whole spine, nervous system, and body, lowering your hands. *Hari Om Tat Sat*.
+
+Thank you for your patience and the extension in time. Next session is our last session. Again, any questions or ahead of time to Ale, if there's any direction you want to go, I still have slides continuing from today to move into.
+
+And Ale had attended a talk where I shared an example that has been really valuable to me for my real human life. And I want to end the next session making sure I present that to you.
+
+And then you're on your own to discover and to share back to the whole world. Have a wonderful day and week. I will see you all on June 23rd. I have no awareness exercise other than be aware of sound and how it influences your different — How do you want that said? Thank you.
+
+---
+
+*Transcribed and formatted with human-AI collaboration*

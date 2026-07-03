@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary of Terms | The Five Koshas — TTC-300, Uruguay</title>
+  <meta name="description" content="Glossary of yoga and Sanskrit terms, with definitions drawn from the four Koshas sessions by Satchidananda.">
+  <link rel="stylesheet" href="../_assets/shared.css">
+  <link rel="stylesheet" href="../_assets/eleventy-extra.css">
+</head>
+<body>
+  <a href="#content" class="skip-nav">Skip to content</a>
+
+  <header data-pagefind-ignore>
+    <h1>Glossary of Terms</h1>
+    <p id="header-subtitle">The Five Koshas &mdash; 300-Hour Teacher Training, Uruguay</p>
+  </header>
+
+  <div class="lang-toggle" data-pagefind-ignore>
+    <a href="?lang=en" onclick="loadGloss('en');return false;" class="lang-btn active" role="button" aria-pressed="true"
+       id="btn-en"><span class="lang-full">English</span><span class="lang-abbr" aria-hidden="true">Eng.</span><span class="lang-sublabel lang-sublabel-full">Original</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">Orig.</span></a>
+    <a href="?lang=es" onclick="loadGloss('es');return false;" class="lang-btn" role="button" aria-pressed="false"
+       id="btn-es"><span class="lang-full">Espa&ntilde;ol</span><span class="lang-abbr" aria-hidden="true">Esp.</span><span class="lang-sublabel lang-sublabel-full">IA Traducido</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">IA Trad.</span></a>
+  </div>
+
+  <div id="content" data-pagefind-body><p id="loading">Loading&hellip;</p></div>
+
+  <footer data-pagefind-ignore>
+    <a id="footer-nav" href="../">&#8592; Back to the series</a>
+    <div id="site-credit" class="site-credit">Made with 🧠❤️🙏 by <a href="https://yogicapproach.com" target="_blank" rel="noopener">YogicApproach</a>.</div>
+  </footer>
+
+  <script src="marked.min.js"></script>
+  <script src="../_assets/shared.js"></script>
+  <script>
+    function loadGloss(lang) {
+      ["en", "es"].forEach(function (l) { document.getElementById("btn-" + l).classList.toggle("active", lang === l); });
+      document.documentElement.lang = lang;
+      var u = new URL(location); u.searchParams.set("lang", lang); history.replaceState(null, "", u);
+      var el = document.getElementById("content");
+      el.innerHTML = '<p id="loading">Loading&hellip;</p>';
+      fetch("glossary-" + lang + ".md").then(function (r) { if (!r.ok) throw 0; return r.text(); })
+        .then(function (md) { el.innerHTML = marked.parse(md); if (location.hash) { var t = document.querySelector(location.hash); if (t) t.scrollIntoView(); } })
+        .catch(function () { el.innerHTML = '<p style="color:#b3402a;text-align:center;padding:40px;">Could not load the glossary.</p>'; });
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      loadGloss(new URLSearchParams(location.search).get("lang") === "es" ? "es" : "en");
+    });
+  </script>
+</body>
+</html>

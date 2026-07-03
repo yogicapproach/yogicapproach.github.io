@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connection | The Five Koshas — TTC-300, Uruguay</title>
+  <meta name="description" content="Satchidananda — 300-Hour Teacher Training, Uruguay — June 16, 2026 — The Five Koshas">
+  <link rel="stylesheet" href="../_assets/shared.css">
+  <link rel="stylesheet" href="../_assets/eleventy-extra.css">
+  <style>
+    /* Koshas: discreet section-heading timestamp -> YouTube deep-link (our addition).
+       HIDDEN BY DEFAULT — wrapped in .ts so they can be revealed globally with one switch:
+       set <html data-ts="on"> (or add ?ts=1 to the URL, or call toggleTimestamps()). */
+    #content a.ts { display: none; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .58em; font-weight: 400; vertical-align: .35em; margin-left: .45em; opacity: .55; text-decoration: none; }
+    html[data-ts="on"] #content a.ts { display: inline; }
+    #content a.ts:hover { opacity: 1; }
+    /* PDF cover card reuses the audio-card look */
+    .resource-pdf-card .resource-cover { object-fit: cover; }
+  </style>
+</head>
+<body>
+  <a href="#content" class="skip-nav">Skip to content</a>
+
+  <header data-pagefind-ignore>
+    <h1>Connection</h1>
+    <p id="header-subtitle">Satchidananda &mdash; 300-Hour Teacher Training, Uruguay &mdash; June 16, 2026</p>
+  </header>
+
+  <div class="lang-toggle" data-pagefind-ignore>
+    <a href="?lang=en" onclick="loadTranscript('en');return false;" class="lang-btn active" role="button" aria-pressed="true"
+       id="btn-en"><span class="lang-full">English</span><span class="lang-abbr" aria-hidden="true">Eng.</span><span class="lang-sublabel lang-sublabel-full">Original</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">Orig.</span></a>
+    <a href="?lang=es" onclick="loadTranscript('es');return false;" class="lang-btn" role="button" aria-pressed="false"
+       id="btn-es"><span class="lang-full">Espa&ntilde;ol</span><span class="lang-abbr" aria-hidden="true">Esp.</span><span class="lang-sublabel lang-sublabel-full">IA Traducido</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">IA Trad.</span></a>
+    <a href="?lang=ne" onclick="loadTranscript('ne');return false;" class="lang-btn" role="button" aria-pressed="false"
+       id="btn-ne"><span class="lang-full">&#2344;&#2375;&#2346;&#2366;&#2354;&#2368;</span><span class="lang-abbr" aria-hidden="true">&#2344;&#2375;&#2346;.</span><span class="lang-sublabel lang-sublabel-full">AI &#2309;&#2344;&#2369;&#2357;&#2366;&#2342;&#2367;&#2340;</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">AI &#2309;&#2344;&#2369;.</span></a>
+  </div>
+
+  <div id="other-talks" data-pagefind-ignore>
+    <span id="other-talks-label" data-href="../">Select <a href="../">another talk</a>:</span>
+    <select id="talk-select" aria-label="Select a talk" onchange="handleTalkSelect(this)">
+      <option value="">-- Choose --</option>
+      <option value="../?lang=en">Synthesis — Exploring the Koshas (all four sessions)</option>
+      <option value="../s1/?lang=en">Session 1 — The Five Koshas</option>
+      <option value="../s3/?lang=en">Session 3 — Sound &amp; Mantra</option>
+      <option value="../s4/?lang=en">Session 4 — Sound, Mantra &amp; Visualization</option>
+      <option value="../glossary/?lang=en" data-newtab="true">Glossary of Terms</option>
+    </select>
+  </div>
+
+  <section id="resources-section">
+    <div class="resources-heading"></div>
+    <div id="resources-audio"></div>
+    <div id="resources-pdfs"></div>
+  </section>
+
+  <div id="content" data-pagefind-body><p id="loading">Loading&hellip;</p></div>
+
+  <div id="img-modal" onclick="this.classList.remove('open')">
+    <button id="img-modal-close" onclick="event.stopPropagation();document.getElementById('img-modal').classList.remove('open')" aria-label="Close image">&#x2715;</button>
+    <img id="img-modal-img" src="" alt="">
+  </div>
+
+  <footer data-pagefind-ignore>
+    <a id="footer-nav" href="../">&#8592; Back to the series</a>
+    <div id="site-credit" class="site-credit">Made with 🧠❤️🙏 by <a href="https://yogicapproach.com" target="_blank" rel="noopener">YogicApproach</a>.</div>
+  </footer>
+
+  <script src="marked.min.js"></script>
+  <script src="../_assets/shared.js"></script>
+  <script>
+    // Runtime viewer (no Eleventy build): section-heading [mm:ss] -> discreet YouTube deep-link.
+    // We wrap marked so the koshas section timestamps become links after render.
+    window.RESOURCES_BASE = "../resources/";  // series-level shared media
+    // HEADER_LOCALIZE: localize the page <h1> + subtitle per language (events parity).
+    var _HDR = {
+      title: { en: 'Connection', es: 'Conexión', ne: 'जडान' },
+      sub: {
+        en: "Satchidananda &mdash; 300-Hour Teacher Training, Uruguay &mdash; June 16, 2026",
+        es: "Satchidananda &mdash; Formación Docente de 300 Horas, Uruguay &mdash; 16 de junio de 2026",
+        ne: "Satchidananda &mdash; ३०० घण्टे शिक्षक प्रशिक्षण, उरुग्वे &mdash; १६ जुन २०२६"
+      }
+    };
+    (function () { var _o = window.loadTranscript; window.loadTranscript = function (l) { if (_o) _o(l); var h = document.querySelector("header h1"), sb = document.getElementById("header-subtitle"); if (h && _HDR.title[l]) h.textContent = _HDR.title[l]; if (sb && _HDR.sub[l]) sb.innerHTML = _HDR.sub[l]; }; })();
+    var _YT = "ePMCVVGHEKU";
+    (function () {
+      var _origParse = marked.parse.bind(marked);
+      marked.parse = function (md) {
+        var html = _origParse(md);
+        return html.replace(/\[(\d{1,2}):(\d{2})(?::(\d{2}))?\]/g, function (_, a, b, c) {
+          var sec = c !== undefined ? (+a)*3600+(+b)*60+(+c) : (+a)*60+(+b);
+          var label = c !== undefined ? a+":"+b+":"+c : a+":"+b;
+          return '<a class="ts" href="https://www.youtube.com/watch?v=' + _YT + '&t=' + sec +
+                 's" target="_blank" rel="noopener" title="Watch this moment">' + label + '</a>';
+        });
+      };
+    })();
+    // Section timestamps are hidden by default. Reveal globally with any of:
+    //   ?ts=1 in the URL, or call toggleTimestamps() (e.g. from a future UI control).
+    window.toggleTimestamps = function () {
+      var on = document.documentElement.getAttribute("data-ts") === "on";
+      document.documentElement.setAttribute("data-ts", on ? "off" : "on");
+    };
+    document.addEventListener("DOMContentLoaded", function () {
+      var q = new URLSearchParams(location.search);
+      if (q.get("ts") === "1" || q.get("ts") === "on") document.documentElement.setAttribute("data-ts", "on");
+      loadTranscript(q.get("lang") || "en");
+    });
+  </script>
+</body>
+</html>

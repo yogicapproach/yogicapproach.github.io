@@ -1,0 +1,42 @@
+{
+  "resources": [
+    {
+      "type": "audio",
+      "title": "El sonido que organiza la materia",
+      "description": "Audio recap of this session",
+      "description_es": "Resumen en audio de esta sesión",
+      "description_ne": "यस सत्रको अडियो सारांश",
+      "file": "podcasts/session-3-4-el-sonido-que-organiza-la-materia.m4a",
+      "cover": "infographics/la-resonancia-de-la-conexion.png",
+      "artist": "YogicApproach",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "type": "pdf",
+      "title": "Resonant Teaching Mastery — Sound, Mantra & the Teacher's Craft",
+      "description": "Session 3 slides",
+      "description_es": "Diapositivas de la Sesión 3",
+      "file": "slides/resonant-teaching-mastery.pdf",
+      "cover": "slides/thumbs/resonant-teaching-mastery.png",
+      "lang": "eng"
+    },
+    {
+      "type": "pdf",
+      "title": "Resonant Yoga Craft — From Connection to Resonance",
+      "description": "Session 3 slides",
+      "description_es": "Diapositivas de la Sesión 3",
+      "file": "slides/resonant-yoga-craft.pdf",
+      "cover": "slides/thumbs/resonant-yoga-craft.png",
+      "lang": "eng"
+    },
+    {
+      "type": "pdf",
+      "title": "Tuning the Teacher's Craft — The Cosmology of Sound",
+      "description": "Session 3 slides",
+      "description_es": "Diapositivas de la Sesión 3",
+      "file": "slides/tuning-the-teacher-s-craft.pdf",
+      "cover": "slides/thumbs/tuning-the-teacher-s-craft.png",
+      "lang": "eng"
+    }
+  ]
+}

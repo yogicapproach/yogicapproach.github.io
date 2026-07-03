@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "type": "audio",
+      "title": "Maneja tu energía con los cinco koshas",
+      "description": "Audio recap of this session",
+      "description_es": "Resumen en audio de esta sesión",
+      "description_ne": "यस सत्रको अडियो सारांश",
+      "file": "podcasts/maneja-tu-energia-con-los-cinco-koshas.m4a",
+      "cover": "infographics/modelo-koshas-metafora-del-automovil.png",
+      "artist": "YogicApproach",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "type": "pdf",
+      "title": "The Human Operating System — From the Classic Model to a Living Control System",
+      "description": "Session 1 slides",
+      "description_es": "Diapositivas de la Sesión 1",
+      "file": "slides/the-human-operating-system.pdf",
+      "cover": "slides/thumbs/the-human-operating-system.png",
+      "lang": "eng"
+    }
+  ]
+}

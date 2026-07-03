@@ -1,0 +1,36 @@
+{
+  "resources": [
+    {
+      "type": "audio",
+      "title": "Cómo integrar tus cinco koshas",
+      "description": "Audio recap of this session",
+      "description_es": "Resumen en audio de esta sesión",
+      "description_ne": "यस सत्रको अडियो सारांश",
+      "file": "podcasts/como-integrar-tus-cinco-koshas.m4a",
+      "cover": "infographics/los-5-koshas-del-ser.png",
+      "artist": "YogicApproach",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "type": "pdf",
+      "title": "Integrating the Five Koshas",
+      "description": "Session 4 slides",
+      "description_es": "Diapositivas de la Sesión 4",
+      "file": "slides/integrating-the-five-koshas.pdf",
+      "cover": "slides/thumbs/integrating-the-five-koshas.png",
+      "lang": "eng"
+    },
+    {
+      "type": "book",
+      "title": "The Brain That Changes Itself",
+      "author": "Norman Doidge, M.D.",
+      "description": "Referenced in this session — modern case studies that visualization can change the body.",
+      "description_es": "Citado en esta sesión — casos modernos de que la visualización puede cambiar el cuerpo.",
+      "cover": "references/brain-that-changes-itself.jpg",
+      "links": [
+        { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Brain_that_Changes_Itself" },
+        { "label": "normandoidge.com", "url": "https://normandoidge.com/?page_id=1259" }
+      ]
+    }
+  ]
+}

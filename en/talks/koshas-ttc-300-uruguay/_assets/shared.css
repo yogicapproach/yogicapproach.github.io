@@ -1,0 +1,335 @@
+/* shared.css — common styles for all event transcript pages */
+
+/* ── Design tokens ───────────────────────────────────────────── */
+:root {
+    --color-accent: #2a6496;
+    --color-text: #333;
+    --color-text-muted: #666;
+    --color-text-faint: #999;
+    --color-border: #ddd;
+    --color-border-strong: #e0e0e0;
+    --color-bg: #f7f7f7;
+    --color-bg-subtle: #f5f5f5;
+    --color-bg-card: #fdfdfd;
+    --color-bg-card-border: #e4e4e4;
+    --color-btn-border: #555;
+    --color-btn-bg: white;
+    --color-btn-active-bg: #555;
+    --color-btn-hover-bg: #444;
+    --color-badge-bg: #f0f0f0;
+    --color-badge-text: #888;
+    --color-error: #c00;
+    --font-body: Georgia, 'Times New Roman', serif;
+    --font-ui: system-ui, -apple-system, sans-serif;
+    --font-size-base: 18px;
+    --line-height-body: 1.8;
+    --max-width: 800px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: var(--font-size-base); }
+body { font-family: var(--font-body); line-height: var(--line-height-body); color: var(--color-text); background: var(--color-bg); max-width: var(--max-width); margin: 0 auto; padding: 20px; }
+header { text-align: center; padding: 30px 0 20px; border-bottom: 1px solid var(--color-border); margin-bottom: 20px; }
+header h1 { font-size: 1.8em; margin-bottom: 5px; }
+header p { color: var(--color-text-muted); font-size: 0.95em; }
+.lang-toggle { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
+.lang-toggle button {
+    padding: 8px 24px; font-size: 1em; cursor: pointer;
+    border: 2px solid var(--color-btn-border); border-radius: 4px;
+    background: var(--color-btn-bg); color: var(--color-btn-border); transition: all 0.2s;
+}
+.lang-toggle button.active { background: var(--color-btn-active-bg); color: var(--color-bg); }
+.lang-toggle button:hover { background: var(--color-btn-hover-bg); color: var(--color-bg); }
+.topbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 20px;
+    background: var(--color-bg-subtle);
+    border-bottom: 1px solid var(--color-border-strong);
+    font-size: 0.85em;
+    color: var(--color-text-muted);
+    gap: 4px;
+    margin: -20px -20px 20px -20px;
+}
+.topbar-credit a { color: var(--color-accent); text-decoration: none; }
+.topbar-credit a:hover { text-decoration: underline; }
+.topbar-links { display: flex; align-items: center; gap: 6px; }
+.topbar-links a { color: var(--color-accent); text-decoration: none; }
+.topbar-links a:hover { text-decoration: underline; }
+.topbar-sep { color: var(--color-accent); }
+.lang-sublabel { display: block; font-size: 0.65em; opacity: 0.75; }
+#content { padding: 10px 0; }
+#content h1 { font-size: 1.6em; margin: 1.5em 0 0.5em; }
+#content h2 { font-size: 1.3em; margin: 1.3em 0 0.4em; }
+#content h3 { font-size: 1.1em; margin: 1.1em 0 0.3em; }
+#content p { margin: 0.8em 0; }
+#content ul, #content ol { margin: 0.8em 0; padding-left: 1.5em; }
+#content li { margin: 0.3em 0; }
+#content hr { border: none; border-top: 1px solid var(--color-border); margin: 2em 0; }
+#content blockquote { border-left: 3px solid var(--color-border); padding-left: 1em; color: var(--color-text-muted); margin: 1em 0; }
+#content em { font-style: italic; }
+#content strong { font-weight: bold; }
+#content a { color: var(--color-accent); }
+#loading { text-align: center; padding: 40px; color: var(--color-text-faint); }
+footer {
+    display: block;
+    margin-top: 40px;
+    border-top: 1px solid var(--color-border);
+    padding: 0;
+}
+#footer-nav {
+    display: block;
+    text-align: center;
+    padding: 16px 0 12px;
+    color: var(--color-text-faint);
+    font-size: 0.85em;
+    text-decoration: none;
+}
+#footer-nav:hover { text-decoration: underline; }
+.footer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 20px;
+    background: var(--color-bg-subtle);
+    border-top: 1px solid var(--color-border-strong);
+    margin: 0 -20px -20px -20px;
+    font-size: 0.78em;
+    color: var(--color-text-muted);
+    gap: 4px;
+}
+.footer-bar .site-credit a { color: var(--color-accent); text-decoration: none; }
+.footer-bar .site-credit a:hover { text-decoration: underline; }
+.footer-links { display: flex; align-items: center; gap: 6px; }
+.footer-links a { color: var(--color-accent); text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; }
+
+/* Resources section */
+#resources-section { margin: 0 0 24px; padding: 18px 0 4px; border-top: 1px solid var(--color-border); }
+.resources-heading {
+    font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--color-text-faint); margin-bottom: 16px; font-family: Georgia, serif;
+}
+.resource-audio-card {
+    display: flex; flex-wrap: wrap; gap: 0 14px; align-items: flex-start;
+    margin-bottom: 12px; padding: 12px;
+    border: 1px solid var(--color-bg-card-border); border-radius: 6px; background: var(--color-bg-card);
+}
+.resource-cover {
+    width: 72px; height: 72px; object-fit: cover;
+    border-radius: 4px; flex-shrink: 0; cursor: zoom-in;
+}
+#img-modal {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.50); z-index: 999;
+    align-items: center; justify-content: center; cursor: zoom-out;
+}
+#img-modal.open { display: flex; }
+#img-modal img { max-width: 90vw; max-height: 90vh; border-radius: 6px; position: relative; }
+.resource-body { flex: 1; min-width: 0; }
+.resource-title { font-weight: bold; font-size: 0.95em; margin-bottom: 1px; }
+.resource-meta { font-size: 0.82em; color: var(--color-badge-text); margin-bottom: 6px; }
+.resource-player { flex: 0 0 100%; height: 24px; margin-top: 4px; }
+.resource-download { font-size: 0.82em; color: var(--color-accent); text-decoration: none; }
+.resource-download:hover { text-decoration: underline; }
+.resource-pdfs { margin-top: 12px; }
+.resource-pdfs-heading {
+    font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--color-text-faint); margin-bottom: 8px;
+}
+.resource-pdf-item { margin: 5px 0; font-size: 0.88em; }
+.resource-pdf-item a { color: var(--color-accent); text-decoration: none; }
+.resource-pdf-item a:hover { text-decoration: underline; }
+.lang-badge {
+    display: inline-block; font-size: 0.72em; background: var(--color-badge-bg);
+    color: var(--color-badge-text); border-radius: 3px; padding: 1px 5px;
+    margin-left: 6px; vertical-align: middle; font-family: sans-serif;
+}
+.pdf-icon { color: var(--color-error); margin-right: 4px; font-style: normal; font-size: 0.85em; }
+details.compact-pdfs { margin-top: 10px; }
+details.compact-pdfs summary {
+    font-size: 0.82em; color: var(--color-badge-text); cursor: pointer;
+    list-style: none; display: flex; align-items: center; gap: 4px;
+    min-height: 44px;
+}
+details.compact-pdfs summary::-webkit-details-marker { display: none; }
+details.compact-pdfs summary::before { content: '▶'; font-size: 0.7em; }
+details.compact-pdfs[open] summary::before { content: '▼'; }
+details.compact-pdfs .compact-list { margin-top: 8px; padding-left: 4px; }
+
+/* ── Talk selector row ───────────────────────────────────────── */
+#other-talks {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: var(--color-text-muted);
+}
+#talk-select {
+    font-size: 0.95em;
+    padding: 4px 8px;
+    max-width: 100%;
+}
+
+/* ── Error message ───────────────────────────────────────────── */
+.error-message { color: var(--color-error); }
+
+/* ── Language select (mobile) ────────────────────────────────── */
+/* On mobile, replace 3-button toggle with a native <select> */
+.lang-select-mobile {
+    display: none;
+    width: 100%; max-width: 320px;
+    margin: 12px auto; padding: 10px 12px;
+    font-size: 1em; border: 2px solid var(--color-btn-border);
+    border-radius: 4px; background: var(--color-btn-bg); color: var(--color-text);
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .lang-toggle { display: none; }
+    .lang-select-mobile { display: block; }
+    #other-talks-label span, #other-talks-label > span { display: none; }
+}
+
+/* ── Responsive / Mobile ─────────────────────────────────────── */
+@media (max-width: 480px) {
+    body { padding: 12px; }
+
+    /* Topbar and footer-bar: tighter on small screens */
+    .topbar { margin: -12px -12px 12px -12px; padding: 3px 12px; }
+    .footer-bar { margin: 0 -12px -12px -12px; padding: 3px 12px; }
+
+    /* Talk selector: prevent overflow */
+    #talk-select { max-width: 100%; }
+    #other-talks { padding: 0 4px; }
+
+    /* Resource cards: tighter layout */
+    .resource-audio-card { gap: 10px; }
+    .resource-cover { width: 56px; height: 56px; }
+
+    /* Headings: scale down slightly */
+    header h1 { font-size: 1.25em; }
+    #content h1 { font-size: 1.35em; }
+    #content h2 { font-size: 1.15em; }
+}
+
+@media (max-width: 360px) {
+    /* Extra-narrow fallback */
+    .topbar-credit { display: none; }
+    .lang-toggle button { font-size: 0.9em; }
+}
+
+/* ── Focus indicators (WCAG 2.1 SC 2.4.7) ───────────────────── */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* ── Skip navigation ─────────────────────────────────────────── */
+.skip-nav {
+    position: absolute; top: -40px; left: 0;
+    background: var(--color-accent); color: white;
+    padding: 8px 16px; text-decoration: none;
+    border-radius: 0 0 4px 0; z-index: 1000;
+    transition: top 0.2s;
+}
+.skip-nav:focus { top: 0; }
+
+/* ── Modal close button ──────────────────────────────────────── */
+#img-modal-close {
+    position: absolute; top: 16px; right: 16px;
+    width: 44px; height: 44px;
+    background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 50%; color: white; font-size: 1.4em; line-height: 1;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    z-index: 1000;
+}
+#img-modal-close:hover { background: rgba(255,255,255,0.3); }
+
+/* ── Devanagari / Nepali script ─────────────────────────────── */
+/* No font-family override — Nirmala UI (Windows) and system Devanagari fonts
+   render better than Noto Sans Devanagari on most platforms. Spacing only. */
+:lang(ne) #content {
+    line-height: 2.0;
+    font-size: 1.05em;
+}
+
+/* ── Dark mode (system preference) ──────────────────────────── */
+/* Override colour tokens only — no selector rules here.
+   Issue #69: https://github.com/yogicapproach/events/issues/69
+   Manual toggle (#77) layers on top via [data-theme] with higher specificity. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-accent: #6aabdb;
+        --color-text: #e0e0e0;
+        --color-text-muted: #aaa;
+        --color-text-faint: #777;
+        --color-border: #3a3a3a;
+        --color-border-strong: #2e2e2e;
+        --color-bg: #1a1a1a;
+        --color-bg-subtle: #212121;
+        --color-bg-card: #242424;
+        --color-bg-card-border: #333;
+        --color-btn-border: #888;
+        --color-btn-bg: #2a2a2a;
+        --color-btn-active-bg: #888;
+        --color-btn-hover-bg: #999;
+        --color-badge-bg: #2e2e2e;
+        --color-badge-text: #999;
+        --color-error: #ff6b6b;
+    }
+}
+
+/* ── Theme toggle (manual override) — Issue #77 ─────────────── */
+/* Higher specificity than :root inside @media — always wins.    */
+:root[data-theme="dark"] {
+    --color-accent: #6aabdb;
+    --color-text: #e0e0e0;
+    --color-text-muted: #aaa;
+    --color-text-faint: #777;
+    --color-border: #3a3a3a;
+    --color-border-strong: #2e2e2e;
+    --color-bg: #1a1a1a;
+    --color-bg-subtle: #212121;
+    --color-bg-card: #242424;
+    --color-bg-card-border: #333;
+    --color-btn-border: #888;
+    --color-btn-bg: #2a2a2a;
+    --color-btn-active-bg: #888;
+    --color-btn-hover-bg: #999;
+    --color-badge-bg: #2e2e2e;
+    --color-badge-text: #999;
+    --color-error: #ff6b6b;
+}
+:root[data-theme="light"] {
+    --color-accent: #2a6496;
+    --color-text: #333;
+    --color-text-muted: #666;
+    --color-text-faint: #999;
+    --color-border: #ddd;
+    --color-border-strong: #e0e0e0;
+    --color-bg: #f7f7f7;
+    --color-bg-subtle: #f5f5f5;
+    --color-bg-card: #fdfdfd;
+    --color-bg-card-border: #e4e4e4;
+    --color-btn-border: #555;
+    --color-btn-bg: white;
+    --color-btn-active-bg: #555;
+    --color-btn-hover-bg: #444;
+    --color-badge-bg: #f0f0f0;
+    --color-badge-text: #888;
+    --color-error: #c00;
+}
+
+/* ── Theme toggle button ─────────────────────────────────────── */
+.theme-toggle-btn {
+    background: none; border: none; cursor: pointer;
+    font-size: 1em; padding: 2px 4px; line-height: 1;
+    opacity: 0.75; vertical-align: middle;
+}
+.theme-toggle-btn:hover { opacity: 1; }

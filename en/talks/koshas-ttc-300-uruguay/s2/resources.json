@@ -1,0 +1,33 @@
+{
+  "resources": [
+    {
+      "type": "audio",
+      "title": "Reprograma tu interior con los cinco koshas",
+      "description": "Audio recap",
+      "description_es": "Resumen en audio",
+      "description_ne": "अडियो सारांश",
+      "file": "podcasts/reprograma-tu-interior-con-los-cinco-koshas.m4a",
+      "cover": "infographics/los-5-koshas-del-ser.png",
+      "artist": "YogicApproach",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "type": "pdf",
+      "title": "The Physics of Connection",
+      "description": "Session 2 slides",
+      "description_es": "Diapositivas de la Sesión 2",
+      "file": "slides/the-physics-of-connection.pdf",
+      "cover": "slides/thumbs/the-physics-of-connection.png",
+      "lang": "eng"
+    },
+    {
+      "type": "pdf",
+      "title": "Kosha Cybernetics — Anatomy of a Living System",
+      "description": "Session 2 slides",
+      "description_es": "Diapositivas de la Sesión 2",
+      "file": "slides/kosha-cybernetics.pdf",
+      "cover": "slides/thumbs/kosha-cybernetics.png",
+      "lang": "eng"
+    }
+  ]
+}
