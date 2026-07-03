@@ -35,22 +35,15 @@ function toggleTheme() {
 var _eventsCache = null;
 var _currentProgram = '';
 
-// TODO(koshas talks): topbar "Share feedback / Report issue" must point to a NEW Google Form
-// for these talks (the student D1 SurveyJS form at feedback/participant/ is SEPARATE and already
-// shared — do not reuse it here). The ID below is the EVENTS form (placeholder until the koshas
-// form exists). Wiring the new form also needs its prefill entry IDs (see _formUrl) or drop the
-// entry.* params for a plain link. Set _FORM_ID (and the entry.* IDs) once the form is created.
-var _FORM_ID = '1FAIpQLSd0ZP73-dDwgR52tmMPd-wSwx-W7hlHFaOdR-vV72fDwlaUYA'; // TODO: replace with koshas form id
-var _FORM_BASE = 'https://docs.google.com/forms/d/e/' + _FORM_ID + '/viewform';
+// Topbar "Share feedback / Report issue" -> the koshas talks Google Form (separate from the
+// student D1 SurveyJS form at feedback/participant/, which is frozen). It's a forms.gle short
+// link, so we link to it directly without prefill entry.* params (the short link doesn't carry
+// them through its redirect, and we don't have this form's field IDs).
+var _FORM_BASE = 'https://forms.gle/znsUhH7p5hUndipe6';
 var _LANG_MAP = { en: 'English', es: 'Spanish', ne: 'Nepali' };
 
 function _formUrl(type, lang) {
-    var params = [
-        'entry.1318168213=' + encodeURIComponent(type === 'feedback' ? 'Share Feedback' : 'Report Issue'),
-        'entry.119875362=' + encodeURIComponent(_LANG_MAP[lang] || 'English')
-    ];
-    if (_currentProgram) params.push('entry.625098476=' + encodeURIComponent(_currentProgram));
-    return _FORM_BASE + '?' + params.join('&');
+    return _FORM_BASE;
 }
 
 function _topbarStrings(lang) {
