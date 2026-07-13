@@ -11,7 +11,7 @@ window.KOSHAS_SERIES = {
     teacher: "Satchidananda",
     host: "Ale",
     blurb: "A four-session journey through the five sheaths — from the traditional map toward a living, practical framework you can teach from and practise within.",
-    recording: "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
+    recording: "",
     upcoming_label: "Notes appear after the class",
     open_label: "Open notes",
     sessions: [
@@ -28,7 +28,7 @@ window.KOSHAS_SERIES = {
     teacher: "Satchidananda",
     host: "Ale",
     blurb: "Un recorrido de cuatro clases por las cinco envolturas — desde el mapa tradicional hacia un marco vivo y práctico desde el cual enseñar y dentro del cual practicar.",
-    recording: "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
+    recording: "",
     upcoming_label: "Los apuntes aparecen después de la clase",
     open_label: "Abrir apuntes",
     sessions: [
@@ -52,7 +52,7 @@ window.KOSHAS_SERIES = {
     teacher: "Satchidananda",
     host: "Ale",
     blurb: "पाँच कोशहरूको माध्यमबाट चार सत्रको यात्रा — परम्परागत नक्साबाट एक जीवन्त, व्यावहारिक ढाँचातर्फ जसबाट तपाईं सिकाउन र अभ्यास गर्न सक्नुहुन्छ।",
-    recording: "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
+    recording: "",
     upcoming_label: "कक्षापछि नोटहरू देखा पर्नेछन्",
     open_label: "नोटहरू खोल्नुहोस्",
     sessions: [
@@ -74,7 +74,7 @@ window.KOSHAS_SERIES = {
     teacher: "Satchidananda",
     host: "Ale",
     blurb: "⚠TODO[pt]: A four-session journey through the five sheaths — from the traditional map toward a living, practical framework you can teach from and practise within.",
-    recording: "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
+    recording: "",
     upcoming_label: "⚠TODO[pt]: Notes appear after the class",
     open_label: "⚠TODO[pt]: Open notes",
     sessions: [

@@ -21,8 +21,8 @@ window.KOSHAS_I18N.en = {
     teacher: "Satchidananda",
     host: "Ale",
     date: "23 June 2026",
-    recording: "https://youtube.com/live/wXDXmb4MMR0",
-    note: "Built from the Session-4 transcript — the practice-based finale that ties the five koshas together. Chanted Sanskrit mantras are garbled by ASR and are named, not reproduced; the intended texts are the standard Saha Nāvavatu, Mahāmṛtyuñjaya, Gāyatrī and the 32 Names of Durgā. The five asanas were given as movement cues only — Sanskrit names are inferred from the cues (the five of Laghoo Shankhaprakshalana). Refer to the recording as the definitive source."
+    recording: "",
+    note: "Built from the Session-4 transcript — the practice-based finale that ties the five koshas together. Chanted Sanskrit mantras are garbled by ASR and are named, not reproduced; the intended texts are the standard Saha Nāvavatu, Mahāmṛtyuñjaya, Gāyatrī and the 32 Names of Durgā. The five asanas were given as movement cues only — Sanskrit names are inferred from the cues (the five of Laghoo Shankhaprakshalana). The source audio is the definitive record."
   },
 
   overview: {

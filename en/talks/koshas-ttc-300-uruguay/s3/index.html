@@ -11,9 +11,9 @@
     /* Koshas: discreet section-heading timestamp -> YouTube deep-link (our addition).
        HIDDEN BY DEFAULT — wrapped in .ts so they can be revealed globally with one switch:
        set <html data-ts="on"> (or add ?ts=1 to the URL, or call toggleTimestamps()). */
-    #content a.ts { display: none; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .58em; font-weight: 400; vertical-align: .35em; margin-left: .45em; opacity: .55; text-decoration: none; }
-    html[data-ts="on"] #content a.ts { display: inline; }
-    #content a.ts:hover { opacity: 1; }
+    #content .ts { display: none; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .58em; font-weight: 400; vertical-align: .35em; margin-left: .45em; opacity: .55; text-decoration: none; }
+    html[data-ts="on"] #content .ts { display: inline; }
+    #content .ts:hover { opacity: 1; }
     /* PDF cover card reuses the audio-card look */
     .resource-pdf-card .resource-cover { object-fit: cover; }
   </style>
@@ -81,7 +81,6 @@
       }
     };
     (function () { var _o = window.loadTranscript; window.loadTranscript = function (l) { if (_o) _o(l); var h = document.querySelector("header h1"), sb = document.getElementById("header-subtitle"); if (h && _HDR.title[l]) h.textContent = _HDR.title[l]; if (sb && _HDR.sub[l]) sb.innerHTML = _HDR.sub[l]; }; })();
-    var _YT = "7A1pu2XUiX4";
     (function () {
       var _origParse = marked.parse.bind(marked);
       marked.parse = function (md) {
@@ -89,8 +88,7 @@
         return html.replace(/\[(\d{1,2}):(\d{2})(?::(\d{2}))?\]/g, function (_, a, b, c) {
           var sec = c !== undefined ? (+a)*3600+(+b)*60+(+c) : (+a)*60+(+b);
           var label = c !== undefined ? a+":"+b+":"+c : a+":"+b;
-          return '<a class="ts" href="https://www.youtube.com/watch?v=' + _YT + '&t=' + sec +
-                 's" target="_blank" rel="noopener" title="Watch this moment">' + label + '</a>';
+          return '<span class="ts">' + label + '</span>';
         });
       };
     })();

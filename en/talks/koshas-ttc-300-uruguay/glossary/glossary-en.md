@@ -4,14 +4,14 @@
 
 ---
 
-**Note on This Glossary:** This glossary indexes the Sanskrit, yogic, and non-obvious terms as they were used across the four sessions of the koshas module delivered for the 300-hour teacher training in Uruguay in June 2026. Definitions are drawn from the sessions themselves — the teacher's own framing, etymologies and quotes — rather than generic dictionary text; where a term was developed across several sessions, the richest explanation is used. Citations \[1\]–\[4\] link to the original session recordings.
+**Note on This Glossary:** This glossary indexes the Sanskrit, yogic, and non-obvious terms as they were used across the four sessions of the koshas module delivered for the 300-hour teacher training in Uruguay in June 2026. Definitions are drawn from the sessions themselves — the teacher's own framing, etymologies and quotes — rather than generic dictionary text; where a term was developed across several sessions, the richest explanation is used. Citations \[1\]–\[4\] link to the session transcripts.
 
-| # | Date | Session | Recording |
+| # | Date | Session | Read |
 |---|------|---------|-----------|
-| \[1\] | 10 Jun | The Five Koshas — A Framework for Awareness | [Session 1](https://www.youtube.com/watch?v=fDUM_Rr7H-Q) |
-| \[2\] | 16 Jun | Connection — Wakefulness, Scale & the Gunas | [Session 2](https://www.youtube.com/live/ePMCVVGHEKU) |
-| \[3\] | 18 Jun | Sound & Mantra — Working the Koshas through Vibration | [Session 3](https://www.youtube.com/live/7A1pu2XUiX4) |
-| \[4\] | 23 Jun | Sound, Mantra & Visualization — The Practice-Based Integration | [Session 4](https://youtube.com/live/wXDXmb4MMR0) |
+| \[1\] | 10 Jun | The Five Koshas — A Framework for Awareness | [Session 1](../s1/) |
+| \[2\] | 16 Jun | Connection — Wakefulness, Scale & the Gunas | [Session 2](../s2/) |
+| \[3\] | 18 Jun | Sound & Mantra — Working the Koshas through Vibration | [Session 3](../s3/) |
+| \[4\] | 23 Jun | Sound, Mantra & Visualization — The Practice-Based Integration | [Session 4](../s4/) |
 
 ---
 
@@ -145,7 +145,7 @@
 
 *Generated: July 3, 2026*
 
-[1]: https://www.youtube.com/watch?v=fDUM_Rr7H-Q "Session 1 — The Five Koshas: A Framework for Awareness (10 Jun 2026)"
-[2]: https://www.youtube.com/live/ePMCVVGHEKU "Session 2 — Connection: Wakefulness, Scale & the Gunas (16 Jun 2026)"
-[3]: https://www.youtube.com/live/7A1pu2XUiX4 "Session 3 — Sound & Mantra (18 Jun 2026)"
-[4]: https://youtube.com/live/wXDXmb4MMR0 "Session 4 — Sound, Mantra & Visualization (23 Jun 2026)"
+[1]: ../s1/ "Session 1 — The Five Koshas: A Framework for Awareness (10 Jun 2026)"
+[2]: ../s2/ "Session 2 — Connection: Wakefulness, Scale & the Gunas (16 Jun 2026)"
+[3]: ../s3/ "Session 3 — Sound & Mantra (18 Jun 2026)"
+[4]: ../s4/ "Session 4 — Sound, Mantra & Visualization (23 Jun 2026)"

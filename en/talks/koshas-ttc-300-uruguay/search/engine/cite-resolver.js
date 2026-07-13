@@ -75,8 +75,7 @@
 
   function ytLink(vid, sec) {
     if (!vid) return null;
-    return "https://www.youtube.com/watch?v=" + encodeURIComponent(vid) +
-           "&t=" + Math.max(0, Math.floor(sec)) + "s";
+    return null;   // recording is not public
   }
 
   /**

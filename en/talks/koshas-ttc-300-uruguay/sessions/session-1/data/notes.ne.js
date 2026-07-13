@@ -19,8 +19,8 @@ window.KOSHAS_I18N.ne = {
     "teacher": "Satchidananda",
     "host": "Ale",
     "date": "⚠TODO[ne]: 10 June 2026",
-    "recording": "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
-    "note": "⚠TODO[ne]: Built from the Session-1 transcript. Quotes are the teacher's words (some reconstructed from the live Spanish translation — verify ⚠ blocks against the recording). Fields marked ‘to develop’ are framework seeds for Sessions 2–4."
+    "recording": "",
+    "note": "⚠TODO[ne]: Built from the Session-1 transcript. Quotes are the teacher's words (some reconstructed from the live Spanish translation — verify ⚠ blocks against the source audio). Fields marked ‘to develop’ are framework seeds for Sessions 2–4."
   },
   "overview": {
     "lead": "⚠TODO[ne]: Don’t take the koshas as five boxes to memorise. Take them as a set of lenses — and learn to change the lens on demand.",

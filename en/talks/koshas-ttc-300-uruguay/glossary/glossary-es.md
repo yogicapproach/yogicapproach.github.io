@@ -4,14 +4,14 @@
 
 ---
 
-**Nota sobre este Glosario:** Este glosario indexa los términos en sánscrito, yóguicos y no evidentes tal como fueron utilizados a lo largo de las cuatro sesiones del módulo de koshas dictado para la formación docente de 300 horas en Uruguay en junio de 2026. Las definiciones provienen de las propias sesiones — el encuadre, las etimologías y las citas del maestro — y no de un diccionario genérico; cuando un término se desarrolló a lo largo de varias sesiones, se usa la explicación más rica. Las citas \[1\]–\[4\] enlazan a las grabaciones originales de cada sesión.
+**Nota sobre este Glosario:** Este glosario indexa los términos en sánscrito, yóguicos y no evidentes tal como fueron utilizados a lo largo de las cuatro sesiones del módulo de koshas dictado para la formación docente de 300 horas en Uruguay en junio de 2026. Las definiciones provienen de las propias sesiones — el encuadre, las etimologías y las citas del maestro — y no de un diccionario genérico; cuando un término se desarrolló a lo largo de varias sesiones, se usa la explicación más rica. Las citas \[1\]–\[4\] enlazan a las transcripciones de cada sesión.
 
-| # | Fecha | Sesión | Grabación |
+| # | Fecha | Sesión | Leer |
 |---|-------|--------|-----------|
-| \[1\] | 10 de jun | Los Cinco Koshas — Un marco para la consciencia | [Sesión 1](https://www.youtube.com/watch?v=fDUM_Rr7H-Q) |
-| \[2\] | 16 de jun | Conexión — Vigilia, escala y las gunas | [Sesión 2](https://www.youtube.com/live/ePMCVVGHEKU) |
-| \[3\] | 18 de jun | Sonido y Mantra — Trabajar los koshas a través de la vibración | [Sesión 3](https://www.youtube.com/live/7A1pu2XUiX4) |
-| \[4\] | 23 de jun | Sonido, Mantra y Visualización — La integración desde la práctica | [Sesión 4](https://youtube.com/live/wXDXmb4MMR0) |
+| \[1\] | 10 de jun | Los Cinco Koshas — Un marco para la consciencia | [Sesión 1](../s1/) |
+| \[2\] | 16 de jun | Conexión — Vigilia, escala y las gunas | [Sesión 2](../s2/) |
+| \[3\] | 18 de jun | Sonido y Mantra — Trabajar los koshas a través de la vibración | [Sesión 3](../s3/) |
+| \[4\] | 23 de jun | Sonido, Mantra y Visualización — La integración desde la práctica | [Sesión 4](../s4/) |
 
 ---
 
@@ -145,7 +145,7 @@
 
 *Generado: 3 de julio de 2026*
 
-[1]: https://www.youtube.com/watch?v=fDUM_Rr7H-Q "Sesión 1 — Los Cinco Koshas: Un marco para la consciencia (10 de jun de 2026)"
-[2]: https://www.youtube.com/live/ePMCVVGHEKU "Sesión 2 — Conexión: Vigilia, escala y las gunas (16 de jun de 2026)"
-[3]: https://www.youtube.com/live/7A1pu2XUiX4 "Sesión 3 — Sonido y Mantra (18 de jun de 2026)"
-[4]: https://youtube.com/live/wXDXmb4MMR0 "Sesión 4 — Sonido, Mantra y Visualización (23 de jun de 2026)"
+[1]: ../s1/ "Sesión 1 — Los Cinco Koshas: Un marco para la consciencia (10 de jun de 2026)"
+[2]: ../s2/ "Sesión 2 — Conexión: Vigilia, escala y las gunas (16 de jun de 2026)"
+[3]: ../s3/ "Sesión 3 — Sonido y Mantra (18 de jun de 2026)"
+[4]: ../s4/ "Sesión 4 — Sonido, Mantra y Visualización (23 de jun de 2026)"

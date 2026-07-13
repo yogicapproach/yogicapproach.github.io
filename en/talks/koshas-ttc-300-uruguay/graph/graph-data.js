@@ -9,7 +9,7 @@ window.__GRAPH__ = {
       "20260610-koshas-ttc-300-uruguay/notes.md (Session 1)",
       "20260616-koshas-ttc-300-uruguay/notes.md (Session 2)",
       "20260618-koshas-ttc-300-uruguay/notes.md (Session 3)",
-      "20260623-koshas-ttc-300-uruguay/ (Session 4 — transcript + notes from the recording wXDXmb4MMR0)"
+      "20260623-koshas-ttc-300-uruguay/ (Session 4 — transcript + notes )"
     ],
     "method": "LLM-authored by reasoning over the session notes/transcripts (stage-2 curation of the auto-extractor output), not hand-written — see artifacts/koshas-graph/pipeline/.",
     "sessions": {

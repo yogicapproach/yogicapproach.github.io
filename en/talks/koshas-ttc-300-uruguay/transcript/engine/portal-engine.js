@@ -9,7 +9,7 @@
      - live MiniSearch query (prefix + fuzzy), debounced, with browse-all mode,
      - language + session filter pills,
      - paged results with term highlighting,
-     - each result deep-links to the recording at the cue's second via the
+     - each result carries the cue's timestamp (no public recording link) via the
        SHARED resolve(session, ts) interface (engine/resolver.js) — never bare.
 
    Nothing here knows about koshas. Sessions, the title, the audio URL scheme,
@@ -160,7 +160,7 @@
           : 'href="#" aria-disabled="true"';
         return (
           '<a class="tp-hit" ' + attrs + ' ' +
-              'title="Open the recording at ' + fmtTime(sec) + '">' +
+              'title="Timestamp ' + fmtTime(sec) + '">' +
             '<div class="tp-hit-top">' +
               '<span class="tp-chip tp-sess">' + escapeHtml(sessionChipLabel(sid)) + "</span>" +
               langChip(cueLang(cue)) + spk +

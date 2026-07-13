@@ -5,7 +5,7 @@
 
 ---
 
-**Note on This Transcript:** This document was created through human-AI collaboration using Whisper transcription technology. The original talk was delivered in English with real-time Spanish translation. While efforts have been made to ensure accuracy, transcription errors may occur. Please refer to the original video recording as the definitive source: [https://www.youtube.com/watch?v=7A1pu2XUiX4](https://www.youtube.com/watch?v=7A1pu2XUiX4)
+**Note on This Transcript:** This document was created through human-AI collaboration using Whisper transcription technology. The original talk was delivered in English with real-time Spanish translation. While efforts have been made to ensure accuracy, transcription errors may occur. The original recording is not publicly available.
 
 *New to the yoga terms in this talk? See the <a href="../glossary/?lang=en" target="_blank">Glossary of Terms</a>.*
 

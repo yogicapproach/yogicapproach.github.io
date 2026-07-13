@@ -16,7 +16,7 @@ window.KOSHAS_I18N.ne = {
     "teacher": "Satchidananda",
     "host": "Ale",
     "date": "२३ जुन २०२६",
-    "recording": "https://youtube.com/live/wXDXmb4MMR0",
+    "recording": "",
     "note": "चौथो सत्रको प्रतिलिपि (transcript) बाट तयार गरिएको — पाँच कोशलाई एकसाथ बाँध्ने, अभ्यासमा आधारित अन्तिम सत्र। गाइएका संस्कृत मन्त्रहरू ASR ले प्रतिलिपि गर्न सकेन; तिनलाई नाम मात्र दिइएको छ, पुन: प्रस्तुत गरिएको छैन — ती मानक Saha Nāvavatu, Mahāmṛtyuñjaya, Gāyatrī र Durgā का ३२ नामहरू हुन्। पाँच asana हरू केवल चालका सङ्केतका रूपमा दिइएका थिए — संस्कृत नामहरू ती सङ्केतबाट अनुमान गरिएका हुन् (Laghoo Shankhaprakshalana का पाँच asana)। निर्णायक स्रोतका रूपमा रेकर्डिङ हेर्नुहोस्।"
   },
   "overview": {

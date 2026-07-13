@@ -113,7 +113,7 @@
 
       var audio = res.audio
         ? '<a class="audio" href="' + res.audio + '" target="_blank" rel="noopener" ' +
-            'title="Open the recording at ' + res.time + '"><span class="play"></span>' +
+            'title="Timestamp ' + res.time + '"><span class="play"></span>' +
             res.time + "</a>"
         : '<span class="chip time" title="Audio-only — no online recording to deep-link">' +
             res.time + "</span>";

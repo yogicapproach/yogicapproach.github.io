@@ -18,8 +18,8 @@ window.KOSHAS_I18N.en = {
     teacher: "Satchidananda",
     host: "Ale",
     date: "10 June 2026",
-    recording: "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
-    note: "Built from the Session-1 transcript. Quotes are the teacher's words (some reconstructed from the live Spanish translation — verify ⚠ blocks against the recording). Fields marked ‘to develop’ are framework seeds for Sessions 2–4."
+    recording: "",
+    note: "Built from the Session-1 transcript. Quotes are the teacher's words (some reconstructed from the live Spanish translation — verify ⚠ blocks against the source audio). Fields marked ‘to develop’ are framework seeds for Sessions 2–4."
   },
 
   overview: {

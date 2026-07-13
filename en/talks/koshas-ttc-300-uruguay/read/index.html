@@ -64,10 +64,10 @@
     // ES = the translator's ORIGINAL spoken Spanish — being re-extracted from the audio via the
     // Shruti bilingual pipeline (not a re-translation), so add es files as they land.
     var SESSIONS = [
-      { id: "s1", n: 1, date: "June 10, 2026", en: true, es: true, yt: "fDUM_Rr7H-Q" },
-      { id: "s2", n: 2, date: "June 16, 2026", en: true, es: true, yt: "ePMCVVGHEKU" },
-      { id: "s3", n: 3, date: "June 18, 2026", en: true, es: true, yt: "7A1pu2XUiX4" },
-      { id: "s4", n: 4, date: "June 23, 2026", en: true, es: true, yt: "wXDXmb4MMR0" }
+      { id: "s1", n: 1, date: "June 10, 2026", en: true, es: true, yt: "" },
+      { id: "s2", n: 2, date: "June 16, 2026", en: true, es: true, yt: "" },
+      { id: "s3", n: 3, date: "June 18, 2026", en: true, es: true, yt: "" },
+      { id: "s4", n: 4, date: "June 23, 2026", en: true, es: true, yt: "" }
     ];
 
     // Present as a clean article: drop the processing/meta header, and turn [mm:ss] (or [h:mm:ss])
@@ -79,9 +79,9 @@
         var sec, label;
         if (c !== undefined) { sec = (+a) * 3600 + (+b) * 60 + (+c); label = a + ":" + b + ":" + c; }
         else { sec = (+a) * 60 + (+b); label = a + ":" + b; }
-        var href = ytId ? "https://www.youtube.com/watch?v=" + ytId + "&t=" + sec + "s" : "#";
+        var href = "#";
         return '<a class="ts" href="' + href + '" target="_blank" rel="noopener" ' +
-               'title="Watch this moment on YouTube">' + label + "</a> ";
+               'title="Timestamp">' + label + "</a> ";
       });
       return md.trim();
     }

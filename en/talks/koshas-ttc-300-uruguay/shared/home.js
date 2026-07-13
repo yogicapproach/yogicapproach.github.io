@@ -54,7 +54,7 @@
         ${LANGS.filter((l) => SERIES[l.code]).map((l) => `<button data-lang="${l.code}" lang="${l.code}" class="${LOCALE === l.code ? "on" : ""}" aria-pressed="${LOCALE === l.code}">${l.label}</button>`).join("")}
       </div>
       <button class="theme-btn" id="themeBtn" aria-label="${esc(t("theme_label"))}" title="${esc(t("theme_label"))}">${THEME === "dark" ? "☾" : "☀"}</button>
-      <a class="rec-link" href="${esc(S.recording)}" target="_blank" rel="noopener"><span class="rec-dot"></span> ${esc(t("recording"))}</a>
+      ${S.recording ? `<a class="rec-link" href="${esc(S.recording)}" target="_blank" rel="noopener"><span class="rec-dot"></span> ${esc(t("recording"))}</a>` : ""}
       <a class="rec-link graph-link" href="graph/"><span class="rec-dot"></span> ${esc({ en: "Knowledge Graph", es: "Grafo de conocimiento", ne: "ज्ञान ग्राफ" }[LOCALE] || "Knowledge Graph")}</a>
       <a class="rec-link transcript-link" href="transcript/"><span class="rec-dot"></span> ${esc({ en: "Transcript", es: "Transcripción", ne: "ट्रान्सक्रिप्ट" }[LOCALE] || "Transcript")}</a>
       <a class="rec-link read-link" href="read/"><span class="rec-dot"></span> ${esc({ en: "Read", es: "Leer", ne: "पढ्नुहोस्" }[LOCALE] || "Read")}</a>
@@ -94,8 +94,8 @@
     }).join("");
     const gLabel = { en: "Knowledge Graph", es: "Grafo de conocimiento", ne: "ज्ञान ग्राफ" }[LOCALE] || "Knowledge Graph";
     const gSub = {
-      en: "Explore how the koshas connect across all four sessions — tap a node, follow a thread, jump to the moment in the recording.",
-      es: "Explora cómo se conectan los koshas a lo largo de las cuatro sesiones — toca un nodo, sigue un hilo, salta al momento de la grabación.",
+      en: "Explore how the koshas connect across all four sessions — tap a node, follow a thread, trace an idea across the sessions.",
+      es: "Explora cómo se conectan los koshas a lo largo de las cuatro sesiones — toca un nodo, sigue un hilo, seguí una idea entre las sesiones.",
       ne: "चारवटै सत्रमा कोशहरू कसरी जोडिन्छन् अन्वेषण गर्नुहोस् — नोडमा थिच्नुहोस्, सूत्र पछ्याउनुहोस्।",
     }[LOCALE] || "Explore how the koshas connect across all four sessions.";
     view.innerHTML = `<div class="reveal">

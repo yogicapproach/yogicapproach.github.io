@@ -16,7 +16,7 @@ window.KOSHAS_I18N.ne = {
     "teacher": "Satchidananda",
     "host": "Ale",
     "date": "१८ जुन २०२६",
-    "recording": "https://www.youtube.com/live/7A1pu2XUiX4",
+    "recording": "",
     "note": "तेस्रो सत्रको प्रतिलिपि (transcript) बाट तयार गरिएको (शीर्षक ‘Filosofía’; टाढाबाट सिकाइएको)। गाइएका संस्कृत मन्त्रहरू Whisper ले प्रतिलिपि गर्न सकेन — तिनलाई नाम मात्र दिइएको छ, पुन: प्रस्तुत गरिएको छैन; ती मानक Mahāmṛtyuñjaya, Gāyatrī र Durgā का ३२ नामहरू हुन्। ‘विकसित गर्न बाँकी’ भनी चिन्ह लगाइएका क्षेत्रहरू अन्तिम सत्र ४ तर्फ लगिने ढाँचाका रूपहरू हुन्।"
   },
   "overview": {

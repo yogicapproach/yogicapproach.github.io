@@ -18,7 +18,7 @@ window.KOSHAS_I18N.es = {
     teacher: "Satchidananda",
     host: "Ale",
     date: "18 de junio de 2026",
-    recording: "https://www.youtube.com/live/7A1pu2XUiX4",
+    recording: "",
     note: "Construido a partir de la transcripción de la Sesión 3 (titulada ‘Filosofía’; dictada de forma remota). Los mantras cantados en sánscrito no pudieron transcribirse con Whisper — se nombran, no se reproducen; los textos son los clásicos Mahāmṛtyuñjaya, Gāyatrī y los 32 Nombres de Durgā. Los campos marcados ‘a desarrollar’ son semillas del marco que se llevan hacia la Sesión 4 final."
   },
 

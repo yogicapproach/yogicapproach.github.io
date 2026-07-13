@@ -16,7 +16,7 @@ window.KOSHAS_I18N.es = {
     teacher: "Satchidananda",
     host: "Ale",
     date: "23 jun 2026",
-    recording: "https://youtube.com/live/wXDXmb4MMR0",
+    recording: "",
     note: "Elaborado a partir de la transcripción de la Sesión 4 — el cierre basado en la práctica que integra los cinco koshas. Los mantras cantados en sánscrito quedaron distorsionados por el reconocimiento de voz y aquí se nombran, no se reproducen; los textos son los estándar Saha Nāvavatu, Mahāmṛtyuñjaya, Gāyatrī y los 32 Nombres de Durgā. Las cinco asanas se dieron solo como indicaciones de movimiento — los nombres en sánscrito se infieren de las consignas (las cinco de Laghoo Shankhaprakshalana). La grabación es la fuente definitiva."
   },
 

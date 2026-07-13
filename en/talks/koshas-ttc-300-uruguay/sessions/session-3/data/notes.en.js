@@ -19,7 +19,7 @@ window.KOSHAS_I18N.en = {
     teacher: "Satchidananda",
     host: "Ale",
     date: "18 June 2026",
-    recording: "https://www.youtube.com/live/7A1pu2XUiX4",
+    recording: "",
     note: "Built from the Session-3 transcript (titled ‘Filosofía’; taught remotely). The chanted Sanskrit mantras could not be transcribed by Whisper — they are named, not reproduced; the texts are the standard Mahāmṛtyuñjaya, Gāyatrī and the 32 Names of Durgā. Fields marked ‘to develop’ are framework seeds carried toward the final Session 4."
   },
 

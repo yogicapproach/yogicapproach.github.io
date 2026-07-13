@@ -19,7 +19,7 @@ window.KOSHAS_I18N.pt = {
     "teacher": "Satchidananda",
     "host": "Ale",
     "date": "⚠MT[pt]: 10 de junho de 2026",
-    "recording": "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
+    "recording": "",
     "note": "⚠MT[pt]: Construído a partir do transcris da Sessão-1. As citações são palavras do professor (algumas reconstruídas da tradução em tempo real en español — verifique ⚠ contra o registro). Os campos marcados 'para desenvolver' são sementes de framework para as Sessões 2–4."
   },
   "overview": {

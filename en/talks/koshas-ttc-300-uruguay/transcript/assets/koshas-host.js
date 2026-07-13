@@ -38,8 +38,7 @@
     return function audioFor(sessionId, seconds) {
       var vid = byId[sessionId] && byId[sessionId].vid;
       if (!vid) return null; // audio-only / no recording → no deep link
-      return "https://www.youtube.com/watch?v=" + encodeURIComponent(vid) +
-             "&t=" + Math.max(0, Math.floor(seconds || 0)) + "s";
+      return null;   // recording is not public
     };
   }
 

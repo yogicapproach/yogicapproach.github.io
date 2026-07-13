@@ -18,7 +18,7 @@ window.KOSHAS_I18N.es = {
     teacher: "Satchidananda",
     host: "Ale",
     date: "10 de junio de 2026",
-    recording: "https://www.youtube.com/watch?v=fDUM_Rr7H-Q",
+    recording: "",
     note: "Construido a partir de la transcripción de la Sesión 1. Las citas son las palabras del maestro (algunas reconstruidas desde la traducción al español en vivo — verificá los bloques ⚠ contra la grabación). Los campos marcados ‘a desarrollar’ son semillas del marco para las Sesiones 2 a 4."
   },
 

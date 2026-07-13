@@ -19,7 +19,7 @@ window.KOSHAS_I18N.en = {
     teacher: "Satchidananda",
     host: "Ale",
     date: "16 June 2026",
-    recording: "https://www.youtube.com/live/ePMCVVGHEKU",
+    recording: "",
     note: "Built from the Session-2 transcript (Satchidananda teaching remotely from Romania). The session's English audio was clear throughout, so quotes are the teacher's own words with little reconstruction. Fields marked ‘to develop’ are framework seeds for Sessions 3–4."
   },
 
