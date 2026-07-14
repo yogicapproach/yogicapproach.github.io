@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../assets/shared.css">
   <link rel="stylesheet" href="../assets/eleventy-extra.css">
   <style>
-    /* Koshas: discreet section-heading timestamp -> YouTube deep-link (our addition).
+    /* Koshas: discreet section-heading time marker (recording is not public: no link).
        HIDDEN BY DEFAULT — wrapped in .ts so they can be revealed globally with one switch:
        set <html data-ts="on"> (or add ?ts=1 to the URL, or call toggleTimestamps()). */
     #content .ts { display: none; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .58em; font-weight: 400; vertical-align: .35em; margin-left: .45em; opacity: .55; text-decoration: none; }
@@ -68,8 +68,8 @@
   <script src="marked.min.js"></script>
   <script src="../assets/shared.js"></script>
   <script>
-    // Runtime viewer (no Eleventy build): section-heading [mm:ss] -> discreet YouTube deep-link.
-    // We wrap marked so the koshas section timestamps become links after render.
+    // Runtime viewer: section-heading [mm:ss] -> a discreet marker (hidden by default).
+    // The recording is not public, so markers are plain text (no deep-link).
     window.RESOURCES_BASE = "../resources/";  // series-level shared media
     // HEADER_LOCALIZE: localize the page <h1> + subtitle per language (events parity).
     var _HDR = {
@@ -88,7 +88,7 @@
         return html.replace(/\[(\d{1,2}):(\d{2})(?::(\d{2}))?\]/g, function (_, a, b, c) {
           var sec = c !== undefined ? (+a)*3600+(+b)*60+(+c) : (+a)*60+(+b);
           var label = c !== undefined ? a+":"+b+":"+c : a+":"+b;
-          return '<span class="ts">' + label + '</span>';
+          return '<span class="ts">' + label + '</span>';   // recording not public: plain marker, no link
         });
       };
     })();

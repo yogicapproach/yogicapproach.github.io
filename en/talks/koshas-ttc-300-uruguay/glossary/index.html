@@ -21,6 +21,8 @@
        id="btn-en"><span class="lang-full">English</span><span class="lang-abbr" aria-hidden="true">Eng.</span><span class="lang-sublabel lang-sublabel-full">Original</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">Orig.</span></a>
     <a href="?lang=es" onclick="loadGloss('es');return false;" class="lang-btn" role="button" aria-pressed="false"
        id="btn-es"><span class="lang-full">Espa&ntilde;ol</span><span class="lang-abbr" aria-hidden="true">Esp.</span><span class="lang-sublabel lang-sublabel-full">IA Traducido</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">IA Trad.</span></a>
+    <a href="?lang=ne" onclick="loadGloss('ne');return false;" class="lang-btn" role="button" aria-pressed="false"
+       id="btn-ne"><span class="lang-full">&#2344;&#2375;&#2346;&#2366;&#2354;&#2368;</span><span class="lang-abbr" aria-hidden="true">&#2344;&#2375;&#2346;.</span><span class="lang-sublabel lang-sublabel-full">AI &#2309;&#2344;&#2369;&#2357;&#2366;&#2342;&#2367;&#2340;</span><span class="lang-sublabel lang-sublabel-abbr" aria-hidden="true">AI &#2309;&#2344;&#2369;.</span></a>
   </div>
 
   <div id="content" data-pagefind-body><p id="loading">Loading&hellip;</p></div>
@@ -34,7 +36,7 @@
   <script src="../assets/shared.js"></script>
   <script>
     function loadGloss(lang) {
-      ["en", "es"].forEach(function (l) { document.getElementById("btn-" + l).classList.toggle("active", lang === l); });
+      ["en", "es", "ne"].forEach(function (l) { document.getElementById("btn-" + l).classList.toggle("active", lang === l); });
       document.documentElement.lang = lang;
       var u = new URL(location); u.searchParams.set("lang", lang); history.replaceState(null, "", u);
       var el = document.getElementById("content");
@@ -44,7 +46,8 @@
         .catch(function () { el.innerHTML = '<p style="color:#b3402a;text-align:center;padding:40px;">Could not load the glossary.</p>'; });
     }
     document.addEventListener("DOMContentLoaded", function () {
-      loadGloss(new URLSearchParams(location.search).get("lang") === "es" ? "es" : "en");
+      var l = new URLSearchParams(location.search).get("lang");
+      loadGloss(l === "es" || l === "ne" ? l : "en");
     });
   </script>
 </body>
