@@ -7,7 +7,9 @@ Last commit on main: see `git log --oneline -1`
 
 ## Active Work
 
-_No active task._
+_No active task on main._ (Note: local branch `swarm/20260907-4` has a
+committed, unpushed README addition for #4 — see PROGRESS.md 2026-09-07.
+KA needs to review + push/merge; not done automatically per swarm rules.)
 
 ---
 
