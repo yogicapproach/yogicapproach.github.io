@@ -1,0 +1,2 @@
+{"ts": "2026-09-07T02:20:27Z", "agent": "swarm 20260907T064155-yogicapproach.github.io", "issue": 4, "status": "claimed", "note": "add README documenting site structure/deploy"}
+{"ts": "2026-09-07T02:22:53Z", "agent": "swarm 20260907T064155-yogicapproach.github.io", "issue": 4, "status": "done", "commit": "061bcee273f74b4ad6bb79c38765eb40163102cd", "branch": "swarm/20260907-4"}
