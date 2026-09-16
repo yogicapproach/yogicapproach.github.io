@@ -177,9 +177,13 @@
     var th = localStorage.getItem("sutras-theme");
     if (th) document.documentElement.setAttribute("data-theme", th);
   } catch(e){}
+  // resolve the language ONCE, before either fetch: resources.json often wins the race,
+  // and curLang was still null then, so a Spanish reader got English cards until the
+  // transcript landed.
+  curLang = pickLang(LANGS, DEFAULT_LANG);
   fetch("resources.json").then(function(r){ return r.ok ? r.json() : null; })
-    .then(function(d){ RES = d && d.resources; renderResources(RES, "resources/", curLang || DEFAULT_LANG); }).catch(function(){});
-  load(pickLang(LANGS, DEFAULT_LANG));
+    .then(function(d){ RES = d && d.resources; renderResources(RES, "resources/", curLang); }).catch(function(){});
+  load(curLang);
 })();
 </script>
 </body>
