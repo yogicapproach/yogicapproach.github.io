@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yoga Sutras — Exploration and Application</title>
+<meta name="description" content="One sutra at a time, taken from the page into practice: the verse, its commentaries, and a class built around experiencing it.">
+<link rel="stylesheet" href="assets/transcript.css">
+<style>
+  .classes{list-style:none;padding:0;margin:0}
+  .classes li{border-bottom:1px solid var(--line);padding:1.1rem 0}
+  .classes a.t{font-size:1.2rem;color:var(--ink);text-decoration:none;font-weight:600}
+  .classes a.t:hover{color:var(--ember)}
+  .classes .sk{font-style:italic;color:var(--ink-2);margin:.15rem 0 .3rem}
+  .classes .row{font-family:var(--sans);font-size:.78rem;color:var(--muted);
+                display:flex;gap:.5rem;flex-wrap:wrap;align-items:baseline}
+  .pill{border:1px solid var(--line);border-radius:999px;padding:.05rem .5rem}
+  .orderbar{font-family:var(--sans);font-size:.8rem;color:var(--muted);display:flex;gap:.5rem;
+            align-items:center;margin:0 0 1rem}
+  .orderbar button{font-family:var(--sans);font-size:.8rem;padding:.3rem .8rem;cursor:pointer;
+                   border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink-2)}
+  .orderbar button[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:#FFF9F2}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker">Talks &middot; Satchidananda</p>
+    <h1>Yoga Sutras — Exploration and Application</h1>
+    <p class="meta">One sutra at a time, taken from the page into practice: the verse, its commentaries, and a class built around experiencing it.<br>Hosted by Janardhana, Instituto Yoga Carrasco, Montevideo &middot;
+      companion: <a href="https://yogaedu-org.github.io/sutra-reader/" target="_blank" rel="noopener noreferrer">Sutra Reader</a></p>
+  </header>
+  <div class="orderbar">
+    <span>Order:</span>
+    <button id="by-sutra" type="button" aria-pressed="true">By sutra</button>
+    <button id="by-date" type="button" aria-pressed="false">As taught</button>
+  </div>
+  <ul class="classes" id="list"></ul>
+  <footer>Each class is the verbatim record of what was said in the room: English as spoken, and
+    Spanish as the live translator said it. 1 class so far.</footer>
+</div>
+<script id="data" type="application/json">[{"slug": "ch02-v42-santosha", "folder": "20260915-ch02-v42-santosha", "chapter": 2, "verse": 42, "pada": "Sadhana Pada", "term": "santosha", "title": "Sutra 2:42 — Santosha", "title_es": "Sutra 2:42 — Santosha", "sanskrit": "santoṣād anuttamaḥ sukha-lābhaḥ", "gloss": "From contentment, unsurpassed happiness is gained.", "gloss_es": "De la práctica del contentamiento proviene una felicidad insuperable.", "date": "2026-09-15", "date_display": "15 September 2026", "date_display_es": "15 de septiembre de 2026", "recording": "https://youtube.com/live/eLCvXTYFnHs", "duration": "1:11:56", "reader_link": "https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1", "languages": ["en", "es"], "es_source": "translator", "practices": ["Shantipath", "Makarasana", "spinal breathing", "Shavasana", "Paschimottanasana"]}]</script>
+<script>
+(function(){
+  var S = JSON.parse(document.getElementById("data").textContent);
+  function render(order){
+    var rows = S.slice().sort(order === "sutra"
+      ? function(a,b){ return a.chapter - b.chapter || a.verse - b.verse; }
+      : function(a,b){ return a.date < b.date ? 1 : -1; });
+    document.getElementById("list").innerHTML = rows.map(function(s){
+      return '<li><a class="t" href="' + s.slug + '/">' + s.title + '</a>' +
+        '<p class="sk">' + s.sanskrit + '</p>' +
+        '<div class="row"><span class="pill">' + s.pada + ' ' + s.chapter + '.' + s.verse + '</span>' +
+        '<span class="pill">' + s.term + '</span>' +
+        '<span>' + s.date_display + '</span>' +
+        '<span>&middot; ' + s.duration + '</span>' +
+        '<span>&middot; EN + ES</span></div></li>';
+    }).join("");
+    document.getElementById("by-sutra").setAttribute("aria-pressed", order === "sutra" ? "true":"false");
+    document.getElementById("by-date").setAttribute("aria-pressed", order === "date" ? "true":"false");
+  }
+  document.getElementById("by-sutra").addEventListener("click", function(){ render("sutra"); });
+  document.getElementById("by-date").addEventListener("click", function(){ render("date"); });
+  render("sutra");
+})();
+</script>
+</body>
+</html>

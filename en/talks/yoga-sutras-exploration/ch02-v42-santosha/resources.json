@@ -1,0 +1,21 @@
+{
+  "resources": [
+    {
+      "type": "audio",
+      "title": "Swami Satyananda's commentary on II.42 — read in Spanish",
+      "description": "Played in class · Español, voz Dalia (latinoamericana) · 1:08",
+      "description_es": "Reproducido en clase · Español, voz Dalia (latinoamericana) · 1:08",
+      "artist": "Text: Four Chapters on Freedom, p. 201 · read with a synthetic voice",
+      "license": "Yoga Publications Trust — quoted for study",
+      "file": "santosha-ii42-es-dalia.mp3"
+    },
+    {
+      "type": "link",
+      "title": "Sutra Reader — II.42 santoṣa",
+      "description": "View quotes, readings, and etymology tables related to this sutra. All content links back to its source; primarily from <a href=\"https://www.satyamyogaprasad.net/\" target=\"_blank\" rel=\"noopener noreferrer\">Satyam Yoga Prasad</a>.",
+      "description_es": "Mira citas, lecturas y tablas de etimología relacionadas con este sutra. Todo el contenido enlaza a su fuente; principalmente de <a href=\"https://www.satyamyogaprasad.net/\" target=\"_blank\" rel=\"noopener noreferrer\">Satyam Yoga Prasad</a>.",
+      "source": "yogaedu-org.github.io",
+      "url": "https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1&lang=es"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application | 15 September 2026</title>
+<meta name="description" content="From contentment, unsurpassed happiness is gained. Class by Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 September 2026.">
+<meta name="author" content="Satchidananda">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application">
+<meta property="og:description" content="From contentment, unsurpassed happiness is gained.">
+<link rel="stylesheet" href="../assets/transcript.css">
+<script src="../assets/marked.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker"><a href="../">Yoga Sutras — Exploration and Application</a></p>
+    <h1>Sutra 2:42 — Santosha</h1>
+    <p class="sanskrit">santoṣād anuttamaḥ sukha-lābhaḥ</p>
+    <p class="meta">Class by Satchidananda &middot; hosted by Janardhana, Instituto Yoga Carrasco, Montevideo<br>
+      15 September 2026 &middot; <a href="https://youtube.com/live/eLCvXTYFnHs" target="_blank" rel="noopener noreferrer">recording</a>
+      &middot; <a href="https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1" target="_blank" rel="noopener noreferrer">Sutra Reader</a></p>
+  </header>
+  <div class="langbar">
+    <button id="btn-en" type="button" aria-pressed="true">English<span class="sub">Original</span></button>
+    <button id="btn-es" type="button" aria-pressed="false">Espa&ntilde;ol<span class="sub">Traductor en vivo</span></button>
+    <span class="spacer"></span>
+    <button id="btn-theme" type="button" title="Light / dark">&#9728;&#9790;</button>
+  </div>
+  <div id="resources"></div>
+  <div id="content"><p class="meta">Loading&hellip;</p></div>
+  <footer id="foot"></footer>
+</div>
+<script>
+(function(){
+  marked.setOptions({gfm:true, breaks:false, mangle:false, headerIds:false});
+  var cache = {}, RES = null;
+
+  function renderResources(list, base, lang){
+    var el = document.getElementById("resources");
+    if (!el || !list || !list.length) return;
+    var S = {en:{h:"Resources", listen:"Listen on", dl:"Download", open:"Open"},
+             es:{h:"Recursos", listen:"Escuchar en", dl:"Descargar", open:"Abrir"}}[lang === "es" ? "es" : "en"];
+    var html = '<p class="res-heading">' + S.h + '</p>';
+    list.forEach(function(r){
+      var desc = (lang === "es" && r.description_es) ? r.description_es : (r.description || "");
+      if (r.type === "link"){
+        html += '<div class="res-card"><div class="res-body">' +
+          '<p class="res-title">' + r.title + '</p>' +
+          '<p class="res-meta">' + desc + '</p>' +
+          '<a class="res-go" href="' + r.url + '" target="_blank" rel="noopener noreferrer">' +
+          S.open + ' &middot; ' + (r.source || "") + ' &rarr;</a></div></div>';
+      } else {
+        var src = base + encodeURIComponent(r.file);
+        var meta = [desc, r.artist, r.license].filter(Boolean).join(" &middot; ");
+        html += '<div class="res-card"><div class="res-body">' +
+          '<p class="res-title">' + r.title + '</p>' +
+          '<p class="res-meta">' + meta + ' &middot; <a href="' + src + '" download>' + S.dl + '</a></p>' +
+          '</div><audio class="res-player" controls preload="none" src="' + src + '"></audio></div>';
+      }
+    });
+    el.innerHTML = html;
+    // exclusive playback, as on the Uruguay talk pages
+    var players = el.querySelectorAll(".res-player");
+    players.forEach(function(p){
+      p.addEventListener("play", function(){
+        players.forEach(function(o){ if (o !== p) o.pause(); });
+      });
+    });
+  }
+
+  function decorate(){
+    var c = document.getElementById("content");
+    c.querySelectorAll("blockquote").forEach(function(b){
+      var t = b.textContent;
+      if (/^\s*(PRACTICE|PR[ÁA]CTICA|CHANT|CANTO)/.test(t)) b.className = "practice";
+      else if (/^\s*(INSERT|INSERTO)/.test(t)) b.className = "insert";
+      else if (/\[Swami/.test(t)) b.className = "quote";
+    });
+    c.innerHTML = c.innerHTML.replace(/⟨tr\.⟩/g,
+      '<span class="tr" title="El traductor no tradujo este tramo en vivo; traducido del ingl\u00e9s.">tr</span>');
+  }
+  function show(lang){
+    var md = cache[lang], c = document.getElementById("content"), f = document.getElementById("foot");
+    var cut = md.lastIndexOf("\n---\n"), head = md.split("\n---\n");
+    var body = head.length > 2 ? head.slice(1, -1).join("\n---\n") : md;
+    c.innerHTML = marked.parse(body);
+    f.innerHTML = marked.parse(md.slice(cut + 5));
+    decorate();
+    renderResources(RES, "resources/", lang);
+    document.getElementById("btn-en").setAttribute("aria-pressed", lang === "en" ? "true" : "false");
+    document.getElementById("btn-es").setAttribute("aria-pressed", lang === "es" ? "true" : "false");
+    document.documentElement.lang = lang;
+    try { localStorage.setItem("sutras-lang", lang); } catch(e){}
+  }
+  function load(lang){
+    if (cache[lang]) return show(lang);
+    fetch("transcript-" + lang + ".md").then(function(r){ return r.text(); })
+      .then(function(t){ cache[lang] = t; show(lang); })
+      .catch(function(){ document.getElementById("content").innerHTML =
+        "<p class='meta'>The transcript could not be loaded.</p>"; });
+  }
+  document.getElementById("btn-en").addEventListener("click", function(){ load("en"); });
+  document.getElementById("btn-es").addEventListener("click", function(){ load("es"); });
+  document.getElementById("btn-theme").addEventListener("click", function(){
+    var cur = document.documentElement.getAttribute("data-theme");
+    var next = cur === "dark" ? "light" : (cur === "light" ? "dark" :
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark"));
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("sutras-theme", next); } catch(e){}
+  });
+  try {
+    var th = localStorage.getItem("sutras-theme");
+    if (th) document.documentElement.setAttribute("data-theme", th);
+  } catch(e){}
+  fetch("resources.json").then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){ RES = d && d.resources; renderResources(RES, "resources/", document.documentElement.lang || "en"); }).catch(function(){});
+  var saved = "en";
+  try { saved = localStorage.getItem("sutras-lang") || "en"; } catch(e){}
+  load(saved);
+})();
+</script>
+</body>
+</html>

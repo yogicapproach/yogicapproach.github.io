@@ -1,0 +1,74 @@
+  :root{
+    --paper:#FBF9F4; --surface:#FFFDF8; --ink:#1E1B16; --ink-2:#3C362D; --muted:#6B6257;
+    --line:#E3DCCE; --ember:#7A2E1E; --ember-soft:#9C4A33; --leaf:#1F4D46;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#15140F; --surface:#1B1A15; --ink:#EFE9DC; --ink-2:#D2CBBB; --muted:#9B9384;
+      --line:#312D25; --ember:#E08663; --ember-soft:#C96E4D; --leaf:#7FB5AA;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#15140F; --surface:#1B1A15; --ink:#EFE9DC; --ink-2:#D2CBBB; --muted:#9B9384;
+    --line:#312D25; --ember:#E08663; --ember-soft:#C96E4D; --leaf:#7FB5AA;
+  }
+  body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.72;
+       margin:0;padding-block:0 3rem;padding-left:20px;padding-right:20px}
+  .wrap{max-width:44rem;margin:0 auto}
+  header.masthead{text-align:center;padding:2.6rem 0 1.2rem;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+          color:var(--ember-soft);margin:0 0 .7rem}
+  header.masthead h1{font-size:1.9rem;line-height:1.2;margin:0 0 .5rem;text-wrap:balance;font-weight:600}
+  .sanskrit{font-style:italic;color:var(--ink-2);margin:0 0 .8rem}
+  .meta{font-family:var(--sans);font-size:.82rem;color:var(--muted);margin:0;line-height:1.5}
+  .meta a{color:var(--ember-soft)}
+  .langbar{position:sticky;top:0;z-index:5;background:var(--paper);display:flex;gap:.5rem;
+           justify-content:center;align-items:center;flex-wrap:wrap;
+           padding:.7rem 0;border-bottom:1px solid var(--line);margin-bottom:1.6rem}
+  .langbar button{font-family:var(--sans);font-size:.85rem;padding:.4rem 1.1rem;cursor:pointer;
+                  border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink-2)}
+  .langbar button[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:#FFF9F2}
+  .langbar .sub{display:block;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+  .langbar .spacer{flex:0 0 1rem}
+  #content h2{font-family:var(--sans);font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;
+              color:var(--ember-soft);margin:2.6rem 0 .9rem;font-weight:600}
+  #content p{margin:0 0 1.05rem}
+  #content hr{border:0;border-top:1px solid var(--line);margin:2.2rem 0}
+  #content em{font-style:italic}
+  #content strong{font-weight:600}
+  blockquote{margin:1.4rem 0;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--line);
+             color:var(--ink-2)}
+  blockquote p{margin:0 0 .5rem}
+  blockquote p:last-child{margin:0}
+  blockquote.practice{border-left-color:var(--leaf);background:none;font-family:var(--sans);
+                      font-size:.82rem;letter-spacing:.02em;color:var(--leaf);font-style:normal;
+                      padding:.55rem 0 .55rem 1.1rem}
+  blockquote.practice em{font-style:normal}
+  blockquote.insert{border-left-color:var(--ember-soft);font-size:.92rem}
+  blockquote.quote{border-left-color:var(--ember);font-size:1.06rem}
+  blockquote.quote em{color:var(--muted);font-size:.82rem}
+  .tr{font-family:var(--sans);font-size:.62rem;vertical-align:super;color:var(--muted);
+      border:1px solid var(--line);border-radius:3px;padding:0 .2rem;margin-left:.15rem;cursor:help}
+  footer{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.1rem;
+         font-family:var(--sans);font-size:.76rem;color:var(--muted)}
+  .note{font-family:var(--sans);font-size:.8rem;color:var(--muted);background:var(--surface);
+        border:1px solid var(--line);border-radius:8px;padding:.9rem 1.1rem;margin:0 0 1.4rem}
+  @media (max-width:430px){ header.masthead h1{font-size:1.5rem} }
+
+/* resources panel — the Uruguay talks' card shape, in this series' tokens */
+#resources{border-top:1px solid var(--line);margin:0 0 1.8rem;padding:1.2rem 0 .2rem}
+#resources:empty{display:none}
+.res-heading{font-family:var(--sans);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
+             color:var(--muted);margin:0 0 .8rem}
+.res-card{display:flex;flex-wrap:wrap;gap:0 .9rem;align-items:flex-start;margin:0 0 .7rem;
+          padding:.8rem .9rem;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.res-body{flex:1 1 14rem;min-width:0}
+.res-title{font-family:var(--sans);font-size:.92rem;font-weight:600;margin:0 0 .15rem;color:var(--ink)}
+.res-meta{font-family:var(--sans);font-size:.78rem;color:var(--muted);line-height:1.5;margin:0}
+.res-meta a,.res-go{color:var(--ember-soft);text-decoration:none}
+.res-meta a:hover,.res-go:hover{text-decoration:underline}
+.res-go{font-family:var(--sans);font-size:.82rem;display:inline-block;margin-top:.35rem}
+.res-player{flex:0 0 100%;height:30px;margin-top:.5rem;max-width:100%}
