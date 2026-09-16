@@ -1,6 +1,14 @@
 {
   "resources": [
     {
+      "type": "link",
+      "title": "Class recording — Sutra 2:42, Santosha",
+      "description": "The full class as it was taught, 1:11:56. English with live Spanish translation.",
+      "description_es": "La clase completa tal como se dictó, 1:11:56. Inglés con traducción al español en vivo.",
+      "source": "YouTube",
+      "url": "https://youtube.com/live/eLCvXTYFnHs"
+    },
+    {
       "type": "audio",
       "title": "Swami Satyananda's commentary on II.42 — read in Spanish",
       "description": "Played in class · Español, voz Dalia (latinoamericana) · 1:08",

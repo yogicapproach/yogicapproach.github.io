@@ -35,7 +35,7 @@
 <script>
 (function(){
   marked.setOptions({gfm:true, breaks:false, mangle:false, headerIds:false});
-  var cache = {}, RES = null;
+  var cache = {}, RES = null, curLang = null;
   var LANGS = ["en", "es"], DEFAULT_LANG = "es";
 
   function pickLang(supported, fallback){
@@ -44,7 +44,7 @@
     var want = (q.get("lang") || "").toLowerCase();
     if (want && supported.indexOf(want) > -1) return want;     // 1. the link wins
     try {
-      var saved = localStorage.getItem("sutras-lang");
+      var saved = localStorage.getItem("sutras-lang-v2");
       if (saved && supported.indexOf(saved) > -1) return saved; // 2. the reader's own choice
     } catch(e){}
     return supported.indexOf(fallback) > -1 ? fallback : supported[0];  // 3. the class default
@@ -106,7 +106,7 @@
     document.getElementById("btn-en").setAttribute("aria-pressed", lang === "en" ? "true" : "false");
     document.getElementById("btn-es").setAttribute("aria-pressed", lang === "es" ? "true" : "false");
     document.documentElement.lang = lang;
-    try { localStorage.setItem("sutras-lang", lang); } catch(e){}
+    curLang = lang;
   }
   function load(lang){
     if (cache[lang]) return show(lang);
@@ -115,8 +115,12 @@
       .catch(function(){ document.getElementById("content").innerHTML =
         "<p class='meta'>The transcript could not be loaded.</p>"; });
   }
-  document.getElementById("btn-en").addEventListener("click", function(){ load("en"); });
-  document.getElementById("btn-es").addEventListener("click", function(){ load("es"); });
+  function choose(lang){           // only a real click is remembered; the default must stay free to change
+    try { localStorage.setItem("sutras-lang-v2", lang); } catch(e){}
+    load(lang);
+  }
+  document.getElementById("btn-en").addEventListener("click", function(){ choose("en"); });
+  document.getElementById("btn-es").addEventListener("click", function(){ choose("es"); });
   document.getElementById("btn-theme").addEventListener("click", function(){
     var cur = document.documentElement.getAttribute("data-theme");
     var next = cur === "dark" ? "light" : (cur === "light" ? "dark" :
@@ -129,7 +133,7 @@
     if (th) document.documentElement.setAttribute("data-theme", th);
   } catch(e){}
   fetch("resources.json").then(function(r){ return r.ok ? r.json() : null; })
-    .then(function(d){ RES = d && d.resources; renderResources(RES, "resources/", document.documentElement.lang || "en"); }).catch(function(){});
+    .then(function(d){ RES = d && d.resources; renderResources(RES, "resources/", curLang || DEFAULT_LANG); }).catch(function(){});
   load(pickLang(LANGS, DEFAULT_LANG));
 })();
 </script>
