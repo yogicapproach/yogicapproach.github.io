@@ -83,17 +83,23 @@
     var html = '<p class="res-heading">' + S.h + '</p>';
     list.forEach(function(r){
       var desc = (lang === "es" && r.description_es) ? r.description_es : (r.description || "");
+      var title = (lang === "es" && r.title_es) ? r.title_es : r.title;
       if (r.type === "link"){
+        var links = r.links && r.links.length ? r.links : [{label: S.open, url: r.url}];
+        var go = links.map(function(L){
+          var lbl = (lang === "es" && L.label_es) ? L.label_es : (L.label || S.open);
+          return '<a class="res-go" href="' + L.url + '" target="_blank" rel="noopener noreferrer">' +
+            lbl + ' &middot; ' + (r.source || "") + ' &rarr;</a>';
+        }).join("");
         html += '<div class="res-card"><div class="res-body">' +
-          '<p class="res-title">' + r.title + '</p>' +
+          '<p class="res-title">' + title + '</p>' +
           '<p class="res-meta">' + desc + '</p>' +
-          '<a class="res-go" href="' + r.url + '" target="_blank" rel="noopener noreferrer">' +
-          S.open + ' &middot; ' + (r.source || "") + ' &rarr;</a></div></div>';
+          '<span class="res-links">' + go + '</span></div></div>';
       } else {
         var src = base + encodeURIComponent(r.file);
         var meta = [desc, r.artist, r.license].filter(Boolean).join(" &middot; ");
         html += '<div class="res-card"><div class="res-body">' +
-          '<p class="res-title">' + r.title + '</p>' +
+          '<p class="res-title">' + title + '</p>' +
           '<p class="res-meta">' + meta + ' &middot; <a href="' + src + '" download>' + S.dl + '</a></p>' +
           '</div><audio class="res-player" controls preload="none" src="' + src + '"></audio></div>';
       }

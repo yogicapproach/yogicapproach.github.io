@@ -2,11 +2,24 @@
   "resources": [
     {
       "type": "link",
-      "title": "Class recording — Sutra 2:42, Santosha",
-      "description": "The full class, 1:01:36. English with live Spanish translation. Originally recorded by <a href=\"https://www.youtube.com/@institutoyogacarrasco9399\" target=\"_blank\" rel=\"noopener noreferrer\">Instituto Yoga Carrasco</a> — <a href=\"https://www.youtube.com/watch?v=eLCvXTYFnHs\" target=\"_blank\" rel=\"noopener noreferrer\">watch it on their channel</a>.",
-      "description_es": "La clase completa, 1:01:36. Inglés con traducción al español en vivo. Grabada originalmente por <a href=\"https://www.youtube.com/@institutoyogacarrasco9399\" target=\"_blank\" rel=\"noopener noreferrer\">Instituto Yoga Carrasco</a> — <a href=\"https://www.youtube.com/watch?v=eLCvXTYFnHs\" target=\"_blank\" rel=\"noopener noreferrer\">verla en su canal</a>.",
+      "title": "Watch on YouTube",
+      "title_es": "Ver en YouTube",
+      "description": "The series, and this class in full (1:01:36). English with live Spanish translation. Originally recorded by <a href=\"https://www.youtube.com/@institutoyogacarrasco9399\" target=\"_blank\" rel=\"noopener noreferrer\">Instituto Yoga Carrasco</a> &mdash; <a href=\"https://www.youtube.com/watch?v=eLCvXTYFnHs\" target=\"_blank\" rel=\"noopener noreferrer\">watch it on their channel</a>.",
+      "description_es": "La serie, y esta clase completa (1:01:36). Inglés con traducción al español en vivo. Grabada originalmente por <a href=\"https://www.youtube.com/@institutoyogacarrasco9399\" target=\"_blank\" rel=\"noopener noreferrer\">Instituto Yoga Carrasco</a> &mdash; <a href=\"https://www.youtube.com/watch?v=eLCvXTYFnHs\" target=\"_blank\" rel=\"noopener noreferrer\">verla en su canal</a>.",
       "source": "YouTube",
-      "url": "https://youtu.be/gitja69jjuY"
+      "url": "https://youtu.be/gitja69jjuY",
+      "links": [
+        {
+          "label": "The full series &mdash; Yoga Sutras: Exploration and Application",
+          "label_es": "La serie completa &mdash; Yoga Sutras: Exploración y Aplicación",
+          "url": "https://www.youtube.com/playlist?list=PLD9ppV7iLqzQ"
+        },
+        {
+          "label": "This class &mdash; Sutra 2:42, Santosha",
+          "label_es": "Esta clase &mdash; Sutra 2:42, Santosha",
+          "url": "https://youtu.be/gitja69jjuY"
+        }
+      ]
     },
     {
       "type": "audio",
