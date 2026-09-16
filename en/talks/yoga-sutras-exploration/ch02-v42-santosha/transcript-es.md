@@ -63,7 +63,7 @@ Me gusta ver esto en sánscrito, porque de esta manera vamos aprendiendo a recon
 
 Y como su comentario sobre este *sutra* es bastante breve, quiero compartir con ustedes una traducción hecha en español, un audio de un minuto y ocho segundos.
 
-> *INSERTO — grabación en español (1:08) del comentario de Swami Satyananda sobre II.42, reproducida en la clase. El texto leído es su comentario tal como está impreso en* Four Chapters on Freedom *(p. 201).*
+> *INSERTO — [grabación en español (1:08, sintetizada)](resources/santosha-ii42-es-dalia.mp3) del comentario de Swami Satyananda sobre II.42, reproducida en la clase. El texto leído es su comentario tal como está impreso en* Four Chapters on Freedom *(p. 201).*
 
 ---
 

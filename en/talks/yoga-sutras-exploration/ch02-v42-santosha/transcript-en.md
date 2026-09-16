@@ -59,7 +59,7 @@ I love, anytime we have Sanskrit phrases, to look at one or two of the words, so
 
 Because his commentary on this *sutra* is quite short, I'd like to play a one minute and eight second translation of it, which hopefully came out correct in Spanish.
 
-> *INSERT — a 1:08 Spanish recording of Swami Satyananda's commentary on II.42, played to the class. The text read is his commentary as printed in* Four Chapters on Freedom *(p. 201).*
+> *INSERT — a [1:08 (synthesized) Spanish recording](resources/santosha-ii42-es-dalia.mp3) of Swami Satyananda's commentary on II.42, played to the class. The text read is his commentary as printed in* Four Chapters on Freedom *(p. 201).*
 
 ---
 
