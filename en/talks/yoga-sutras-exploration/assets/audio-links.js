@@ -1,8 +1,9 @@
 /* talks#91 -- audio links in the transcript, and a floating player.
  *
  * A link in the transcript that points at an .mp3 the resources panel also carries does
- * not download the file: it scrolls to that card's player and starts it. Without JS the
- * link still works as a plain link to the file.
+ * not download the file: it starts that card's player where it is, without moving the
+ * page, and the floating player appears. Without JS the link still works as a plain link
+ * to the file.
  *
  * The floating player appears only while that audio is playing (or was paused from the
  * floating player itself) AND its card's player is off screen. Closing it pauses the
@@ -33,8 +34,7 @@
     var p = playerFor(a.getAttribute("href"));
     if (!p) return;                                                        // no matching card: let the link work
     e.preventDefault();
-    p.scrollIntoView({behavior: "smooth", block: "center"});
-    p.play().catch(function(){});
+    p.play().catch(function(){});      // no scroll: the reader keeps their place, the floating player takes over
   });
 
   // ---- 2. the floating player ---------------------------------------------------------
