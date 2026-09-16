@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="en" href="./?lang=en">
 <link rel="alternate" hreflang="es" href="./?lang=es">
 <link rel="alternate" hreflang="x-default" href="./">
-<link rel="stylesheet" href="../assets/transcript.css?v=62622aab">
+<link rel="stylesheet" href="../assets/transcript.css?v=4ba298b2">
 <script src="../assets/marked.min.js?v=90d4825b"></script>
 </head>
 <body>
@@ -29,6 +29,7 @@
     <button id="btn-en" type="button" aria-pressed="true">English<span class="sub">Original</span></button>
     <button id="btn-es" type="button" aria-pressed="false">Espa&ntilde;ol<span class="sub">Traductor en vivo</span></button>
     <span class="spacer"></span>
+    <button id="btn-share" type="button">Share</button>
     <button id="btn-theme" type="button" title="Light / dark">&#9728;&#9790;</button>
   </div>
   <div id="resources"></div>
@@ -39,7 +40,7 @@
 (function(){
   marked.setOptions({gfm:true, breaks:false, mangle:false, headerIds:false});
   var cache = {}, RES = null, curLang = null;
-  var LANGS = ["en", "es"], DEFAULT_LANG = "en", META = {"en": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application | 15 September 2026", "description": "From contentment, unsurpassed happiness is gained. Class by Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 September 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application", "og_description": "From contentment, unsurpassed happiness is gained.", "locale": "en_US", "locale_alt": "es_LA", "c_series": "Yoga Sutras — Exploration and Application", "c_h1": "Sutra 2:42 — Santosha", "c_meta_html": "Class by Satchidananda &middot; hosted by Janardhana, Instituto Yoga Carrasco, Montevideo<br> 15 September 2026 &middot; <a href=\"https://youtu.be/gitja69jjuY\" target=\"_blank\" rel=\"noopener noreferrer\">recording</a> &middot; <a href=\"https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1\" target=\"_blank\" rel=\"noopener noreferrer\">Sutra Reader</a>"}, "es": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación | 15 de septiembre de 2026", "description": "De la práctica del contentamiento proviene una felicidad insuperable. Clase de Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 de septiembre de 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación", "og_description": "De la práctica del contentamiento proviene una felicidad insuperable.", "locale": "es_LA", "locale_alt": "en_US", "c_series": "Yoga Sutras — Exploración y Aplicación", "c_h1": "Sutra 2:42 — Santosha", "c_meta_html": "Clase de Satchidananda &middot; organizada por Janardhana, Instituto Yoga Carrasco, Montevideo<br> 15 de septiembre de 2026 &middot; <a href=\"https://youtu.be/gitja69jjuY\" target=\"_blank\" rel=\"noopener noreferrer\">grabación</a> &middot; <a href=\"https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1&lang=es\" target=\"_blank\" rel=\"noopener noreferrer\">Sutra Reader</a>"}};
+  var LANGS = ["en", "es"], DEFAULT_LANG = "en", META = {"en": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application | 15 September 2026", "description": "From contentment, unsurpassed happiness is gained. Class by Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 September 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application", "og_description": "From contentment, unsurpassed happiness is gained.", "locale": "en_US", "locale_alt": "es_LA", "c_series": "Yoga Sutras — Exploration and Application", "c_h1": "Sutra 2:42 — Santosha", "c_meta_html": "Class by Satchidananda &middot; hosted by Janardhana, Instituto Yoga Carrasco, Montevideo<br> 15 September 2026 &middot; <a href=\"https://youtu.be/gitja69jjuY\" target=\"_blank\" rel=\"noopener noreferrer\">recording</a> &middot; <a href=\"https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1\" target=\"_blank\" rel=\"noopener noreferrer\">Sutra Reader</a>", "c_share": "Share", "c_copied": "Link copied", "share_title": "Sutra 2:42 — Santosha · Yoga Sutras — Exploration and Application", "share_text": "From contentment, unsurpassed happiness is gained."}, "es": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación | 15 de septiembre de 2026", "description": "De la práctica del contentamiento proviene una felicidad insuperable. Clase de Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 de septiembre de 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación", "og_description": "De la práctica del contentamiento proviene una felicidad insuperable.", "locale": "es_LA", "locale_alt": "en_US", "c_series": "Yoga Sutras — Exploración y Aplicación", "c_h1": "Sutra 2:42 — Santosha", "c_meta_html": "Clase de Satchidananda &middot; organizada por Janardhana, Instituto Yoga Carrasco, Montevideo<br> 15 de septiembre de 2026 &middot; <a href=\"https://youtu.be/gitja69jjuY\" target=\"_blank\" rel=\"noopener noreferrer\">grabación</a> &middot; <a href=\"https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1&lang=es\" target=\"_blank\" rel=\"noopener noreferrer\">Sutra Reader</a>", "c_share": "Compartir", "c_copied": "Enlace copiado", "share_title": "Sutra 2:42 — Santosha · Yoga Sutras — Exploración y Aplicación", "share_text": "De la práctica del contentamiento proviene una felicidad insuperable."}};
 
   function applyMeta(lang){      // the head must describe what the reader is seeing
     var m = META[lang] || META[DEFAULT_LANG];
@@ -54,6 +55,8 @@
     var t1 = document.getElementById("m-series"); if (t1) t1.textContent = m.c_series;
     var t2 = document.getElementById("m-h1");     if (t2) t2.textContent = m.c_h1;
     var t3 = document.getElementById("m-meta");   if (t3) t3.innerHTML  = m.c_meta_html;
+    var t4 = document.getElementById("btn-share");
+    if (t4 && !t4.dataset.busy) t4.textContent = m.c_share;
   }
 
   function pickLang(supported, fallback){
@@ -166,6 +169,26 @@
   }
   document.getElementById("btn-en").addEventListener("click", function(){ choose("en"); });
   document.getElementById("btn-es").addEventListener("click", function(){ choose("es"); });
+  document.getElementById("btn-share").addEventListener("click", function(){
+    var m = META[curLang] || META[DEFAULT_LANG], btn = this;
+    // share the language too, so the reader on the other end opens what the sender saw
+    var url = location.origin + location.pathname + "?lang=" + curLang;
+    var payload = {title: m.share_title, text: m.share_text, url: url};
+    function flash(msg){
+      btn.dataset.busy = "1"; btn.textContent = msg;
+      setTimeout(function(){ delete btn.dataset.busy; btn.textContent = m.c_share; }, 1800);
+    }
+    if (navigator.share) {
+      navigator.share(payload).catch(function(){});      // a cancelled share is not an error
+      return;
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function(){ flash(m.c_copied); })
+        .catch(function(){ window.prompt(m.c_share, url); });
+      return;
+    }
+    window.prompt(m.c_share, url);
+  });
   document.getElementById("btn-theme").addEventListener("click", function(){
     var cur = document.documentElement.getAttribute("data-theme");
     var next = cur === "dark" ? "light" : (cur === "light" ? "dark" :
