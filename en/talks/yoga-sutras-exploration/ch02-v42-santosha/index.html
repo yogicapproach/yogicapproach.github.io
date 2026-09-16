@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application">
 <meta property="og:description" content="From contentment, unsurpassed happiness is gained.">
+<meta property="og:locale" content="es_LA">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="alternate" hreflang="en" href="./?lang=en">
+<link rel="alternate" hreflang="es" href="./?lang=es">
+<link rel="alternate" hreflang="x-default" href="./">
 <link rel="stylesheet" href="../assets/transcript.css">
 <script src="../assets/marked.min.js"></script>
 </head>
@@ -47,7 +52,13 @@
       var saved = localStorage.getItem("sutras-lang-v2");
       if (saved && supported.indexOf(saved) > -1) return saved; // 2. the reader's own choice
     } catch(e){}
-    return supported.indexOf(fallback) > -1 ? fallback : supported[0];  // 3. the class default
+    var prefs = (navigator.languages && navigator.languages.length)
+                  ? navigator.languages : [navigator.language || ""];
+    for (var i = 0; i < prefs.length; i++){                  // 3. what the browser asks for
+      var base = String(prefs[i]).toLowerCase().split("-")[0];
+      if (supported.indexOf(base) > -1) return base;
+    }
+    return supported.indexOf(fallback) > -1 ? fallback : supported[0];  // 4. the class default
   }
 
 
