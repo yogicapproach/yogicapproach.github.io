@@ -36,6 +36,20 @@
 (function(){
   marked.setOptions({gfm:true, breaks:false, mangle:false, headerIds:false});
   var cache = {}, RES = null;
+  var LANGS = ["en", "es"], DEFAULT_LANG = "es";
+
+  function pickLang(supported, fallback){
+    var q = new URLSearchParams(location.search);
+    new URLSearchParams((location.hash || "").replace(/^#[?]?/, "")).forEach(function(v, k){ q.set(k, v); });
+    var want = (q.get("lang") || "").toLowerCase();
+    if (want && supported.indexOf(want) > -1) return want;     // 1. the link wins
+    try {
+      var saved = localStorage.getItem("sutras-lang");
+      if (saved && supported.indexOf(saved) > -1) return saved; // 2. the reader's own choice
+    } catch(e){}
+    return supported.indexOf(fallback) > -1 ? fallback : supported[0];  // 3. the class default
+  }
+
 
   function renderResources(list, base, lang){
     var el = document.getElementById("resources");
@@ -116,9 +130,7 @@
   } catch(e){}
   fetch("resources.json").then(function(r){ return r.ok ? r.json() : null; })
     .then(function(d){ RES = d && d.resources; renderResources(RES, "resources/", document.documentElement.lang || "en"); }).catch(function(){});
-  var saved = "en";
-  try { saved = localStorage.getItem("sutras-lang") || "en"; } catch(e){}
-  load(saved);
+  load(pickLang(LANGS, DEFAULT_LANG));
 })();
 </script>
 </body>
