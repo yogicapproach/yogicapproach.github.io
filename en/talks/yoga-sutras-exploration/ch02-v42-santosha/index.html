@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +9,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application">
 <meta property="og:description" content="From contentment, unsurpassed happiness is gained.">
-<meta property="og:locale" content="es_LA">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_LA">
 <link rel="alternate" hreflang="en" href="./?lang=en">
 <link rel="alternate" hreflang="es" href="./?lang=es">
 <link rel="alternate" hreflang="x-default" href="./">
@@ -41,7 +41,19 @@
 (function(){
   marked.setOptions({gfm:true, breaks:false, mangle:false, headerIds:false});
   var cache = {}, RES = null, curLang = null;
-  var LANGS = ["en", "es"], DEFAULT_LANG = "es";
+  var LANGS = ["en", "es"], DEFAULT_LANG = "en", META = {"en": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application | 15 September 2026", "description": "From contentment, unsurpassed happiness is gained. Class by Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 September 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application", "og_description": "From contentment, unsurpassed happiness is gained.", "locale": "en_US", "locale_alt": "es_LA"}, "es": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación | 15 de septiembre de 2026", "description": "De la práctica del contentamiento proviene una felicidad insuperable. Clase de Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 de septiembre de 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación", "og_description": "De la práctica del contentamiento proviene una felicidad insuperable.", "locale": "es_LA", "locale_alt": "en_US"}};
+
+  function applyMeta(lang){      // the head must describe what the reader is seeing
+    var m = META[lang] || META[DEFAULT_LANG];
+    if (!m) return;
+    document.title = m.title;
+    [["name","description",m.description], ["property","og:title",m.og_title],
+     ["property","og:description",m.og_description], ["property","og:locale",m.locale],
+     ["property","og:locale:alternate",m.locale_alt]].forEach(function(r){
+      var el = document.head.querySelector("meta[" + r[0] + '="' + r[1] + '"]');
+      if (el) el.setAttribute("content", r[2]);
+    });
+  }
 
   function pickLang(supported, fallback){
     var q = new URLSearchParams(location.search);
@@ -118,6 +130,7 @@
     document.getElementById("btn-es").setAttribute("aria-pressed", lang === "es" ? "true" : "false");
     document.documentElement.lang = lang;
     curLang = lang;
+    applyMeta(lang);
   }
   function load(lang){
     if (cache[lang]) return show(lang);
