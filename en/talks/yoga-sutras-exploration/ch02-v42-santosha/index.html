@@ -84,28 +84,42 @@
     list.forEach(function(r){
       var desc = (lang === "es" && r.description_es) ? r.description_es : (r.description || "");
       var title = (lang === "es" && r.title_es) ? r.title_es : r.title;
+      var out = function(href, inner){     // every card title opens the card's own thing
+        return '<a href="' + href + '" target="_blank" rel="noopener noreferrer">' + inner + '</a>';
+      };
       if (r.type === "link"){
-        var links = r.links && r.links.length ? r.links : [{label: S.open, url: r.url}];
+        var multi = !!(r.links && r.links.length);
+        var links = multi ? r.links : [{label: S.open + ' &middot; ' + (r.source || ""), url: r.url}];
         var go = links.map(function(L){
           var lbl = (lang === "es" && L.label_es) ? L.label_es : (L.label || S.open);
-          return '<a class="res-go" href="' + L.url + '" target="_blank" rel="noopener noreferrer">' +
-            lbl + ' &middot; ' + (r.source || "") + ' &rarr;</a>';
+          var a = '<a class="res-go" href="' + L.url + '" target="_blank" rel="noopener noreferrer">' +
+            lbl + ' &rarr;</a>';
+          return multi ? '<li>' + a + '</li>' : a;
         }).join("");
         html += '<div class="res-card"><div class="res-body">' +
-          '<p class="res-title">' + title + '</p>' +
-          '<p class="res-meta">' + desc + '</p>' +
-          '<span class="res-links">' + go + '</span></div></div>';
+          '<p class="res-title">' + out(links[0].url, title) + '</p>' +
+          (desc ? '<p class="res-meta">' + desc + '</p>' : '') +
+          (multi ? '<ul class="res-links">' + go + '</ul>' : go) + '</div></div>';
       } else {
         var src = base + encodeURIComponent(r.file);
         var meta = [desc, r.artist, r.license].filter(Boolean).join(" &middot; ");
         html += '<div class="res-card"><div class="res-body">' +
-          '<p class="res-title">' + title + '</p>' +
+          '<p class="res-title"><a class="res-play" href="#">' + title + '</a></p>' +
           '<p class="res-meta">' + meta + ' &middot; <a href="' + src + '" download>' + S.dl + '</a></p>' +
           '</div><audio class="res-player" controls preload="none" src="' + src + '"></audio></div>';
       }
     });
     el.innerHTML = html;
     // exclusive playback, as on the Uruguay talk pages
+    el.querySelectorAll(".res-play").forEach(function(a){   // the title plays the audio
+      a.addEventListener("click", function(e){
+        e.preventDefault();
+        var card = a.closest(".res-card");
+        var au = card && card.querySelector(".res-player");
+        if (!au) return;
+        if (au.paused) au.play(); else au.pause();
+      });
+    });
     var players = el.querySelectorAll(".res-player");
     players.forEach(function(p){
       p.addEventListener("play", function(){
