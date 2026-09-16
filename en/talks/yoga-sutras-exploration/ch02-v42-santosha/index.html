@@ -20,12 +20,10 @@
 <body>
 <div class="wrap">
   <header class="masthead">
-    <p class="kicker"><a href="../">Yoga Sutras — Exploration and Application</a></p>
-    <h1>Sutra 2:42 — Santosha</h1>
+    <p class="kicker"><a href="../" id="m-series">Yoga Sutras — Exploration and Application</a></p>
+    <h1 id="m-h1">Sutra 2:42 — Santosha</h1>
     <p class="sanskrit">santoṣād anuttamaḥ sukha-lābhaḥ</p>
-    <p class="meta">Class by Satchidananda &middot; hosted by Janardhana, Instituto Yoga Carrasco, Montevideo<br>
-      15 September 2026 &middot; <a href="https://youtube.com/live/eLCvXTYFnHs" target="_blank" rel="noopener noreferrer">recording</a>
-      &middot; <a href="https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1" target="_blank" rel="noopener noreferrer">Sutra Reader</a></p>
+    <p class="meta" id="m-meta">Class by Satchidananda &middot; hosted by Janardhana, Instituto Yoga Carrasco, Montevideo<br> 15 September 2026 &middot; <a href="https://youtube.com/live/eLCvXTYFnHs" target="_blank" rel="noopener noreferrer">recording</a> &middot; <a href="https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1" target="_blank" rel="noopener noreferrer">Sutra Reader</a></p>
   </header>
   <div class="langbar">
     <button id="btn-en" type="button" aria-pressed="true">English<span class="sub">Original</span></button>
@@ -41,7 +39,7 @@
 (function(){
   marked.setOptions({gfm:true, breaks:false, mangle:false, headerIds:false});
   var cache = {}, RES = null, curLang = null;
-  var LANGS = ["en", "es"], DEFAULT_LANG = "en", META = {"en": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application | 15 September 2026", "description": "From contentment, unsurpassed happiness is gained. Class by Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 September 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application", "og_description": "From contentment, unsurpassed happiness is gained.", "locale": "en_US", "locale_alt": "es_LA"}, "es": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación | 15 de septiembre de 2026", "description": "De la práctica del contentamiento proviene una felicidad insuperable. Clase de Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 de septiembre de 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación", "og_description": "De la práctica del contentamiento proviene una felicidad insuperable.", "locale": "es_LA", "locale_alt": "en_US"}};
+  var LANGS = ["en", "es"], DEFAULT_LANG = "en", META = {"en": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application | 15 September 2026", "description": "From contentment, unsurpassed happiness is gained. Class by Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 September 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploration and Application", "og_description": "From contentment, unsurpassed happiness is gained.", "locale": "en_US", "locale_alt": "es_LA", "c_series": "Yoga Sutras — Exploration and Application", "c_h1": "Sutra 2:42 — Santosha", "c_meta_html": "Class by Satchidananda &middot; hosted by Janardhana, Instituto Yoga Carrasco, Montevideo<br> 15 September 2026 &middot; <a href=\"https://youtube.com/live/eLCvXTYFnHs\" target=\"_blank\" rel=\"noopener noreferrer\">recording</a> &middot; <a href=\"https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1\" target=\"_blank\" rel=\"noopener noreferrer\">Sutra Reader</a>"}, "es": {"title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación | 15 de septiembre de 2026", "description": "De la práctica del contentamiento proviene una felicidad insuperable. Clase de Satchidananda, Janardhana, Instituto Yoga Carrasco, Montevideo, 15 de septiembre de 2026.", "og_title": "Sutra 2:42 — Santosha | Yoga Sutras — Exploración y Aplicación", "og_description": "De la práctica del contentamiento proviene una felicidad insuperable.", "locale": "es_LA", "locale_alt": "en_US", "c_series": "Yoga Sutras — Exploración y Aplicación", "c_h1": "Sutra 2:42 — Santosha", "c_meta_html": "Clase de Satchidananda &middot; organizada por Janardhana, Instituto Yoga Carrasco, Montevideo<br> 15 de septiembre de 2026 &middot; <a href=\"https://youtube.com/live/eLCvXTYFnHs\" target=\"_blank\" rel=\"noopener noreferrer\">grabación</a> &middot; <a href=\"https://yogaedu-org.github.io/sutra-reader/?tab=sutra&deck=sutra-renderings&card=1&lang=es\" target=\"_blank\" rel=\"noopener noreferrer\">Sutra Reader</a>"}};
 
   function applyMeta(lang){      // the head must describe what the reader is seeing
     var m = META[lang] || META[DEFAULT_LANG];
@@ -53,6 +51,9 @@
       var el = document.head.querySelector("meta[" + r[0] + '="' + r[1] + '"]');
       if (el) el.setAttribute("content", r[2]);
     });
+    var t1 = document.getElementById("m-series"); if (t1) t1.textContent = m.c_series;
+    var t2 = document.getElementById("m-h1");     if (t2) t2.textContent = m.c_h1;
+    var t3 = document.getElementById("m-meta");   if (t3) t3.innerHTML  = m.c_meta_html;
   }
 
   function pickLang(supported, fallback){
