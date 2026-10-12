@@ -1,5 +1,7 @@
 # yogicapproach.github.io
 
+> **Start here:** [Layout](#layout) for where content lives, [Deploy](#deploy) for how it goes live; planning state is in `.claude/pm/PENDING-TASK.md`.
+
 Public website for Yogic Approach, served by GitHub Pages at the custom domain
 [yogicapproach.com](https://yogicapproach.com) (see `CNAME`).
 
