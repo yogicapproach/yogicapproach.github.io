@@ -1,2 +1,4 @@
 {"ts": "2026-09-07T02:20:27Z", "agent": "swarm 20260907T064155-yogicapproach.github.io", "issue": 4, "status": "claimed", "note": "add README documenting site structure/deploy"}
 {"ts": "2026-09-07T02:22:53Z", "agent": "swarm 20260907T064155-yogicapproach.github.io", "issue": 4, "status": "done", "commit": "061bcee273f74b4ad6bb79c38765eb40163102cd", "branch": "swarm/20260907-4"}
+{"ts": "2026-10-12T11:38:20Z", "agent": "swarm 20261012T154840-yogicapproach.github.io", "issue": 4, "status": "claimed", "note": "wave22: sub-issues, closure, README merge, docs refresh"}
+{"ts": "2026-10-12T11:39:23Z", "agent": "swarm 20261012T154840-yogicapproach.github.io", "issue": 4, "status": "done", "commit": "1b64b16", "branch": "swarm/20261012-wave"}
