@@ -1,0 +1,51 @@
+{
+  "resources": [
+    {
+      "type": "link",
+      "title": "Watch on YouTube",
+      "title_es": "Ver en YouTube",
+      "description": "The class in full. English with live Spanish translation.",
+      "description_es": "La clase completa. Inglés con traducción al español en vivo.",
+      "source": "YouTube",
+      "url": "https://youtu.be/pDqCKDo6iOE"
+    },
+    {
+      "type": "audio",
+      "title": "The sutra, chanted",
+      "title_es": "El sutra, cantado",
+      "description": "Kāyendriya-siddhir aśuddhi-kṣayāt tapasaḥ · one recitation by the room, 0:07 · from the class recording",
+      "description_es": "Kāyendriya-siddhir aśuddhi-kṣayāt tapasaḥ · una recitación del grupo, 0:07 · de la grabación de la clase",
+      "artist": "Yoga Sutra II.43",
+      "license": "Class recording",
+      "file": "sutra-ii43-chanted.mp3"
+    },
+    {
+      "type": "link",
+      "title": "Class slides",
+      "title_es": "Diapositivas de la clase",
+      "description": "The slides shown in class (Google Slides).",
+      "description_es": "Las diapositivas de la clase (Google Slides).",
+      "source": "Google Slides",
+      "url": "https://yalk.cc/ya-sutras-ii43-tapas-slides"
+    },
+    {
+      "type": "link",
+      "title": "Quotes on tapas",
+      "title_es": "Citas sobre tapas",
+      "description": "Quotes on tapas from the Bihar School of Yoga, filterable by teacher, theme, book and language. Each one links to its page in the online book.",
+      "description_es": "Citas sobre tapas de la Bihar School of Yoga, con filtros por maestro, tema, libro e idioma. Cada una enlaza a su página en el libro en línea.",
+      "source": "Yoga Sutras — Exploration and Application",
+      "url": "resources/quotes-collection.html"
+    },
+    {
+      "type": "audio",
+      "title": "The real power of tapas — a Spanish audio summary",
+      "title_es": "El verdadero poder del Tapas — resumen en audio",
+      "description": "Español · 1:43 · generated with NotebookLM (Google) from research summaries; not a teacher's voice",
+      "description_es": "Español · 1:43 · generado con NotebookLM (Google) a partir de resúmenes de investigación; no es la voz de un maestro",
+      "artist": "Yoga Sutra II.43",
+      "license": "Machine-generated study aid",
+      "file": "tapas-notebooklm-es.mp3"
+    }
+  ]
+}
