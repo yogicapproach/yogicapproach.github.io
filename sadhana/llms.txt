@@ -1,0 +1,11 @@
+# Sadhana
+
+Repeated practice programmes run online by YogicApproach: a cycle of daily practice
+with its own readings, recordings and feedback. URLs are
+`/{lang}/sadhana/{series}/{YYYY}-{mon}/{part}/`, where the occurrence is the actual
+starting month of that cycle.
+
+## Navaratri
+
+- [Readings for the ten days -- Shardiya Navaratri, October 2026](https://yogicapproach.com/en/sadhana/navaratri/2026-oct/readings/): the
+  readings used on each of the ten days, in the gurus' own words, with their sources.
