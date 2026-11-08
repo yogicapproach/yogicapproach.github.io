@@ -11,7 +11,7 @@ Method: `git ls-tree -l`, blob-hash duplicate detection, `cmp`, grep of the page
 ## Ranked findings
 
 ### 1. Session pages download multi-MB PNGs to draw 72 px thumbnails (speed, bandwidth) - HIGH
-`shared/../assets/shared.js:256,304,356` renders `<img class="resource-cover" ...>` with no `loading="lazy"` and no size variant; CSS shows it at 72x72 (56x56 on mobile) (`assets/shared.css:121-124,209`). `sN/resources.json` points the audio cover at the full infographic.
+`en/talks/koshas-ttc-300-uruguay/assets/shared.js:256,304,356` renders `<img class="resource-cover" ...>` with no `loading="lazy"` and no size variant; CSS shows it at 72x72 (56x56 on mobile) (`assets/shared.css:121-124,209`). `sN/resources.json` points the audio cover at the full infographic.
 Measured bytes of cover images fetched on open (git blob sizes):
 - s1: 5,598,642 + 446,768 = **6.0 MB**
 - s2: 4,387,299 + 500,998 + 568,102 = **5.5 MB**
