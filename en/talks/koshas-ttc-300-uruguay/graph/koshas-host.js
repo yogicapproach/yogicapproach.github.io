@@ -45,6 +45,9 @@
 
   /* ---- data load (http fetch, file:// embedded fallback) ---- */
   function loadData() {
+    // graph-data.js is already loaded by a <script> tag and mirrors graph.json
+    // (a test asserts that), so use it and skip a second ~106 KB download (talks#9).
+    if (window.__GRAPH__) return Promise.resolve(window.__GRAPH__);
     return fetch("graph.json").then(function (r) {
       if (!r.ok) throw new Error("http " + r.status);
       return r.json();
@@ -99,12 +102,27 @@
       },
     });
     if (window.Cite) {
-      fetch("corpus.json")
-        .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (corpus) {
-          if (corpus) citeLink.setResolver(window.Cite.makeResolver(corpus));
-        })
-        .catch(function () { /* corpus unavailable — fallback link still works */ });
+      // The 454 KB corpus is only needed to resolve a cited quote, so it is not
+      // part of the first paint: fetch it on the first interaction, or after a
+      // 4 s idle fallback, whichever comes first (talks#9).
+      var corpusRequested = false;
+      var loadCorpus = function () {
+        if (corpusRequested) return;
+        corpusRequested = true;
+        ["pointerdown", "touchstart", "keydown", "mousemove"].forEach(function (ev) {
+          document.removeEventListener(ev, loadCorpus, true);
+        });
+        fetch("corpus.json")
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (corpus) {
+            if (corpus) citeLink.setResolver(window.Cite.makeResolver(corpus));
+          })
+          .catch(function () { /* corpus unavailable — fallback link still works */ });
+      };
+      ["pointerdown", "touchstart", "keydown", "mousemove"].forEach(function (ev) {
+        document.addEventListener(ev, loadCorpus, { capture: true, passive: true });
+      });
+      setTimeout(loadCorpus, 4000);
     }
 
     /* ---- the koshas-specific panel body ---- */
