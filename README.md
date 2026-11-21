@@ -1,112 +1,92 @@
 # yogicapproach.github.io
 
-> **Start here:** [Live-site gate](#live-site-gate) before you push anything, [Layout](#layout) for where content lives, [Deploy](#deploy) for how it goes live, [Who publishes here](#who-publishes-here) for the spoke repos.
+Public website for Yogic Approach, served by GitHub Pages at
+[yogicapproach.com](https://yogicapproach.com) (the `CNAME` file pins the domain).
 
-Public website for Yogic Approach, served by GitHub Pages at the custom domain
-[yogicapproach.com](https://yogicapproach.com) (see `CNAME`).
+This repo is **publish-only**: static HTML/CSS/JS with no build step, no package
+manifest and no CI. Whatever is on `main` is what is served, and a push to `main`
+is public within a minute or two. Other repos build the content and publish it
+here; they own the planning and the issues for it. Issues on this repo are for
+housekeeping and for problems visitors report.
 
-This is a **publish-only** repo: static, hand-authored HTML/CSS/JS with **no build
-step, no package manifest and no CI**. What is in the tree is what is served.
-Content is pushed here from other repos (see below) which own their own planning
-and issue tracking. Issues on this repo are for repo-level housekeeping and for
-content-facing concerns raised by site visitors.
+> **Start here:** [Who publishes what](#who-publishes-what) before you edit
+> anything, [Rules for changes](#rules-for-changes) before you push, and
+> [Layout](#layout) to find a file.
 
-## Live-site gate
+## Who publishes what
 
-**`main` is the live site.** There is no staging and no preview: a commit on
-`main` is public within a minute or two.
+Almost every commit on `main` is a `publish(...)` or `deploy(...)` commit from one
+of these repos. **Edit the source repo and republish; a hand edit here is
+overwritten by that repo's next publish.**
 
-- Never push to `main` directly from an agent session; use a branch and a pull
-  request, and let the owner merge.
-- Moving or renaming a published path breaks shared links and WhatsApp previews;
-  leave a redirect stub at every old path.
-- Large media (audio, PDF) is in git and counts against the Pages 1 GB cap — see
-  [#10](https://github.com/yogicapproach/yogicapproach.github.io/issues/10)
-  before adding more.
-- Never commit local tooling output (`graphify-out/`, `.gh-offline-sync/`,
-  `.claude/worktrees/`, `.claude/tmp/`): it would be published.
+| Path | Source repo | Commit subject to look for |
+|---|---|---|
+| `/` root files (`index.html`, `robots.txt`, `sitemap.xml`), `assets/`, `es/`, `ne/`, `events/`, `retreats/` | `site-root` | `deploy(site-root): <timestamp> [<sha>]` |
+| `en/talks/`, `talks/` | `talks` | `publish(talks#N): ...` |
+| `sadhana/` and the readings deck under `en/sadhana/` | `navaratri-sadhana` | `publish(navaratri-sadhana#N): ...` |
+| `en/events/`, `es/events/`, `ne/events/` | `events` (through `site-root`) | `deploy(site-root): ...` |
+
+One exception: the GoatCounter snippets on the readings page were committed
+directly here. Check the source repo before overwriting them.
+
+## Rules for changes
+
+- **Pipelines may push to `main`; agent sessions in this repo may not.** The
+  publish pipelines above push straight to `main`. Any other change, by a person
+  or an agent, goes through a branch and a pull request (`Refs #N`, never
+  `Fixes`), and the owner merges.
+- **Do not move or rename a published path.** It breaks shared links and WhatsApp
+  previews. Leave a redirect stub at every old path.
+- **A site-wide change (shell, URL structure) needs the publishing repos'
+  agreement first**, because it collides with their next publish.
+- **Large media counts against the Pages limit of 1 GB.** The tree is about
+  230 MB; see [#10](https://github.com/yogicapproach/yogicapproach.github.io/issues/10)
+  before adding more audio or PDFs.
+- **The repo is public.** Never commit `.claude/settings*.json`, tokens, local
+  paths or tool output (`graphify-out/`, `.gh-offline-sync/`, `.claude/worktrees/`,
+  `.claude/tmp/`, `.vscode/`).
+- **Keep English, Spanish and Nepali in step.** Devanagari text is NFC UTF-8 only.
 
 ## Layout
 
-- `index.html` — currently a short placeholder ("in the process of migrating")
-  linking to the Uruguay 2026 talks. There is no central home page or shared
-  navigation yet.
-- `en/`, `es/`, `ne/` — content by language (English, Spanish, Nepali). Coverage
-  varies: `en/` has `events/`, `retreats/`, `sadhana/`, `talks/`; `es/` and `ne/`
-  have `events/` only.
-- `events/`, `retreats/`, `talks/`, `sadhana/` (repo root) — language-neutral
-  content roots, each with its own `sitemap.xml`/`llms.txt` where present
-  (`events/`, `sadhana/`).
-- `assets/` — shared static assets (currently `assets/2026-uruguay/`).
-- `404.html`, `robots.txt`, `sitemap.xml` — Pages/SEO files; the root
-  `sitemap.xml` indexes the per-section sitemaps.
-- `CNAME` — pins the custom domain; do not remove or repurpose.
-- `.claude/pm/` — planning state for Claude Code sessions (not served content,
-  but it is in the published tree).
-
-The relationship between the root-level content roots and their `en/` counterparts
-is being reworked — see
-[yogicapproach/site-root#20](https://github.com/yogicapproach/site-root/issues/20)
-(URL architecture: language segment at root). Treat the current layout as
-transitional rather than a fixed contract.
+- `index.html`: a short placeholder ("in the process of migrating") linking to the
+  Uruguay 2026 talks. There is no home page or shared navigation yet; the proposals
+  are in [site-root#38](https://github.com/yogicapproach/site-root/issues/38).
+- `404.html`, `robots.txt`, `sitemap.xml`: Pages and SEO files. The root
+  `sitemap.xml` is an index of the per-section sitemaps.
+- `CNAME`: the custom domain. Do not remove or repurpose it.
+- `en/`, `es/`, `ne/`: content by language. `en/` has `events/`, `retreats/`,
+  `sadhana/` and `talks/`; `es/` and `ne/` have `events/` only.
+  - `en/talks/koshas-ttc-300-uruguay/`: the Koshas TTC-300 reader, sessions,
+    transcript, glossary, graph and resources. Its `feedback/participant/` folder
+    holds the survey form and the only copy of SurveyJS (`vendor/`).
+  - `en/talks/yoga-sutras-exploration/`: the Yoga Sutras class pages.
+- `events/`, `retreats/`, `talks/`, `sadhana/` at the repo root: language-neutral
+  section roots. `events/`, `sadhana/` and `talks/` carry their own
+  `sitemap.xml` and `llms.txt`. The root-level paths and their `en/` counterparts
+  are being reworked
+  ([site-root#20](https://github.com/yogicapproach/site-root/issues/20)), so treat
+  this layout as transitional.
+- `assets/`: shared static assets (currently `assets/2026-uruguay/`).
+- `.claude/pm/`: planning notes for Claude Code sessions. It is not site content,
+  but it is in the published tree.
 
 ## Deploy
 
 GitHub Pages, "Deploy from a branch": source `main`, path `/`, custom domain
-`yogicapproach.com` (checked via the Pages API on 2026-11-09: `build_type: legacy`).
-Pushing to `main` publishes; nothing else is needed or run.
-
-## Who publishes here
-
-Recent `main` history is almost entirely `publish(...)` commits from spoke repos:
-
-| Spoke repo | What it publishes |
-|---|---|
-| `talks` (`yogicapproach/talks`) | class pages under `en/talks/` (Yoga Sutras exploration, Koshas TTC 300) |
-| `navaratri-sadhana` | the Navaratri readings deck and `sadhana/` |
-| `events` | `events/`, `en|es|ne/events/` pages |
-| `site-root` | root files (`sitemap.xml`, `robots.txt`, deploy of the root) |
-
-Because spokes push straight to `main`, a change to site-wide structure can
-collide with their next publish — agree it with them first.
-
-## Local changes
-
-Line endings: git stores LF. If `git status` shows a file modified but
-`git diff --ignore-cr-at-eol` is empty, it is a CRLF difference only; see
-[PR #6](https://github.com/yogicapproach/yogicapproach.github.io/pull/6)
-(`.gitattributes`).
-
-Static site served by GitHub Pages at https://yogicapproach.com (the `CNAME` file). There is no build step in this repo: whatever is committed on `main` is what is served. A push to `main` triggers a Pages rebuild.
-
-## Do not hand-edit published output
-
-Most of this tree is **generated** by other repos and overwritten on their next publish. Edit the source, not the copy here. Source per tree (taken from the commit subjects of each path, `git log --format=%s -- <dir>`):
-
-| Path | Published by | Evidence in git log |
-|---|---|---|
-| `/` root files, `assets/`, `es/`, `ne/`, `events/` | **site-root** repo | `deploy(site-root): <timestamp> [<sha>]` |
-| `retreats/` | **site-root** repo (older deploys) | `deploy(site-root): ...` |
-| `en/talks/`, `talks/` | **talks** repo | `publish(talks#N): ...`, `publish: ... (talks #N)` |
-| `sadhana/` and the readings deck under `en/` | **navaratri-sadhana** repo | `publish(navaratri-sadhana#69): ...` |
-
-Exceptions: GoatCounter pageview snippets on the readings page were committed directly here (`feat: ... GoatCounter ...`). Re-check the source repo before overwriting those.
-
-## Directory map
-
-- `index.html`, `404.html`, `robots.txt`, `sitemap.xml`, `CNAME`: site root.
-- `assets/`: shared assets.
-- `en/`, `es/`, `ne/`: the three site languages (English, Spanish, Nepali). Keep them in step.
-- `en/talks/koshas-ttc-300-uruguay/`: Koshas TTC-300 notes, with `feedback/` (SurveyJS form; `participant/` page, `survey.json`, `content.json`, `vendor/`).
-- `en/talks/yoga-sutras-exploration/`: Yoga Sutras class pages.
-- `events/`, `retreats/`, `sadhana/`, `talks/`: section roots.
+`yogicapproach.com` (Pages API check on 2026-11-09: `build_type: legacy`).
+Pushing to `main` publishes; nothing else is run. `CNAME` keeps the domain.
 
 ## Feedback collector
 
-The Koshas participant form posts to the Cloudflare Worker `koshas-feedback` (`https://koshas-feedback.kaanchan.workers.dev/submit`, set as `COLLECTOR_URL` in `en/talks/koshas-ttc-300-uruguay/feedback/participant/index.html`). The Worker source is not in this repo; it was published via the talks repo (commits `publish: feedback form LIVE ... (talks#85)`). Its README/deploy notes live there.
+The Koshas participant form posts to the Cloudflare Worker `koshas-feedback`
+(`https://koshas-feedback.kaanchan.workers.dev/submit`, set as `COLLECTOR_URL` in
+`en/talks/koshas-ttc-300-uruguay/feedback/participant/index.html`). The Worker
+source is not in this repo; it is in the `talks` repo (`publish: feedback form LIVE
+... (talks#85)`), with its README and deploy notes.
 
-## Deploy model
+## Line endings
 
-1. Edit in the source repo (table above) and publish; the publish commit lands here on `main`.
-2. GitHub Pages rebuilds from `main`; `CNAME` keeps the custom domain.
-3. Never push local tooling (`.claude/` settings, `graphify-out/`) here; the repo is public.
+Git stores LF (see `.gitattributes`). If `git status` shows a file as modified but
+`git diff --ignore-cr-at-eol` is empty, the difference is CRLF only. Staging the
+file clears it.
