@@ -14,7 +14,7 @@ See `PROGRESS.md` for completed work and `PENDING-TASK.md` for in-progress sessi
 
 ## Open Issues (priority order)
 
-_None open. All dev/planning issues live in private repos (`site-root`, `events`)._
+Open: #4 (README) — done on `swarm/20261012-wave`, awaiting KA merge. Dev/planning issues live in private repos (`site-root`, `events`).
 
 ---
 
