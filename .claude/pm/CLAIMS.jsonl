@@ -4,3 +4,4 @@
 {"ts": "2026-10-12T11:39:23Z", "agent": "swarm 20261012T154840-yogicapproach.github.io", "issue": 4, "status": "done", "commit": "1b64b16", "branch": "swarm/20261012-wave"}
 {"ts": "2026-11-09T09:19:58Z", "agent": "swarm 20261109T132545-yogicapproach.github.io", "issue": 4, "status": "claimed", "note": "README live gate, spokes, CLAUDE.md refresh"}
 {"ts": "2026-11-09T09:20:10Z", "agent": "swarm 20261109T132545-yogicapproach.github.io", "issue": 4, "status": "done", "commit": "e1986b0", "branch": "wave27/4-readme"}
+{"ts": "2026-11-09T10:51:13Z", "agent": "swarm 20261109T162839-yogicapproach.github.io", "issue": 4, "status": "done", "note": "README + CLAUDE.md map written", "branch": "wave27/docs-map"}
