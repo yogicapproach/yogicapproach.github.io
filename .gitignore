@@ -1,3 +1,8 @@
 # Claude Code agent staging area — never commit tmp output
 .claude/tmp/*
 !.claude/tmp/.gitkeep
+
+# Local tooling output: never publish
+graphify-out/
+.gh-offline-sync/
+.claude/worktrees/
