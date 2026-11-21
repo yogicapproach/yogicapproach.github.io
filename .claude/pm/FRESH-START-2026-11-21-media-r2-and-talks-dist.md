@@ -1,6 +1,13 @@
 Paste this whole file as the first prompt of a new session in `C:\Users\kaanchan\Projects\Yoga\yogicapproach\github-repos\yogicapproach.github.io`. It is self-contained.
 Pre-flight for KA: `/effort medium`. No `/model` change needed.
 
+## UPDATE 2026-11-21 21:15 (supersedes the Deliver list below)
+
+- Deliver 1 DONE: the talks dist-contract issue is [site-root#63](https://github.com/yogicapproach/site-root/issues/63).
+- Deliver 3 DONE: talks PR #108 (`.gitattributes`) merged.
+- Ownership moved: per the site-root session (reporting KA's direct confirmation to it), **site-root owns #63, #35 and the R2/media-domain work**; this repo is a publication point. Do NOT file or edit site-root issues, and do NOT execute R2; send requests to the session `site-root-b5` with SendMessage. Stay out of site-root's `src/**`, DEPLOY-CONTRACT.md, assemble-and-deploy.yml, es/ ne/ roots, the Cloudflare zone, and this repo's root files (index.html, sitemap.xml, robots.txt, CNAME, 404.html).
+- Remaining for this repo: housekeeping only (README/CLAUDE.md), and #7/#8/#9 await KA's "ready to test" check; talks source changes only when asked.
+
 ## What you are doing
 
 Continue the site housekeeping started 2026-11-21. Two follow-on decisions are open, and KA said yes to both.
