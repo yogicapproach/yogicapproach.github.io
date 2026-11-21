@@ -1,3 +1,4 @@
+Resume from: C:\Users\kaanchan\Projects\Yoga\yogicapproach\github-repos\yogicapproach.github.io\.claude\pm\FRESH-START-2026-11-21-media-r2-and-talks-dist.md
 # Pending Task — yogicapproach/yogicapproach.github.io
 
 Written: 2026-10-12 (swarm wave 22) — resume pointer refreshed
