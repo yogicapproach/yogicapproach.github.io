@@ -6,3 +6,5 @@
 graphify-out/
 .gh-offline-sync/
 .claude/worktrees/
+.vscode/
+.claude/settings.json.bak-*
