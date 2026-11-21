@@ -208,6 +208,18 @@ async function loadResources(lang, resourcesBasePath) {
     };
     var s = _strings[_lang] || _strings.en;
     var _basePath = resourcesBasePath || 'resources/';
+    // Small cover (talks#7): the 72 px card cover must not download the multi-MB original.
+    // Infographics and slide thumbnails have a generated 240 px JPEG at <dir>/sm/<name>.jpg
+    // (scripts/make_cover_thumbs.py); the full image stays the click-to-enlarge modal source,
+    // and the card falls back to the full image if the small one is missing.
+    function coverImgTag(cover, alt) {
+        var full = _basePath + encodeURIComponent(cover) + '?v=1';
+        var small = /(^|\/)(infographics|slides\/thumbs)\/[^\/]+\.png$/i.test(cover)
+            ? cover.replace(/([^\/]+)\.png$/i, 'sm/$1.jpg') : '';
+        if (!small) return '<img class="resource-cover" src="' + full + '" alt="' + alt + '" data-modal="true">';
+        return '<img class="resource-cover" src="' + _basePath + encodeURIComponent(small) + '?v=1" data-full="' + full +
+               '" onerror="this.onerror=null;this.src=this.dataset.full" loading="lazy" alt="' + alt + '" data-modal="true">';
+    }
 
     try {
         var res = await fetch('resources.json');
@@ -253,7 +265,7 @@ async function loadResources(lang, resourcesBasePath) {
                 var mime       = r.file.endsWith('.mp3') ? 'audio/mpeg' : 'audio/mp4';
                 audioHtml += `
                     <div class="resource-audio-card">
-                        ${coverSrc ? `<img class="resource-cover" src="${coverSrc}" alt="${r.title}" data-modal="true">` : ''}
+                        ${r.cover ? coverImgTag(r.cover, r.title) : ''}
                         <div class="resource-body">
                             <div class="resource-title">${r.title}</div>
                             <div class="resource-meta">${metaPartsA.join(' &middot; ')}${downloadLink}</div>
@@ -271,7 +283,7 @@ async function loadResources(lang, resourcesBasePath) {
                 var modal = document.getElementById('img-modal');
                 var modalImg = document.getElementById('img-modal-img');
                 if (modal && modalImg) {
-                    modalImg.src = img.src;
+                    modalImg.src = img.dataset.full || img.src;
                     modalImg.alt = img.alt;
                     modal.classList.add('open');
                 }
@@ -301,7 +313,7 @@ async function loadResources(lang, resourcesBasePath) {
                         var descP = (_lang === 'ne' && r.description_ne) ? r.description_ne : (_lang === 'es' && r.description_es) ? r.description_es : (r.description || '');
                         pdfsHtml += `
                         <div class="resource-audio-card resource-pdf-card">
-                            <img class="resource-cover" src="${coverSrc}" alt="${r.title}" data-modal="true">
+                            ${coverImgTag(r.cover, r.title)}
                             <div class="resource-body">
                                 <div class="resource-title">${r.title} ${badge}</div>
                                 <div class="resource-meta">${descP ? descP + ' &middot; ' : ''}<a class="resource-download" href="${fileSrc}" target="_blank" rel="noopener">${s.openPdf} &rarr;</a></div>
@@ -334,7 +346,7 @@ async function loadResources(lang, resourcesBasePath) {
                     img.addEventListener('click', function() {
                         var modal = document.getElementById('img-modal');
                         var modalImg = document.getElementById('img-modal-img');
-                        if (modal && modalImg) { modalImg.src = img.src; modalImg.alt = img.alt; modal.classList.add('open'); }
+                        if (modal && modalImg) { modalImg.src = img.dataset.full || img.src; modalImg.alt = img.alt; modal.classList.add('open'); }
                     });
                 });
             }
@@ -364,7 +376,7 @@ async function loadResources(lang, resourcesBasePath) {
                     img.addEventListener('click', function() {
                         var modal = document.getElementById('img-modal');
                         var modalImg = document.getElementById('img-modal-img');
-                        if (modal && modalImg) { modalImg.src = img.src; modalImg.alt = img.alt; modal.classList.add('open'); }
+                        if (modal && modalImg) { modalImg.src = img.dataset.full || img.src; modalImg.alt = img.alt; modal.classList.add('open'); }
                     });
                 });
             }
