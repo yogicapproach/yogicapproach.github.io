@@ -1,0 +1,16 @@
+# Yogic Approach
+
+> Yogic Approach shares talks, events, retreats and daily practice programmes in the yoga tradition, taught by Satchidananda. Content is published in English, with Spanish and Nepali where available.
+
+Site: https://yogicapproach.com
+
+This is the root index. Each section keeps its own detailed llms.txt; start from the one that matches your question.
+
+## Sections
+
+- [Events: Uruguay 2026, Exploring the Koshas](https://yogicapproach.com/events/llms.txt): talks given in February 2026, with transcripts, audio, syntheses and a glossary, in EN, ES and NE.
+- [Sadhana: repeated practice programmes](https://yogicapproach.com/sadhana/llms.txt): Navaratri readings and other practice cycles.
+
+## Sitemap
+
+- https://yogicapproach.com/sitemap.xml

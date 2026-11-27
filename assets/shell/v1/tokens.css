@@ -1,0 +1,39 @@
+/* Yogic Approach shell v1: design tokens. Direction A (Śulba); direction B to follow (site-root#40).
+   Immutable once released: a change is a new vN directory, never an edit. Light and dark values; the dark
+   theme follows the system unless a page sets data-theme="light" or data-theme="dark" on <html>.
+   Every text/background pair is checked by tests/check_site_quality.py --tokens ... --pairs pairs.json. */
+:root {
+  --ys-bg: #eef0ec;
+  --ys-text: #1d2b3a;
+  --ys-muted: #4a5866;
+  --ys-accent: #a87a0e;   /* geometry, rules and focus only: 3.36:1 on --ys-bg, never body text */
+  --ys-focus: #a87a0e;
+  --ys-rule: #c9cfc8;     /* decorative separators, carries no meaning */
+
+  --ys-m: 8px;            /* the module: every spacing is a multiple, as the mark's geometry is */
+  --ys-wrap: 72rem;
+  --ys-measure: 38rem;
+  --ys-size: 1.0625rem;
+  --ys-lh: 1.65;
+  --ys-lh-deva: 1.8;
+  --ys-font: "YS Serif", "Noto Serif Devanagari", "Nirmala UI", "Mangal", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ys-bg: #14202c;
+    --ys-text: #eef0ec;
+    --ys-muted: #b4bfca;
+    --ys-accent: #d9a53a;
+    --ys-focus: #d9a53a;
+    --ys-rule: #34465a;
+  }
+}
+:root[data-theme="dark"] {
+  --ys-bg: #14202c;
+  --ys-text: #eef0ec;
+  --ys-muted: #b4bfca;
+  --ys-accent: #d9a53a;
+  --ys-focus: #d9a53a;
+  --ys-rule: #34465a;
+}

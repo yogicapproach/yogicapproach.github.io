@@ -1,0 +1,6 @@
+[
+  {"fg": "--ys-text",   "bg": "--ys-bg", "min": 4.5, "note": "body text and links"},
+  {"fg": "--ys-muted",  "bg": "--ys-bg", "min": 4.5, "note": "secondary text, footer, current language"},
+  {"fg": "--ys-accent", "bg": "--ys-bg", "min": 3.0, "note": "mark, link underline (graphics, WCAG 1.4.11)"},
+  {"fg": "--ys-focus",  "bg": "--ys-bg", "min": 3.0, "note": "keyboard focus ring (WCAG 1.4.11)"}
+]

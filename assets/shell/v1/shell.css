@@ -1,0 +1,43 @@
+/* Yogic Approach shell v1: base typography, header and footer. Needs tokens.css. No JavaScript is required. */
+/* Both faces MUST declare the same font-weight: with 400 on one and a 400 700 range on the other, Chrome picks
+   one face per weight before it applies unicode-range and never loads the Latin face (measured 2026-11-09). */
+@font-face {
+  font-family: "YS Serif"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(fonts/Spectral-Regular-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0100-017F, U+0300-036F, U+1E00-1EFF, U+2010-2014, U+2018-201D, U+2026;
+}
+@font-face {
+  font-family: "YS Serif"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(fonts/NotoSerifDevanagari-wght-deva.woff2) format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+25CC, U+A830-A839;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--ys-bg); color: var(--ys-text); font: var(--ys-size) / var(--ys-lh) var(--ys-font); -webkit-text-size-adjust: 100%; }
+:lang(ne) { line-height: var(--ys-lh-deva); }
+body { margin: 0; overflow-wrap: anywhere; }
+h1, h2, h3 { font-weight: normal; line-height: 1.2; }
+a { color: var(--ys-text); text-decoration-color: var(--ys-accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 3px; }
+a:focus-visible { outline: 3px solid var(--ys-focus); outline-offset: 3px; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+.ys-wrap { max-width: var(--ys-wrap); margin: 0 auto; padding: 0 calc(var(--ys-m) * 3); }
+.ys-skip { position: absolute; left: -999px; }
+.ys-skip:focus { left: var(--ys-m); top: var(--ys-m); z-index: 10; background: var(--ys-text); color: var(--ys-bg); padding: var(--ys-m) calc(var(--ys-m) * 2); }
+
+.ys-header-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: calc(var(--ys-m) * 3); padding-top: var(--ys-m); padding-bottom: var(--ys-m); }
+.ys-brand { display: inline-flex; align-items: center; gap: calc(var(--ys-m) * 1.5); min-height: 44px; text-decoration: none; font-size: 1.375rem; }
+.ys-mark { width: 40px; height: 40px; color: var(--ys-accent); flex: none; }
+.ys-nav ul, .ys-langs ul { display: flex; flex-wrap: wrap; column-gap: calc(var(--ys-m) * 2); }
+.ys-nav a, .ys-langs a { display: inline-block; min-height: 44px; padding: 10px 2px; }
+.ys-langs a[aria-current] { text-decoration: none; color: var(--ys-muted); }
+.ys-header-in > .ys-nav { flex: 1 1 auto; }
+
+.ys-footer { margin-top: calc(var(--ys-m) * 8); border-top: 1px solid var(--ys-rule); color: var(--ys-muted); }
+.ys-footer a { color: var(--ys-muted); }
+.ys-footer-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--ys-m) calc(var(--ys-m) * 3); padding-top: calc(var(--ys-m) * 2); padding-bottom: calc(var(--ys-m) * 4); }
+.ys-footer p { margin: 0; }
+
+@media (max-width: 36rem) {
+  .ys-header-in > .ys-nav, .ys-header-in > .ys-langs { flex: 1 1 100%; }
+}
